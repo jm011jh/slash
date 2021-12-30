@@ -1,0 +1,316 @@
+body.black .nav_bg {
+  background-color: #ffffff;
+}
+
+body.black .nav_btn::before {
+  background-color: #ffffff;
+}
+
+body.black .nav_btn::after {
+  background-color: #000000;
+}
+
+body.black #nav .nav_btn {
+  color: #000000;
+}
+
+body.black #nav .nav_btn_text {
+  color: #000000;
+}
+
+body.black #nav .nav_ul li a {
+  color: #ffffff;
+}
+
+body.black #nav .nav_ul li span {
+  background-color: #ffffff;
+}
+
+body.black #nav.show .nav_btn {
+  color: #ffffff;
+}
+
+body.black #nav.show .nav_btn_text {
+  color: #ffffff;
+}
+
+body.black #nav.show .nav_ul li a {
+  color: #000000;
+}
+
+body.black #nav.show .nav_ul li span {
+  background-color: #000000;
+}
+
+body.white .nav_bg {
+  background-color: #000000;
+}
+
+body.white .nav_btn::before {
+  background-color: #000000;
+}
+
+body.white .nav_btn::after {
+  background-color: #ffffff;
+}
+
+body.white #nav .nav_btn {
+  color: #ffffff;
+}
+
+body.white #nav .nav_btn_text {
+  color: #ffffff;
+}
+
+body.white #nav .nav_ul li a {
+  color: #000000;
+}
+
+body.white #nav .nav_ul li span {
+  background-color: #000000;
+}
+
+body.white #nav.show .nav_btn {
+  color: #000000;
+}
+
+body.white #nav.show .nav_btn_text {
+  color: #000000;
+}
+
+body.white #nav.show .nav_ul li a {
+  color: #ffffff;
+}
+
+body.white #nav.show .nav_ul li span {
+  background-color: #ffffff;
+}
+
+#nav .nav_container, #nav .nav_head, #nav .nav_body, #nav.show .nav_ul li a {
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+}
+
+.nav_btn::after, .nav_btn::before, .nav_ul li span, #nav .nav_bg, #nav .nav_ul li a {
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+.nav_ul li span {
+  -webkit-transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);
+          transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  right: 16px;
+  width: 200px;
+  height: 300px;
+}
+
+#nav .nav_container {
+  -webkit-transform: translate(0, -87px);
+          transform: translate(0, -87px);
+}
+
+#nav .nav_head {
+  opacity: 0;
+  cursor: default;
+}
+
+#nav .nav_body {
+  pointer-events: unset;
+}
+
+#nav .nav_ul li a {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav.on .nav_container {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav.on .nav_head {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#nav.on .nav_body {
+  pointer-events: none;
+}
+
+#nav.on .nav_ul li a {
+  -webkit-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+}
+
+#nav .nav_bg {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#nav.show .nav_btn::before {
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+#nav.show .nav_btn::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav.show .nav_bg {
+  opacity: 1;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#nav.show .nav_body {
+  pointer-events: unset;
+}
+
+#nav.show .nav_ul li a {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav.show .nav_ul li:nth-child(1) a {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#nav.show .nav_ul li:nth-child(2) a {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+#nav.show .nav_ul li:nth-child(3) a {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#nav.show .nav_ul li:nth-child(4) a {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav_container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_head {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 0;
+  cursor: pointer;
+}
+
+.nav_btn {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 16px;
+  overflow: hidden;
+}
+
+.nav_btn_text {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.nav_btn::after, .nav_btn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 18px;
+}
+
+.nav_btn::before {
+  background-color: #ffffff;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.nav_btn::after {
+  background-color: #000000;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.nav_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav_ul {
+  font-size: 16px;
+  line-height: 1.4;
+  display: inline-block;
+}
+
+.nav_ul li {
+  position: relative;
+  height: 22px;
+  overflow: hidden;
+}
+
+.nav_ul li a {
+  padding: 0 4px;
+  display: block;
+}
+
+.nav_ul li span {
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  -webkit-transform: translate(-50%, 0) scaleX(0);
+          transform: translate(-50%, 0) scaleX(0);
+}
+
+.nav_ul li.mouseenter span {
+  -webkit-transform: translate(0%, 0) scaleX(1);
+          transform: translate(0%, 0) scaleX(1);
+}
+
+.nav_ul li.mouseleave span {
+  -webkit-transform: translate(50%, 0) scaleX(0);
+          transform: translate(50%, 0) scaleX(0);
+}
+
+.nav_bg {
+  width: 100%;
+  height: 100%;
+  background-color: #0f0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40px;
+}
+/*# sourceMappingURL=nav.css.map */

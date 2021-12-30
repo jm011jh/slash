@@ -1,0 +1,14 @@
+$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+$font2 : 'Playfair Display', serif;
+$black : #000000;
+$white : #ffffff;
+@mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
+// #region header==================================================
+
+#header{width: 100%;position: fixed;top: 0;}
+#header.white{color: $white;}
+#header.black{color: $black;}
+
+.header__col1{display: flex;}
+
+// #endregion header==================================================

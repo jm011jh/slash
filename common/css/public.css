@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("./nav.css");
+@import url("./header.css");
+@import url("./line.css");
+@import url("./circle.css");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+  background-color: #333;
+  height: 300vh;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+body.black {
+  background-color: #000000;
+}
+
+body.white {
+  background-color: #ffffff;
+}
+
+a, a:visited, a:link, a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  cursor: default;
+  pointer-events: unset;
+  top: 0;
+  left: 0;
+}
+
+.none {
+  display: none !important;
+}
+/*# sourceMappingURL=public.css.map */
