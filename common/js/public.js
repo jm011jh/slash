@@ -4,6 +4,8 @@ $(document).ready(function(){
     $.get(`common/inc/circle.html`, (data) => { $("#downCircle").prepend(data);})
     for(let i = 0; i<= $(".line").length - 1; i++){
         $.get(`common/inc/line.html`, (data)=>{ $(".line").eq(i).prepend(data);})
-        console.log('yas')
+    }
+    for(let i = 0; i<= $(".blink").length -1; i++){
+        $.get(`common/inc/ico_blink.html`, (data) => { $(".blink").eq(i).prepend(data);})
     }
 })

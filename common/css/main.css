@@ -1,0 +1,283 @@
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+body.black #sect1 p {
+  color: #ffffff;
+}
+
+body.black .sect1__container2_belt svg {
+  fill: #ffffff;
+}
+
+body.white #sect1 p {
+  color: #000000;
+}
+
+body.white .sect1__container2_belt svg {
+  fill: #000000;
+}
+
+#sect1 {
+  width: 100%;
+  padding-top: 70vh;
+}
+
+.sect1__container1 {
+  margin-bottom: 100px;
+}
+
+.sect1__container1__title, .sect1__container1__description {
+  display: inline-block;
+}
+
+.sect1__container1__title {
+  font-size: clamp(140px, 6.5vw, 160px);
+  line-height: 1;
+  font-weight: 400;
+  margin-right: clamp(80px, 1vw, 120px);
+}
+
+.sect1__container1__title .font1 {
+  font-weight: 500;
+}
+
+.sect1__container1__title .font2 {
+  letter-spacing: clamp(-2px, -0.1vw, -10px);
+}
+
+.sect1__container1__description .p1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.sect1__container1__description .p1 b {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sect1__container1__description .p2 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.sect1__container2 {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 130px;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.sect1__container2_wrap {
+  position: absolute;
+}
+
+.sect1__container2_belt svg {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-animation: 5s 0s rotating infinite linear;
+          animation: 5s 0s rotating infinite linear;
+}
+
+.sect1__container2_belt p, .sect1__container2_belt svg, .sect1__container2_belt {
+  display: inline-block;
+}
+
+.sect1__container2_belt p {
+  font-size: 16px;
+  margin: 0px 22px;
+  -webkit-transform: translate(0, -6px);
+          transform: translate(0, -6px);
+}
+
+.sect1__container3 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.sect1__container3_wrap {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sect1__container3_belt {
+  display: inline-block;
+  font-size: clamp(200px, 13.4vw, 260px);
+  line-height: 1;
+}
+
+.sect1__container3_belt p {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.sect1__container3_belt b {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+body.black #sect2 {
+  color: #ffffff;
+}
+
+body.black .sect2__container1 svg {
+  fill: #ffffff;
+}
+
+body.black .sect2__container4 {
+  border: 1px solid #ffffff;
+}
+
+body.black .sect2__container4 p {
+  color: #ffffff;
+}
+
+body.black .sect2__container4 .arrow {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+body.black .sect2__container4 .arrow span {
+  background-color: #ffffff;
+}
+
+body.white #sect2 {
+  color: #000000;
+}
+
+body.white .sect2__container1 svg {
+  fill: #000000;
+}
+
+body.white .sect2__container4 {
+  border: 1px solid #000000;
+}
+
+body.white .sect2__container4 p {
+  color: #000000;
+}
+
+body.white .sect2__container4 .arrow {
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+
+body.white .sect2__container4 .arrow span {
+  background-color: #000000;
+}
+
+.sect2__container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title_container {
+  margin-top: 40px;
+}
+
+.title_container .blink {
+  width: 26px;
+  height: 26px;
+}
+
+.title_container .title_text {
+  font-size: 20px;
+}
+
+.sect2__container2 {
+  margin-top: 80px;
+}
+
+.sect2__container2 p {
+  font-size: clamp(60px, 3vw, 80px);
+}
+
+.sect2__container2 .p1 {
+  margin-left: 160px;
+}
+
+.sect2__container3 {
+  margin-top: 60px;
+}
+
+.sect2__container3 p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.sect2__container4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #000000;
+  border-radius: 40px;
+}
+
+.sect2__container4 a {
+  padding: 24px 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sect2__container4 p {
+  font-size: 20px;
+  margin-right: 26px;
+}
+
+.sect2__container4 .arrow {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+
+.sect2__container4 .arrow span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000000;
+  width: 25.4px;
+  height: 1px;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+/*# sourceMappingURL=main.css.map */

@@ -2,8 +2,24 @@ body.black .circle__text {
   fill: #ffffff;
 }
 
+body.black .circle__arrow {
+  background-color: #ffffff;
+}
+
+body.black .circle__arrow span {
+  background-color: #000000;
+}
+
 body.white .circle__text {
   fill: #000000;
+}
+
+body.white .circle__arrow {
+  background-color: #000000;
+}
+
+body.white .circle__arrow span {
+  background-color: #ffffff;
 }
 
 #downCircle {
@@ -31,11 +47,55 @@ body.white .circle__text {
 
 .circle__text {
   fill: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13.9px;
+  font-weight: 400;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   font-family: Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+}
+
+.circle__arrow {
+  width: 75%;
+  height: 75%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.circle__arrow span {
+  position: absolute;
+}
+
+.circle__arrow span:nth-child(1) {
+  width: 1px;
+  height: 46px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.circle__arrow span:nth-child(2), .circle__arrow span:nth-child(3) {
+  width: 1px;
+  height: 25px;
+}
+
+.circle__arrow span:nth-child(2) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(calc(-50% - 8.5px), calc(-50% + 15px)) rotate(-45deg);
+          transform: translate(calc(-50% - 8.5px), calc(-50% + 15px)) rotate(-45deg);
+}
+
+.circle__arrow span:nth-child(3) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(calc(-50% + 8.5px), calc(-50% + 15px)) rotate(45deg);
+          transform: translate(calc(-50% + 8.5px), calc(-50% + 15px)) rotate(45deg);
 }
 
 .path {

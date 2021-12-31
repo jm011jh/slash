@@ -42,7 +42,7 @@ body.white{
 .nav_btn::after, .nav_btn::before, .nav_ul li span,#nav .nav_bg, #nav .nav_ul li a{transition-duration: .3s;}
 .nav_ul li span{transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);}
 
-#nav{position: fixed;top: 0;right: 16px;width: 200px;height: 300px;}
+#nav{position: fixed;top: 0;right: 50px;width: 200px;height: 300px;}
 #nav .nav_container{transform: translate(0,-87px);}
 #nav .nav_head{opacity: 0;cursor: default;}
 #nav .nav_body{pointer-events: unset;}
@@ -72,9 +72,9 @@ body.white{
 .nav_btn::before{background-color: $white;transform: translate(0,0);}
 .nav_btn::after{background-color: $black;transform: translate(0,100%);}
 .nav_body{display: flex;justify-content: center;}
-.nav_ul{font-size: 16px;line-height: 1.4;display: inline-block;}
-.nav_ul li{position: relative;height: 22px;overflow: hidden;}
-.nav_ul li a{padding: 0 4px;display: block;}
+.nav_ul{display: inline-block;}
+.nav_ul li{position: relative;overflow: hidden;}
+.nav_ul li a{padding: 0 4px;display: block;font-size: 18px;line-height: 1.4;}
 .nav_ul li span{width: 100%;height: 1px;background-color: $black;display: block;position: absolute;bottom: 1px;left: 0;transform:translate(-50%,0) scaleX(0);}
 .nav_ul li.mouseenter span{transform:translate(0%,0) scaleX(1);}
 .nav_ul li.mouseleave span{transform:translate(50%,0) scaleX(0);}

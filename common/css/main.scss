@@ -1,0 +1,77 @@
+$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+$font2 : 'Playfair Display', serif;
+$black : #000000;
+$white : #ffffff;
+@mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
+@mixin beltContainer {position: relative;overflow-x: hidden;width: 100%;}
+@keyframes rotating{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+body.black{
+    #sect1 p{color: $white;}
+    .sect1__container2_belt svg{fill: $white;}
+}
+body.white{
+    #sect1 p{color: $black;}
+    .sect1__container2_belt svg{fill: $black;}
+}
+//#region sect1==================================================
+#sect1{width: 100%;padding-top: 70vh;}
+.sect1__container1{margin-bottom: 100px;}
+.sect1__container1__title, .sect1__container1__description{display: inline-block;}
+.sect1__container1__title{font-size:clamp(140px, 6.5vw, 160px);line-height: 1;font-weight:400;margin-right: clamp(80px, 1vw, 120px);}
+.sect1__container1__title .font1{font-weight: 500;}
+.sect1__container1__title .font2{letter-spacing:clamp(-2px, -0.1vw, -10px)}
+
+.sect1__container1__description .p1 {font-size: 16px;font-weight: 500;margin-bottom: 32px;}
+.sect1__container1__description .p1 b{font-size: 20px;font-weight: 500;}
+.sect1__container1__description .p2{font-size: 18px;line-height: 1.4;}
+
+.sect1__container2{position: relative;overflow-x: hidden;width: 100%;height: 30px;margin-bottom: 130px; @include beltContainer;}
+.sect1__container2_wrap{position: absolute;}
+.sect1__container2_belt svg{width: 26px;height: 26px;display: inline-block;transition-duration: .3s;transition-property:color;animation:5s 0s rotating infinite linear;}
+.sect1__container2_belt p, .sect1__container2_belt svg, .sect1__container2_belt{display: inline-block;}
+.sect1__container2_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);}
+
+.sect1__container3{position: relative;overflow: hidden;width: 100%;height: 260px; @include beltContainer;}
+.sect1__container3_wrap{position: absolute;display: flex;}
+.sect1__container3_belt{display: inline-block;font-size:clamp(200px, 13.4vw, 260px);line-height: 1;}
+.sect1__container3_belt p{white-space: nowrap;display: inline-block;}
+.sect1__container3_belt b{font-family: $font2;font-weight: 400;}
+//#endregion sect1===============================================
+//#region sect2==================================================
+body.black{
+    #sect2{color: $white;}
+    .sect2__container1 svg{fill:$white;}
+    .sect2__container4{border: 1px solid $white;}
+    .sect2__container4 p{color: $white;}
+    .sect2__container4 .arrow{border-top: 1px solid $white;border-right: 1px solid $white;}
+    .sect2__container4 .arrow span{background-color: $white;}
+}
+body.white{
+    #sect2{color: $black;}
+    .sect2__container1 svg{fill:$black;}
+    .sect2__container4{border: 1px solid $black;}
+    .sect2__container4 p{color: $black;}
+    .sect2__container4 .arrow{border-top: 1px solid $black;border-right: 1px solid $black;}
+    .sect2__container4 .arrow span{background-color: $black;}
+}
+.sect2__container1{display: flex;}
+.title_container{margin-top: 40px;}
+.title_container .blink{width: 26px;height: 26px;}
+.title_container .title_text{font-size: 20px;}
+
+.sect2__container2{margin-top: 80px;}
+.sect2__container2 p{font-size: clamp(60px, 3vw, 80px);}
+.sect2__container2 .p1{margin-left: 160px;}
+.sect2__container3{margin-top: 60px;}
+.sect2__container3 p{font-size: 18px;line-height: 1.6;}
+.sect2__container4{position: absolute;bottom: 0;right: 0;border: 1px solid $black;border-radius: 40px;}
+.sect2__container4 a{padding: 24px 28px;display: flex;}
+.sect2__container4 p{font-size: 20px;margin-right: 26px;}
+.sect2__container4 .arrow{width: 18px;height: 18px;border: 1px solid #000;border-bottom: 0px;border-left: 0px;}
+.sect2__container4 .arrow span{display: block;position: absolute;top: 50%;left: 50%;background-color: $black;
+    width: 25.4px;height: 1px;transform:translate(-50%,-50%)rotate(-45deg);
+}
+//#endregion sect1===============================================

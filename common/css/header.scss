@@ -3,12 +3,44 @@ $font2 : 'Playfair Display', serif;
 $black : #000000;
 $white : #ffffff;
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
+@keyframes soundAnimation {
+    0%{transform:   translate(0,50%) scaleY(0.2);}
+    50%{transform:  translate(0,0%) scaleY(1);}
+    100%{transform: translate(0,50%) scaleY(0.2);}
+}
 // #region header==================================================
-
+body.black{
+    .header__logo{color: $white;}
+    .header__sound_animation span{background-color:$white;}
+    .header__sound_states{color: $white;}
+}
+body.white{
+    .header__logo{color: $black;}
+    .header__sound_animation span{background-color:$black;}
+    .header__sound_states{color: $black;}
+}
 #header{width: 100%;position: fixed;top: 0;}
-#header.white{color: $white;}
-#header.black{color: $black;}
 
 .header__col1{display: flex;}
+.header__logo{font-size: 20px;}
+.header__sound{display: flex;cursor: pointer;}
+.header__sound_animation{display: flex;}
+.header__sound_animation span{display: block;width: 1px;height: 12px;margin-right: 2px;}
+.header__sound_states{font-size: 14px;}
 
+.header__sound.on{
+    .header__sound_states.off{display: none;}
+    .header__sound_states.on{display: block;}
+    .header__sound_animation span{animation: 1s 0s soundAnimation infinite;}
+    .header__sound_animation span:nth-child(1){animation-delay: 0s;}
+    .header__sound_animation span:nth-child(2){animation-delay: 0.05s;}
+    .header__sound_animation span:nth-child(3){animation-delay: 0.1s;}
+    .header__sound_animation span:nth-child(4){animation-delay: 0.15s;}
+    .header__sound_animation span:nth-child(5){animation-delay: 0.2s;}
+}
+.header__sound.off{
+    .header__sound_states.off{display: block;}
+    .header__sound_states.on{display: none;}
+    .header__sound_animation span{animation-play-state: paused;}
+}
 // #endregion header==================================================

@@ -48,4 +48,16 @@ li {
 .none {
   display: none !important;
 }
+
+.relative {
+  position: relative;
+}
+
+.font1 {
+  font-family: Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+}
+
+.font2 {
+  font-family: "Playfair Display", serif;
+}
 /*# sourceMappingURL=public.css.map */

@@ -20,6 +20,22 @@
   }
 }
 
+body.black .line-container {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+body.black .line-moving .line-stick {
+  background-color: #ffffff;
+}
+
+body.white .line-container {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.white .line-moving .line-stick {
+  background-color: #000000;
+}
+
 .line {
   width: 95%;
   height: 1px;
@@ -49,14 +65,14 @@
 }
 
 .line-moving.animate {
-  -webkit-animation: 1.5s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
-          animation: 1.5s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
+  -webkit-animation: 2s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
+          animation: 2s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
 }
 
 .line-moving .line-stick {
   width: 20px;
   height: 1px;
-  background-color: #fff;
+  background-color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;

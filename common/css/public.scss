@@ -17,3 +17,6 @@ a,a:visited,a:link,a:hover{color: $black;text-decoration: none;}
 li{list-style: none;}
 .hidden{position: absolute;opacity: 0;cursor: default;pointer-events: unset;top: 0;left: 0;}
 .none{display: none !important;}
+.relative{position: relative;}
+.font1{font-family: $font1;}
+.font2{font-family: $font2;}
