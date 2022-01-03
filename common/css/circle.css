@@ -24,8 +24,8 @@ body.white .circle__arrow span {
 
 #downCircle {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 40px;
+  right: 40px;
   width: 120px;
   height: 120px;
 }

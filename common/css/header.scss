@@ -2,6 +2,10 @@ $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue L
 $font2 : 'Playfair Display', serif;
 $black : #000000;
 $white : #ffffff;
+$--gw : 40px;
+$--gc : 135px;
+$--gg : 20px;
+$--g : 155px;
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
 @keyframes soundAnimation {
     0%{transform:   translate(0,50%) scaleY(0.2);}
@@ -19,7 +23,7 @@ body.white{
     .header__sound_animation span{background-color:$black;}
     .header__sound_states{color: $black;}
 }
-#header{width: 100%;position: fixed;top: 0;}
+#header{width: 100%;position: fixed;top: 0;padding-left:$--gw;padding-right:$--gw;padding-top: 40px;}
 
 .header__col1{display: flex;}
 .header__logo{font-size: 20px;}

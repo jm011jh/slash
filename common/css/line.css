@@ -37,13 +37,15 @@ body.white .line-moving .line-stick {
 }
 
 .line {
-  width: 95%;
+  width: 100%;
   height: 1px;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  padding: 0 40px;
+  overflow: hidden;
 }
 
 .line-container {
@@ -52,6 +54,7 @@ body.white .line-moving .line-stick {
   background-color: rgba(255, 255, 255, 0.3);
   overflow-x: hidden;
   overflow-y: unset;
+  position: relative;
 }
 
 .line-moving {

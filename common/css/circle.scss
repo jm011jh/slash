@@ -2,6 +2,12 @@ $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue L
 $font2 : 'Playfair Display', serif;
 $white : #ffffff;
 $black : #000000;
+$--gw : 40px;
+$--gc : 135px;
+$--gg : 20px;
+$--g : 155px;
+$--gt : 40px;
+$--gb : 40px;
 body.black{
     .circle__text{fill:$white}
     .circle__arrow{background-color: $white;}
@@ -13,7 +19,7 @@ body.white{
     .circle__arrow span{background-color: $white;}
 }
 
-#downCircle{position: fixed;bottom: 50px;right: 50px;width: 120px;height: 120px;}
+#downCircle{position: fixed;bottom: $--gb;right: $--gw;width: 120px;height: 120px;}
 .circle__container{width: 100%;height:100%;}
 .circle__svg{position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);width: 100%;height: 100%;}
 .circle__text{fill: $white;font-size: 13.9px;font-weight: 400;transition-duration: 0.3s;font-family: $font1;}
