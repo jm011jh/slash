@@ -14,6 +14,10 @@ body.white .footer__c1_belt svg {
   fill: #ffffff;
 }
 
+#footer {
+  padding-bottom: 140px;
+}
+
 .footer__c1 {
   position: relative;
   overflow-x: hidden;
@@ -83,7 +87,7 @@ body.white .footer__c1_belt svg {
   font-size: 20px;
   color: #ffffff;
   opacity: 0.5;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .footer__c3 .p2 {
