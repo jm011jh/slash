@@ -4,6 +4,7 @@
 @import url("./line.css");
 @import url("./circle.css");
 @import url("./footer.css");
+@import url("./cursor.css");
 * {
   padding: 0;
   margin: 0;

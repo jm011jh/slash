@@ -4,6 +4,7 @@
 @import url("./line.css");
 @import url("./circle.css");
 @import url("./footer.css");
+@import url("./cursor.css");
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;}
 
 $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";

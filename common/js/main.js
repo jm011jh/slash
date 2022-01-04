@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    var windowScrollTop = $(document).scrollTop();
     var winW = $(window).width();
     var winH = $(window).height();
+    var windowScrollTop = $(document).scrollTop();
+    var windowScrollBot = windowScrollTop + winH;
 
     const body = $('body');
     const s1 = $('#sect1');
@@ -48,6 +49,7 @@ $(document).ready(function(){
             scrollDelay=false;
             scrollPadding=500;//스크롤여분값
             windowScrollTop = $(document).scrollTop();
+            windowScrollBot = windowScrollTop + winH;
 
             if(200 < windowScrollTop && windowScrollTop < (s3t - scrollPadding)){
                 body.removeClass('white');
@@ -64,6 +66,32 @@ $(document).ready(function(){
                 scrollDelay=true;
             },10);
         };
+
+        $('.scroll-detect').each(function(index,item){
+            var thisTop = $(this).offset().top;
+            var topPadding = 100;
+
+            if(windowScrollTop < thisTop && thisTop < windowScrollBot - topPadding){
+                $(this).addClass('on_view')
+            }else{
+                $(this).removeClass('on_view')
+            }
+        })
+
+        $('.s6__c1_col').each(function(){
+            var thisTop = $(this).offset().top;
+            var topPadding = 300;
+            var parentBox = $(this).find('.s6__c1_padding')
+            var stretchBox = $(this).find('.s6__c1_imgBox')
+            var stretchW = stretchBox.width()
+            if(thisTop<windowScrollBot - topPadding && windowScrollTop < thisTop){
+                $(this).css({"marginLeft":""+stretchW/2+"px"})
+                parentBox.css({"width":stretchW})
+            }else{
+                $(this).css({"marginLeft":"-"+stretchW/2+"px"})
+                parentBox.css({"width":"0px"})
+            }
+        })
     });
     $(window).resize(function(){
         sizeRefresh()
@@ -138,30 +166,48 @@ $(document).ready(function(){
     while(s1c3beltWrapW - s1c3beltW <= winW)
 
     const animationTime = 200;
-    $('.s6__c1_col').on({
-        mouseenter:function(){
-            var parentBox = $(this).find('.s6__c1_padding')
-            var stretchBox = $(this).find('.s6__c1_imgBox')
-            var stretchW = stretchBox.width()
-            parentBox.stop().animate({
-                "width":stretchW
-            },animationTime,"linear")
-            $(this).stop().animate({
-                "marginLeft":""+stretchW/2+"px"
-            },animationTime,"linear")
-            console.log(stretchW)
-        },
-        mouseleave:function(){
-            var parentBox = $(this).find('.s6__c1_padding')
-            var stretchBox = $(this).find('.s6__c1_imgBox')
-            var stretchW = stretchBox.width()
+    // $('.s6__c1_col').on({
+    //     mouseenter:function(){
+    //         var parentBox = $(this).find('.s6__c1_padding')
+    //         var stretchBox = $(this).find('.s6__c1_imgBox')
+    //         var stretchW = stretchBox.width()
+    //         parentBox.stop().animate({
+    //             "width":stretchW
+    //         },animationTime,"linear")
+    //         $(this).stop().animate({
+    //             "marginLeft":""+stretchW/2+"px"
+    //         },animationTime,"linear")
+    //         console.log(stretchW)
+    //     },
+    //     mouseleave:function(){
+    //         var parentBox = $(this).find('.s6__c1_padding')
+    //         var stretchBox = $(this).find('.s6__c1_imgBox')
+    //         var stretchW = stretchBox.width()
 
-            parentBox.stop().animate({
-                "width":"0"
-            },animationTime,"linear")
-            $(this).stop().animate({
-                "marginLeft":"-"+stretchW/2+"px"
-            },animationTime,"linear")
-        },
+    //         parentBox.stop().animate({
+    //             "width":"0"
+    //         },animationTime,"linear")
+    //         $(this).stop().animate({
+    //             "marginLeft":"-"+stretchW/2+"px"
+    //         },animationTime,"linear")
+    //     },
+    // })
+    const s3c2p1 = $('.s3__c2_p1')
+    const s3c2p1Text = s3c2p1.text()
+    const s3c2p1arr = s3c2p1Text.split(" ");
+    console.log(s3c2p1arr)
+
+    for(i=0;i<s3c2p1arr.length;i++){
+        // console.log('hi')
+    }
+    $('.split_space').each(function(){
+        var text = $(this).text();
+        var arr = text.split(" ");
+        $(this).empty();
+        for(i=0;i<arr.length;i++){
+            var span = $("<span>"+ arr[i] +"&nbsp;</span>")
+            span.addClass('mouse-change')
+            span.appendTo($(this))
+        }
     })
 })

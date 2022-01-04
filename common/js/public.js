@@ -5,6 +5,7 @@ $(document).ready(function(){
     $.get(`common/inc/nav.html`, (data) => { $("#nav").prepend(data);})
     $.get(`common/inc/circle.html`, (data) => { $("#downCircle").prepend(data);})
     $.get(`common/inc/footer.html`, (data) => { $("#footer").prepend(data)})
+    $.get(`common/inc/cursor.html`, (data) => { $("#cursor").prepend(data)})
     for(let i = 0; i<= $(".line").length - 1; i++){
         $.get(`common/inc/line.html`, (data)=>{ $(".line").eq(i).prepend(data);})
     }
