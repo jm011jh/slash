@@ -69,34 +69,31 @@
         }
     }
     setAttr(s3c1f1, {
-        "data-1990": "opacity:0;",
         "data-2000": "left:50%;top:50%;transform:translate(-50%,-50%);opacity:1;",
         "data-3000": "left:2%;top:75%;transform:translate(0%,-50%);opacity:1;",
     })
     setAttr(s3c1f2, {
-        "data-1990": "opacity:0;",
         "data-2000": "left:50%;transform:translate(-50%,-50%);opacity:1;",
         "data-3000": "left:98%;transform:translate(-100%,-50%);opacity:1;",
     })
     setAttr(s3c1f3, {
-        "data-1990": "opacity:0;",
         "data-2000": "left:50%;top:50%;transform:translate(-50%,-50%);opacity:1;",
         "data-3000": "left:2%;top:25%;transform:translate(0%,-50%);opacity:1;",
     })
     setAttr(s3c1f1img1,{
-        "data-1900": "opacity:0",
+        "data-1700": "opacity:0",
         "data-2000": "opacity:1",
         "data-3800": "opacity:1",
         "data-4000": "opacity:0",
     })
     setAttr(s3c1f2img1,{
-        "data-1900": "opacity:0",
+        "data-1700": "opacity:0",
         "data-2000": "opacity:1",
         "data-3800": "opacity:1",
         "data-4000": "opacity:0",
     })
     setAttr(s3c1f3img1,{
-        "data-1900": "opacity:0",
+        "data-1700": "opacity:0",
         "data-2000": "opacity:1",
         "data-3800": "opacity:1",
         "data-4000": "opacity:0",
@@ -122,19 +119,19 @@
     setAttr(s3c1f1img3,{
         "data-4950": "opacity:0",
         "data-5000": "opacity:1",
-        "data-5800": "opacity:1",
+        "data-5500": "opacity:1",
         "data-6000": "opacity:0",
     })
     setAttr(s3c1f2img3,{
         "data-4950": "opacity:0",
         "data-5000": "opacity:1",
-        "data-5800": "opacity:1",
+        "data-5500": "opacity:1",
         "data-6000": "opacity:0",
     })
     setAttr(s3c1f3img3,{
         "data-4950": "opacity:0",
         "data-5000": "opacity:1",
-        "data-5800": "opacity:1",
+        "data-5500": "opacity:1",
         "data-6000": "opacity:0",
     })
 
