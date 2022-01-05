@@ -141,6 +141,12 @@ $(document).ready(function(){
             })
         
     }
+    // function beltMoveLeft(el,beltW){
+    //     $(el).css({"transform":`translate(${(0 - beltW)}px,0px)`,"transition-duration":"8s","transition-timing-function":"linear"})
+    //     setTimeout(()=>{
+    //         $(el).css({"transform":"translate(0px,0px)","transition-duration":"0s"})
+    //     },s1c2beltMoveSpeed)
+    // }
     function beltMoveRight(el,beltW,speed){
         $(el).css({"left":`${0 - beltW}px`})
         $(el).animate({
@@ -209,5 +215,10 @@ $(document).ready(function(){
             span.addClass('mouse-change')
             span.appendTo($(this))
         }
+    })
+    $('.s1__c1__title p').each(function(){
+        var text = text.split(" ");
+        var arr = text.split(" ");
+        
     })
 })

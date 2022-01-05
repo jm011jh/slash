@@ -5,6 +5,7 @@
 @import url("./circle.css");
 @import url("./footer.css");
 @import url("./cursor.css");
+@import url("./read_more.css");
 * {
   padding: 0;
   margin: 0;
@@ -65,5 +66,50 @@ li {
 
 .font2 {
   font-family: "Playfair Display", serif;
+}
+
+.slot-overflow {
+  overflow-x: hidden;
+  overflow-y: unset;
+}
+
+.slot-container {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-90deg) rotateY(0deg);
+          transform: rotateX(-90deg) rotateY(0deg);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-perspective: -1000px;
+          perspective: -1000px;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.slot-content:not(.fake) {
+  -webkit-transform: rotateX(0deg) translateZ(80px);
+          transform: rotateX(0deg) translateZ(80px);
+  position: absolute;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.slot-container.on_view {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+          transform: rotateX(0deg) rotateY(0deg);
+}
+
+.slot-container.delay02 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.fake {
+  opacity: 0;
+  -webkit-transform: unset;
+          transform: unset;
+  position: unset !important;
 }
 /*# sourceMappingURL=public.css.map */

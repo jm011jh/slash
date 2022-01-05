@@ -8,16 +8,62 @@ $(document).ready(function(){
     var ftC1beltWrapW = ftC1beltWrap.width();
     var ftC1beltL = ftC1belt.length;
     var ftC1beltW = ftC1belt.width();
+//#region resize function=====================================
+$(window).resize(function(){
+    sizeRefresh()
+    ftC1Cloning();
+});
+function sizeRefresh(){
+    ftC1beltW = ftC1belt.width();
+    winW = $(window).width();
+    winH = $(window).height();
+    stickyTop = footerSticky.getBoundingClientRect().top;
+    stickyLeft = footerSticky.getBoundingClientRect().left;
+    stickyW = $footerSticky.outerWidth();
+    stickyH = $footerSticky.outerHeight();
+    circleW = $footerStickyCircle.outerWidth();
+    circleH = $footerStickyCircle.outerHeight();
+}
+//#endregion resize function==================================
+//#region sticky circle function==============================
+    const footerSticky = document.getElementById('footerSticky');
+    const $footerSticky = $('#footerSticky');
+    const $footerStickyCircle = $('#footerStickyCircle');
+    const $footerStickyBlend = $('#footerStickyBlend')
+    var stickyTop = footerSticky.getBoundingClientRect().top;
+    var stickyLeft = footerSticky.getBoundingClientRect().left;
+    var stickyW = $footerSticky.outerWidth();
+    var stickyH = $footerSticky.outerHeight();
+    var circleW = $footerStickyCircle.outerWidth();
+    var circleH = $footerStickyCircle.outerHeight();
 
-    $(window).resize(function(){
-        sizeRefresh()
-        ftC1Cloning();
-    });
-    function sizeRefresh(){
-        ftC1beltW = ftC1belt.width();
-        winW = $(window).width();
-        winH = $(window).height();
-    }
+    $('.footer__c2_sticky').mousemove(function(e){
+        stickyTop = footerSticky.getBoundingClientRect().top;
+        stickyLeft = footerSticky.getBoundingClientRect().left;
+        var stickyRange = 2;//숫자가 커질 수록 도형 이동 거리가 줄어듭니다.
+        var x = e.clientX - stickyLeft - stickyW/2;
+        var y = e.clientY - stickyTop - stickyH/2;
+        TweenLite.to($footerStickyCircle,1,{
+            css:{
+                transform:`matrix(1,0,0,1,${x/3},${y/3})`,
+            }
+        })
+    })
+    $('.footer__c2_sticky').mouseleave(function(){
+        setTimeout(()=>{
+            $footerStickyBlend.removeClass('blended')
+            TweenLite.to($footerStickyCircle,0.5,{
+                css:{
+                    transform:`matrix(1,0,0,1,0,0)`,
+                }
+            })
+        },100)
+    })
+    $('.footer__c2_sticky').mouseenter(function(){
+        $footerStickyBlend.addClass('blended')
+    })
+//#endregion sticky circle function==============================
+//#region belt move function=====================================
     function ftC1Cloning(){
         if(ftC1beltWrapW - ftC1beltW <= winW){
             ftC1belt.eq(0).clone().appendTo(ftC1beltWrap);
@@ -53,4 +99,5 @@ $(document).ready(function(){
 
     do{ftC1Cloning()}
     while(ftC1beltWrapW - ftC1beltW <= winW)
+//#endregion belt move function==================================
 })

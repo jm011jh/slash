@@ -5,6 +5,7 @@
 @import url("./circle.css");
 @import url("./footer.css");
 @import url("./cursor.css");
+@import url("./read_more.css");
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;}
 
 $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
@@ -23,3 +24,13 @@ li{list-style: none;}
 .relative{position: relative;}
 .font1{font-family: $font1;}
 .font2{font-family: $font2;}
+.slot-overflow{overflow-x: hidden;overflow-y: unset;}
+.slot-container{transform-style: preserve-3d;transform: rotateX(-90deg) rotateY(0deg);transition-duration: 0.6s;perspective: -1000px;transition-delay: 0.5s;}
+.slot-content:not(.fake){transform: rotateX(0deg) translateZ(80px);position: absolute;transition-duration: 0.6s;transition-delay: 0.5s;}
+.slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
+.slot-container.delay02{transition-delay: 0.2s;}
+
+// .s1__c3.slot-container{transform:rotateX(90deg) rotateY(0deg)}
+// .s1__c3.slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
+// .s1__c3 .slot-content:not(.fake){transform: rotateX(0deg) translateZ(200px);}
+.fake{opacity: 0;transform: unset;position: unset !important;}

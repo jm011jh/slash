@@ -1,0 +1,38 @@
+$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+$font2 : 'Playfair Display', serif;
+$black : #000000;
+$white : #ffffff;
+$--gw : 40px;//외곽
+$--gc : 135px;//컬럼
+$--gg : 20px;//갭
+$--g : 155px;//컬럼+갭
+@mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
+@mixin beltContainer {position: relative;overflow-x: hidden;width: 100%;}
+@keyframes rotating{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+
+body.black{
+    .btn__read_more{border: 1px solid $white;}
+    .btn__read_more p{color: $white;}
+    .btn__read_more .arrow{border-top: 1px solid $white;border-right: 1px solid $white;}
+    .btn__read_more .arrow span{background-color: $white;}
+}
+body.white{
+    .btn__read_more{border: 1px solid $white;}
+    .btn__read_more p{color: $white;}
+    .btn__read_more .arrow{border-top: 1px solid $white;border-right: 1px solid $white;}
+    .btn__read_more .arrow span{background-color: $white;}
+}
+.btn__read_more{border-radius: 40px;height: 75px;}
+.btn__read_more a{display: flex;width: 100%;height: 100%;padding: 24px 28px;transform: translate(0%,0%);transition-duration: 0.3s;justify-content: space-between;}
+.btn__read_more p{font-size: 20px;margin-right: 26px;}
+.btn__read_more .arrow{width: 18px;height: 18px;border: 1px solid #000;border-bottom: 0px;border-left: 0px;position: absolute;right: 24px;}
+.btn__read_more .arrow span{display: block;position: absolute;top: 50%;left: 50%;background-color: $black;width: 25.4px;height: 1px;transform:translate(-50%,-50%)rotate(-45deg);}
+.btn__read_more .arrow.fake{position:relative;opacity: 0;}
+.btn__read_more .arrow.real{transform: translate(0,0);transition-duration: 0.4s;}
+.btn__read_more .arrow.real:nth-of-type(3){transform: translate(-100%,100%);opacity: 0;}
+.btn__read_more:hover .arrow.real:nth-of-type(2){opacity: 0;transform: translate(100%,-100%);}
+// .btn__read_more:hover .arrow.real:nth-of-type(3){opacity: 1;transform: translate(0%,0%);}
+.btn__read_more:hover .arrow.real:nth-of-type(3){opacity: 1;transform: translate(-20%,20%);}
