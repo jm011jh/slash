@@ -2,10 +2,27 @@
   0% {
     -webkit-transform: translate(-55%, -50%);
             transform: translate(-55%, -50%);
+    opacity: 1;
   }
-  100% {
+  25% {
     -webkit-transform: translate(55%, -50%);
             transform: translate(55%, -50%);
+    opacity: 1;
+  }
+  26% {
+    -webkit-transform: translate(55%, -50%);
+            transform: translate(55%, -50%);
+    opacity: 0;
+  }
+  27% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+    opacity: 0;
   }
 }
 
@@ -13,10 +30,27 @@
   0% {
     -webkit-transform: translate(-55%, -50%);
             transform: translate(-55%, -50%);
+    opacity: 1;
   }
-  100% {
+  25% {
     -webkit-transform: translate(55%, -50%);
             transform: translate(55%, -50%);
+    opacity: 1;
+  }
+  26% {
+    -webkit-transform: translate(55%, -50%);
+            transform: translate(55%, -50%);
+    opacity: 0;
+  }
+  27% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-55%, -50%);
+            transform: translate(-55%, -50%);
+    opacity: 0;
   }
 }
 
@@ -68,8 +102,8 @@ body.white .line-moving .line-stick {
 }
 
 .line-moving.animate {
-  -webkit-animation: 2s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
-          animation: 2s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01);
+  -webkit-animation: 4s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01) infinite;
+          animation: 4s 0s lineMovingHorizontal cubic-bezier(0.11, 0.11, 0.69, 0.01) infinite;
 }
 
 .line-moving .line-stick {

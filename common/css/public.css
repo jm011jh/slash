@@ -20,6 +20,7 @@ body {
   height: 300vh;
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
+  overflow-x: hidden;
 }
 
 body.black {

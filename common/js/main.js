@@ -12,6 +12,7 @@ $(document).ready(function(){
     const s5 = $('#sect5');
     const s6 = $('#sect6');
     const s7 = $('#sect7');
+    const footer = $('#footer');
     var s1t = s1.offset().top;
     var s2t = s2.offset().top;
     var s3t = s3.offset().top;
@@ -19,6 +20,7 @@ $(document).ready(function(){
     var s5t = s5.offset().top;
     var s6t = s6.offset().top;
     var s7t = s7.offset().top;
+    var footert = footer.offset().top;
 
     const s1c2belt = $('.s1__c2_belt');
     const s1c2beltWrap = $('.s1__c2_wrap');
@@ -31,33 +33,40 @@ $(document).ready(function(){
     var s1c3beltWrapW = s1c3beltWrap.width();
     var s1c3beltL = s1c3belt.length;
     var s1c3beltW = s1c3belt.width();
-
     var scrollDelay = true;
-    var swiper = new Swiper(".s4__swiper", {
-        slidesPerView: 3.065,
-        spaceBetween: 20,
-    });
-    function s4SwiperImgSizing(){
-        var w = $('.s4__swiper_imgBox').width()
-        $('.s4__swiper_imgBox').height(w)
-    }
-    setTimeout(()=>{
-        s4SwiperImgSizing()
-    })
     $(window).scroll(function(){
         if(scrollDelay){
             scrollDelay=false;
-            scrollPadding=500;//스크롤여분값
+            scrollPadding=300;//스크롤여분값
             windowScrollTop = $(document).scrollTop();
             windowScrollBot = windowScrollTop + winH;
 
             if(200 < windowScrollTop && windowScrollTop < (s3t - scrollPadding)){
+                console.log('sect1')
                 body.removeClass('white');
                 body.addClass('black');
             }else if((s3t - scrollPadding) <= windowScrollTop && windowScrollTop < (s4t - scrollPadding)){
+                console.log('sect3')
                 body.removeClass('black');
                 body.addClass('white');
-            }else if((s4t - scrollPadding)<=windowScrollTop){
+            }else if((s4t - scrollPadding) <= windowScrollTop && windowScrollTop < (s5t - scrollPadding)){
+                console.log('sect4')
+                body.removeClass('white');
+                body.addClass('black');
+            }else if((s5t - scrollPadding) <= windowScrollTop && windowScrollTop < (s6t - scrollPadding)){
+                console.log('sect5')
+                body.removeClass('white');
+                body.addClass('black');
+            }else if((s6t - scrollPadding) <= windowScrollTop && windowScrollTop < (s7t - scrollPadding)){
+                console.log('sect6')
+                body.removeClass('black');
+                body.addClass('white');
+            }else if((s7t - scrollPadding) <= windowScrollTop && windowScrollTop < (footert - scrollPadding)){
+                console.log('sect7')
+                body.removeClass('white');
+                body.addClass('black');
+            }else if((footert - scrollPadding) <= windowScrollTop){
+                console.log('footer')
                 body.removeClass('white');
                 body.addClass('black');
             }
@@ -77,7 +86,14 @@ $(document).ready(function(){
                 $(this).removeClass('on_view')
             }
         })
+        $('.scroll-detect-instant').each(function(index,item){
+            var thisTop = $(this).offset().top;
+            var topPadding = 100;
 
+            if(windowScrollTop < thisTop && thisTop < windowScrollBot - topPadding){
+                $(this).addClass('on_view')
+            }
+        })
         $('.s6__c1_col').each(function(){
             var thisTop = $(this).offset().top;
             var topPadding = 300;
@@ -93,9 +109,9 @@ $(document).ready(function(){
             }
         })
     });
+//#region resize==================================================
     $(window).resize(function(){
         sizeRefresh()
-        s4SwiperImgSizing();
         s1c2Cloning();
         s1c3Cloning();
     });
@@ -107,11 +123,14 @@ $(document).ready(function(){
         s5t = s5.offset().top;
         s6t = s6.offset().top;
         s7t = s7.offset().top;
+        footert = footer.offset().top;
         s1c2beltW = s1c2belt.width();
         s1c3beltW = s1c3belt.width();
         winW = $(window).width();
         winH = $(window).height();
     }
+//#endregion resize===============================================
+//#region beltmove==================================================
     function s1c2Cloning(){
         if(s1c2beltWrapW - s1c2beltW <= winW){
             s1c2belt.eq(0).clone().appendTo(s1c2beltWrap);
@@ -131,8 +150,8 @@ $(document).ready(function(){
         s1c3beltWrapW = (s1c3beltW + 2) * (s1c3beltL + 1);
     }
 
-    s1c2beltMoveSpeed = 8000;
-    s1c3beltMoveSpeed = 45000;
+    var s1c2beltMoveSpeed = 8000;
+    var s1c3beltMoveSpeed = 45000;
     function beltMoveLeft(el,beltW,speed){
             $(el).animate({
                 left:`${(0 - beltW)}px`
@@ -141,12 +160,6 @@ $(document).ready(function(){
             })
         
     }
-    // function beltMoveLeft(el,beltW){
-    //     $(el).css({"transform":`translate(${(0 - beltW)}px,0px)`,"transition-duration":"8s","transition-timing-function":"linear"})
-    //     setTimeout(()=>{
-    //         $(el).css({"transform":"translate(0px,0px)","transition-duration":"0s"})
-    //     },s1c2beltMoveSpeed)
-    // }
     function beltMoveRight(el,beltW,speed){
         $(el).css({"left":`${0 - beltW}px`})
         $(el).animate({
@@ -170,42 +183,12 @@ $(document).ready(function(){
     while(s1c2beltWrapW - s1c2beltW <= winW)
     do{s1c3Cloning()}
     while(s1c3beltWrapW - s1c3beltW <= winW)
-
-    const animationTime = 200;
-    // $('.s6__c1_col').on({
-    //     mouseenter:function(){
-    //         var parentBox = $(this).find('.s6__c1_padding')
-    //         var stretchBox = $(this).find('.s6__c1_imgBox')
-    //         var stretchW = stretchBox.width()
-    //         parentBox.stop().animate({
-    //             "width":stretchW
-    //         },animationTime,"linear")
-    //         $(this).stop().animate({
-    //             "marginLeft":""+stretchW/2+"px"
-    //         },animationTime,"linear")
-    //         console.log(stretchW)
-    //     },
-    //     mouseleave:function(){
-    //         var parentBox = $(this).find('.s6__c1_padding')
-    //         var stretchBox = $(this).find('.s6__c1_imgBox')
-    //         var stretchW = stretchBox.width()
-
-    //         parentBox.stop().animate({
-    //             "width":"0"
-    //         },animationTime,"linear")
-    //         $(this).stop().animate({
-    //             "marginLeft":"-"+stretchW/2+"px"
-    //         },animationTime,"linear")
-    //     },
-    // })
+//#endregion beltmove==================================================
+//#region text split================================================
     const s3c2p1 = $('.s3__c2_p1')
     const s3c2p1Text = s3c2p1.text()
     const s3c2p1arr = s3c2p1Text.split(" ");
-    console.log(s3c2p1arr)
 
-    for(i=0;i<s3c2p1arr.length;i++){
-        // console.log('hi')
-    }
     $('.split_space').each(function(){
         var text = $(this).text();
         var arr = text.split(" ");
@@ -216,9 +199,31 @@ $(document).ready(function(){
             span.appendTo($(this))
         }
     })
-    $('.s1__c1__title p').each(function(){
-        var text = text.split(" ");
+    $('.split_text').each(function(){
+        var text = $(this).text();
         var arr = text.split(" ");
-        
+        $(this).empty();
+        for(i=0;i<arr.length;i++){
+            var span = $("<span>" + arr[i] + " </span>");
+            span.addClass('space')
+            span.appendTo($(this));
+            var spanText = span.text();
+            var spanArr = spanText.split("");
+            span.empty();
+            for(j=0;j<spanArr.length;j++){
+                var spanMini = $("<span>" + spanArr[j] + "</span>");
+                spanMini.addClass('mini-span')
+                spanMini.appendTo(span);
+            }
+        }
     })
+//#endregion text split=============================================
+//#region sect5=================================================
+// $('.s5__c1_listWrap').mouseenter(function(){
+//     $(this).find('a').addClass('hover')
+// })
+// $('.s5__c1_listWrap').mouseleave(function(){
+//     $(this).find('a').removeClass('hover')
+// })
+//#endregion sect5==============================================
 })
