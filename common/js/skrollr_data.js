@@ -31,62 +31,65 @@ setAttr(s3c1f3, {
     "data-4500": "left:2%;top:25%;transform:translate(0%,-50%);opacity:1;",
 })
 setAttr(s3c1f1img1, {
-    "data-2700": "opacity:0",
-    "data-3000": "opacity:1",
-    "data-4800": "opacity:1",
-    "data-5000": "opacity:0",
+    "data-2999": "@opacity:off;",
+    "data-3000": "@opacity:on",
+    "data-4998": "@opacity:on",
+    "data-4999": "@opacity:off",
 })
 setAttr(s3c1f2img1, {
-    "data-2700": "opacity:0",
-    "data-3000": "opacity:1",
-    "data-4800": "opacity:1",
-    "data-5000": "opacity:0",
+    "data-2999": "@opacity:off;",
+    "data-3000": "@opacity:on",
+    "data-4998": "@opacity:on",
+    "data-4999": "@opacity:off",
 })
 setAttr(s3c1f3img1, {
-    "data-2700": "opacity:0",
-    "data-3000": "opacity:1",
-    "data-4800": "opacity:1",
-    "data-5000": "opacity:0",
+    "data-2999": "@opacity:off;",
+    "data-3000": "@opacity:on",
+    "data-4998": "@opacity:on",
+    "data-4999": "@opacity:off",
 })
+
 setAttr(s3c1f1img2, {
-    "data-4950": "opacity:0",
-    "data-5000": "opacity:1",
-    "data-5800": "opacity:1",
-    "data-6000": "opacity:0",
+    "data-4999": "@opacity:off;",
+    "data-5000": "@opacity:on",
+    "data-5998": "@opacity:on",
+    "data-5999": "@opacity:off",
 })
 setAttr(s3c1f2img2, {
-    "data-4950": "opacity:0",
-    "data-5000": "opacity:1",
-    "data-5800": "opacity:1",
-    "data-6000": "opacity:0",
+    "data-4999": "@opacity:off;",
+    "data-5000": "@opacity:on",
+    "data-5998": "@opacity:on",
+    "data-5999": "@opacity:off",
 })
 setAttr(s3c1f3img2, {
-    "data-4950": "opacity:0",
-    "data-5000": "opacity:1",
-    "data-5800": "opacity:1",
-    "data-6000": "opacity:0",
+    "data-4999": "@opacity:off;",
+    "data-5000": "@opacity:on",
+    "data-5998": "@opacity:on",
+    "data-5999": "@opacity:off",
 })
+
 setAttr(s3c1f1img3, {
-    "data-5950": "opacity:0",
-    "data-6000": "opacity:1",
-    "data-6500": "opacity:1",
-    "data-7000": "opacity:0",
+    "data-5999": "@opacity:off;",
+    "data-6000": "@opacity:on",
+    "data-6998": "@opacity:on",
+    "data-6999": "@opacity:off",
 })
 setAttr(s3c1f2img3, {
-    "data-5950": "opacity:0",
-    "data-6000": "opacity:1",
-    "data-6500": "opacity:1",
-    "data-7000": "opacity:0",
+    "data-5999": "@opacity:off;",
+    "data-6000": "@opacity:on",
+    "data-6998": "@opacity:on",
+    "data-6999": "@opacity:off",
 })
 setAttr(s3c1f3img3, {
-    "data-5950": "opacity:0",
-    "data-6000": "opacity:1",
-    "data-6500": "opacity:1",
-    "data-7000": "opacity:0",
+    "data-5999": "@opacity:off;",
+    "data-6000": "@opacity:on",
+    "data-6998": "@opacity:on",
+    "data-6999": "@opacity:off",
 })
 //#endregion sect3===============================================
 //#region sect4==================================================
-const s4SwiperContents = [
+const $s4c2Wrapper = $('#s4c2Wrapper')
+const s4c2Contents = [
     {
         year: "©2021",
         img: "/common/image/slide_dubai.png",
@@ -148,18 +151,17 @@ const s4SwiperContents = [
         description: "(slide-10 description)",
     },
 ]
-const $s4c2Wrapper = $('#s4c2Wrapper')
-for (i = 0; i <= s4SwiperContents.length - 1; i++) {
+for (i = 0; i <= s4c2Contents.length - 1; i++) {
     var $s4SwiperList =
         $(
             `<li class="s4__c2_listitem mouse-change-link">
             <a href="#">
-                <p class="s4__c2_p1">${s4SwiperContents[i].year}</p>
+                <p class="s4__c2_p1">${s4c2Contents[i].year}</p>
                 <div class="s4__c2_imgBox">
-                <img id="s4Img${i + 1}" src="${s4SwiperContents[i].img}" alt=""></img>
+                <img id="s4Img${i + 1}" src="${s4c2Contents[i].img}" alt=""></img>
                 </div>
-                <p class="s4__c2_p2">${s4SwiperContents[i].title}</p>
-                <p class="s4__c2_p3">${s4SwiperContents[i].description}</p>
+                <p class="s4__c2_p2">${s4c2Contents[i].title}</p>
+                <p class="s4__c2_p3">${s4c2Contents[i].description}</p>
             </a>
             </li>`
         )
@@ -195,7 +197,7 @@ const s4Img10 = document.getElementById('s4Img10')
 //     "data-13500": "@data-moving:7;",
 // })
 setAttr(s4c2Wrapper,{
-    "data-8800": "transform:translate(0%,-50%)",
+    "data-10000": "transform:translate(0%,-50%)",
     "data-13500": "transform:translate(-100%,-50%)",
 })
 setAttr(s4Img1, {

@@ -71,21 +71,21 @@ body.white .footer__c1_belt svg {
 
 .footer__c2_sticky {
   position: absolute;
-  width: 350px;
-  height: 350px;
-  border: 1px solid #ff0;
+  width: 400px;
+  height: 400px;
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, calc(-50% - 28px));
           transform: translate(-50%, calc(-50% - 28px));
+  border-radius: 50%;
 }
 
 .footer__c2_sticky_circle {
   width: 280px;
   height: 280px;
   position: absolute;
-  top: 35px;
-  left: 35px;
+  top: 60px;
+  left: 60px;
   border-radius: 50%;
   pointer-events: none;
 }

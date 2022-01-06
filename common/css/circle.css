@@ -2,7 +2,7 @@ body.black .circle__text {
   fill: #ffffff;
 }
 
-body.black .circle__arrow {
+body.black .circle__circle {
   background-color: #ffffff;
 }
 
@@ -14,7 +14,7 @@ body.white .circle__text {
   fill: #000000;
 }
 
-body.white .circle__arrow {
+body.white .circle__circle {
   background-color: #000000;
 }
 
@@ -54,16 +54,32 @@ body.white .circle__arrow span {
   font-family: Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
 }
 
-.circle__arrow {
+.circle__circle {
   width: 75%;
   height: 75%;
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.circle__arrow {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
 }
 
 .circle__arrow span {
@@ -96,6 +112,43 @@ body.white .circle__arrow span {
   top: 50%;
   -webkit-transform: translate(calc(-50% + 8.5px), calc(-50% + 15px)) rotate(45deg);
           transform: translate(calc(-50% + 8.5px), calc(-50% + 15px)) rotate(45deg);
+}
+
+@-webkit-keyframes arrowInit {
+  0% {
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+  }
+}
+
+@keyframes arrowInit {
+  0% {
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -55%);
+            transform: translate(-50%, -55%);
+  }
+}
+
+.circle__arrow.init {
+  -webkit-animation: 0.6s 0s arrowInit infinite alternate;
+          animation: 0.6s 0s arrowInit infinite alternate;
+}
+
+.circle__arrow.right {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.circle__arrow.up {
+  -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+          transform: translate(-50%, -50%) rotate(-180deg);
 }
 
 .path {

@@ -51,7 +51,7 @@ body.white{
 #nav.on .nav_container{transform: translate(0,0);}
 #nav.on .nav_head{opacity: 1;cursor: pointer;}
 #nav.on .nav_body{pointer-events: none;}
-#nav.on .nav_ul li a{transform: translate(0,20px);}
+#nav.on .nav_ul li a{transform: translate(0,22px);}
 
 #nav .nav_bg{opacity: 0;transform: scale(0.8);}
 #nav.show .nav_btn::before{transform: translate(0,-100%);}

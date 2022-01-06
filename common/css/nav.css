@@ -143,8 +143,8 @@ body.white #nav.show .nav_ul li span {
 }
 
 #nav.on .nav_ul li a {
-  -webkit-transform: translate(0, 20px);
-          transform: translate(0, 20px);
+  -webkit-transform: translate(0, 22px);
+          transform: translate(0, 22px);
 }
 
 #nav .nav_bg {

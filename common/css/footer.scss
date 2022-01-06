@@ -24,8 +24,8 @@ body.white{
 
 .footer__c2{padding-bottom: 300px;position: relative;}
 .footer__c2 p{color: $white;font-size: clamp(40px, 15vw, 180px);line-height: 1;text-align: center;}
-$stickyR : 350px;
-.footer__c2_sticky{position: absolute;width: $stickyR;height: $stickyR;border: 1px solid #ff0;top: 0;left: 50%;transform: translate(-50%,calc(-50% - 28px));}
+$stickyR : 400px;
+.footer__c2_sticky{position: absolute;width: $stickyR;height: $stickyR;top: 0;left: 50%;transform: translate(-50%,calc(-50% - 28px));border-radius: 50%;}
 $stickyCircleR : 280px;
 .footer__c2_sticky_circle{width: $stickyCircleR;height: $stickyCircleR;position: absolute;top:($stickyR - $stickyCircleR)/2;left:($stickyR - $stickyCircleR)/2;border-radius: 50%;pointer-events: none;}
 $stickyArrowR : 50px; 

@@ -45,7 +45,7 @@ function sizeRefresh(){
         var y = e.clientY - stickyTop - stickyH/2;
         TweenLite.to($footerStickyCircle,1,{
             css:{
-                transform:`matrix(1,0,0,1,${x/3},${y/3})`,
+                transform:`matrix(1,0,0,1,${x/2},${y/2})`,
             }
         })
     })

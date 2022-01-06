@@ -8,14 +8,15 @@ $--gg : 20px;
 $--g : 155px;
 $--gt : 40px;
 $--gb : 40px;
+@mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
 body.black{
     .circle__text{fill:$white}
-    .circle__arrow{background-color: $white;}
+    .circle__circle{background-color: $white;}
     .circle__arrow span{background-color: $black;}
 }
 body.white{
     .circle__text{fill: $black;}
-    .circle__arrow{background-color: $black;}
+    .circle__circle{background-color: $black;}
     .circle__arrow span{background-color: $white;}
 }
 
@@ -23,12 +24,20 @@ body.white{
 .circle__container{width: 100%;height:100%;}
 .circle__svg{position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);width: 100%;height: 100%;}
 .circle__text{fill: $white;font-size: 13.9px;font-weight: 400;transition-duration: 0.3s;font-family: $font1;}
-.circle__arrow{width: 75%;height: 75%;background-color: $white;border-radius: 50%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);
+.circle__circle{width: 75%;height: 75%;background-color: $white;border-radius: 50%; @include absCenter;}
+.circle__arrow{width: 75%;height: 75%;@include absCenter;transition-duration: 0.3s;animation-play-state: paused;transform:translate(-50%,-50%)rotate(0deg);
     span{position: absolute;}
     span:nth-child(1){width: 1px;height: 46px;transform: translate(-50%,-50%);left: 50%;top: 50%;}
     span:nth-child(2),span:nth-child(3){width: 1px;height: 25px;}
     span:nth-child(2){left: 50%;top: 50%;transform: translate(calc(-50% - 8.5px),calc(-50% + 15px)) rotate(-45deg);}
     span:nth-child(3){left: 50%;top: 50%;transform: translate(calc(-50% + 8.5px),calc(-50% + 15px)) rotate(45deg);}
 }
+@keyframes arrowInit{
+    0%{transform: translate(-50%,-45%);}
+    100%{transform: translate(-50%,-55%);}
+}
+.circle__arrow.init{animation:0.6s 0s arrowInit infinite alternate;}
+.circle__arrow.right{transform: translate(-50%,-50%) rotate(-90deg);}
+.circle__arrow.up{transform: translate(-50%,-50%) rotate(-180deg);}
 
 .path{fill:transparent;stroke:crimson;stroke-width:5;}
