@@ -8,7 +8,7 @@ $(window).resize(function(){
 })
 let mouse = {x:0,y:0};
 function cursorMove(e){
-    TweenLite.to(cursor,0.2,{
+    TweenLite.to(cursor,0.3,{
         css:{
             left:(e.clientX - $(cursor).outerHeight()/2)+"px",
             top:(e.clientY - $(cursor).outerWidth()/2)+"px"
@@ -17,7 +17,7 @@ function cursorMove(e){
 }
 window.addEventListener("mousemove",function(e){
     cursorMove(e)
-    var gutter = 10;
+    var gutter = 100;
     if(e.clientX<gutter||e.clientX>(winW - gutter)||e.clientY<gutter||e.clientY>(winH - gutter)){
         cursor.addClass('out')
     }else{

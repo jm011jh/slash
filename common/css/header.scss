@@ -8,9 +8,9 @@ $--gg : 20px;
 $--g : 155px;
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
 @keyframes soundAnimation {
-    0%{transform:   translate(0,50%) scaleY(0.2);}
-    50%{transform:  translate(0,0%) scaleY(1);}
-    100%{transform: translate(0,50%) scaleY(0.2);}
+    0%{transform:  scaleY(0.5) translate(0,25%) ;}
+    50%{transform: scaleY(1) translate(0,0%) ;}
+    100%{transform:scaleY(0.5) translate(0,25%) ;}
 }
 // #region header==================================================
 body.black{
@@ -26,21 +26,22 @@ body.white{
 #header{width: 100%;position: fixed;top: 0;padding-left:$--gw;padding-right:$--gw;padding-top: 40px;}
 
 .header__col1{display: flex;}
-.header__logo{font-size: 20px;}
-.header__sound{display: flex;cursor: pointer;}
-.header__sound_animation{display: flex;}
+.header__logo{font-size: 20px;width: $--gc;align-items: flex-end;display: flex;}
+.header__logo img{align-items: flex-end;}
+.header__sound{display: flex;cursor: pointer;align-items: flex-end;}
+.header__sound_animation{display: flex;transform: translate(0,-2px);margin-right: 10px;}
 .header__sound_animation span{display: block;width: 1px;height: 12px;margin-right: 2px;}
-.header__sound_states{font-size: 14px;}
+.header__sound_states{font-size: 14px;align-items: flex-end;}
 
 .header__sound.on{
     .header__sound_states.off{display: none;}
     .header__sound_states.on{display: block;}
-    .header__sound_animation span{animation: 1s 0s soundAnimation infinite;}
-    .header__sound_animation span:nth-child(1){animation-delay: 0s;}
-    .header__sound_animation span:nth-child(2){animation-delay: 0.05s;}
-    .header__sound_animation span:nth-child(3){animation-delay: 0.1s;}
-    .header__sound_animation span:nth-child(4){animation-delay: 0.15s;}
-    .header__sound_animation span:nth-child(5){animation-delay: 0.2s;}
+    .header__sound_animation span{animation: 0.6s 0s soundAnimation infinite;}
+    .header__sound_animation span:nth-child(1){animation-delay: 0s;animation-duration: 0.5s;}
+    .header__sound_animation span:nth-child(2){animation-delay: 0.15s;animation-duration: 0.4s;}
+    .header__sound_animation span:nth-child(3){animation-delay: 0.1s;animation-duration: 0.6s;}
+    .header__sound_animation span:nth-child(4){animation-delay: 0.05s;animation-duration: 0.55s;}
+    .header__sound_animation span:nth-child(5){animation-delay: 0.2s;animation-duration: 0.45s;}
 }
 .header__sound.off{
     .header__sound_states.off{display: block;}

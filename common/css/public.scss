@@ -13,9 +13,10 @@ $font2 : 'Playfair Display', serif;
 $black : #000000;
 $white : #ffffff;
 *{padding: 0;margin: 0;box-sizing: border-box;}
-body{font-size: 14px;font-family: $font1;background-color: #333;height: 300vh;transition-duration: 0.6s;overflow-x: hidden;}
+body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;}
 body.black{background-color: $black;}
 body.white{background-color: $white;}
+body.hidden{height: 100%;min-height: 100%;overflow: hidden !important; touch-action: none;}
 a,a:visited,a:link,a:hover{color: $black;text-decoration: none;}
 li{list-style: none;}
 #nav, #downCircle, #header{z-index: 99;}
@@ -24,6 +25,8 @@ li{list-style: none;}
 .relative{position: relative;}
 .font1{font-family: $font1;}
 .font2{font-family: $font2;}
+.opac0{opacity: 0 !important;}
+.opac1{opacity: 1 !important;}
 .slot-overflow{overflow-x: hidden;overflow-y: unset;}
 .slot-container{transform-style: preserve-3d;transform: rotateX(-90deg) rotateY(0deg);transition-duration: 0.6s;perspective: -1000px;transition-delay: 0.5s;}
 .slot-content:not(.fake){transform: rotateX(0deg) translateZ(80px);position: absolute;transition-duration: 0.6s;transition-delay: 0.5s;}
