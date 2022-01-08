@@ -7,6 +7,7 @@
 @import url("./cursor.css");
 @import url("./read_more.css");
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;}
+@mixin persParent{transform-style: preserve-3d; overflow: hidden;}
 
 $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
 $font2 : 'Playfair Display', serif;
@@ -33,6 +34,25 @@ li{list-style: none;}
 .slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
 .slot-container.delay02{transition-delay: 0.2s;}
 
+.perspective-text-parent{@include persParent;}
+.perspective-text-child{transition-property: transform;}
+@for $i from 1 through 20{
+    .on_view .perspective-text-child:nth-of-type(#{$i}){
+        transition-delay: #{$i/20}s;
+    }
+}
+.open-text-child{overflow: hidden;}
+.open-text-child span{display: inline-block;transition-duration: 0.6s;transform: translate(0,100%);opacity: 1;transition-property: opacity transform;transition-delay: 0s;}
+.on_view .open-text-child span{opacity: 1;transform: translate(0,0);}
+@for $i from 1 through 3{
+    .on_view .open-text-child:nth-of-type(#{$i}){
+    @for $k from 1 through 60{
+            span:nth-of-type(#{$k}){
+                transition-delay: #{$i*0.2 + $k*0.01}s;
+            }
+        }
+    }
+}
 // .s1__c3.slot-container{transform:rotateX(90deg) rotateY(0deg)}
 // .s1__c3.slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
 // .s1__c3 .slot-content:not(.fake){transform: rotateX(0deg) translateZ(200px);}

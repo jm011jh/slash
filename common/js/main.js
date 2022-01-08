@@ -381,40 +381,6 @@ function mainFunction(){
     do{s1c3Cloning()}
     while(s1c3beltWrapW - s1c3beltW <= winW)
 //#endregion beltmove==================================================
-//#region text split================================================
-    const s3c2p1 = $('.s3__c2_p1')
-    const s3c2p1Text = s3c2p1.text()
-    const s3c2p1arr = s3c2p1Text.split(" ");
-
-    $('.split_space').each(function(){
-        var text = $(this).text();
-        var arr = text.split(" ");
-        $(this).empty();
-        for(i=0;i<arr.length;i++){
-            var span = $("<span>"+ arr[i] +"&nbsp;</span>")
-            span.addClass('mouse-change')
-            span.appendTo($(this))
-        }
-    })
-    $('.split_text').each(function(){
-        var text = $(this).text();
-        var arr = text.split(" ");
-        $(this).empty();
-        for(i=0;i<arr.length;i++){
-            var span = $("<span>" + arr[i] + " </span>");
-            span.addClass('space')
-            span.appendTo($(this));
-            var spanText = span.text();
-            var spanArr = spanText.split("");
-            span.empty();
-            for(j=0;j<spanArr.length;j++){
-                var spanMini = $("<span>" + spanArr[j] + "</span>");
-                spanMini.addClass('mini-span')
-                spanMini.appendTo(span);
-            }
-        }
-    })
-//#endregion text split=============================================
 //#region sect5=================================================
 $('.s5__c1_listWrap').mouseenter(function(){
     $(this).find('a').addClass('hover')
