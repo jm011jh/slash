@@ -54,19 +54,19 @@
   }
 }
 
-body.black .line-container {
+#colorStyle.black .line-container {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-body.black .line-moving .line-stick {
+#colorStyle.black .line-moving .line-stick {
   background-color: #ffffff;
 }
 
-body.white .line-container {
+#colorStyle.white .line-container {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-body.white .line-moving .line-stick {
+#colorStyle.white .line-moving .line-stick {
   background-color: #000000;
 }
 

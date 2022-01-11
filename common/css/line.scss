@@ -13,11 +13,11 @@ $cubicBezier1 : cubic-bezier(0.11, 0.11, 0.69, 0.01);
     27%{transform: translate(-55%,-50%);opacity: 0;}
     100%{transform: translate(-55%,-50%);opacity: 0;}
 }
-body.black{
+#colorStyle.black{
     .line-container{background-color: rgba(255,255,255,0.3);}
     .line-moving .line-stick{background-color: $white;}
 }
-body.white{
+#colorStyle.white{
     .line-container{background-color: rgba(0,0,0,0.3);}
     .line-moving .line-stick{background-color: $black;}
 }

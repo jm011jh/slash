@@ -1,16 +1,16 @@
-body.black .footer__c1_belt p {
+#colorStyle.black .footer__c1_belt p {
   color: #ffffff;
 }
 
-body.black .footer__c1_belt svg {
+#colorStyle.black .footer__c1_belt svg {
   fill: #ffffff;
 }
 
-body.white .footer__c1_belt p {
+#colorStyle.white .footer__c1_belt p {
   color: #000000;
 }
 
-body.white .footer__c1_belt svg {
+#colorStyle.white .footer__c1_belt svg {
   fill: #ffffff;
 }
 

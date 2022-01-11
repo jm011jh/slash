@@ -28,27 +28,27 @@
   }
 }
 
-body.black .header__logo {
+#colorStyle.black .header__logo {
   color: #ffffff;
 }
 
-body.black .header__sound_animation span {
+#colorStyle.black .header__sound_animation span {
   background-color: #ffffff;
 }
 
-body.black .header__sound_states {
+#colorStyle.black .header__sound_states {
   color: #ffffff;
 }
 
-body.white .header__logo {
+#colorStyle.white .header__logo {
   color: #000000;
 }
 
-body.white .header__sound_animation span {
+#colorStyle.white .header__sound_animation span {
   background-color: #000000;
 }
 
-body.white .header__sound_states {
+#colorStyle.white .header__sound_states {
   color: #000000;
 }
 

@@ -14,6 +14,7 @@ $(document).ready(function(){
     const s6 = $('#sect6');
     const s7 = $('#sect7');
     const footer = $('#footer');
+    const colorStyle = $('#colorStyle')
     var s1t = s1.offset().top;
     var s2t = s2.offset().top;
     var s3t = s3.offset().top;
@@ -144,15 +145,28 @@ function s3c1Keep(dataNum){//for sect3 img function
 }
 function mainFunction(){
             //#region body scroll check==================================================
+            //#region scroll-detect check================================================
+        $('.s6__c1_col').each(function(){
+            var thisTop = $(this).offset().top;
+            var parentBox = $(this).find('.s6__c1_padding')
+            var stretchBox = $(this).find('.s6__c1_imgBox')
+            var stretchW = stretchBox.width()
+            if(thisTop<windowScrollBot - scrollPadding && windowScrollTop < thisTop){
+                parentBox.css({"width":stretchW})
+            }else{
+                parentBox.css({"width":"0px"})
+            }
+        })
+        //#endregion scroll-detect check=============================================
             windowScrollTop = $(document).scrollTop();
             windowScrollBot = windowScrollTop + winH;
             if(200 < windowScrollTop && windowScrollTop < (s2t - scrollPadding)){
-                body.removeClass("white")
-                body.addClass("black")
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
             }else if((s2t - scrollPadding) <= windowScrollTop && windowScrollTop < (s3t - scrollPadding)){
-                body.removeClass("white")
-                body.addClass("black")
-            }else if((s3t - scrollPadding) <= windowScrollTop && windowScrollTop < (s4t + scrollPadding)){//3
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
+            }else if((s3t - scrollPadding) <= windowScrollTop && windowScrollTop < (s4t - scrollPadding)){//3
                 //#region declare===============================================
                 var sect3top = Math.floor(s3t)
                 var sect4top = Math.floor(s4t)
@@ -212,25 +226,25 @@ function mainFunction(){
                 // }else if(sect3for6 < windowScrollTop){
                 //     s3c1Keep(3);
                 // }
-                body.removeClass("black")
-                body.addClass("white")
+                colorStyle.removeClass("black")
+                colorStyle.addClass("white")
                 $s4c2Wrapper.css({"transform":"translate(0%,0%)"})
-            }else if((s4t + scrollPadding) <= windowScrollTop && windowScrollBot < (s5t - scrollPadding)){//4
-                body.removeClass("white")
-                body.addClass("black")
-            }else if((s5t - scrollPadding) <= windowScrollBot && windowScrollTop < (s6t - scrollPadding)){//5
+            }else if((s4t - scrollPadding) <= windowScrollTop && windowScrollTop < (s5t - scrollPadding)){//4
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
+            }else if((s5t - scrollPadding) <= windowScrollTop && windowScrollTop < (s6t - scrollPadding)){//5
                 $s4c2Wrapper.css({"transform":"translate(-100%,0%)"})
-                body.removeClass("white")
-                body.addClass("black")
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
             }else if((s6t - scrollPadding) <= windowScrollTop && windowScrollTop < (s7t - scrollPadding)){//6
-                body.removeClass("black")
-                body.addClass("white")
+                colorStyle.removeClass("black")
+                colorStyle.addClass("white")
             }else if((s7t - scrollPadding) <= windowScrollTop && windowScrollTop < (footert - scrollPadding)){//7
-                body.removeClass("white")
-                body.addClass("black")
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
             }else if((footert - scrollPadding) <= windowScrollTop){//footer
-                body.removeClass("white")
-                body.addClass("black")
+                colorStyle.removeClass("white")
+                colorStyle.addClass("black")
             }
 
             if(s4t < (windowScrollTop - scrollPadding) && windowScrollBot < (s5t - scrollPadding)){
@@ -264,41 +278,7 @@ function mainFunction(){
                 },10);
             mainFunction();
         };
-//#region scroll-detect check================================================
-        $('.scroll-detect').each(function(index,item){
-            var thisTop = $(this).offset().top;
-            var topPadding = 100;
-
-            if(windowScrollTop < thisTop && thisTop < windowScrollBot - topPadding){
-                $(this).addClass('on_view')
-            }else{
-                $(this).removeClass('on_view')
-            }
-        })
-        $('.scroll-detect-instant').each(function(index,item){
-            var thisTop = $(this).offset().top;
-            var topPadding = 100;
-
-            if(windowScrollTop < thisTop && thisTop < windowScrollBot - topPadding){
-                setTimeout(()=>{
-                    $(this).addClass('on_view')
-                })
-            }
-        })
-        $('.s6__c1_col').each(function(){
-            var thisTop = $(this).offset().top;
-            var topPadding = 300;
-            var parentBox = $(this).find('.s6__c1_padding')
-            var stretchBox = $(this).find('.s6__c1_imgBox')
-            var stretchW = stretchBox.width()
-            if(thisTop<windowScrollBot - topPadding && windowScrollTop < thisTop){
-                parentBox.css({"width":stretchW})
-            }else{
-                parentBox.css({"width":"0px"})
-            }
-        })
     });
-//#endregion scroll-detect check=============================================
 //#region resize==================================================
     $(window).resize(function(){
         sizeRefresh();

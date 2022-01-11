@@ -15,8 +15,8 @@ $black : #000000;
 $white : #ffffff;
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;}
-body.black{background-color: $black;}
-body.white{background-color: $white;}
+#colorStyle.black{background-color: $black;}
+#colorStyle.white{background-color: $white;}
 body.hidden{height: 100%;min-height: 100%;overflow: hidden !important; touch-action: none;}
 a,a:visited,a:link,a:hover{color: $black;text-decoration: none;}
 li{list-style: none;}
@@ -31,21 +31,21 @@ li{list-style: none;}
 .slot-overflow{overflow-x: hidden;overflow-y: unset;}
 .slot-container{transform-style: preserve-3d;transform: rotateX(-90deg) rotateY(0deg);transition-duration: 0.6s;perspective: -1000px;transition-delay: 0.5s;}
 .slot-content:not(.fake){transform: rotateX(0deg) translateZ(80px);position: absolute;transition-duration: 0.6s;transition-delay: 0.5s;}
-.slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
+.slot-container.on-view{transform: rotateX(0deg) rotateY(0deg);}
 .slot-container.delay02{transition-delay: 0.2s;}
 
-.perspective-text-parent{@include persParent;}
-.perspective-text-child{transition-property: transform;}
+.perspective-text-parent{@include persParent;display: inline-block;}
+.perspective-text-child{transition-property: transform;display: inline-block;}
 @for $i from 1 through 20{
-    .on_view .perspective-text-child:nth-of-type(#{$i}){
-        transition-delay: #{$i/20}s;
+    .on-view .perspective-text-child:nth-of-type(#{$i}){
+        transition-delay: #{$i/20}s !important;
     }
 }
-.open-text-child{overflow: hidden;}
+.open-text-child{overflow: hidden;display:block;}
 .open-text-child span{display: inline-block;transition-duration: 0.6s;transform: translate(0,100%);opacity: 1;transition-property: opacity transform;transition-delay: 0s;}
-.on_view .open-text-child span{opacity: 1;transform: translate(0,0);}
+.on-view .open-text-child span{opacity: 1;transform: translate(0,0);}
 @for $i from 1 through 3{
-    .on_view .open-text-child:nth-of-type(#{$i}){
+    .on-view .open-text-child:nth-of-type(#{$i}){
     @for $k from 1 through 60{
             span:nth-of-type(#{$k}){
                 transition-delay: #{$i*0.2 + $k*0.01}s;
@@ -54,6 +54,16 @@ li{list-style: none;}
     }
 }
 // .s1__c3.slot-container{transform:rotateX(90deg) rotateY(0deg)}
-// .s1__c3.slot-container.on_view{transform: rotateX(0deg) rotateY(0deg);}
+// .s1__c3.slot-container.on-view{transform: rotateX(0deg) rotateY(0deg);}
 // .s1__c3 .slot-content:not(.fake){transform: rotateX(0deg) translateZ(200px);}
 .fake{opacity: 0;transform: unset;position: unset !important;}
+#colorStyle.black{
+    .title_container svg{fill:$white;}
+}
+#colorStyle.white{
+    .title_container svg{fill:$black;}
+}
+.title_container{display: flex;}
+.title_container{padding: 40px 0 0 0;}
+.title_container .blink{width: 26px;height: 26px;}
+.title_container .title_text{font-size: 20px;margin-left: 10px;margin-top: 4px;}

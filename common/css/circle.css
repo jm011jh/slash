@@ -1,24 +1,24 @@
-body.black .circle__text {
+#colorStyle.black .circle__text {
   fill: #ffffff;
 }
 
-body.black .circle__circle {
+#colorStyle.black .circle__circle {
   background-color: #ffffff;
 }
 
-body.black .circle__arrow span {
+#colorStyle.black .circle__arrow span {
   background-color: #000000;
 }
 
-body.white .circle__text {
+#colorStyle.white .circle__text {
   fill: #000000;
 }
 
-body.white .circle__circle {
+#colorStyle.white .circle__circle {
   background-color: #000000;
 }
 
-body.white .circle__arrow span {
+#colorStyle.white .circle__arrow span {
   background-color: #ffffff;
 }
 

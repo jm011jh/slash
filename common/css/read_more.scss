@@ -13,13 +13,13 @@ $--g : 155px;//컬럼+갭
     100%{transform: rotate(-360deg);}
 }
 
-body.black{
+#colorStyle.black{
     .btn__read_more{border: 1px solid $white;}
     .btn__read_more p{color: $white;}
     .btn__read_more .arrow{border-top: 1px solid $white;border-right: 1px solid $white;}
     .btn__read_more .arrow span{background-color: $white;}
 }
-body.white{
+#colorStyle.white{
     .btn__read_more{border: 1px solid $black;}
     .btn__read_more p{color: $black;}
     .btn__read_more .arrow{border-top: 1px solid $black;border-right: 1px solid $black;}

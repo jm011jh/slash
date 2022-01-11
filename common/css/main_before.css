@@ -20,61 +20,61 @@
   }
 }
 
-body.black #sect1 p {
+#colorStyle.black #sect1 p {
   color: #ffffff;
 }
 
-body.black .s1__c2_belt svg {
+#colorStyle.black .s1__c2_belt svg {
   fill: #ffffff;
 }
 
-body.black .title_text {
+#colorStyle.black .title_text {
   color: #ffffff;
 }
 
-body.black .btn__read_more {
+#colorStyle.black .btn__read_more {
   border: 1px solid #ffffff;
 }
 
-body.black .btn__read_more p {
+#colorStyle.black .btn__read_more p {
   color: #ffffff;
 }
 
-body.black .btn__read_more .arrow {
+#colorStyle.black .btn__read_more .arrow {
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
 }
 
-body.black .btn__read_more .arrow span {
+#colorStyle.black .btn__read_more .arrow span {
   background-color: #ffffff;
 }
 
-body.white #sect1 p {
+#colorStyle.white #sect1 p {
   color: #000000;
 }
 
-body.white .s1__c2_belt svg {
+#colorStyle.white .s1__c2_belt svg {
   fill: #000000;
 }
 
-body.white .title_text {
+#colorStyle.white .title_text {
   color: #000000;
 }
 
-body.white .btn__read_more {
+#colorStyle.white .btn__read_more {
   border: 1px solid #ffffff;
 }
 
-body.white .btn__read_more p {
+#colorStyle.white .btn__read_more p {
   color: #ffffff;
 }
 
-body.white .btn__read_more .arrow {
+#colorStyle.white .btn__read_more .arrow {
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
 }
 
-body.white .btn__read_more .arrow span {
+#colorStyle.white .btn__read_more .arrow span {
   background-color: #ffffff;
 }
 
@@ -232,53 +232,53 @@ body.white .btn__read_more .arrow span {
   font-weight: 400;
 }
 
-body.black #sect2 {
+#colorStyle.black #sect2 {
   color: #ffffff;
 }
 
-body.black .s2__c1 svg {
+#colorStyle.black .s2__c1 svg {
   fill: #ffffff;
 }
 
-body.black .s2__c4 {
+#colorStyle.black .s2__c4 {
   border: 1px solid #ffffff;
 }
 
-body.black .s2__c4 p {
+#colorStyle.black .s2__c4 p {
   color: #ffffff;
 }
 
-body.black .s2__c4 .arrow {
+#colorStyle.black .s2__c4 .arrow {
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
 }
 
-body.black .s2__c4 .arrow span {
+#colorStyle.black .s2__c4 .arrow span {
   background-color: #ffffff;
 }
 
-body.white #sect2 {
+#colorStyle.white #sect2 {
   color: #000000;
 }
 
-body.white .s2__c1 svg {
+#colorStyle.white .s2__c1 svg {
   fill: #000000;
 }
 
-body.white .s2__c4 {
+#colorStyle.white .s2__c4 {
   border: 1px solid #000000;
 }
 
-body.white .s2__c4 p {
+#colorStyle.white .s2__c4 p {
   color: #000000;
 }
 
-body.white .s2__c4 .arrow {
+#colorStyle.white .s2__c4 .arrow {
   border-top: 1px solid #000000;
   border-right: 1px solid #000000;
 }
 
-body.white .s2__c4 .arrow span {
+#colorStyle.white .s2__c4 .arrow span {
   background-color: #000000;
 }
 
@@ -323,7 +323,7 @@ body.white .s2__c4 .arrow span {
   margin-left: 160px;
 }
 
-.s2__c2.on_view p {
+.s2__c2.on-view p {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
@@ -343,7 +343,7 @@ body.white .s2__c4 .arrow span {
           transition-duration: 0.3s;
 }
 
-.s2__c3.on_view p {
+.s2__c3.on-view p {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
@@ -446,27 +446,27 @@ body.white .s2__c4 .arrow span {
           transition-delay: 0s;
 }
 
-.s3__c2_fig.on_view .s3__c2_p1 span:nth-of-type(1) {
+.s3__c2_fig.on-view .s3__c2_p1 span:nth-of-type(1) {
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
 
-.s3__c2_fig.on_view .s3__c2_p1 span:nth-of-type(2) {
+.s3__c2_fig.on-view .s3__c2_p1 span:nth-of-type(2) {
   -webkit-transition-delay: 0.35s;
           transition-delay: 0.35s;
 }
 
-.s3__c2_fig.on_view .s3__c2_p1 span:nth-of-type(3) {
+.s3__c2_fig.on-view .s3__c2_p1 span:nth-of-type(3) {
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
 
-.s3__c2_fig.on_view .s3__c2_p1 span:nth-of-type(4) {
+.s3__c2_fig.on-view .s3__c2_p1 span:nth-of-type(4) {
   -webkit-transition-delay: 0.45s;
           transition-delay: 0.45s;
 }
 
-.s3__c2_fig.on_view .s3__c2_p1 span {
+.s3__c2_fig.on-view .s3__c2_p1 span {
   opacity: 1;
   -webkit-transform: perspective(1000px) rotateX(0deg);
           transform: perspective(1000px) rotateX(0deg);
@@ -531,11 +531,11 @@ body.white .s2__c4 .arrow span {
   margin-top: 13px;
 }
 
-body.white #sect5 p {
+#colorStyle.white #sect5 p {
   color: #000000;
 }
 
-body.black #sect5 p {
+#colorStyle.black #sect5 p {
   color: #ffffff;
 }
 
@@ -614,7 +614,7 @@ body.black #sect5 p {
           transition-timing-function: ease;
 }
 
-.s5__c1.on_view .s5__c1_list a .arrow {
+.s5__c1.on-view .s5__c1_list a .arrow {
   -webkit-transform: translate(10px, calc(-50% - 10px));
           transform: translate(10px, calc(-50% - 10px));
 }
@@ -645,19 +645,19 @@ body.black #sect5 p {
   right: 0;
 }
 
-body.white #sect6 p {
+#colorStyle.white #sect6 p {
   color: #000000;
 }
 
-body.white #sect6 span {
+#colorStyle.white #sect6 span {
   color: #000000;
 }
 
-body.black #sect6 p {
+#colorStyle.black #sect6 p {
   color: #ffffff;
 }
 
-body.black #sect6 span {
+#colorStyle.black #sect6 span {
   color: #ffffff;
 }
 
@@ -738,19 +738,19 @@ body.black #sect6 span {
   bottom: 260px;
 }
 
-body.black .s7__c2_belt p {
+#colorStyle.black .s7__c2_belt p {
   color: #ffffff;
 }
 
-body.black .s7__c2_belt svg {
+#colorStyle.black .s7__c2_belt svg {
   fill: #ffffff;
 }
 
-body.white .s7__c2_belt p {
+#colorStyle.white .s7__c2_belt p {
   color: #000000;
 }
 
-body.white .s7__c2_belt svg {
+#colorStyle.white .s7__c2_belt svg {
   fill: #000000;
 }
 

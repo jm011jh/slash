@@ -7,11 +7,11 @@ $--gw : 40px;//외곽
 $--gc : 135px;//컬럼
 $--gg : 20px;//갭
 $--g : 155px;//컬럼+갭
-body.black{
+#colorStyle.black{
     .footer__c1_belt p{color: $white;}
     .footer__c1_belt svg{fill: $white;}
 }
-body.white{
+#colorStyle.white{
     .footer__c1_belt p{color: $black;}
     .footer__c1_belt svg{fill: $white;}
 }

@@ -9,12 +9,12 @@ $--g : 155px;
 $--gt : 40px;
 $--gb : 40px;
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;};
-body.black{
+#colorStyle.black{
     .circle__text{fill:$white}
     .circle__circle{background-color: $white;}
     .circle__arrow span{background-color: $black;}
 }
-body.white{
+#colorStyle.white{
     .circle__text{fill: $black;}
     .circle__circle{background-color: $black;}
     .circle__arrow span{background-color: $white;}

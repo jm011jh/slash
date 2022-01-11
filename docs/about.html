@@ -5,15 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
     <link rel="stylesheet" href="/common/css/public.css">
+    <link rel="stylesheet" href="/common/css/about.css">
+    <link rel="stylesheet" href="/common/css/loco.css">
 </head>
 
-<body>
-    <div id="header" class="black"></div>
-    <div id="nav"></div>
+<body data-scroll-container>
+    <div id="colorStyle" class="black">
+        <main id="aboutMain">
+            <div id="sect1" class="relative" data-scroll-section>
+                <div class="about__s1_bg"></div>
+                <div class="about__s1_text" data-scroll data-scroll-class="on-view">
+                    <p class="about__s1_tit flip-text"><span>Who&nbsp;</span><br><span>we&nbsp;</span><br><span>are?&nbsp;</span></p>
+                </div>
+                <div class="about__s1_person"></div>
+            </div>
+            <div class="line"></div>
+            <div id="sect2" class="relative" data-scroll-section>
+                <div class="s2__c1_title title_container">
+                    <div class="blink"></div>
+                    <div class="title_text">About</div>
+                </div>
+                <div data-scroll data-scroll-class="on-view" class="s2__c2 scroll-detect-instant">
+                    <span class="margin open-text">
+                        <p class="split_text">Slash</p>
+                    </span>
+                    <span class="split_space flip-text">Strategy and establishment of project</span><br><span class="split_space flip-text">Slash is a full service agency</span><br><span class="split_space flip-text">that provides all services.</span>
+                </div>
+                <div class="s2__c3">
+                    <div class="row">
+                        <div class="s2__c3_fig s2__c3_f1" data-scroll data-scroll-class="on-view" data-scroll-repeat="on-view">
+                            <div class="img"></div>
+                            <div class="open-text small">
+                                <p class="split_text">우리는&nbsp;새로운&nbsp;것에&nbsp;도전하는&nbsp;것을&nbsp;좋아합니다</p>
+                            </div>
+                        </div>
+                        <div class="s2__c3_fig s2__c3_f2" data-scroll data-scroll-class="on-view" data-scroll-repeat="on-view">
+                            <div class="open-text small">
+                                <p class="split_text">프로젝트의&nbsp;전략과&nbsp;수립,&nbsp;프로덕션까지</p>
+                                <p class="split_text">슬래시는&nbsp;모든&nbsp;서비스를&nbsp;제공하는&nbsp;풀&nbsp;서비스&nbsp;에이전시입니다.</p>
+                            </div>
+                            <div class="img"></div>
+                            <div class="split_space flip-text big">We like to try new thing</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="s2__c3_fig s2__c3_f3" data-scroll data-scroll-class="on-view" data-scroll-repeat="on-view">
+                            <div class="img"></div>
+                            <div class="open-text small">
+                                <p class="split_text">보다&nbsp;더&nbsp;나은&nbsp;디자인을&nbsp;위해&nbsp;최선을&nbsp;다하는&nbsp;Slash입니다</p>
+                            </div>
+                        </div>
+                        <div class="s2__c3_fig s2__c3_f4" data-scroll data-scroll-class="on-view" data-scroll-repeat="on-view">
+
+                            <div class="open-text small">
+                                <p class="split_text">with&nbsp;youth&nbsp;and&nbsp;enthusiasm</p>
+                            </div>
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sect3" class="relative" data-scroll-section>
+                <div id="s3c" class="s3_container" data-scroll>
+                    <div class="s3_sticky" data-scroll-sticky data-scroll-target="#s3c">
+                        <div class="s3__bg"></div>
+                        <div class="s3__text">
+                            <ul class="s3__text_list">
+                                <li class="s3__text_listitem" style="color:white;">dasdfasdf</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="footer"></div>
+        <div id="header" class="black"></div>
+        <div id="nav"></div>
+        <div id="downCircle"></div>
+        <div id="cursor"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/common/js/public.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="/common/js/loco.js"></script>
+    <!-- <script src="/common/js/public.js"></script> -->
     <script src="/common/js/about.js"></script>
 </body>
 

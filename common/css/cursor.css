@@ -135,11 +135,11 @@
   opacity: 1;
 }
 
-body.white #cursor .cursor-circle {
+#colorStyle.white #cursor .cursor-circle {
   background-color: #000000;
 }
 
-body.black #cursor .cursor-circle {
+#colorStyle.black #cursor .cursor-circle {
   background-color: #ffffff;
 }
 /*# sourceMappingURL=cursor.css.map */
