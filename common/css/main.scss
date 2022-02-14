@@ -21,7 +21,7 @@ $--g : 155px;//컬럼+갭
     .title_text{color: $black;}
 }
 //#region sect1==================================================
-.sect1_bg{width: 100%;height: 160vh;position: absolute;background-image: url(/common/image/main_bg.png);background-size: cover;background-repeat: no-repeat;}
+.sect1_bg{width: 100%;height: 200vh;position: absolute;background-image: url(/common/image/main_bg.png);background-size: cover;background-repeat: no-repeat;}
 #sect1{width: 100%;padding-top: 55vh;padding-bottom: 114px;}
 .s1__c1{margin-bottom: 100px;padding:0 $--gw;}
 .s1__c1__title, .s1__c1__description{display: inline-block;}
@@ -104,7 +104,7 @@ $--g : 155px;//컬럼+갭
 #sect3{width: 100%;height: 1000vh;top: 0;padding-top: 200px;margin-top: 100px;margin-bottom: 300px;}
 .s3__sticky{position: sticky;top: 0;width: 100%;height: 100vh;}
 .s3__c1{position: absolute;width: 100%;height: 100%;transition-duration: 0.6s;opacity: 0;}
-.s3__c1_fig{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+.s3__c1_fig{position: absolute;left: 50%;top: 50%;}
 .s3__c1_fig[data-number="1"] img:nth-of-type(1){opacity: 1;}
 .s3__c1_fig[data-number="2"] img:nth-of-type(2){opacity: 1;}
 .s3__c1_fig[data-number="3"] img:nth-of-type(3){opacity: 1;}

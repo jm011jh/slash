@@ -1,5 +1,6 @@
 $(document).ready(function(){
 //#region declare============================================================
+
     var winW = $(window).width();
     var winH = $(window).height();
     var windowScrollTop = $(document).scrollTop();
@@ -131,7 +132,7 @@ for (i = 0; i <= s4c2Contents.length - 1; i++) {
 
 function s3c1Keep(dataNum){//for sect3 img function
     TweenLite.to(s3c1f1,0.2,{
-        css:{top:"75%",left:"2%",x:"0%"}
+        css:{top:"75%",left:"2%"}
     })
     TweenLite.to(s3c1f2,0.2,{
         css:{top:"50%",left:"98%",x:"-100%",y:"-50%"}
@@ -180,19 +181,20 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-                    TweenLite.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%"}})
-                    TweenLite.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%"}})
-                    TweenLite.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%"}})
+                    TweenLite.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    TweenLite.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    TweenLite.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
                     $('.s3__c1').removeClass('opac1')
                     $('.s3__c1').addClass('opac0')
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
-                    var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight))
+                    var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
                     TweenLite.to(s3c1f1,0.5,{
                         css:{
                             left: Math.floor(50- persent/2.0615)+"%",
                             top: 1 + Math.floor(50 + persent/4)+"%",
                             x:(-50 + persent/2)+"%",
+                            y:"-50%",
                         }
                     });
                     TweenLite.to(s3c1f2,0.5,{
@@ -219,13 +221,6 @@ function mainFunction(){
                 }else if(sect3for4 < windowScrollTop){
                     s3c1Keep(3);
                 }
-                // else if(sect3for4 < windowScrollTop && windowScrollTop <= sect3for5){
-                //     s3c1Keep(3);
-                // }else if(sect3for5 < windowScrollTop && windowScrollTop <= sect3for6){
-                //     s3c1Keep(3);
-                // }else if(sect3for6 < windowScrollTop){
-                //     s3c1Keep(3);
-                // }
                 colorStyle.removeClass("black")
                 colorStyle.addClass("white")
                 $s4c2Wrapper.css({"transform":"translate(0%,0%)"})

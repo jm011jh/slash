@@ -28,22 +28,17 @@ li{list-style: none;}
 .font2{font-family: $font2;}
 .opac0{opacity: 0 !important;}
 .opac1{opacity: 1 !important;}
-.slot-overflow{overflow-x: hidden;overflow-y: unset;}
-.slot-container{transform-style: preserve-3d;transform: rotateX(-90deg) rotateY(0deg);transition-duration: 0.6s;perspective: -1000px;transition-delay: 0.5s;}
-.slot-content:not(.fake){transform: rotateX(0deg) translateZ(80px);position: absolute;transition-duration: 0.6s;transition-delay: 0.5s;}
-.slot-container.on-view{transform: rotateX(0deg) rotateY(0deg);}
-.slot-container.delay02{transition-delay: 0.2s;}
 
 .perspective-text-parent{@include persParent;display: inline-block;}
 .perspective-text-child{transition-property: transform;display: inline-block;}
 @for $i from 1 through 20{
     .on-view .perspective-text-child:nth-of-type(#{$i}){
-        transition-delay: #{$i/20}s !important;
+        transition-delay: #{$i/10}s !important;
     }
 }
-.open-text-child{overflow: hidden;display:block;}
-.open-text-child span{display: inline-block;transition-duration: 0.6s;transform: translate(0,100%);opacity: 1;transition-property: opacity transform;transition-delay: 0s;}
-.on-view .open-text-child span{opacity: 1;transform: translate(0,0);}
+.open-text-child{overflow: hidden;display: block;}
+.open-text-child span{display: inline-block;transition-duration: 0.6s;transform: translate(0,20px);transition-delay: 0s;}
+.on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;}
 @for $i from 1 through 3{
     .on-view .open-text-child:nth-of-type(#{$i}){
     @for $k from 1 through 60{
