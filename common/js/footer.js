@@ -13,17 +13,6 @@ $(window).resize(function(){
     sizeRefresh()
     ftC1Cloning();
 });
-function sizeRefresh(){
-    ftC1beltW = ftC1belt.width();
-    winW = $(window).width();
-    winH = $(window).height();
-    stickyTop = footerSticky.getBoundingClientRect().top;
-    stickyLeft = footerSticky.getBoundingClientRect().left;
-    stickyW = $footerSticky.outerWidth();
-    stickyH = $footerSticky.outerHeight();
-    circleW = $footerStickyCircle.outerWidth();
-    circleH = $footerStickyCircle.outerHeight();
-}
 //#endregion resize function==================================
 //#region sticky circle function==============================
     const footerSticky = document.getElementById('footerSticky');
@@ -48,21 +37,32 @@ function sizeRefresh(){
                 transform:`matrix(1,0,0,1,${x/2},${y/2})`,
             }
         })
+        console.log('move')
     })
     $('.footer__c2_sticky').mouseleave(function(){
-        setTimeout(()=>{
-            $footerStickyBlend.removeClass('blended')
-            TweenLite.to($footerStickyCircle,0.5,{
+        $footerStickyBlend.removeClass('blended')
+            TweenLite.to($footerStickyCircle,1,{
                 css:{
                     transform:`matrix(1,0,0,1,0,0)`,
                 }
             })
-        },100)
+        console.log('leave')
     })
     $('.footer__c2_sticky').mouseenter(function(){
         $footerStickyBlend.addClass('blended')
     })
 //#endregion sticky circle function==============================
+function sizeRefresh(){
+    ftC1beltW = ftC1belt.width();
+    winW = $(window).width();
+    winH = $(window).height();
+    stickyTop = footerSticky.getBoundingClientRect().top;
+    stickyLeft = footerSticky.getBoundingClientRect().left;
+    stickyW = $footerSticky.outerWidth();
+    stickyH = $footerSticky.outerHeight();
+    circleW = $footerStickyCircle.outerWidth();
+    circleH = $footerStickyCircle.outerHeight();
+}
 //#region belt move function=====================================
     function ftC1Cloning(){
         if(ftC1beltWrapW - ftC1beltW <= winW){

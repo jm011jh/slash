@@ -20,6 +20,7 @@ $--g : 155px;//컬럼+갭
     .s1__c2_belt svg{fill: $black;}
     .title_text{color: $black;}
 }
+::-webkit-scrollbar { display: none; }
 //#region sect1==================================================
 .sect1_bg{width: 100%;height: 200vh;position: absolute;background-image: url(/common/image/main_bg.png);background-size: cover;background-repeat: no-repeat;}
 #sect1{width: 100%;padding-top: 55vh;padding-bottom: 114px;}
@@ -151,7 +152,7 @@ $s4c2listW : $--g * 4 + $--gc;
 .s4__c2_listitem a{display: block;}
 .s4__c2_p1{font-size: 14px;color: rgba(255,255,255,1);text-align: right;}
 .s4__c2_imgBox{width: 100%;height: $s4c2listW * 0.7;max-height:800px;margin-top: 8px;border-radius: 18px;overflow: hidden;}
-.s4__c2_imgBox img{width: 200%;}
+.s4__c2_imgBox img{width: 100%;}
 .s4__c2_p2{font-size: 18px;color: rgba(255,255,255,1);margin-top: 24px;}
 .s4__c2_p3{font-size: 16px;color: rgba(255,255,255,0.3);margin-top: 13px;}
 //#endregion sect4===============================================
@@ -231,4 +232,9 @@ $s4c2listW : $--g * 4 + $--gc;
 .s7__c2_belt p, .s7__c2_belt svg, .s7__c2_belt{display: inline-block;}
 .s7__c2_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);}
 
+#sect1,
+#sect2,
+#sect5,
+#sect6,
+#sect7{overflow-x: hidden;}
 //#endregion sect7===============================================

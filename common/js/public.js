@@ -18,6 +18,9 @@ $(document).ready(function () {
     for (let i = 0; i <= $(".btn__read_more").length - 1; i++) {
         $.get(`/common/inc/read_more.html`, (data) => { $(".btn__read_more").eq(i).prepend(data); })
     }
+    for (let i = 0; i <= $(".ico_blink").length - 1; i++) {
+        $.get(`/common/inc/ico_blink.html`, (data) => { $(".ico_blink").eq(i).prepend(data);})
+    }
     //#endregion get data from docs===============================================
     function publicRefresh(){
         windowScrollTop = $(document).scrollTop();
@@ -25,10 +28,12 @@ $(document).ready(function () {
     }
     function publicFn(){
         $('.scroll-detect').each(function(index,item){
+            var thisHeight = $(this).height();
             var thisTop = $(this).offset().top;
+            var thisBot = thisTop - thisHeight;
             var topPadding = 100;
     
-            if(windowScrollTop < thisTop && thisTop < windowScrollBot - topPadding){
+            if( thisTop < windowScrollBot - topPadding && windowScrollTop < thisTop ){
                 $(this).addClass('on-view')
             }else{
                 $(this).removeClass('on-view')

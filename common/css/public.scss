@@ -13,8 +13,13 @@ $font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue L
 $font2 : 'Playfair Display', serif;
 $black : #000000;
 $white : #ffffff;
+$--gw : 40px;//외곽
+$--gc : 135px;//컬럼
+$--gg : 20px;//갭
+$--g : 155px;//컬럼+갭
 *{padding: 0;margin: 0;box-sizing: border-box;}
-body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;}
+body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;width: 100%;}
+#colorStyle{transition-duration: 0.6s;transition-property: background-color;}
 #colorStyle.black{background-color: $black;}
 #colorStyle.white{background-color: $white;}
 body.hidden{height: 100%;min-height: 100%;overflow: hidden !important; touch-action: none;}
@@ -32,18 +37,28 @@ li{list-style: none;}
 .perspective-text-parent{@include persParent;display: inline-block;}
 .perspective-text-child{transition-property: transform;display: inline-block;}
 @for $i from 1 through 20{
-    .on-view .perspective-text-child:nth-of-type(#{$i}){
+    .on-view .perspective-text-child:nth-child(#{$i}){
         transition-delay: #{$i/10}s !important;
     }
 }
 .open-text-child{overflow: hidden;display: block;}
-.open-text-child span{display: inline-block;transition-duration: 0.6s;transform: translate(0,20px);transition-delay: 0s;}
+.open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,20px);transition-delay: 0s;}
 .on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;}
-@for $i from 1 through 3{
+@for $i from 1 through 7{
     .on-view .open-text-child:nth-of-type(#{$i}){
     @for $k from 1 through 60{
             span:nth-of-type(#{$k}){
-                transition-delay: #{$i*0.2 + $k*0.01}s;
+                transition-delay: #{$i*0.1 + $k*0.02 - 0.1}s;
+            }
+        }
+    }
+}
+.open-text-child.on-view span{transform: translate(0,0px);transition-delay: 1s;}
+@for $i from 1 through 3{
+    .on-view.open-text-child:nth-of-type(#{$i}){
+    @for $k from 1 through 60{
+            span:nth-of-type(#{$k}){
+                transition-delay: #{$i*0.1 + $k*0.01}s;
             }
         }
     }
@@ -62,3 +77,4 @@ li{list-style: none;}
 .title_container{padding: 40px 0 0 0;}
 .title_container .blink{width: 26px;height: 26px;}
 .title_container .title_text{font-size: 20px;margin-left: 10px;margin-top: 4px;}
+.title_container{margin-left: $--gw;}

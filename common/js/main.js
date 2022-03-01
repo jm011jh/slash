@@ -1,12 +1,10 @@
 $(document).ready(function(){
+    $('.s1__c1').addClass('on-view')
 //#region declare============================================================
-
     var winW = $(window).width();
     var winH = $(window).height();
     var windowScrollTop = $(document).scrollTop();
     var windowScrollBot = windowScrollTop + winH;
-
-    const body = $('body');
     const s1 = $('#sect1');
     const s2 = $('#sect2');
     const s3 = $('#sect3');
