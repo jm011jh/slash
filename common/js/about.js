@@ -8,8 +8,10 @@ $(window).ready(function(){
     var s5t = $("#sect5").offset().top;
     var s6t = $("#sect6").offset().top;
     var s6ct = $(".s6__container").offset().top;
+    var s6h = $("#sect6").innerHeight();
     var s7t = $("#sect7").offset().top;
     var scrollPadding = 300;//스크롤여분값
+    const s6List = $(".s6__list")
     $('#sect1').addClass('on-view')
 // #region sect2 belt==================================================
     const s2c4belt = $('.s2__c4_belt');
@@ -78,12 +80,29 @@ function scroll(){
             $(".s3__bg").removeClass('on-view')
             $(".s3__logo").removeClass('on-view')
         }
-    }else if(s6t < windowScrollBot && windowScrollBot < s7t){
-        var start = windowScrollBot - s6t;
-        var end = $("#sect6").innerHeight();
-        var pers = Math.floor(start / end * 1000);
-        
-
+    }else if(s4t < windowScrollTop && windowScrollTop <= s5t){
+    }else if(s5t < windowScrollTop && windowScrollTop <= s6t){
+        TweenLite.to(s6List,1,{
+            css:{x:"0%"}
+        });
+    }else if(s6t < windowScrollTop && windowScrollTop < s6t + s6h - winH){
+        var start = windowScrollBot - s6t - winH;
+        var end = $("#sect6").innerHeight() - winH;
+        var pers = Math.floor(start / end * 1100);
+        $('.s6__text').addClass('init')
+        TweenLite.to(s6List,0.7,{
+            css:{x:0 - pers/10+"%"}
+        });
+        $(".s6__listitem").each(function(){
+            var rotate = $(this).find('.listitem_bg');
+            TweenLite.to(rotate,0.9,{
+                css:{rotation :0 - pers}
+            })
+        })
+    }else if(s6t + s6h - winH < windowScrollTop && windowScrollTop <= s7t){
+        TweenLite.to(s6List,1,{
+            css:{x:"-110%"}
+        });
     }
     if(0< windowScrollBot && windowScrollBot < s4t){//color style
         $("#colorStyle").removeClass("white")
@@ -92,7 +111,7 @@ function scroll(){
         $("#colorStyle").removeClass("black")
         $("#colorStyle").addClass("white")
     }
-    if(s6ct < windowScrollTop && windowScrollTop < s7t){
+    if(s6t < windowScrollTop && windowScrollTop < s7t){
         $('.s6__text').addClass('init')
     }else{
         $('.s6__text').removeClass('init')
@@ -126,6 +145,21 @@ $(window).resize(function(){
     s5t = $("#sect5").offset().top;
     s6t = $("#sect6").offset().top;
     s6ct = $(".s6__container").offset().top;
+    s6h = $("#sect6").innerHeight();
     s7t = $("#sect7").offset().top;
 })
+setTimeout(()=>{
+    s2c4beltW = s2c4belt.width();
+    winW = $(window).width();
+    winH = $(window).height();
+    windowScrollTop = $(document).scrollTop();
+    windowScrollBot = windowScrollTop + winH;
+    s3t = $("#sect3").offset().top;
+    s4t = $("#sect4").offset().top;
+    s5t = $("#sect5").offset().top;
+    s6t = $("#sect6").offset().top;
+    s6ct = $(".s6__container").offset().top;
+    s6h = $("#sect6").innerHeight();
+    s7t = $("#sect7").offset().top;
+},100)
 })

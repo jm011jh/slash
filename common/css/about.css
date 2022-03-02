@@ -296,6 +296,9 @@
           transform: scale(0.95);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  background-image: url(/common/image/about_s3_bg.png);
+  background-size: cover;
+  background-position: center center;
 }
 
 #aboutMain #sect3 .s3__bg.on-view {
@@ -468,7 +471,7 @@
 }
 
 #aboutMain #sect5 {
-  padding-top: 280px;
+  padding: 280px 0;
 }
 
 #aboutMain #sect5 .s5__list {
@@ -526,10 +529,6 @@
   width: 290px;
 }
 
-#aboutMain #sect6 {
-  padding-top: 280px;
-}
-
 #aboutMain #sect6 .line {
   top: 160px;
 }
@@ -545,7 +544,6 @@
 
 #aboutMain #sect6 .s6__container {
   width: 100%;
-  padding: 0 40px;
   height: 1000vh;
   position: relative;
 }
@@ -555,7 +553,8 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  border: 5px solid #000;
+  overflow: hidden;
+  padding: 0 40px;
 }
 
 #aboutMain #sect6 .s6__text {
@@ -564,6 +563,13 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  left: unset;
+  right: unset;
+}
+
+#aboutMain #sect6 .s6__text.right {
+  left: unset;
+  right: 0;
 }
 
 #aboutMain #sect6 .s6__text p {
@@ -623,6 +629,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
 }
 
 #aboutMain #sect6 .s6__listitem {
