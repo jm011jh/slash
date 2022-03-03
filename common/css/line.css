@@ -68,6 +68,7 @@
 
 #colorStyle.white .line-moving .line-stick {
   background-color: #000000;
+  height: 3px;
 }
 
 .line {
@@ -75,9 +76,7 @@
   height: 1px;
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  left: 0;
   padding: 0 40px;
   overflow: hidden;
 }

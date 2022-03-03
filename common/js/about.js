@@ -10,8 +10,11 @@ $(window).ready(function(){
     var s6ct = $(".s6__container").offset().top;
     var s6h = $("#sect6").innerHeight();
     var s7t = $("#sect7").offset().top;
+    var s7h = $("#sect7").innerHeight();
+    var footerT = $("#footer").offset().top;
     var scrollPadding = 300;//스크롤여분값
     const s6List = $(".s6__list")
+    const s7bgScale = $("#s7bgScale")
     $('#sect1').addClass('on-view')
 // #region sect2 belt==================================================
     const s2c4belt = $('.s2__c4_belt');
@@ -99,17 +102,36 @@ function scroll(){
                 css:{rotation :0 - pers}
             })
         })
-    }else if(s6t + s6h - winH < windowScrollTop && windowScrollTop <= s7t){
+    }else if(s6t + s6h - winH < windowScrollTop && windowScrollTop < s7t){
         TweenLite.to(s6List,1,{
             css:{x:"-110%"}
         });
+        TweenLite.to(s7bgScale,0.5,{
+            css:{scale:1}
+        })
+    }else if(s7t <= windowScrollTop && windowScrollTop < s7t + s7h - winH){
+        var start = windowScrollBot - s7t - winH;
+        var end = $("#sect7").innerHeight() - winH;
+        var pers = Math.floor(start / end * 32);
+        if(10<=pers){
+            TweenLite.to(s7bgScale,0.3,{
+                css:{scale:(1/pers)*10}
+            })
+        }
+    }else if(footerT && windowScrollTop){
+        TweenLite.to(s7bgScale,0.5,{
+            css:{scale:1/3.2}
+        })
     }
     if(0< windowScrollBot && windowScrollBot < s4t){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
-    }else if(s4t <= windowScrollBot){
+    }else if(s4t <= windowScrollBot && windowScrollBot < s7t){
         $("#colorStyle").removeClass("black")
         $("#colorStyle").addClass("white")
+    }else if(s7t <= windowScrollBot){
+        $("#colorStyle").removeClass("white")
+        $("#colorStyle").addClass("black")
     }
     if(s6t < windowScrollTop && windowScrollTop < s7t){
         $('.s6__text').addClass('init')
@@ -147,6 +169,8 @@ $(window).resize(function(){
     s6ct = $(".s6__container").offset().top;
     s6h = $("#sect6").innerHeight();
     s7t = $("#sect7").offset().top;
+    footerT = $("#footer").offset().top;
+    s7h = $("#sect7").innerHeight();
 })
 setTimeout(()=>{
     s2c4beltW = s2c4belt.width();
@@ -161,5 +185,7 @@ setTimeout(()=>{
     s6ct = $(".s6__container").offset().top;
     s6h = $("#sect6").innerHeight();
     s7t = $("#sect7").offset().top;
+    footerT = $("#footer").offset().top;
+    s7h = $("#sect7").innerHeight();
 },100)
 })

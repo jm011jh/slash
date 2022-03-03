@@ -530,7 +530,7 @@
 }
 
 #aboutMain #sect6 .line {
-  top: 160px;
+  top: 0px;
 }
 
 #aboutMain #sect6 .text1 {
@@ -644,5 +644,96 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+#aboutMain #sect7 {
+  padding-top: 240px;
+}
+
+#aboutMain #sect7 .s7__container {
+  width: 100%;
+  height: 300vh;
+  position: relative;
+}
+
+#aboutMain #sect7 .s7__sticky {
+  width: 100%;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#aboutMain #sect7 .s7__bg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#aboutMain #sect7 .s7__bg_scale {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: relative;
+}
+
+#aboutMain #sect7 .s7__bg_scale img {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+#aboutMain #sect8 .s8__text {
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#aboutMain #sect8 .s8__text p:not(.small) {
+  display: inline-block;
+  line-height: 1;
+}
+
+#aboutMain #sect8 .s8__text p.small {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+#aboutMain #sect8 .s8__text .text1 {
+  font-weight: 500;
+}
+
+#aboutMain #sect8 .s8__text .text2 {
+  font-family: "Playfair Display", serif;
+}
+
+#aboutMain #sect8 .contact__title {
+  position: relative;
+}
+
+#aboutMain #sect8 .contact__title .title_text {
+  color: #ffffff;
+}
+
+#aboutMain #sect8 .s8__logo {
+  width: 450px;
+  margin: 360px auto 260px;
+}
+
+#aboutMain #sect8 .s8__logo img {
+  width: 100%;
+}
+
+#aboutMain #sect8 .line {
+  top: 0;
+  position: static;
 }
 /*# sourceMappingURL=about.css.map */
