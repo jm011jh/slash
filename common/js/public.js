@@ -79,6 +79,15 @@ $(document).ready(function () {
             span.appendTo($(this))
         }
     })
+    $('.split_space2').each(function(){
+        var text = $(this).text();
+        var arr = text.split(" ");
+        $(this).empty();
+        for(i=0;i<arr.length;i++){
+            var span = $("<span>"+ arr[i] +"&nbsp;</span>")
+            span.appendTo($(this))
+        }
+    })
     $('.split_text').each(function(){
         var text = $(this).text();
         var arr = text.split("");

@@ -177,4 +177,10 @@
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
+
+@media all and (max-width: 768px) {
+  #header {
+    padding: 20px 20px 0;
+  }
+}
 /*# sourceMappingURL=header.css.map */

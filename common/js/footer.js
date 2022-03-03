@@ -2,7 +2,6 @@ $(document).ready(function(){
 //#region resize function=====================================
 $(window).resize(function(){
     sizeRefresh()
-    ftC1Cloning();
 });
 //#endregion resize function==================================
 //#region sticky circle function==============================

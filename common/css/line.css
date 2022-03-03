@@ -115,4 +115,10 @@
   -webkit-transform: scaleX(1) translate(-50%, -50%);
           transform: scaleX(1) translate(-50%, -50%);
 }
+
+@media all and (max-width: 768px) {
+  .line {
+    padding: 0 20px;
+  }
+}
 /*# sourceMappingURL=line.css.map */

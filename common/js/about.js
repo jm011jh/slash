@@ -15,6 +15,7 @@ $(window).ready(function(){
     var scrollPadding = 300;//스크롤여분값
     const s6List = $(".s6__list")
     const s7bgScale = $("#s7bgScale")
+    const s7bgScaleMob = $("#s7bgScaleMob")
     $('#sect1').addClass('on-view')
 // #region sect2 belt==================================================
     const s2c4belt = $('.s2__c4_belt');
@@ -89,7 +90,7 @@ function scroll(){
     //#region s6 list horizontal-scroll
     if(windowScrollTop<=s6t){
         $('.s6__text').removeClass('init')
-        TweenLite.to(s6List,0.9,{
+        TweenLite.to(s6List,1,{
             css:{x:0+"%"}
         });
     }else if(s6t < windowScrollTop && windowScrollTop < s6t + s6h - winH){
@@ -114,31 +115,46 @@ function scroll(){
     //#endregion s6 list horizontal-scroll
     //#region s7 bg scale
     if(windowScrollTop < s7t){
-        console.log('under')
         TweenLite.to(s7bgScale,0.5,{
             css:{scale:1}
         })
+        TweenLite.to(s7bgScaleMob,0.5,{
+            css:{scale:1}
+        })
     }else if(s7t <= windowScrollTop && windowScrollTop < s7t + s7h - winH){
-        console.log('on')
+        
         var start = windowScrollBot - s7t - winH;
         var end = $("#sect7").innerHeight() - winH;
         var pers = Math.floor(start / end * 32);
+        var persMob = Math.floor(start / end * 175);
+        
         if(10<=pers){
             TweenLite.to(s7bgScale,0.3,{
                 css:{scale:(1/pers)*10}
             })
         }
+        if(100<=persMob){
+            TweenLite.to(s7bgScaleMob,0.3,{
+                css:{scale:(1/persMob * 100)}
+            })
+        }else if(persMob<100){
+            TweenLite.to(s7bgScaleMob,0.3,{
+                css:{scale:1}
+            })
+        }
     }else if(s7t + s7h - winH <= windowScrollTop){
-        console.log('over')
-        TweenLite.to(s7bgScale,0.5,{
+        TweenLite.to(s7bgScale,0.2,{
             css:{scale:1/3.2}
+        })
+        TweenLite.to(s7bgScaleMob,0.2,{
+            css:{scale:1/1.75}
         })
     }
     //#region s7 bg scale
-    if(0< windowScrollBot && windowScrollBot < s4t){//color style
+    if(0< windowScrollBot && windowScrollBot < s4t - 1000){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
-    }else if(s4t <= windowScrollBot && windowScrollBot < s7t){
+    }else if(s4t - 1000 <= windowScrollBot && windowScrollBot < s7t){
         $("#colorStyle").removeClass("black")
         $("#colorStyle").addClass("white")
     }else if(s7t <= windowScrollBot){
