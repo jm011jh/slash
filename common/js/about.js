@@ -51,42 +51,46 @@ $(window).ready(function(){
 // #endregion sect2 belt==================================================
 // #region sect4 text-change==================================================
 function scroll(){
+    //#region s3 text change
     if(s3t < windowScrollBot && windowScrollBot < s4t){
-        var start = windowScrollTop - s3t + winH;
-        var end = $("#sect3").innerHeight();
-        var pers = Math.floor(start / end * 1000);
-
-        if(100 < pers && pers < 300){
-            $(".s3__text_list li").removeClass('on-view')
-            $(".s3__text_list li").eq(0).addClass('on-view')
-        }
-        else if(300 <= pers && pers < 500){
-            $(".s3__text_list li").removeClass('on-view')
-            $(".s3__text_list li").eq(1).addClass('on-view')
-        }
-        else if(500 <= pers && pers < 700){
-            $(".s3__text_list li").removeClass('on-view')
-            $(".s3__text_list li").eq(2).addClass('on-view')
-        }
-        else if(700 <= pers && pers < 900){
-            $(".s3__text_list li").removeClass('on-view')
-            $(".s3__text_list li").eq(3).addClass('on-view')
-        }
-        else{
-            $(".s3__text_list li").removeClass('on-view')
-        }
-
-        if(100< pers && pers <950){
-            $(".s3__bg").addClass('on-view')
-            $(".s3__logo").addClass('on-view')
-        }else{
-            $(".s3__bg").removeClass('on-view')
-            $(".s3__logo").removeClass('on-view')
-        }
-    }else if(s4t < windowScrollTop && windowScrollTop <= s5t){
-    }else if(s5t < windowScrollTop && windowScrollTop <= s6t){
-        TweenLite.to(s6List,1,{
-            css:{x:"0%"}
+            var start = windowScrollTop - s3t + winH;
+            var end = $("#sect3").innerHeight();
+            var pers = Math.floor(start / end * 1000);
+    
+            if(100 < pers && pers < 300){
+                $(".s3__text_list li").removeClass('on-view')
+                $(".s3__text_list li").eq(0).addClass('on-view')
+            }
+            else if(300 <= pers && pers < 500){
+                $(".s3__text_list li").removeClass('on-view')
+                $(".s3__text_list li").eq(1).addClass('on-view')
+            }
+            else if(500 <= pers && pers < 700){
+                $(".s3__text_list li").removeClass('on-view')
+                $(".s3__text_list li").eq(2).addClass('on-view')
+            }
+            else if(700 <= pers && pers < 900){
+                $(".s3__text_list li").removeClass('on-view')
+                $(".s3__text_list li").eq(3).addClass('on-view')
+            }
+            else{
+                $(".s3__text_list li").removeClass('on-view')
+            }
+    
+            if(100< pers && pers <950){
+                $(".s3__bg").addClass('on-view')
+                $(".s3__logo").addClass('on-view')
+            }else{
+                $(".s3__bg").removeClass('on-view')
+                $(".s3__logo").removeClass('on-view')
+            }
+    }
+    //#endregion s3 text change
+    //#region s6 list horizontal-scroll
+    if(windowScrollTop<=s6t){
+        $('.s6__text').removeClass('init')
+        TweenLite.to(s6List,0.9,{
+            css:{x:0+"%"}
         });
     }else if(s6t < windowScrollTop && windowScrollTop < s6t + s6h - winH){
         var start = windowScrollBot - s6t - winH;
@@ -102,14 +106,20 @@ function scroll(){
                 css:{rotation :0 - pers}
             })
         })
-    }else if(s6t + s6h - winH < windowScrollTop && windowScrollTop < s7t){
+    }else if(s6t + s6h - winH < windowScrollTop){
         TweenLite.to(s6List,1,{
             css:{x:"-110%"}
         });
+    }
+    //#endregion s6 list horizontal-scroll
+    //#region s7 bg scale
+    if(windowScrollTop < s7t){
+        console.log('under')
         TweenLite.to(s7bgScale,0.5,{
             css:{scale:1}
         })
     }else if(s7t <= windowScrollTop && windowScrollTop < s7t + s7h - winH){
+        console.log('on')
         var start = windowScrollBot - s7t - winH;
         var end = $("#sect7").innerHeight() - winH;
         var pers = Math.floor(start / end * 32);
@@ -118,11 +128,13 @@ function scroll(){
                 css:{scale:(1/pers)*10}
             })
         }
-    }else if(footerT && windowScrollTop){
+    }else if(s7t + s7h - winH <= windowScrollTop){
+        console.log('over')
         TweenLite.to(s7bgScale,0.5,{
             css:{scale:1/3.2}
         })
     }
+    //#region s7 bg scale
     if(0< windowScrollBot && windowScrollBot < s4t){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
