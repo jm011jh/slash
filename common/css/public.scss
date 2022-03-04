@@ -37,20 +37,27 @@ li{list-style: none;}
 .opac0{opacity: 0 !important;}
 .opac1{opacity: 1 !important;}
 .on_mobile{display: none}
+.on_win{display: block;}
+.text2{font-family: $font2;}
 @media all and(max-width:768px){
+    .on_win{display: none;}
     .on_mobile{display: block}
     #soundPlayBtn{display: none}
 }
 
 .perspective-text-parent{@include persParent;display: inline-block;}
 .perspective-text-child{transition-property: transform;display: inline-block;}
-@for $i from 1 through 20{
-    .on-view .perspective-text-child:nth-child(#{$i}){
-        transition-delay: #{$i/10}s !important;
+@for $h from 1 through 10{
+    @for $i from 1 through 20{
+        .perspective-text-parent:nth-child(#{$h}){
+            .on-view .perspective-text-child:nth-child(#{$i}){
+                transition-delay: #{$h/10 + $i/30}s !important;
+            }
+        }
     }
 }
 .open-text-child{overflow-y: hidden;display: block;}
-.open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,20px);transition-delay: 0s;}
+.open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,100%);transition-delay: 0s;}
 .on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;}
 @for $i from 1 through 7{
     .on-view .open-text-child:nth-of-type(#{$i}){

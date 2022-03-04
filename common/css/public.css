@@ -101,7 +101,18 @@ li {
   display: none;
 }
 
+.on_win {
+  display: block;
+}
+
+.text2 {
+  font-family: "Playfair Display", serif;
+}
+
 @media all and (max-width: 768px) {
+  .on_win {
+    display: none;
+  }
   .on_mobile {
     display: block;
   }
@@ -125,104 +136,1004 @@ li {
   display: inline-block;
 }
 
-.on-view .perspective-text-child:nth-child(1) {
-  -webkit-transition-delay: 0.1s !important;
-          transition-delay: 0.1s !important;
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.13333s !important;
+          transition-delay: 0.13333s !important;
 }
 
-.on-view .perspective-text-child:nth-child(2) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.16667s !important;
+          transition-delay: 0.16667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(3) {
   -webkit-transition-delay: 0.2s !important;
           transition-delay: 0.2s !important;
 }
 
-.on-view .perspective-text-child:nth-child(3) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.23333s !important;
+          transition-delay: 0.23333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.26667s !important;
+          transition-delay: 0.26667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(6) {
   -webkit-transition-delay: 0.3s !important;
           transition-delay: 0.3s !important;
 }
 
-.on-view .perspective-text-child:nth-child(4) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.33333s !important;
+          transition-delay: 0.33333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.36667s !important;
+          transition-delay: 0.36667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(9) {
   -webkit-transition-delay: 0.4s !important;
           transition-delay: 0.4s !important;
 }
 
-.on-view .perspective-text-child:nth-child(5) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.43333s !important;
+          transition-delay: 0.43333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.46667s !important;
+          transition-delay: 0.46667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(12) {
   -webkit-transition-delay: 0.5s !important;
           transition-delay: 0.5s !important;
 }
 
-.on-view .perspective-text-child:nth-child(6) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 0.53333s !important;
+          transition-delay: 0.53333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 0.56667s !important;
+          transition-delay: 0.56667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(15) {
   -webkit-transition-delay: 0.6s !important;
           transition-delay: 0.6s !important;
 }
 
-.on-view .perspective-text-child:nth-child(7) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 0.7s !important;
           transition-delay: 0.7s !important;
 }
 
-.on-view .perspective-text-child:nth-child(8) {
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(1) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.23333s !important;
+          transition-delay: 0.23333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.26667s !important;
+          transition-delay: 0.26667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.3s !important;
+          transition-delay: 0.3s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.33333s !important;
+          transition-delay: 0.33333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.36667s !important;
+          transition-delay: 0.36667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.43333s !important;
+          transition-delay: 0.43333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.46667s !important;
+          transition-delay: 0.46667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.53333s !important;
+          transition-delay: 0.53333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.56667s !important;
+          transition-delay: 0.56667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 0.8s !important;
           transition-delay: 0.8s !important;
 }
 
-.on-view .perspective-text-child:nth-child(9) {
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(2) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.33333s !important;
+          transition-delay: 0.33333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.36667s !important;
+          transition-delay: 0.36667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.43333s !important;
+          transition-delay: 0.43333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.46667s !important;
+          transition-delay: 0.46667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.53333s !important;
+          transition-delay: 0.53333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.56667s !important;
+          transition-delay: 0.56667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 0.9s !important;
           transition-delay: 0.9s !important;
 }
 
-.on-view .perspective-text-child:nth-child(10) {
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(3) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.43333s !important;
+          transition-delay: 0.43333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.46667s !important;
+          transition-delay: 0.46667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.53333s !important;
+          transition-delay: 0.53333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.56667s !important;
+          transition-delay: 0.56667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1s !important;
           transition-delay: 1s !important;
 }
 
-.on-view .perspective-text-child:nth-child(11) {
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(4) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.53333s !important;
+          transition-delay: 0.53333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.56667s !important;
+          transition-delay: 0.56667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.1s !important;
           transition-delay: 1.1s !important;
 }
 
-.on-view .perspective-text-child:nth-child(12) {
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(5) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.63333s !important;
+          transition-delay: 0.63333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.66667s !important;
+          transition-delay: 0.66667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1.1s !important;
+          transition-delay: 1.1s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.2s !important;
           transition-delay: 1.2s !important;
 }
 
-.on-view .perspective-text-child:nth-child(13) {
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.23333s !important;
+          transition-delay: 1.23333s !important;
+}
+
+.perspective-text-parent:nth-child(6) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.26667s !important;
+          transition-delay: 1.26667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.73333s !important;
+          transition-delay: 0.73333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.76667s !important;
+          transition-delay: 0.76667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 1.1s !important;
+          transition-delay: 1.1s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1.2s !important;
+          transition-delay: 1.2s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.23333s !important;
+          transition-delay: 1.23333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.26667s !important;
+          transition-delay: 1.26667s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.3s !important;
           transition-delay: 1.3s !important;
 }
 
-.on-view .perspective-text-child:nth-child(14) {
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.33333s !important;
+          transition-delay: 1.33333s !important;
+}
+
+.perspective-text-parent:nth-child(7) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.36667s !important;
+          transition-delay: 1.36667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.83333s !important;
+          transition-delay: 0.83333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.86667s !important;
+          transition-delay: 0.86667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 1.1s !important;
+          transition-delay: 1.1s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 1.2s !important;
+          transition-delay: 1.2s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 1.23333s !important;
+          transition-delay: 1.23333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 1.26667s !important;
+          transition-delay: 1.26667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1.3s !important;
+          transition-delay: 1.3s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.33333s !important;
+          transition-delay: 1.33333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.36667s !important;
+          transition-delay: 1.36667s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.4s !important;
           transition-delay: 1.4s !important;
 }
 
-.on-view .perspective-text-child:nth-child(15) {
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.43333s !important;
+          transition-delay: 1.43333s !important;
+}
+
+.perspective-text-parent:nth-child(8) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.46667s !important;
+          transition-delay: 1.46667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 0.93333s !important;
+          transition-delay: 0.93333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 0.96667s !important;
+          transition-delay: 0.96667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 1.1s !important;
+          transition-delay: 1.1s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 1.2s !important;
+          transition-delay: 1.2s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 1.23333s !important;
+          transition-delay: 1.23333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 1.26667s !important;
+          transition-delay: 1.26667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 1.3s !important;
+          transition-delay: 1.3s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 1.33333s !important;
+          transition-delay: 1.33333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 1.36667s !important;
+          transition-delay: 1.36667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1.4s !important;
+          transition-delay: 1.4s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.43333s !important;
+          transition-delay: 1.43333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.46667s !important;
+          transition-delay: 1.46667s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.5s !important;
           transition-delay: 1.5s !important;
 }
 
-.on-view .perspective-text-child:nth-child(16) {
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.53333s !important;
+          transition-delay: 1.53333s !important;
+}
+
+.perspective-text-parent:nth-child(9) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.56667s !important;
+          transition-delay: 1.56667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(1) {
+  -webkit-transition-delay: 1.03333s !important;
+          transition-delay: 1.03333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(2) {
+  -webkit-transition-delay: 1.06667s !important;
+          transition-delay: 1.06667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(3) {
+  -webkit-transition-delay: 1.1s !important;
+          transition-delay: 1.1s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(4) {
+  -webkit-transition-delay: 1.13333s !important;
+          transition-delay: 1.13333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(5) {
+  -webkit-transition-delay: 1.16667s !important;
+          transition-delay: 1.16667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(6) {
+  -webkit-transition-delay: 1.2s !important;
+          transition-delay: 1.2s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(7) {
+  -webkit-transition-delay: 1.23333s !important;
+          transition-delay: 1.23333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(8) {
+  -webkit-transition-delay: 1.26667s !important;
+          transition-delay: 1.26667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(9) {
+  -webkit-transition-delay: 1.3s !important;
+          transition-delay: 1.3s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(10) {
+  -webkit-transition-delay: 1.33333s !important;
+          transition-delay: 1.33333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(11) {
+  -webkit-transition-delay: 1.36667s !important;
+          transition-delay: 1.36667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(12) {
+  -webkit-transition-delay: 1.4s !important;
+          transition-delay: 1.4s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(13) {
+  -webkit-transition-delay: 1.43333s !important;
+          transition-delay: 1.43333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(14) {
+  -webkit-transition-delay: 1.46667s !important;
+          transition-delay: 1.46667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(15) {
+  -webkit-transition-delay: 1.5s !important;
+          transition-delay: 1.5s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(16) {
+  -webkit-transition-delay: 1.53333s !important;
+          transition-delay: 1.53333s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(17) {
+  -webkit-transition-delay: 1.56667s !important;
+          transition-delay: 1.56667s !important;
+}
+
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(18) {
   -webkit-transition-delay: 1.6s !important;
           transition-delay: 1.6s !important;
 }
 
-.on-view .perspective-text-child:nth-child(17) {
-  -webkit-transition-delay: 1.7s !important;
-          transition-delay: 1.7s !important;
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(19) {
+  -webkit-transition-delay: 1.63333s !important;
+          transition-delay: 1.63333s !important;
 }
 
-.on-view .perspective-text-child:nth-child(18) {
-  -webkit-transition-delay: 1.8s !important;
-          transition-delay: 1.8s !important;
-}
-
-.on-view .perspective-text-child:nth-child(19) {
-  -webkit-transition-delay: 1.9s !important;
-          transition-delay: 1.9s !important;
-}
-
-.on-view .perspective-text-child:nth-child(20) {
-  -webkit-transition-delay: 2s !important;
-          transition-delay: 2s !important;
+.perspective-text-parent:nth-child(10) .on-view .perspective-text-child:nth-child(20) {
+  -webkit-transition-delay: 1.66667s !important;
+          transition-delay: 1.66667s !important;
 }
 
 .open-text-child {
@@ -234,8 +1145,8 @@ li {
   display: inline-block;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
-  -webkit-transform: translate(0, 20px);
-          transform: translate(0, 20px);
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
