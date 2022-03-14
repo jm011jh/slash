@@ -6,4 +6,141 @@
 @import url("./footer.css");
 @import url("./cursor.css");
 @import url("./read_more.css");
+body {
+  overflow: hidden;
+}
+
+.menu {
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.menu.is-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.menu--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.menu--item {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: 100%;
+  overflow: hidden;
+  padding-right: 80px;
+}
+
+.menu--item .img--box {
+  height: 100%;
+  width: 120%;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center center;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu--item:nth-child(1) .img--box {
+  background-image: url(/common/image/project_bespoke.png);
+}
+
+.menu--item:nth-child(2) .img--box {
+  background-image: url(/common/image/project_dubai.png);
+}
+
+.menu--item:nth-child(3) .img--box {
+  background-image: url(/common/image/project_freestyle.png);
+}
+
+.menu--item:nth-child(4) .img--box {
+  background-image: url(/common/image/project_imsil.png);
+}
+
+.menu--item:nth-child(5) .img--box {
+  background-image: url(/common/image/project_labstart.png);
+}
+
+.menu--item:nth-child(6) .img--box {
+  background-image: url(/common/image/project_yakwang.png);
+}
+
+.menu--item:nth-child(7) .img--box {
+  background-image: url(/common/image/project_zepeto.png);
+}
+
+.menu--item:nth-child(8) .img--box {
+  background-image: url(/common/image/project_zpmireuk.png);
+}
+
+.menu--item:nth-child(9) .img--box {
+  background-image: url(/common/image/project_zpsamsung.png);
+}
+
+.menu--item:nth-child(10) .img--box {
+  background-image: url(/common/image/project_zpmireuk.png);
+}
+
+@media (max-width: 767px) {
+  .menu--item {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+.item--num {
+  color: white;
+  font-size: 24px;
+}
+
+.item--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32.8vw;
+}
+
+.item--img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.item--year {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+}
+
+.item--tit {
+  font-size: 32px;
+  color: white;
+}
+
+.item--class {
+  color: rgba(255, 255, 255, 0.5);
+}
 /*# sourceMappingURL=project.css.map */
