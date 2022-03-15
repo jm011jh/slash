@@ -19,7 +19,7 @@ $white : #ffffff;
 .services_on_mobile{opacity: 0;}
 @media all and(max-width:768px){
     .services_on_pc{opacity: 0;}
-    .services_on_mobile{opacity: 1;}  
+    .services_on_mobile{opacity: 1;}
 }
 #colorStyle{
     #sect1,#sect3,#sect4,#sect5{width: calc(100% - 80px);margin: auto;}
