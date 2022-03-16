@@ -32,6 +32,14 @@
   color: #ffffff;
 }
 
+#colorStyle.black .header__logo_white {
+  display: inline-block;
+}
+
+#colorStyle.black .header__logo_black {
+  display: none;
+}
+
 #colorStyle.black .header__sound_animation span {
   background-color: #ffffff;
 }
@@ -42,6 +50,14 @@
 
 #colorStyle.white .header__logo {
   color: #000000;
+}
+
+#colorStyle.white .header__logo_white {
+  display: none;
+}
+
+#colorStyle.white .header__logo_black {
+  display: inline-block;
 }
 
 #colorStyle.white .header__sound_animation span {
@@ -92,6 +108,7 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-bottom: 4px;
 }
 
 .header__sound_animation {

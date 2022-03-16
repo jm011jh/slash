@@ -126,6 +126,7 @@
 #nav .nav_ul li a {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  font-weight: 300;
 }
 
 #nav.on .nav_container {
@@ -231,6 +232,7 @@
   color: #ffffff;
   position: relative;
   z-index: 2;
+  font-weight: 300;
 }
 
 .nav_btn::after, .nav_btn::before {

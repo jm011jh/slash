@@ -45,4 +45,75 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoH00.woff");
+  src: url("../font/AppleSDGothicNeoH00#AppleSDGothicNeoH00") format("svg"), url("../font/AppleSDGothicNeoH00.otf") format("opentype"), url("../font/AppleSDGothicNeoH00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoH00.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoEB00.woff");
+  src: url("../font/AppleSDGothicNeoEB00#AppleSDGothicNeoEB00") format("svg"), url("../font/AppleSDGothicNeoEB00.otf") format("opentype"), url("../font/AppleSDGothicNeoEB00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoEB00.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoB00.woff");
+  src: url("../font/AppleSDGothicNeoB00#AppleSDGothicNeoB00") format("svg"), url("../font/AppleSDGothicNeoB00.otf") format("opentype"), url("../font/AppleSDGothicNeoB00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoB00.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoSB00.woff");
+  src: url("../font/AppleSDGothicNeoSB00#AppleSDGothicNeoSB00") format("svg"), url("../font/AppleSDGothicNeoSB00.otf") format("opentype"), url("../font/AppleSDGothicNeoSB00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoSB00.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoR00.woff");
+  src: url("../font/AppleSDGothicNeoR00#AppleSDGothicNeoR00") format("svg"), url("../font/AppleSDGothicNeoR00.otf") format("opentype"), url("../font/AppleSDGothicNeoR00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoR00.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoM00.woff");
+  src: url("../font/AppleSDGothicNeoM00#AppleSDGothicNeoL00") format("svg"), url("../font/AppleSDGothicNeoM00.otf") format("opentype"), url("../font/AppleSDGothicNeoM00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoM00.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoL00.woff");
+  src: url("../font/AppleSDGothicNeoL00#AppleSDGothicNeoL00") format("svg"), url("../font/AppleSDGothicNeoL00.otf") format("opentype"), url("../font/AppleSDGothicNeoL00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoL00.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoUL00.woff");
+  src: url("../font/AppleSDGothicNeoUL00#AppleSDGothicNeoUL00") format("svg"), url("../font/AppleSDGothicNeoUL00.otf") format("opentype"), url("../font/AppleSDGothicNeoUL00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoUL00.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AppleSD';
+  src: url("../font/AppleSDGothicNeoT00.woff");
+  src: url("../font/AppleSDGothicNeoT00#AppleSDGothicNeoT00") format("svg"), url("../font/AppleSDGothicNeoT00.otf") format("opentype"), url("../font/AppleSDGothicNeoT00.woff") format("woff"), url("../font/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("../font/AppleSDGothicNeoT00.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
 /*# sourceMappingURL=font.css.map */

@@ -6,6 +6,7 @@
 @import url("./footer.css");
 @import url("./cursor.css");
 @import url("./read_more.css");
+@import url("./font.css");
 body {
   overflow: hidden;
 }

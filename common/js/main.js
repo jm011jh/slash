@@ -287,8 +287,6 @@ function mainFunction(){
         s6t = s6.offset().top;
         s7t = s7.offset().top;
         footert = footer.offset().top;
-        s1c2beltW = s1c2belt.width();
-        s1c3beltW = s1c3belt.width();
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -300,60 +298,6 @@ function mainFunction(){
         
     }
 //#endregion resize===============================================
-//#region beltmove==================================================
-    function s1c2Cloning(){
-        if(s1c2beltWrapW - s1c2beltW <= winW){
-            s1c2belt.eq(0).clone().appendTo(s1c2beltWrap);
-            s1c2belt.eq(0).clone().appendTo(s1c2beltWrap);
-            s1c2beltWrap.width(s1c2beltWrapW + s1c2beltW);
-        }
-        s1c2beltL = $('.s1__c2_belt').length;
-        s1c2beltWrapW = (s1c2beltW + 2) * (s1c2beltL + 1);
-    }
-    function s1c3Cloning(){
-        if(s1c3beltWrapW - s1c3beltW <= winW){
-            s1c3belt.eq(0).clone().appendTo(s1c3beltWrap);
-            s1c3belt.eq(0).clone().appendTo(s1c3beltWrap);
-            s1c3beltWrap.width(s1c3beltWrapW + s1c3beltW);
-        }
-        s1c3beltL = $('.s1__c3_belt').length;
-        s1c3beltWrapW = (s1c3beltW + 2) * (s1c3beltL + 1);
-    }
-
-    var s1c2beltMoveSpeed = 8000;
-    var s1c3beltMoveSpeed = 45000;
-    function beltMoveLeft(el,beltW,speed){
-            $(el).animate({
-                left:`${(0 - beltW)}px`
-            },speed,'linear',function(){
-                $(el).css({"left":"0px"})
-            })
-        
-    }
-    function beltMoveRight(el,beltW,speed){
-        $(el).css({"left":`${0 - beltW}px`})
-        $(el).animate({
-            left:"0px"
-        },speed,'linear',function(){
-            $(el).css({"left":`${0 - beltW}px`})
-        })
-    }
-    function s1c2beltMove(){
-        beltMoveLeft(s1c2beltWrap,s1c2beltW,s1c2beltMoveSpeed)
-    }
-    function s1c3beltMove(){
-        beltMoveRight(s1c3beltWrap,s1c3beltW,s1c3beltMoveSpeed)
-    }
-    s1c2beltMove()
-    s1c3beltMove()
-    setInterval(s1c2beltMove,s1c2beltMoveSpeed);
-    setInterval(s1c3beltMove,s1c3beltMoveSpeed);
-
-    do{s1c2Cloning()}
-    while(s1c2beltWrapW - s1c2beltW <= winW)
-    do{s1c3Cloning()}
-    while(s1c3beltWrapW - s1c3beltW <= winW)
-//#endregion beltmove==================================================
 //#region sect5=================================================
 $('.s5__c1_listWrap').mouseenter(function(){
     $(this).find('a').addClass('hover')

@@ -15,11 +15,15 @@ $--g : 155px;
 // #region header==================================================
 #colorStyle.black{
     .header__logo{color: $white;}
+    .header__logo_white{display: inline-block;}
+    .header__logo_black{display: none;}
     .header__sound_animation span{background-color:$white;}
     .header__sound_states{color: $white;}
 }
 #colorStyle.white{
     .header__logo{color: $black;}
+    .header__logo_white{display: none;}
+    .header__logo_black{display: inline-block;}
     .header__sound_animation span{background-color:$black;}
     .header__sound_states{color: $black;}
 }
@@ -28,7 +32,7 @@ $--g : 155px;
 .header__col1{display: flex;}
 .header__logo{font-size: 20px;width: $--gc;align-items: flex-end;display: flex;}
 .header__logo img{align-items: flex-end;}
-.header__sound{display: flex;cursor: pointer;align-items: flex-end;}
+.header__sound{display: flex;cursor: pointer;align-items: flex-end;margin-bottom: 4px;}
 .header__sound_animation{display: flex;transform: translate(0,-2px);margin-right: 10px;}
 .header__sound_animation span{display: block;width: 1px;height: 12px;margin-right: 2px;}
 .header__sound_states{font-size: 14px;align-items: flex-end;}
