@@ -6,10 +6,10 @@ const $menu = document.querySelector('.menu')
 const $items = document.querySelectorAll('.menu--item')
 const $bgs = document.querySelectorAll('.img--box')
 
-let menuWidth = $menu.clientWidth
-let itemWidth = $items[0].clientWidth
+let menuWidth = $menu.offsetWidth
+let itemWidth = $items[0].offsetWidth
 let wrapWidth = $items.length * itemWidth
-let bgWidth = $bgs[0].clientWidth
+let bgWidth = $bgs[0].offsetWidth
 
 let scrollSpeed = 0
 let oldScrollY = 0
@@ -32,7 +32,7 @@ const dispose = (scroll) => {
     },
     modifiers: {
       x: (x, target) => {
-        const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x))
+        const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
         return `${s}px`
       }
     }
@@ -43,7 +43,7 @@ const dispose = (scroll) => {
     },
     modifiers: {
       x: (x, target) => {
-        const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x))
+        const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
         return `${-s/20}px`
       }
     }
@@ -104,10 +104,10 @@ $menu.addEventListener('selectstart', () => { return false })
 Resize
 --------------------*/
 window.addEventListener('resize', () => {
-  menuWidth = $menu.clientWidth
-  itemWidth = $items[0].clientWidth
-  bgWidth = $bgs[0].clientWidth
+  menuWidth = $menu.offsetWidth
+  itemWidth = $items[0].offsetWidth
   wrapWidth = $items.length * itemWidth
+  bgWidth = $bgs[0].offsetWidth
 })
 
 /*--------------------
