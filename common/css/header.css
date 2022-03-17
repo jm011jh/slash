@@ -68,6 +68,39 @@
   color: #000000;
 }
 
+@media all and (max-width: 750px) {
+  #colorStyle.mobile-black .header__logo {
+    color: #ffffff;
+  }
+  #colorStyle.mobile-black .header__logo_white {
+    display: inline-block;
+  }
+  #colorStyle.mobile-black .header__logo_black {
+    display: none;
+  }
+  #colorStyle.mobile-black .header__sound_animation span {
+    background-color: #ffffff;
+  }
+  #colorStyle.mobile-black .header__sound_states {
+    color: #ffffff;
+  }
+  #colorStyle.mobile-white .header__logo {
+    color: #000000;
+  }
+  #colorStyle.mobile-white .header__logo_white {
+    display: none;
+  }
+  #colorStyle.mobile-white .header__logo_black {
+    display: inline-block;
+  }
+  #colorStyle.mobile-white .header__sound_animation span {
+    background-color: #000000;
+  }
+  #colorStyle.mobile-white .header__sound_states {
+    color: #000000;
+  }
+}
+
 #header {
   width: 100%;
   position: fixed;

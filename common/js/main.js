@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('.s1__c1').addClass('on-view')
+$('.s1__c1').addClass('on-view')
+// for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
 //#region declare============================================================
     var winW = $(window).width();
     var winH = $(window).height();
@@ -162,16 +163,24 @@ function mainFunction(){
             }else if((s4t - scrollPadding) <= windowScrollTop && windowScrollTop < (s5t - scrollPadding)){//4
                 colorStyle.removeClass("white")
                 colorStyle.addClass("black")
+                colorStyle.removeClass("mobile-white")
+                colorStyle.removeClass("mobile-black")
             }else if((s5t - scrollPadding) <= windowScrollTop && windowScrollTop < (s6t - scrollPadding)){//5
                 $s4c2Wrapper.css({"transform":"translate(-100%,0%)"})
                 colorStyle.removeClass("white")
                 colorStyle.addClass("black")
+                colorStyle.removeClass("mobile-white")
+                colorStyle.removeClass("mobile-black")
             }else if((s6t - scrollPadding) <= windowScrollTop && windowScrollTop < (s7t - scrollPadding)){//6
                 colorStyle.removeClass("black")
                 colorStyle.addClass("white")
+                colorStyle.removeClass("mobile-white")
+                colorStyle.addClass("mobile-black")
             }else if((s7t - scrollPadding) <= windowScrollTop && windowScrollTop < (footert - scrollPadding)){//7
                 colorStyle.removeClass("white")
                 colorStyle.addClass("black")
+                colorStyle.removeClass("mobile-white")
+                colorStyle.removeClass("mobile-black")
             }else if((footert - scrollPadding) <= windowScrollTop){//footer
                 colorStyle.removeClass("white")
                 colorStyle.addClass("black")

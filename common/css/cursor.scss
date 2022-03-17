@@ -24,3 +24,6 @@ $white : #ffffff;
 #colorStyle.black{
   #cursor .cursor-circle{background-color: $white;} 
 }
+@media all and(max-width:750px){
+  #cursor{display: none;}
+}

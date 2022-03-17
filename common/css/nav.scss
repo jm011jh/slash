@@ -38,6 +38,42 @@ $white : #ffffff;
         .nav_ul li span{background-color:$white;}
     }
 }
+@media all and(max-width:750px){
+    #colorStyle.mobile-black{
+        .nav_bg{background-color: $white;}
+        .nav_btn::before{background-color: $white;}
+        .nav_btn::after{background-color: $black;}
+        #nav{
+            .nav_btn{color: $black;}
+            .nav_btn_text{color: $black;}
+            .nav_ul li a{color: $white;}
+            .nav_ul li span{background-color: $white;}
+        }
+        #nav.show{
+            .nav_btn{color: $white;}
+            .nav_btn_text{color: $white;}
+            .nav_ul li a{color: $black;}
+            .nav_ul li span{background-color:$black;}
+        }
+    }
+    #colorStyle.mobile-white{
+        .nav_bg{background-color: $black;}
+        .nav_btn::before{background-color: $black;}
+        .nav_btn::after{background-color: $white;}
+        #nav{
+            .nav_btn{color: $white;}
+            .nav_btn_text{color: $white;}
+            .nav_ul li a{color: $black;}
+            .nav_ul li span{background-color: $black;}
+        }
+        #nav.show{
+            .nav_btn{color: $black;}
+            .nav_btn_text{color: $black;}
+            .nav_ul li a{color: $white;}
+            .nav_ul li span{background-color:$white;}
+        }
+    }
+}
 #nav .nav_container, #nav .nav_head, #nav .nav_body, #nav.show .nav_ul li a{transition-duration: .6s;}
 .nav_btn::after, .nav_btn::before, .nav_ul li span,#nav .nav_bg, #nav .nav_ul li a{transition-duration: .3s;}
 .nav_ul li span{transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);}

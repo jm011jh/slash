@@ -142,4 +142,10 @@
 #colorStyle.black #cursor .cursor-circle {
   background-color: #ffffff;
 }
+
+@media all and (max-width: 750px) {
+  #cursor {
+    display: none;
+  }
+}
 /*# sourceMappingURL=cursor.css.map */

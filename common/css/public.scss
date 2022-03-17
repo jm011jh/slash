@@ -18,15 +18,16 @@ $font3 :'AppleSD';
 
 $black : #000000;
 $white : #ffffff;
-$--gw : 40px;//외곽
-$--gc : 135px;//컬럼
-$--gg : 20px;//갭
-$--g : 155px;//컬럼+갭
+
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;width: 100%;}
 #colorStyle{transition-duration: 0.6s;transition-property: background-color;}
 #colorStyle.black{background-color: $black;}
 #colorStyle.white{background-color: $white;}
+@media all and(max-width:750px){
+    #colorStyle.mobile-black{background-color: $black;}
+    #colorStyle.mobile-white{background-color: $white;}
+}
 body.hidden{height: 100%;min-height: 100%;overflow: hidden !important; touch-action: none;}
 a,a:visited,a:link,a:hover{color: $black;text-decoration: none;}
 li{list-style: none;}
@@ -40,12 +41,12 @@ li{list-style: none;}
 .trans0{transition-duration: 0s !important;}
 .opac0{opacity: 0 !important;}
 .opac1{opacity: 1 !important;}
-.on_mobile{display: none}
-.on_win{display: block;}
+.on_mobile{display: none !important;}
+.on_win{display: block !important;}
 .text2{font-family: $font2;}
 @media all and(max-width:768px){
-    .on_win{display: none;}
-    .on_mobile{display: block}
+    .on_win{display: none !important;}
+    .on_mobile{display: block !important; }
     #soundPlayBtn{display: none}
 }
 
@@ -61,8 +62,8 @@ li{list-style: none;}
     }
 }
 .open-text-child{overflow-y: hidden;display: block;}
-.open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,100%);transition-delay: 0s;}
-.on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;}
+.open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,100%);transition-delay: 0s;opacity: 0;}
+.on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;opacity: 1;}
 @for $i from 1 through 7{
     .on-view .open-text-child:nth-of-type(#{$i}){
     @for $k from 1 through 60{
@@ -105,9 +106,11 @@ li{list-style: none;}
 .title_container{padding: 32px 0 0 0;}
 .title_container .blink{width: 26px;height: 26px;}
 .title_container .title_text{font-size: 18px;margin-left: 10px;margin-top: 2px;font-weight: 300;}
-.title_container{margin-left: $--gw;}
+.title_container{margin-left: 40px;}
 
 
 @media all and(max-width:768px){
+    .title_container{padding: 16px 0 0 0;}
     .title_container .title_text{font-size: 14px;}
+    .title_container .blink{width: 17px;height: 17px;transform: translate(0,3px);}
 }
