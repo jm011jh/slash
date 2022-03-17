@@ -21,6 +21,9 @@ $(document).ready(function () {
     for (let i = 0; i <= $(".ico_blink").length - 1; i++) {
         $.get(`/common/inc/ico_blink.html`, (data) => { $(".ico_blink").eq(i).prepend(data);})
     }
+    for (let i = 0; i <= $(".small_belt").length - 1; i++) {
+        $.get(`/common/inc/smallbelt.html`, (data) => { $(".small_belt").eq(i).prepend(data);})
+    }
     //#endregion get data from docs===============================================
     function publicRefresh(){
         windowScrollTop = $(document).scrollTop();
@@ -117,4 +120,8 @@ $(document).ready(function () {
         // }
     })
     //endregion text animation====================================================
+    const beltSmall = $('.belt_small_belt');
+    gsap.fromTo(beltSmall,7,
+        {x:"-100%"},{x:"0%",ease:Power0.easeNone}
+    ).repeat(-1);
 })

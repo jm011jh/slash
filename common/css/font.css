@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'HelveticaNeue';
+  font-family: 'Helvetica Neue';
   src: url("HelveticaNeue.eot");
   src: url("HelveticaNeue.svg#HelveticaNeue") format("svg"), url("../font/HelveticaNeue.otf") format("opentype"), url("HelveticaNeue.woff") format("woff"), url("HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("HelveticaNeue.woff2") format("woff2");
   font-weight: 400;

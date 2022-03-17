@@ -15,7 +15,7 @@
 }
 
 #footer {
-  padding-top: 400px;
+  padding-top: 270px;
   padding-bottom: 140px;
   width: 100%;
   overflow: hidden;
@@ -39,8 +39,8 @@
   height: 400px;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, calc(-50% - 28px));
-          transform: translate(-50%, calc(-50% - 28px));
+  -webkit-transform: translate(-50%, calc(-50% - 14px));
+          transform: translate(-50%, calc(-50% - 14px));
   border-radius: 50%;
 }
 

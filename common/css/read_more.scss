@@ -25,11 +25,11 @@ $--g : 155px;//컬럼+갭
     .btn__read_more .arrow{border-top: 1px solid $black;border-right: 1px solid $black;}
     .btn__read_more .arrow span{background-color: $black;}
 }
-.btn__read_more{border-radius: 40px;height: 60px;}
+.btn__read_more{border-radius: 40px;height: 62 px;}
 .btn__read_more a{display: flex;width: 100%;height: 100%;padding: 18px 28px;transform: translate(0%,0%);transition-duration: 0.3s;justify-content: space-between;}
 .btn__read_more p{font-size: 18px;margin-right: 26px;font-weight: 300;}
 .btn__read_more .arrow{width: 14px;height: 14px;border: 1px solid #000;border-bottom: 0px;border-left: 0px;position: absolute;right: 24px;}
-.btn__read_more .arrow span{display: block;position: absolute;top: calc(50% + 2px);left: calc(50% - 2px);background-color: $black;width: 26px;height: 1px;transform:translate(-50%,-50%)rotate(-45deg);}
+.btn__read_more .arrow span{display: block;position: absolute;top: calc(50% + 0.8px);left: calc(50% - 0.8px);background-color: $black;width: 22px;height: 1px;transform:translate(-50%,-50%)rotate(-45deg);}
 .btn__read_more .arrow.fake{position:relative;opacity: 0;}
 .btn__read_more .arrow.real{transform: translate(0,0);transition-duration: 0.4s;}
 .btn__read_more .arrow.real:nth-of-type(3){transform: translate(-100%,100%);opacity: 0;}

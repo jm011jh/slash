@@ -17,8 +17,12 @@ body {
   color: #ffffff;
 }
 
-#colorStyle.black .s1__c2_belt svg {
+#colorStyle.black .belt_small_belt svg {
   fill: #ffffff;
+}
+
+#colorStyle.black .belt_small_belt p {
+  color: white;
 }
 
 #colorStyle.black .title_text {
@@ -29,8 +33,12 @@ body {
   color: #000000;
 }
 
-#colorStyle.white .s1__c2_belt svg {
+#colorStyle.white .belt_small_belt svg {
   fill: #000000;
+}
+
+#colorStyle.white .belt_small_belt p {
+  color: black;
 }
 
 #colorStyle.white .title_text {
@@ -52,8 +60,8 @@ body {
 
 #sect1 {
   width: 100%;
-  padding-top: 55vh;
-  padding-bottom: 104px;
+  padding-top: 70vh;
+  padding-bottom: 88px;
 }
 
 .s1__c1 {
@@ -11720,12 +11728,21 @@ body {
   font-weight: 500;
 }
 
+.s1__c1__description .p1 span {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin: 0 8px 0 6px;
+}
+
 .s1__c1__description .p2 {
   font-size: 18px;
   line-height: 1.4;
+  font-weight: 300;
 }
 
-.s1__c2 {
+.belt_small {
   position: relative;
   overflow-x: hidden;
   height: 30px;
@@ -11735,12 +11752,17 @@ body {
   width: 100%;
 }
 
-.s1__c2_wrap {
+.belt_small_wrap {
   position: absolute;
   display: -webkit-box;
 }
 
-.s1__c2_belt svg {
+.belt_small_belt {
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.belt_small_belt svg {
   width: 26px;
   height: 26px;
   -webkit-transition-duration: .3s;
@@ -11749,11 +11771,11 @@ body {
   transition-property: color;
 }
 
-.s1__c2_belt p, .s1__c2_belt svg {
+.belt_small_belt p, .belt_small_belt svg {
   display: inline-block;
 }
 
-.s1__c2_belt p {
+.belt_small_belt p {
   font-size: 16px;
   margin: 0px 22px;
   -webkit-transform: translate(0, -6px);
@@ -11773,26 +11795,6 @@ body {
   overflow: hidden;
 }
 
-.s1__c3.on-view {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.s1__c3 .persWrap {
-  -webkit-transform: rotateX(-90deg) translateZ(300px);
-          transform: rotateX(-90deg) translateZ(300px);
-  -webkit-transition-duration: 0.9s;
-          transition-duration: 0.9s;
-}
-
-.s1__c3.on-view .persWrap {
-  opacity: 1;
-  -webkit-transform: rotateX(0deg) translateZ(0px);
-          transform: rotateX(0deg) translateZ(0px);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
 .s1__c3_wrap {
   position: absolute;
   display: -webkit-box;
@@ -11802,7 +11804,7 @@ body {
 
 .s1__c3_belt {
   display: inline-block;
-  font-size: 13vw;
+  font-size: 12.5vw;
   line-height: 1;
   padding-right: 4vw;
 }
@@ -11816,60 +11818,6 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: italic;
-}
-
-.s1__c2_belt {
-  -webkit-animation: 8s 0s beltMoveToRight infinite linear;
-          animation: 8s 0s beltMoveToRight infinite linear;
-}
-
-@-webkit-keyframes beltMoveToLeft {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@keyframes beltMoveToLeft {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-.s1__c3_belt {
-  -webkit-animation: 30s 0s beltMoveToLeft infinite linear;
-          animation: 30s 0s beltMoveToLeft infinite linear;
-}
-
-@-webkit-keyframes beltMoveToRight {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes beltMoveToRight {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
 }
 
 #colorStyle.black .title_container svg {
@@ -11905,6 +11853,10 @@ body {
   padding: 0 40px 195px;
 }
 
+.s2__c1 {
+  margin-left: 0px;
+}
+
 .s2__c2 {
   margin-top: 60px;
   color: #ffffff;
@@ -11912,8 +11864,8 @@ body {
 
 .s2__c2 p {
   font-size: 3.15vw;
-  font-weight: 300;
-  line-height: 1.3;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 .s2__c2 span.margin {
@@ -11922,6 +11874,7 @@ body {
 
 .s2__c2 .p1 > span {
   overflow: visible;
+  line-height: 0.5;
 }
 
 .s2__c2 span.split_space span {
@@ -11930,7 +11883,6 @@ body {
           transform: rotateX(-90deg) translateZ(80px);
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
-  line-height: 0.8;
 }
 
 .s2__c2.on-view span.split_space span {
@@ -12074,6 +12026,7 @@ body {
   overflow: hidden;
   margin: auto;
   display: block;
+  font-weight: 500;
 }
 
 .s3__c2_fig .s3__c2_p1 span {
@@ -12095,9 +12048,10 @@ body {
 
 .s3__c2_fig .s3__c2_p2 {
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.66;
   font-weight: 400;
   font-family: "AppleSD";
+  margin-top: 28px;
 }
 
 .s3__c2_fig .s3__c2_p2 span.space {
@@ -12907,13 +12861,14 @@ body {
 .s4__c2_p2 {
   font-size: 18px;
   color: white;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .s4__c2_p3 {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.3);
-  margin-top: 8px;
+  margin-top: 9  px;
+  font-weight: 300;
 }
 
 #colorStyle.white #sect5 p {
@@ -13111,12 +13066,13 @@ body {
 }
 
 #sect6 {
-  padding-top: 280px;
-  padding-bottom: 420px;
+  padding-top: 270px;
+  padding-bottom: 410px;
 }
 
 .s6__c1 {
-  font-size: clamp(20px, 6vw, 140px);
+  font-size: clamp(80px, 6.5vw, 130px);
+  font-weight: 400;
 }
 
 .s6__c1_col {
@@ -13126,14 +13082,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 0.8vw;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
 .s6__c1_col span {
   white-space: nowrap;
-  line-height: 1;
+  line-height: 0.96;
 }
 
 .s6__c1_col span b {
@@ -13147,6 +13103,10 @@ body {
   border-radius: 18px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  margin-left: -1vw;
+  margin-right: 1vw;
+  -webkit-transform: translate(0, 0.4vw);
+          transform: translate(0, 0.4vw);
 }
 
 .s6__c1_imgBox {
@@ -13198,6 +13158,7 @@ body {
 
 #sect7 {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .s7__c1 {

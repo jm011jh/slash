@@ -45,88 +45,12 @@ $(document).ready(function(){
     var scrollDelay = true;
     var scrollPadding = 300;//스크롤여분값
 //#endregion declare=========================================================
-//#region sect4 s4c2 list======================================
-const $s4c2Wrapper = $('#s4c2Wrapper')
-var s4c2WrapperTop = $s4c2Wrapper.offset().top;
-const s4c2Contents = [
-    {
-        year: "©2021",
-        img: "/common/image/slide_dubai.png",
-        title: "SMART KOREA, MOVING THE WORLD TO YOU",
-        description: "VIRTUAL SHOWROOM",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_samsung.png",
-        title: "BESPOKE SAMSUNG",
-        description: "VIRTUAL SHOWROOM",
-    },
-    {
-        year: "©2021",
-        img: "/common/image/slide_zepeto.png",
-        title: "ZEPETO",
-        description: "ex.UI/UX design, branding, content, concept",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_luminous.png",
-        title: "Luminous acc",
-        description: "(Virtual Showroom)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-05 title",
-        description: "(slide-05 description)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-06 title",
-        description: "(slide-06 description)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-07 title",
-        description: "(slide-07 description)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-08 title",
-        description: "(slide-08 description)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-09 title",
-        description: "(slide-09 description)",
-    },
-    {
-        year: "©2020",
-        img: "/common/image/slide_04.png",
-        title: "slide-10 title",
-        description: "(slide-10 description)",
-    },
-]
-for (i = 0; i <= s4c2Contents.length - 1; i++) {
-    var $s4SwiperList =
-        $(
-            `<li class="s4__c2_listitem mouse-change-link">
-            <a href="#">
-                <p class="s4__c2_p1">${s4c2Contents[i].year}</p>
-                <div class="s4__c2_imgBox">
-                <img id="s4Img${i + 1}" src="${s4c2Contents[i].img}" alt=""></img>
-                </div>
-                <p class="s4__c2_p2">${s4c2Contents[i].title}</p>
-                <p class="s4__c2_p3">${s4c2Contents[i].description}</p>
-            </a>
-            </li>`
-        )
-    $s4c2Wrapper.append($s4SwiperList)
-}
-//#endregion sect4 s4c2 list====================================
+//#region sect1 belt=========================================================
+
+gsap.fromTo(s1c3belt,40,
+    {x:"0%"},{x:"-100%",ease:Power0.easeNone}
+).repeat(-1);
+//#endregion sect1 belt======================================================
 
 function s3c1Keep(dataNum){//for sect3 img function
     TweenLite.to(s3c1f1,0.2,{
@@ -179,36 +103,49 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-                    TweenLite.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    TweenLite.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    TweenLite.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    gsap.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    gsap.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
                     $('.s3__c1').removeClass('opac1')
                     $('.s3__c1').addClass('opac0')
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
                     var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
-                    TweenLite.to(s3c1f1,0.5,{
+                    var answer = Math.floor(persent/2.0615)
+                    gsap.to(s3c1f1,0.5,{
+                            left: (i)=>{return (50-answer)+"%"},
+                            top: (i)=>{return (1 + Math.floor(50 + persent/4))+"%"},
+                            x: (i)=>{return (-50 + persent/2)+"%"},
+                            y: (i)=>{return "-50%"},
+                            }
+                    );
+                    gsap.to(s3c1f2,0.5,{
                         css:{
-                            left: Math.floor(50- persent/2.0615)+"%",
-                            top: 1 + Math.floor(50 + persent/4)+"%",
-                            x:(-50 + persent/2)+"%",
-                            y:"-50%",
-                        }
-                    });
-                    TweenLite.to(s3c1f2,0.5,{
-                        css:{
-                            left:(50 + (Math.floor(persent/2.0615)))+"%",
+                            left:(50 + answer)+"%",
                             x:Math.floor(-50 - persent/2)+"%",
                             y:"-50%",
                         }
                     });
-                    TweenLite.to(s3c1f3,0.5,{
+                    gsap.to(s3c1f3,0.5,{
                         css:{
-                            left:Math.floor(50-(persent/2.0615))+"%",
+                            left:(50 - answer)+"%",
                             top: 1 + ((50 - persent/4))+"%",
                             x:(-51 + persent/2)+"%",
                         }
                     });
+
+                    // gsap.to(s1c3belt,{
+                    //     duration:30,
+                    //     ease:"none",
+                    //     x:"-=100%",
+                    //     modifiers:{
+                    //         x:gsap.utils.unitize(x=>parseFloat(x) % 500)
+                    //     },
+                    //     repeat: -1
+                    // })
+
+
+
                     $('.s3__c1_fig').attr({"data-number":"1"})
                     $('.s3__c1').addClass('opac1')
                     $('.s3__c1').removeClass('opac0')
@@ -275,8 +212,6 @@ function mainFunction(){
 //#region resize==================================================
     $(window).resize(function(){
         sizeRefresh();
-        s1c2Cloning();
-        s1c3Cloning();
     });
     function sizeRefresh(){
         s1t = s1.offset().top;

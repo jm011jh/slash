@@ -1,0 +1,7 @@
+@mixin beltContainer {position: relative;overflow-x: hidden;width: 100%;};
+.smallBelt{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 80px; @include beltContainer;}
+.smallBelt_wrap{position: absolute;display: -webkit-box;}
+.smallBelt_belt{transform: translate(50%,0);}
+.smallBelt_belt svg{width: 26px;height: 26px;transition-duration: .3s;transition-property:color;fill: white;}
+.smallBelt_belt p, .s1__c2_belt svg{display: inline-block;}
+.smallBelt_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);color: white;}
