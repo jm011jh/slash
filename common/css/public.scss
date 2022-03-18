@@ -10,7 +10,7 @@
 @import url("./belt.css");
 @mixin absCenter {position: absolute;transform:translate(-50%,-50%);left: 50%;top: 50%;}
 @mixin persParent{transform-style: preserve-3d; overflow: hidden;}
-
+@mixin beltContainer {position: relative;overflow-x: hidden;width: 100%;};
 //$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
 $font1 :  "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
 $font2 : 'Playfair Display', serif;
@@ -22,12 +22,26 @@ $white : #ffffff;
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;width: 100%;}
 #colorStyle{transition-duration: 0.6s;transition-property: background-color;}
+#colorStyle.black{
+    .belt_small_belt svg{fill: $white;}
+    .belt_small_belt p{color: white;}
+}
+#colorStyle.white{
+    .belt_small_belt svg{fill: $black;}
+    .belt_small_belt p{color: black;}
+}
+#colorStyle.mobile-black{
+    .belt_small_belt svg{fill: $white;}
+    .belt_small_belt p{color: white;}
+}
+#colorStyle.mobile-white{
+    .belt_small_belt svg{fill: $black;}
+    .belt_small_belt p{color: black;}
+}
 #colorStyle.black{background-color: $black;}
 #colorStyle.white{background-color: $white;}
-@media all and(max-width:750px){
-    #colorStyle.mobile-black{background-color: $black;}
-    #colorStyle.mobile-white{background-color: $white;}
-}
+#colorStyle.mobile-black{background-color: $black;}
+#colorStyle.mobile-white{background-color: $white;}
 body.hidden{height: 100%;min-height: 100%;overflow: hidden !important; touch-action: none;}
 a,a:visited,a:link,a:hover{color: $black;text-decoration: none;}
 li{list-style: none;}
@@ -44,6 +58,7 @@ li{list-style: none;}
 .on_mobile{display: none !important;}
 .on_win{display: block !important;}
 .text2{font-family: $font2;}
+.italic{font-style: italic;}
 @media all and(max-width:768px){
     .on_win{display: none !important;}
     .on_mobile{display: block !important; }
@@ -102,6 +117,12 @@ li{list-style: none;}
 #colorStyle.white{
     .title_container svg{fill:$black;}
 }
+#colorStyle.mobile-black{
+    .title_container svg{fill:$white;}
+}
+#colorStyle.mobile-white{
+    .title_container svg{fill:$black;}
+}
 .title_container{display: flex;}
 .title_container{padding: 32px 0 0 0;}
 .title_container .blink{width: 26px;height: 26px;}
@@ -113,4 +134,16 @@ li{list-style: none;}
     .title_container{padding: 16px 0 0 0;}
     .title_container .title_text{font-size: 14px;}
     .title_container .blink{width: 17px;height: 17px;transform: translate(0,3px);}
+}
+
+.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 80px; @include beltContainer;}
+.belt_small_wrap{position: absolute;display: -webkit-box;}
+.belt_small_belt{transform: translate(50%,0);}
+.belt_small_belt svg{width: 26px;height: 26px;transition-duration: .3s;transition-property:color;}
+.belt_small_belt p, .belt_small_belt svg{display: inline-block;}
+.belt_small_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);}
+@media all and(max-width:750px){
+    .belt_small{margin-bottom: 50px;}
+    .belt_small p{font-weight: 300;font-size: 14px;margin: 0 10px;}
+    .belt_small svg{width: 16px;transform: translate(0,3px);}
 }

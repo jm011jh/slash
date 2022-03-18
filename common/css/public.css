@@ -32,6 +32,38 @@ body {
   transition-property: background-color;
 }
 
+#colorStyle.black .belt_small_belt svg {
+  fill: #ffffff;
+}
+
+#colorStyle.black .belt_small_belt p {
+  color: white;
+}
+
+#colorStyle.white .belt_small_belt svg {
+  fill: #000000;
+}
+
+#colorStyle.white .belt_small_belt p {
+  color: black;
+}
+
+#colorStyle.mobile-black .belt_small_belt svg {
+  fill: #ffffff;
+}
+
+#colorStyle.mobile-black .belt_small_belt p {
+  color: white;
+}
+
+#colorStyle.mobile-white .belt_small_belt svg {
+  fill: #000000;
+}
+
+#colorStyle.mobile-white .belt_small_belt p {
+  color: black;
+}
+
 #colorStyle.black {
   background-color: #000000;
 }
@@ -40,13 +72,12 @@ body {
   background-color: #ffffff;
 }
 
-@media all and (max-width: 750px) {
-  #colorStyle.mobile-black {
-    background-color: #000000;
-  }
-  #colorStyle.mobile-white {
-    background-color: #ffffff;
-  }
+#colorStyle.mobile-black {
+  background-color: #000000;
+}
+
+#colorStyle.mobile-white {
+  background-color: #ffffff;
 }
 
 body.hidden {
@@ -122,6 +153,10 @@ li {
 
 .text2 {
   font-family: "Playfair Display", serif;
+}
+
+.italic {
+  font-style: italic;
 }
 
 @media all and (max-width: 768px) {
@@ -6297,6 +6332,14 @@ li {
   fill: #000000;
 }
 
+#colorStyle.mobile-black .title_container svg {
+  fill: #ffffff;
+}
+
+#colorStyle.mobile-white .title_container svg {
+  fill: #000000;
+}
+
 .title_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6333,6 +6376,62 @@ li {
   .title_container .blink {
     width: 17px;
     height: 17px;
+    -webkit-transform: translate(0, 3px);
+            transform: translate(0, 3px);
+  }
+}
+
+.belt_small {
+  position: relative;
+  overflow-x: hidden;
+  height: 30px;
+  margin-bottom: 80px;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.belt_small_wrap {
+  position: absolute;
+  display: -webkit-box;
+}
+
+.belt_small_belt {
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.belt_small_belt svg {
+  width: 26px;
+  height: 26px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.belt_small_belt p, .belt_small_belt svg {
+  display: inline-block;
+}
+
+.belt_small_belt p {
+  font-size: 16px;
+  margin: 0px 22px;
+  -webkit-transform: translate(0, -6px);
+          transform: translate(0, -6px);
+}
+
+@media all and (max-width: 750px) {
+  .belt_small {
+    margin-bottom: 50px;
+  }
+  .belt_small p {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+  .belt_small svg {
+    width: 16px;
     -webkit-transform: translate(0, 3px);
             transform: translate(0, 3px);
   }

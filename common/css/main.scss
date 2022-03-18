@@ -13,15 +13,11 @@ body{overflow-x:hidden;font-family: $font1;}
 #colorStyle.black{
     #sect1 p{color: $white;}
     #sect1 .s1__c1_p{color: $white;}
-    .belt_small_belt svg{fill: $white;}
-    .belt_small_belt p{color: white;}
     .title_text{color: $white;}
 }
 #colorStyle.white{
     #sect1 p{color: $black;}
     #sect1 .s1__c1_p{color: $black;}
-    .belt_small_belt svg{fill: $black;}
-    .belt_small_belt p{color: black;}
     .title_text{color: $black;}
 }
 ::-webkit-scrollbar { display: none; }
@@ -57,13 +53,6 @@ body{overflow-x:hidden;font-family: $font1;}
 .s1__c1__description .p1 span{width: 1px;height: 16px;background-color: rgba(255,255,255,0.3);display: inline-block;margin: 0 8px 0 6px;}
 .s1__c1__description .p2{font-size: 18px;line-height: 1.4;font-weight: 200;}
 
-.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 80px; @include beltContainer;}
-.belt_small_wrap{position: absolute;display: -webkit-box;}
-.belt_small_belt{transform: translate(50%,0);}
-.belt_small_belt svg{width: 26px;height: 26px;transition-duration: .3s;transition-property:color;}
-.belt_small_belt p, .belt_small_belt svg{display: inline-block;}
-.belt_small_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);}
-
 .s1__c3{position: relative;overflow: hidden;width: 100%;height: 13vw; @include beltContainer;@include persParent;}
 .s1__c3_wrap{position: absolute;display: flex;}
 .s1__c3_belt{display: inline-block;font-size:12.5vw;line-height: 1;padding-right: 4vw;}
@@ -71,6 +60,7 @@ body{overflow-x:hidden;font-family: $font1;}
 .s1__c3_belt b{font-family: $font2;font-weight: 400;font-style: italic;}
 
 @media all and(max-width:750px){
+    .sect1_bg{height: 100vh;}
     #sect1{padding-top: 35vh;padding-bottom: 76px;}
     .s1__c1{padding: 0 20px;margin-bottom: 54px;}
     .s1__c1_p{display: flex;flex-wrap: wrap;}
@@ -81,9 +71,6 @@ body{overflow-x:hidden;font-family: $font1;}
     .s1__c1__description .p2{margin-top: -12px;font-size: 16px;letter-spacing: 0.2px;}
     .s1__c3{height: 114px;}
     .s1__c3_belt{font-size: 120px;}
-    .belt_small{margin-bottom: 50px;}
-    .belt_small p{font-weight: 300;font-size: 14px;margin: 0 10px;}
-    .belt_small svg{width: 16px;transform: translate(0,3px);}
 }
 //#endregion sect1===============================================
 //#region sect2==================================================
@@ -120,6 +107,7 @@ body{overflow-x:hidden;font-family: $font1;}
     .s2__c2 p{font-size: 32px;}
     .s2__c3{margin-top: 32px;}
     .s2__c3 p{font-size: 16px;font-weight: 200;}
+    .s2__c4{right: unset;left: 20px;}
 }
 //#endregion sect1===============================================
 //#region sect3==================================================
@@ -184,7 +172,7 @@ $s4c2listW : 155px * 4 + 135px;
 .s4__c1{padding-top: 120px;margin-left: 0;}
 .s4__c2{width:100%;height: 1000vh;position: relative;}
 .s4__c2_list{width: ($s4c2listW * 8 + 20px * 8);display: flex;flex-wrap: nowrap;align-items: flex-start;justify-content: flex-start;transition-duration: 0.3s;position: absolute;}
-.s4__c2_sticky{position: sticky;top: 0px;height: 100vh;}
+.s4__c2_sticky{position: sticky;top: 0px;height: 100vh;overflow: hidden;}
 
 .s4__c2_listitem{width: $s4c2listW;flex-shrink: 0;margin-right: 20px;}
 .s4__c2_listitem a{display: block;}
@@ -200,6 +188,7 @@ $s4c2listW : 155px * 4 + 135px;
 @media all and(max-width:750px){
     #sect4{padding: 120px 0 0 20px;}
     .s4__c1{padding-top: 60px;}
+    .s4__c2{height: 500vh;}
     .s4__c2_list{width: calc((278px + 10px)*9);margin-top: 50px;}
     .s4__c2_listitem{width: 278px;margin-right: 10px;}
     .s4__c2_imgBox{height: 278px;}

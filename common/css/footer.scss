@@ -11,7 +11,7 @@ $white : #ffffff;
     .footer__c1_belt p{color: $black;}
     .footer__c1_belt svg{fill: $white;}
 }
-#footer{padding-top:270px;padding-bottom: 140px;width: 100%;overflow: hidden;}
+#footer{padding-top:270px;padding-bottom: 40px;width: 100%;overflow: hidden;}
 .footer__c2{padding-bottom: 100px;position: relative;}
 .footer__c2 p{color: $white;font-size: clamp(40px, 15vw, 180px);line-height: 1;text-align: center;}
 $stickyR : 400px;
