@@ -193,15 +193,15 @@ function mainFunction(){
                 let persent = ((Math.floor(windowScrollTop - s4t - scrollPadding)/Math.floor(sect4Height - winH - scrollPadding * 2))*100).toFixed(2)
                 // console.log(persent)
                 $s4c2Wrapper
-                TweenLite.to($s4c2Wrapper,0.2,{
+                TweenLite.to($s4c2Wrapper,0.4,{
                     css:{x:0 - persent + "%"}
                 })
             }else if((windowScrollTop - scrollPadding)<=s4t){
-                TweenLite.to($s4c2Wrapper,0,{
+                TweenLite.to($s4c2Wrapper,0.5,{
                     css:{x:"0%"}
                 })
             }else if((s5t - scrollPadding)<=windowScrollBot){
-                TweenLite.to($s4c2Wrapper,0,{
+                TweenLite.to($s4c2Wrapper,0.5,{
                     css:{x:"-100%"}
                 })
 

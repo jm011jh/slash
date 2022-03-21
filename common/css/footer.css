@@ -31,6 +31,7 @@
   font-size: clamp(40px, 15vw, 180px);
   line-height: 1;
   text-align: center;
+  font-weight: 500;
 }
 
 .footer__c2_sticky {

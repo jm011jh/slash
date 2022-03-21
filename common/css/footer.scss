@@ -13,7 +13,7 @@ $white : #ffffff;
 }
 #footer{padding-top:270px;padding-bottom: 40px;width: 100%;overflow: hidden;}
 .footer__c2{padding-bottom: 100px;position: relative;}
-.footer__c2 p{color: $white;font-size: clamp(40px, 15vw, 180px);line-height: 1;text-align: center;}
+.footer__c2 p{color: $white;font-size: clamp(40px, 15vw, 180px);line-height: 1;text-align: center;font-weight: 500;}
 $stickyR : 400px;
 .footer__c2_sticky{position: absolute;width: $stickyR;height: $stickyR;top: 0;left: 50%;transform: translate(-50%,calc(-50% - 14px));border-radius: 50%;}
 $stickyCircleR : 280px;
