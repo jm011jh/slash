@@ -112,40 +112,26 @@ function mainFunction(){
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
                     var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
-                    var answer = Math.floor(persent/2.0615)
-                    gsap.to(s3c1f1,0.5,{
-                            left: (i)=>{return (50-answer)+"%"},
-                            top: (i)=>{return (1 + Math.floor(50 + persent/4))+"%"},
-                            x: (i)=>{return (-50 + persent/2)+"%"},
-                            y: (i)=>{return "-50%"},
+                    var answer = Math.floor(persent/2.0615);
+                    gsap.to(s3c1f1,0.3,{
+                            left: (i)=>{return gsap.utils.clamp(2,50,(50-answer)) + "%"},
+                            top: (i)=>{return gsap.utils.clamp(50,75,(1 + Math.floor(50 + persent/4))) + "%"},
+                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2))+"%"},
                             }
                     );
-                    gsap.to(s3c1f2,0.5,{
+                    gsap.to(s3c1f2,0.3,{
                         css:{
-                            left:(50 + answer)+"%",
-                            x:Math.floor(-50 - persent/2)+"%",
-                            y:"-50%",
+                            left: (i)=>{return gsap.utils.clamp(50,98,(50 + answer)) + "%"},
+                            x: (i)=>{return gsap.utils.clamp(-100,-50,Math.floor(-50 - persent/2)) + "%"},
                         }
                     });
-                    gsap.to(s3c1f3,0.5,{
+                    gsap.to(s3c1f3,0.3,{
                         css:{
-                            left:(50 - answer)+"%",
-                            top: 1 + ((50 - persent/4))+"%",
-                            x:(-51 + persent/2)+"%",
+                            left: (i)=>{return gsap.utils.clamp(2,50,(50 - answer)) + "%"},
+                            top : (i)=>{return gsap.utils.clamp(25,50,(50 - persent/4)) + "%"},
+                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2)) + "%"},
                         }
                     });
-
-                    // gsap.to(s1c3belt,{
-                    //     duration:30,
-                    //     ease:"none",
-                    //     x:"-=100%",
-                    //     modifiers:{
-                    //         x:gsap.utils.unitize(x=>parseFloat(x) % 500)
-                    //     },
-                    //     repeat: -1
-                    // })
-
-
 
                     $('.s3__c1_fig').attr({"data-number":"1"})
                     $('.s3__c1').addClass('opac1')
@@ -161,6 +147,9 @@ function mainFunction(){
                 colorStyle.addClass("white")
                 $s4c2Wrapper.css({"transform":"translate(0%,0%)"})
             }else if((s4t - scrollPadding) <= windowScrollTop && windowScrollTop < (s5t - scrollPadding)){//4
+                gsap.to(s3c1f1,0.1,{css:{top:"75%",left:"2%",x:"0%",y:"-50%"}})
+                gsap.to(s3c1f2,0.1,{css:{top:"25%",left:"2%",x:"0%",y:"-50%"}})
+                gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"98%",x:"-100%",y:"-50%"}})
                 colorStyle.removeClass("white")
                 colorStyle.addClass("black")
                 colorStyle.removeClass("mobile-white")

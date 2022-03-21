@@ -88,16 +88,17 @@ function scroll(){
     }
     //#endregion s3 text change
     //#region s6 list horizontal-scroll
-    if(windowScrollTop<=s6t){
+    if(windowScrollTop<=s6t + winH){
         $('.s6__text').removeClass('init')
         TweenLite.to(s6List,1,{
             css:{x:0+"%"}
         });
-    }else if(s6t < windowScrollTop && windowScrollTop < s6t + s6h - winH){
+    }else if(s6t + winH < windowScrollTop && windowScrollTop < s6t + s6h){
+        console.log(s6t + "....." + windowScrollTop)
         var start = windowScrollBot - s6t - winH;
         var end = $("#sect6").innerHeight() - winH;
         var pers = Math.floor(start / end * 1100);
-        $('.s6__text').addClass('init')
+            $('.s6__text').addClass('init')
         TweenLite.to(s6List,0.7,{
             css:{x:0 - pers/10+"%"}
         });
