@@ -1,4 +1,6 @@
 $(window).ready(function(){
+    const $s2 = document.querySelector('#sect2')
+    const s2Title = document.querySelector('#s2Title')
     const s1 = $("#sect1")
     const s2 = $("#sect2")
     const s3 = $("#sect3")
@@ -68,5 +70,14 @@ $(window).ready(function(){
             s2title.removeClass('fixed')
             s2title.addClass('end')
         }
+            const ele = $s2.getBoundingClientRect();
+            console.log(windowScrollTop)
+            // if(ele.top>0){
+            //     console.log("up")
+            // }else if(ele.top<0){
+            //     console.log("down")
+            // }else if(ele.top==0){
+            //     console.log("in")
+            // }
     })
 })
