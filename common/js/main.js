@@ -1,5 +1,14 @@
 $(document).ready(function(){
 $('.s1__c1').addClass('on-view')
+var swiper = new Swiper(".s4_swiper", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    mousewheel:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
 // for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
 //#region declare============================================================
     var winW = $(window).width();
@@ -45,7 +54,7 @@ gsap.fromTo(s1c3belt,40,
 
 function s3c1Keep(dataNum){//for sect3 img function
     TweenLite.to(s3c1f1,0.2,{
-        css:{top:"75%",left:"2%",y:"-50%"}
+        css:{top:"75%",left:"6.25%",y:"-50%"}
     })
     TweenLite.to(s3c1f2,0.2,{
         css:{top:"50%",left:"98%",x:"-100%",y:"-50%"}
