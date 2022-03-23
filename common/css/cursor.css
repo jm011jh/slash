@@ -143,6 +143,14 @@
   background-color: #ffffff;
 }
 
+#colorStyle.mobile-white #cursor .cursor-circle {
+  background-color: #000000;
+}
+
+#colorStyle.mobile-black #cursor .cursor-circle {
+  background-color: #ffffff;
+}
+
 @media all and (max-width: 750px) {
   #cursor {
     display: none;

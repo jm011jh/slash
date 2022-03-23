@@ -24,6 +24,12 @@ $white : #ffffff;
 #colorStyle.black{
   #cursor .cursor-circle{background-color: $white;} 
 }
+#colorStyle.mobile-white{
+  #cursor .cursor-circle{background-color: $black;}
+}
+#colorStyle.mobile-black{
+  #cursor .cursor-circle{background-color: $white;} 
+}
 @media all and(max-width:750px){
   #cursor{display: none;}
 }

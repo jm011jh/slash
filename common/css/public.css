@@ -17,7 +17,7 @@
 
 body {
   font-size: 14px;
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+  font-family: "Helvetica Neue";
   background-color: #333;
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
@@ -123,7 +123,7 @@ li {
 }
 
 .font1 {
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+  font-family: "Helvetica Neue";
 }
 
 .font2 {

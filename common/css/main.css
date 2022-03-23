@@ -11967,7 +11967,7 @@ body {
 
 #sect3 {
   width: 100%;
-  height: 1000vh;
+  height: 800vh;
   top: 0;
   padding-top: 200px;
   margin-top: 100px;
@@ -11997,19 +11997,26 @@ body {
   top: 50%;
 }
 
-.s3__c1_fig[data-number="1"] img:nth-of-type(1) {
-  opacity: 1;
+.s3__c1_fig1 {
+  width: 400px;
+  height: 380px;
 }
 
-.s3__c1_fig[data-number="2"] img:nth-of-type(2) {
-  opacity: 1;
+.s3__c1_fig2 {
+  width: 440px;
+  height: 680px;
 }
 
-.s3__c1_fig[data-number="3"] img:nth-of-type(3) {
-  opacity: 1;
+.s3__c1_fig3 {
+  width: 300px;
+  height: 240px;
 }
 
-.s3__c1_fig img {
+.s3c1_img {
+  -webkit-transition-property: opacity transform;
+  transition-property: opacity transform;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
   width: 100%;
   position: absolute;
   overflow: hidden;
@@ -12018,26 +12025,31 @@ body {
   opacity: 0;
 }
 
-.s3c1_img {
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
+.s3c1_text {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
-.s3__c1_fig1 {
-  width: 486px;
-  height: 322px;
+.s3__c1_fig[data-number="1"] img:nth-of-type(1), .s3__c1_fig[data-number="1"] p:nth-of-type(1) {
+  opacity: 1;
 }
 
-.s3__c1_fig2 {
-  width: 470px;
-  height: 670px;
+.s3__c1_fig[data-number="2"] img:nth-of-type(2), .s3__c1_fig[data-number="2"] p:nth-of-type(2) {
+  opacity: 1;
 }
 
-.s3__c1_fig3 {
-  width: 470px;
-  height: 323px;
+.s3__c1_fig[data-number="3"] img:nth-of-type(3), .s3__c1_fig[data-number="3"] p:nth-of-type(3) {
+  opacity: 1;
+}
+
+.s3__c1_fig2 .s3c1_text {
+  right: 0;
 }
 
 .s3__c2_fig {
@@ -12866,7 +12878,7 @@ body {
 
 #sect4 {
   width: 100%;
-  padding: 120px 0 0 40px;
+  padding: 120px 40px;
 }
 
 #colorStyle.black #sect4 p, #colorStyle.mobile-black #sect4 p {
@@ -12884,7 +12896,7 @@ body {
 
 .s4__c2 {
   width: 100%;
-  height: 1000vh;
+  height: 800vh;
   position: relative;
 }
 
@@ -13043,6 +13055,11 @@ body {
 #sect5 {
   width: 100%;
   padding-top: 260px;
+}
+
+#sect5 {
+  height: 0;
+  overflow: hidden;
 }
 
 .s5__c1 {

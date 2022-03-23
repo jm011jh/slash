@@ -57,7 +57,7 @@ $--g : 155px;//컬럼+갭
         .s2__c3_f3{width: $--gc * 4 + $--gg * 3;margin-left: $--gc + $--gg;}
         .s2__c3_f4{width: $--gc *2 + $--gg; margin-right: $--gw + $--g}
 
-        .s2__c4{position: relative;overflow: hidden;width: 100%;height: 12.5vw; @include beltContainer;@include persParent;}
+        .s2__c4{position: relative;overflow: hidden;width: 100%;height: 12.5vw; @include beltContainer;@include persParent;margin-top: 180px;}
         .s2__c4.on-view{transform: translate(0,0);}
         .s2__c4 .persWrap{transform:rotateX(-90deg) translateZ(300px);transition-duration: 0.9s;}
         .s2__c4.on-view .persWrap{opacity: 1;transform: rotateX(0deg) translateZ(80px);transition-duration: 1s;}
@@ -173,8 +173,8 @@ $--g : 155px;//컬럼+갭
         }
     }
     #sect5{padding:260px 0 230px 0;
-        .s5__container1{display: flex;width: calc(100% - 80px);max-width: 1530px;margin: auto;justify-content: space-around;}
-        .s5__container2{width: calc(50% - 30px);}
+        .s5__container1{display: flex;width: calc(100% - 80px);max-width: 1530px;margin: auto;justify-content: space-between;}
+        .s5__container2{width: calc(50% - 40px);}
         .s5__container3{margin-bottom: 120px;}
         .s5__tit{padding-bottom:28px;border-bottom: 1px solid #e5e5e5;}
         .s5__tit p{font-size: 18px;color: $white;background-color: $black;display: inline-block;padding: 14px 26px;border-radius: 24px;}
@@ -225,10 +225,12 @@ $--g : 155px;//컬럼+갭
     @media all and(max-width:768px){
         #sect6{
             .s6__text{top: unset;position: static;transform: translate(0,0);width: 100%;padding-top: 80px;margin-bottom: 40px;}
+            .s6__text p{transform:scale(1) translate(0,0);}
             .s6__text p:not(.small){font-size: 32px;}
             .s6__text p.small{font-size: 16px;margin-top: 40px;}
             .s6__list{padding-left: 0;height: unset;}
             .s6__listitem{width: 300px;height: 300px;}
+            .s6__text.init p{opacity: 1;transform: scale(1)translate(0,0);}
         }
     }
     #sect7{padding-top:240px;

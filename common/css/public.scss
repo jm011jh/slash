@@ -12,9 +12,9 @@
 @mixin persParent{transform-style: preserve-3d; overflow: hidden;}
 @mixin beltContainer {position: relative;overflow-x: hidden;width: 100%;};
 //$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
-$font1 :  "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
+$font1 :  'Helvetica Neue';
 $font2 : 'Playfair Display', serif;
-$font3 :'AppleSD';
+$font3 : 'AppleSD';
 
 $black : #000000;
 $white : #ffffff;

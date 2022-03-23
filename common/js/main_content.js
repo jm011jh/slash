@@ -1,5 +1,6 @@
 //#region sect4 s4c2 list======================================
 const $s4c2Wrapper = $('#s4c2Wrapper')
+const $s4c2WrapperMobile = $('#s4c2WrapperMobile')
 var s4c2WrapperTop = $s4c2Wrapper.offset().top;
 const s4c2Contents = [
     {
@@ -78,5 +79,21 @@ for (i = 0; i <= s4c2Contents.length - 1; i++) {
             </li>`
         )
     $s4c2Wrapper.append($s4SwiperList)
+}
+for (i = 0; i <= s4c2Contents.length - 1; i++) {
+    var $s4SwiperList =
+        $(
+            `<li class="s4__c2_listitem_mobile mouse-change-link">
+            <a href="#">
+                <p class="s4__c2_p1">${s4c2Contents[i].year}</p>
+                <div class="s4__c2_imgBox">
+                <img id="s4Img${i + 1}" src="${s4c2Contents[i].img}" alt=""></img>
+                </div>
+                <p class="s4__c2_p2">${s4c2Contents[i].title}</p>
+                <p class="s4__c2_p3">${s4c2Contents[i].description}</p>
+            </a>
+            </li>`
+        )
+    $s4c2WrapperMobile.append($s4SwiperList)
 }
 //#endregion sect4 s4c2 list====================================
