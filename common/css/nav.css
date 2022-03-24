@@ -42,6 +42,38 @@
   background-color: #000000;
 }
 
+#colorStyle.black .nav_container_mobile .nav_btn {
+  color: #000000;
+}
+
+#colorStyle.black .nav_container_mobile .nav_btn_text {
+  color: #000000;
+}
+
+#colorStyle.black .nav_container_mobile .nav_ul li a {
+  color: #ffffff;
+}
+
+#colorStyle.black .nav_container_mobile .nav_ul li span {
+  background-color: #ffffff;
+}
+
+#colorStyle.black .show.nav_container_mobile .nav_btn {
+  color: #ffffff;
+}
+
+#colorStyle.black .show.nav_container_mobile .nav_btn_text {
+  color: #ffffff;
+}
+
+#colorStyle.black .show.nav_container_mobile .nav_ul li a {
+  color: #000000;
+}
+
+#colorStyle.black .show.nav_container_mobile .nav_ul li span {
+  background-color: #000000;
+}
+
 #colorStyle.white .nav_bg {
   background-color: #000000;
 }
@@ -83,6 +115,38 @@
 }
 
 #colorStyle.white .show.nav_container .nav_ul li span {
+  background-color: #ffffff;
+}
+
+#colorStyle.white .nav_container_mobile .nav_btn {
+  color: #ffffff;
+}
+
+#colorStyle.white .nav_container_mobile .nav_btn_text {
+  color: #ffffff;
+}
+
+#colorStyle.white .nav_container_mobile .nav_ul li a {
+  color: #000000;
+}
+
+#colorStyle.white .nav_container_mobile .nav_ul li span {
+  background-color: #000000;
+}
+
+#colorStyle.white .show.nav_container_mobile .nav_btn {
+  color: #000000;
+}
+
+#colorStyle.white .show.nav_container_mobile .nav_btn_text {
+  color: #000000;
+}
+
+#colorStyle.white .show.nav_container_mobile .nav_ul li a {
+  color: #ffffff;
+}
+
+#colorStyle.white .show.nav_container_mobile .nav_ul li span {
   background-color: #ffffff;
 }
 
@@ -130,6 +194,38 @@
   background-color: #000000;
 }
 
+#colorStyle.mobile-black .nav_container_mobile .nav_btn {
+  color: #000000;
+}
+
+#colorStyle.mobile-black .nav_container_mobile .nav_btn_text {
+  color: #000000;
+}
+
+#colorStyle.mobile-black .nav_container_mobile .nav_ul li a {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-black .nav_container_mobile .nav_ul li span {
+  background-color: #ffffff;
+}
+
+#colorStyle.mobile-black .show.nav_container_mobile .nav_btn {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-black .show.nav_container_mobile .nav_btn_text {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-black .show.nav_container_mobile .nav_ul li a {
+  color: #000000;
+}
+
+#colorStyle.mobile-black .show.nav_container_mobile .nav_ul li span {
+  background-color: #000000;
+}
+
 #colorStyle.mobile-white .nav_bg {
   background-color: #000000;
 }
@@ -171,6 +267,38 @@
 }
 
 #colorStyle.mobile-white .show.nav_container .nav_ul li span {
+  background-color: #ffffff;
+}
+
+#colorStyle.mobile-white .nav_container_mobile .nav_btn {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-white .nav_container_mobile .nav_btn_text {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-white .nav_container_mobile .nav_ul li a {
+  color: #000000;
+}
+
+#colorStyle.mobile-white .nav_container_mobile .nav_ul li span {
+  background-color: #000000;
+}
+
+#colorStyle.mobile-white .show.nav_container_mobile .nav_btn {
+  color: #000000;
+}
+
+#colorStyle.mobile-white .show.nav_container_mobile .nav_btn_text {
+  color: #000000;
+}
+
+#colorStyle.mobile-white .show.nav_container_mobile .nav_ul li a {
+  color: #ffffff;
+}
+
+#colorStyle.mobile-white .show.nav_container_mobile .nav_ul li span {
   background-color: #ffffff;
 }
 
@@ -257,6 +385,10 @@
   pointer-events: none;
 }
 
+#nav .nav_container.on .nav_body {
+  pointer-events: none;
+}
+
 #nav .nav_container.on .nav_ul li a {
   -webkit-transform: translate(0, 22px);
           transform: translate(0, 22px);
@@ -310,6 +442,81 @@
 }
 
 #nav .nav_container.show .nav_ul li:nth-child(4) a {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+#nav .nav_container_mobile.on {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav .nav_container_mobile.on .nav_head {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#nav .nav_container_mobile.on .nav_body {
+  pointer-events: none;
+}
+
+#nav .nav_container_mobile.on .nav_body {
+  pointer-events: none;
+}
+
+#nav .nav_container_mobile.on .nav_ul li a {
+  -webkit-transform: translate(0, 22px);
+          transform: translate(0, 22px);
+}
+
+#nav
+#nav .nav_container_mobile .nav_bg {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#nav .nav_container_mobile.show .nav_btn::before {
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+#nav .nav_container_mobile.show .nav_btn::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav .nav_container_mobile.show .nav_bg {
+  opacity: 1;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#nav .nav_container_mobile.show .nav_body {
+  pointer-events: unset;
+}
+
+#nav .nav_container_mobile.show .nav_ul li a {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+#nav .nav_container_mobile.show .nav_ul li:nth-child(1) a {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+#nav .nav_container_mobile.show .nav_ul li:nth-child(2) a {
+  -webkit-transition-delay: 0.05s;
+          transition-delay: 0.05s;
+}
+
+#nav .nav_container_mobile.show .nav_ul li:nth-child(3) a {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#nav .nav_container_mobile.show .nav_ul li:nth-child(4) a {
   -webkit-transition-delay: 0.15s;
           transition-delay: 0.15s;
 }

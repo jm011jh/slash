@@ -112,7 +112,6 @@ function scroll(){
             css:{x:0+"%"}
         });
     }else if(s6t + winH < windowScrollTop && windowScrollTop < s6t + s6h){
-        console.log(s6t + "....." + windowScrollTop)
         var start = windowScrollBot - s6t - winH;
         var end = $("#sect6").innerHeight() - winH;
         var pers = Math.floor(start / end * 1100);

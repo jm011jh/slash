@@ -135,7 +135,7 @@ li{list-style: none;}
     .title_container .blink{width: 17px;height: 17px;transform: translate(0,3px);}
 }
 
-.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 80px; @include beltContainer;}
+.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 24px; @include beltContainer;}
 .belt_small_wrap{position: absolute;display: -webkit-box;}
 .belt_small_belt{transform: translate(50%,0);}
 .belt_small_belt svg{width: 26px;height: 26px;transition-duration: .3s;transition-property:color;}

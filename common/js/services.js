@@ -40,6 +40,7 @@ $(window).ready(function(){
         );
     }
     $(window).resize(function(){
+        ScrollTrigger.refresh();
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -77,12 +78,6 @@ $(window).ready(function(){
         if(windowScrollTop<s2t){
             s2title.removeClass('fixed')
         }else if(s2t<=windowScrollTop && windowScrollTop < s3t - s2titleH){
-            var start = windowScrollTop - s2t;
-            var end = s2h - s2titleH;
-            var fontPers = (0 - Math.floor(start / end * 120) + 160)/10;
-            TweenLite.to(s2title,0.1,{
-                css:{fontSize:fontPers+"vw"}
-            });
             s2title.removeClass('end')
             s2title.addClass('fixed')
         }else if(s3t - s2titleH <= windowScrollTop){
@@ -91,6 +86,19 @@ $(window).ready(function(){
         }
 
     })
+    const trig$2 = gsap.timeline({
+        scrollTrigger:{
+            trigger:$s2,
+            start:"top top",
+            end:"bottom top",
+            scrub:true,
+        }
+    })
+    trig$2.to(s2title,{
+        fontSize:"40px",
+        paddingTop:"240px",
+    })
+
     const s4belt = $(".s4__belt_item")
     gsap.fromTo(s4belt,20,
         {x:"0%"},{x:"-100%",ease:Power0.easeNone}
