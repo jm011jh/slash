@@ -27,7 +27,7 @@ $--g : 155px;
     .header__sound_animation span{background-color:$black;}
     .header__sound_states{color: $black;}
 }
-@media all and(max-width:750px){
+@media all and(max-width:768px){
     #colorStyle.mobile-black{
         .header__logo{color: $white;}
         .header__logo_white{display: inline-block;}

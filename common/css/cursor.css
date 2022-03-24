@@ -151,7 +151,7 @@
   background-color: #ffffff;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
   #cursor {
     display: none;
   }

@@ -144,7 +144,7 @@
   width: 135px;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
   #footer {
     padding-top: 90px;
     padding-bottom: 40px;

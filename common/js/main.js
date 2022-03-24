@@ -1,13 +1,10 @@
 $(document).ready(function(){
 $('.s1__c1').addClass('on-view')
 var swiper = new Swiper(".s4_swiper", {
-    slidesPerView: 1.3,
-    spaceBetween: 8,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    // spaceBetween: 8,
     mousewheel:true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
 });
 // for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
 //#region declare============================================================
@@ -145,29 +142,20 @@ function mainFunction(){
                 colorStyle.addClass("black")
             }
 }
-gsap.to($s4c2Wrapper,0.9,{
-    x:"-90%",
-    scrollTrigger:{
-        trigger:s4,
-        start:"5% top",
-        end:"bottom bottom",
-        scrub:true
-    }
-})
 gsap.set(s3c1,{opacity:"0"})
 gsap.set(s3c1f1,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
 gsap.set(s3c1f2,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
 gsap.set(s3c1f3,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
-gsap.to(s3c1,0.5,{
+gsap.to(s3c1,0.1,{
     opacity:"1",
     scrollTrigger:{
         trigger:s3,
-        start:"top top",
+        start:"1% top",
         end:"5% top",
-        scrub:true
+        scrub:1
     }
 })
-gsap.to(s3c1f1,0.5,{
+gsap.to(s3c1f1,0.3,{
     left:"6.25%",
     top:"75%",
     x:"0%",
@@ -176,21 +164,21 @@ gsap.to(s3c1f1,0.5,{
         trigger:s3,
         start:"10% top",
         end:"40% top",
-        scrub:true
+        scrub:1
     }
     }
 );
-gsap.to(s3c1f2,0.5,{
+gsap.to(s3c1f2,0.3,{
     left:"98%",
     x:"-100%",
     scrollTrigger:{
         trigger:s3,
         start:"10% top",
         end:"40% top",
-        scrub:true
+        scrub:1
     }
 });
-gsap.to(s3c1f3,0.5,{
+gsap.to(s3c1f3,0.3,{
     left:"10%",
     top:"25%",
     x:"0%",
@@ -199,9 +187,21 @@ gsap.to(s3c1f3,0.5,{
         trigger:s3,
         start:"10% top",
         end:"40% top",
-        scrub:true
+        scrub:1
     }
 });
+gsap.set($s4c2Wrapper,{x:"0%"})
+gsap.to($s4c2Wrapper,{
+    x:"-=90%",
+    ease: Power2.easeOut,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:s4,
+        start:"5% top",
+        end:"bottom bottom",
+        scrub:1,
+    },
+})
 $(window).scroll(function(){
     if(scrollDelay){
         scrollDelay = false;
