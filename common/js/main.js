@@ -24,6 +24,7 @@ var swiper = new Swiper(".s4_swiper", {
     const s2__c2 = $('.s2__c2')
     const s2c2 = document.querySelector("#s2c2")
     const s2c3 = document.querySelector("#s2c3")
+    const s3c1 = document.querySelector("#s3c1")
     const s5 = $('#sect5');
     const s6 = $('#sect6');
     const s7 = $('#sect7');
@@ -53,17 +54,6 @@ var swiper = new Swiper(".s4_swiper", {
 //#endregion sect1 belt======================================================
 
 function s3c1Keep(dataNum){//for sect3 img function
-    TweenLite.to(s3c1f1,0.2,{
-        css:{top:"75%",left:"6.25%",y:"-50%"}
-    })
-    TweenLite.to(s3c1f2,0.2,{
-        css:{top:"50%",left:"98%",x:"-100%",y:"-50%"}
-    })
-    TweenLite.to(s3c1f3,0.2,{
-        css:{top:"25%",left:"10%",x:"0%",y:"-50%"}
-    })
-    $('.s3__c1').removeClass('opac0')
-    $('.s3__c1').addClass('opac1')
     $('.s3__c1_fig').attr({"data-number":dataNum})
 }
 function mainFunction(){
@@ -90,41 +80,37 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-                    gsap.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    gsap.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    $('.s3__c1').removeClass('opac1')
-                    $('.s3__c1').addClass('opac0')
+                    // gsap.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    // gsap.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+                    // gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
                     var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
                     var answer = Math.floor(persent/2.0615);
-                    gsap.to(s3c1f1,0.5,{
-                            left: (i)=>{return gsap.utils.clamp(6.25,50,(50-answer)) + "%"},
-                            top: (i)=>{return gsap.utils.clamp(50,75,(1 + Math.floor(50 + persent/4))) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2))+"%"},
-                            y: "-50%"
-                            }
-                    );
-                    gsap.to(s3c1f2,0.5,{
-                        css:{
-                            left: (i)=>{return gsap.utils.clamp(50,98,(50 + answer)) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-100,-50,Math.floor(-50 - persent/2)) + "%"},
-                            y: "-50%"
-                        }
-                    });
-                    gsap.to(s3c1f3,0.5,{
-                        css:{
-                            left: (i)=>{return gsap.utils.clamp(10,50,(50 - answer)) + "%"},
-                            top : (i)=>{return gsap.utils.clamp(25,50,(50 - answer/1.5)) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + answer*6/5)) + "%"},
-                            y: "-50%"
-                        }
-                    });
+                    // gsap.to(s3c1f1,0.5,{
+                    //         left: (i)=>{return gsap.utils.clamp(6.25,50,(50-answer)) + "%"},
+                    //         top: (i)=>{return gsap.utils.clamp(50,75,(1 + Math.floor(50 + persent/4))) + "%"},
+                    //         x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2))+"%"},
+                    //         y: "-50%"
+                    //         }
+                    // );
+                    // gsap.to(s3c1f2,0.5,{
+                    //     css:{
+                    //         left: (i)=>{return gsap.utils.clamp(50,98,(50 + answer)) + "%"},
+                    //         x: (i)=>{return gsap.utils.clamp(-100,-50,Math.floor(-50 - persent/2)) + "%"},
+                    //         y: "-50%"
+                    //     }
+                    // });
+                    // gsap.to(s3c1f3,0.5,{
+                    //     css:{
+                    //         left: (i)=>{return gsap.utils.clamp(10,50,(50 - answer)) + "%"},
+                    //         top : (i)=>{return gsap.utils.clamp(25,50,(50 - answer/1.5)) + "%"},
+                    //         x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + answer*6/5)) + "%"},
+                    //         y: "-50%"
+                    //     }
+                    // });
 
                     $('.s3__c1_fig').attr({"data-number":"1"})
-                    $('.s3__c1').addClass('opac1')
-                    $('.s3__c1').removeClass('opac0')
                 }else if(sect3for2 < windowScrollTop && windowScrollTop <= sect3for3){
                     s3c1Keep(1);
                 }else if(sect3for3 < windowScrollTop && windowScrollTop <= sect3for4){
@@ -159,16 +145,63 @@ function mainFunction(){
                 colorStyle.addClass("black")
             }
 }
-gsap.to($s4c2Wrapper,0.6,{
+gsap.to($s4c2Wrapper,0.9,{
     x:"-90%",
     scrollTrigger:{
         trigger:s4,
-        start:"15% top",
+        start:"5% top",
         end:"bottom bottom",
         scrub:true
     }
 })
-
+gsap.set(s3c1,{opacity:"0"})
+gsap.set(s3c1f1,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.set(s3c1f2,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.set(s3c1f3,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.to(s3c1,0.5,{
+    opacity:"1",
+    scrollTrigger:{
+        trigger:s3,
+        start:"top top",
+        end:"5% top",
+        scrub:true
+    }
+})
+gsap.to(s3c1f1,0.5,{
+    left:"6.25%",
+    top:"75%",
+    x:"0%",
+    y: "-50%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:true
+    }
+    }
+);
+gsap.to(s3c1f2,0.5,{
+    left:"98%",
+    x:"-100%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:true
+    }
+});
+gsap.to(s3c1f3,0.5,{
+    left:"10%",
+    top:"25%",
+    x:"0%",
+    y: "-50%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:true
+    }
+});
 $(window).scroll(function(){
     if(scrollDelay){
         scrollDelay = false;

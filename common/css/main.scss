@@ -185,7 +185,7 @@ $s4c2listW : 155px * 4 + 135px;
 }
 .s4__c1{padding-top: 120px;margin-left: 0;}
 .s4__c2{width:100%;height: 800vh;position: relative;}
-.s4__c2_list{display: flex;flex-wrap: nowrap;align-items: flex-start;justify-content: flex-start;transition-duration: 0.3s;position: absolute;}
+.s4__c2_list{display: flex;flex-wrap: nowrap;align-items: flex-start;justify-content: flex-start;position: absolute;}
 .s4__c2_sticky{position: sticky;top: 0px;height: 100vh;overflow: hidden;}
 
 .s4__c2_listitem{width: $s4c2listW;flex-shrink: 0;margin-right: 20px;}
@@ -320,6 +320,8 @@ $s4c2listW : 155px * 4 + 135px;
     #sect7{margin-bottom: 4px;}
     .s7__c1{height: 106.6vw;}
 }
+
+.belt_small{margin-bottom: 24px;}
 #sect1,
 #sect2,
 #sect5,

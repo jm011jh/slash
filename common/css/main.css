@@ -12936,8 +12936,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
   position: absolute;
 }
 
@@ -13493,6 +13491,10 @@ body {
   .s7__c1 {
     height: 106.6vw;
   }
+}
+
+.belt_small {
+  margin-bottom: 24px;
 }
 
 #sect1,
