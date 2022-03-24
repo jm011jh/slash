@@ -1,8 +1,8 @@
 $(document).ready(function(){
 $('.s1__c1').addClass('on-view')
 var swiper = new Swiper(".s4_swiper", {
-    slidesPerView: 3,
-    spaceBetween: 10,
+    slidesPerView: 1.3,
+    spaceBetween: 8,
     mousewheel:true,
     pagination: {
       el: ".swiper-pagination",
@@ -21,6 +21,9 @@ var swiper = new Swiper(".s4_swiper", {
     const s4 = $('#sect4');
     const $s4 = document.querySelector("#sect4");
     const $s4c2Sticky = document.querySelector("#s4c2Sticky");
+    const s2__c2 = $('.s2__c2')
+    const s2c2 = document.querySelector("#s2c2")
+    const s2c3 = document.querySelector("#s2c3")
     const s5 = $('#sect5');
     const s6 = $('#sect6');
     const s7 = $('#sect7');
@@ -47,9 +50,6 @@ var swiper = new Swiper(".s4_swiper", {
 //#endregion declare=========================================================
 //#region sect1 belt=========================================================
 
-gsap.fromTo(s1c3belt,40,
-    {x:"0%"},{x:"-100%",ease:Power0.easeNone}
-).repeat(-1);
 //#endregion sect1 belt======================================================
 
 function s3c1Keep(dataNum){//for sect3 img function
@@ -68,28 +68,6 @@ function s3c1Keep(dataNum){//for sect3 img function
 }
 function mainFunction(){
             //#region body scroll check==================================================
-            //#region scroll-detect check================================================
-        $('.s6__c1_col').each(function(){
-            var thisTop = $(this).offset().top;
-            var parentBox = $(this).find('.s6__c1_padding')
-            var stretchBox = $(this).find('.s6__c1_imgBox')
-            var stretchW = stretchBox.width()
-            if(thisTop<windowScrollBot - scrollPadding && windowScrollTop < thisTop){
-                parentBox.css({"width":stretchW})
-            }else{
-                parentBox.css({"width":"0px"})
-            }
-        })
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-        //#endregion scroll-detect check=============================================
             windowScrollTop = $(document).scrollTop();
             windowScrollBot = windowScrollTop + winH;
             if(200 < windowScrollTop && windowScrollTop < (s2t - scrollPadding)){
@@ -182,23 +160,24 @@ function mainFunction(){
             }
 }
 gsap.to($s4c2Wrapper,0.6,{
-    x:"-110%",
+    x:"-90%",
     scrollTrigger:{
         trigger:s4,
-        start:"top top",
+        start:"15% top",
         end:"bottom bottom",
         scrub:true
     }
 })
-    $(window).scroll(function(){
-        if(scrollDelay){
-            scrollDelay = false;
-            setTimeout(()=>{
-                scrollDelay=true;
-                },10);
-            mainFunction();
-        };
-    });
+
+$(window).scroll(function(){
+    if(scrollDelay){
+        scrollDelay = false;
+        setTimeout(()=>{
+            scrollDelay=true;
+            },10);
+        mainFunction();
+    };
+});
 //#region resize==================================================
     $(window).resize(function(){
         sizeRefresh();

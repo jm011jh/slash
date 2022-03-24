@@ -156,18 +156,40 @@
 }
 
 #nav .nav_container, #nav .nav_head, #nav .nav_body, #nav.show .nav_ul li a {
-  -webkit-transition-duration: .6s;
-          transition-duration: .6s;
+  -webkit-transition: 0.6s 0s;
+  transition: 0.6s 0s;
+  -webkit-transition: 0.6s 0;
+  -moz-transition: 0.6s 0;
+  -o-transition: 0.6s 0;
+  -ms-transition: 0.6s 0;
 }
 
 .nav_btn::after, .nav_btn::before, .nav_ul li span, #nav .nav_bg, #nav .nav_ul li a {
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  -webkit-transition: 0.3s 0s;
+  transition: 0.3s 0s;
+  -webkit-transition: 0.3s 0;
+  -moz-transition: 0.3s 0;
+  -o-transition: 0.3s 0;
+  -ms-transition: 0.3s 0;
 }
 
 .nav_ul li span {
   -webkit-transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);
           transition-timing-function: cubic-bezier(0, 0.76, 0.08, 0.98);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform opacity color;
+  transition: -webkit-transform opacity color;
+  transition: transform opacity color;
+  transition: transform opacity color, -webkit-transform opacity color;
+}
+
+#nav *:not(.nav_ul li span) {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform opacity color;
+  transition: -webkit-transform opacity color;
+  transition: transform opacity color;
+  transition: transform opacity color, -webkit-transform opacity color;
 }
 
 #nav {
