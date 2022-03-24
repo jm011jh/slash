@@ -77,36 +77,9 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-                    // gsap.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    // gsap.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    // gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
+
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
-                    var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
-                    var answer = Math.floor(persent/2.0615);
-                    // gsap.to(s3c1f1,0.5,{
-                    //         left: (i)=>{return gsap.utils.clamp(6.25,50,(50-answer)) + "%"},
-                    //         top: (i)=>{return gsap.utils.clamp(50,75,(1 + Math.floor(50 + persent/4))) + "%"},
-                    //         x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2))+"%"},
-                    //         y: "-50%"
-                    //         }
-                    // );
-                    // gsap.to(s3c1f2,0.5,{
-                    //     css:{
-                    //         left: (i)=>{return gsap.utils.clamp(50,98,(50 + answer)) + "%"},
-                    //         x: (i)=>{return gsap.utils.clamp(-100,-50,Math.floor(-50 - persent/2)) + "%"},
-                    //         y: "-50%"
-                    //     }
-                    // });
-                    // gsap.to(s3c1f3,0.5,{
-                    //     css:{
-                    //         left: (i)=>{return gsap.utils.clamp(10,50,(50 - answer)) + "%"},
-                    //         top : (i)=>{return gsap.utils.clamp(25,50,(50 - answer/1.5)) + "%"},
-                    //         x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + answer*6/5)) + "%"},
-                    //         y: "-50%"
-                    //     }
-                    // });
-
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for2 < windowScrollTop && windowScrollTop <= sect3for3){
                     s3c1Keep(1);

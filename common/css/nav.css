@@ -203,7 +203,6 @@
 }
 
 #nav *:not(.nav_ul li span) {
-  -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-transition: -webkit-transform opacity color;
   transition: -webkit-transform opacity color;

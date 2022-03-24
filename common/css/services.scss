@@ -51,8 +51,8 @@ $white : #ffffff;
     #sect2{padding: 20% 0 280px;
         .s2__bg{width: calc(100% - 80px);margin: auto;}
         .s2__bg img{width: 100%;}
-        .s2__title{position: absolute;top: 0;font-size: 16vw;color: $black;text-align: center;width: 100%;line-height:1;transform: translate(0,63%);}
-        .fixed{position: fixed;}
+        .s2__title{position: absolute;top: 0%;font-size: 16vw;color: $black;text-align: center;width: 100%;line-height:1;transform: translate(0,0%);}
+        .fixed{position: fixed;top: 50%;}
         .end{top: unset;bottom: 0;}
     }
     @media all and(max-width:768px){
