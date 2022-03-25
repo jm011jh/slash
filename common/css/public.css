@@ -1187,7 +1187,6 @@ li {
 }
 
 .open-text-child {
-  overflow-y: hidden;
   display: block;
 }
 
@@ -6385,7 +6384,7 @@ li {
   position: relative;
   overflow-x: hidden;
   height: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 24px;
   position: relative;
   overflow-x: hidden;
   width: 100%;
@@ -6421,7 +6420,7 @@ li {
           transform: translate(0, -6px);
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
   .belt_small {
     margin-bottom: 50px;
   }

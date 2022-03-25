@@ -18,7 +18,6 @@ $font3 : 'AppleSD';
 
 $black : #000000;
 $white : #ffffff;
-
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{font-size: 14px;font-family: $font1;background-color: #333;transition-duration: 0.6s;overflow-x: hidden;width: 100%;}
 #colorStyle{transition-duration: 0.6s;transition-property: background-color;}
@@ -76,7 +75,7 @@ li{list-style: none;}
         }
     }
 }
-.open-text-child{overflow-y: hidden;display: block;}
+.open-text-child{display: block;}
 .open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,100%);transition-delay: 0s;opacity: 0;}
 .on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;opacity: 1;}
 @for $i from 1 through 7{
@@ -136,13 +135,13 @@ li{list-style: none;}
     .title_container .blink{width: 17px;height: 17px;transform: translate(0,3px);}
 }
 
-.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 80px; @include beltContainer;}
+.belt_small{position: relative;overflow-x: hidden;height: 30px;margin-bottom: 24px; @include beltContainer;}
 .belt_small_wrap{position: absolute;display: -webkit-box;}
 .belt_small_belt{transform: translate(50%,0);}
 .belt_small_belt svg{width: 26px;height: 26px;transition-duration: .3s;transition-property:color;}
 .belt_small_belt p, .belt_small_belt svg{display: inline-block;}
 .belt_small_belt p{font-size: 16px;margin: 0px 22px;transform: translate(0, -6px);}
-@media all and(max-width:750px){
+@media all and(max-width:768px){
     .belt_small{margin-bottom: 50px;}
     .belt_small p{font-weight: 300;font-size: 14px;margin: 0 10px;}
     .belt_small svg{width: 16px;transform: translate(0,3px);}

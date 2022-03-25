@@ -1,15 +1,7 @@
 $(document).ready(function(){
-    const tl = gsap.timeline({
-        scrollTrigger:{
-            trigger: ".big_belt_trigger",
-            start:"top bottom",
-            end:"bottom top",
-            scrub: true,
-            
-        }
-    })
-    tl.to(".big_belt_trigger",{
-        x:-100,
-        duration:3
-    })
+    const smallBelt = $(this).find(".small_belt_trigger")
+
+    gsap.fromTo(smallBelt,60,
+        {x:"0%"},{x:"-100%",ease:Power0.easeNone}
+    ).repeat(-1);
 })

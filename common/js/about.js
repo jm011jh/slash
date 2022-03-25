@@ -16,40 +16,60 @@ $(window).ready(function(){
     const s6List = $(".s6__list")
     const s7bgScale = $("#s7bgScale")
     const s7bgScaleMob = $("#s7bgScaleMob")
-    $('#sect1').addClass('on-view')
-// #region sect2 belt==================================================
-    const s2c4belt = $('.s2__c4_belt');
-    const s2c4beltWrap = $('.s2__c4_wrap');
-    var s2c4beltWrapW = s2c4beltWrap.width();
-    var s2c4beltL = s2c4belt.length;
-    var s2c4beltW = s2c4belt.width();
-
-    function s2c4Cloning(){
-        if(s2c4beltWrapW - s2c4beltW <= winW){
-            s2c4belt.eq(0).clone().appendTo(s2c4beltWrap);
-            s2c4belt.eq(0).clone().appendTo(s2c4beltWrap);
-            s2c4beltWrap.width(s2c4beltWrapW + s2c4beltW);
+    const s2c3f1 = $("#s2c3f1")
+    const s2c3f2 = $("#s2c3f2")
+    const s2c3f3 = $("#s2c3f3")
+    const s2c3f4 = $("#s2c3f4")
+    const s2c4belt = $(".s2__c4_belt p")
+    setTimeout(()=>{$('#sect1').addClass('on-view')},100)
+    gsap.set(s2c3f1,{y:"0%"})
+    gsap.set(s2c3f2,{y:"0%"})
+    gsap.set(s2c3f3,{y:"0%"})
+    gsap.set(s2c3f4,{y:"0%"})
+    gsap.to(s2c3f1,{
+        y:"-20%",
+        scrollTrigger:{
+            trigger:"#sect2",
+            start:"top top",
+            end:"bottom bottom",
+            scrub:1,
+            duration:{min:0.2,max:0.3},
+            ease: "power1.inOut"
         }
-        s2c4beltL = $('.s2__c4_belt').length;
-        s2c4beltWrapW = (s2c4beltW + 2) * (s2c4beltL + 1);
-    }
-    var s2c4beltMoveSpeed = 45000;
-    function s2c4beltMove(){
-        beltMoveRight(s2c4beltWrap,s2c4beltW,s2c4beltMoveSpeed)
-    }
-    function beltMoveRight(el,beltW,speed){
-        $(el).css({"left":`${0 - beltW}px`})
-        $(el).animate({
-            left:"0px"
-        },speed,'linear',function(){
-            $(el).css({"left":`${0 - beltW}px`})
-        })
-    }
-    s2c4beltMove()
-    setInterval(s2c4beltMove,s2c4beltMoveSpeed);
-    do{s2c4Cloning()}
-    while(s2c4beltWrapW - s2c4beltW <= winW)
-// #endregion sect2 belt==================================================
+    })
+    gsap.to(s2c3f2,{
+        y:"-20%",
+        scrollTrigger:{
+            trigger:"#sect2",
+            start:"top top",
+            end:"bottom bottom",
+            scrub:1,
+            duration:{min:0.2,max:0.3},
+            ease: "power1.inOut"
+        }
+    })
+    gsap.to(s2c3f3,{
+        y:"-55%",
+        scrollTrigger:{
+            trigger:"#sect2",
+            start:"top top",
+            end:"bottom bottom",
+            scrub:1,
+            duration:{min:0.2,max:0.4},
+            ease: "power1.inOut"
+        }
+    })
+    gsap.to(s2c3f4,{
+        y:"-60%",
+        scrollTrigger:{
+            trigger:"#sect2",
+            start:"top top",
+            end:"bottom bottom",
+            scrub:1,
+            duration:{min:0.2,max:0.3},
+            ease: "power1.inOut"
+        }
+    })
 // #region sect4 text-change==================================================
 function scroll(){
     //#region s3 text change
@@ -86,15 +106,12 @@ function scroll(){
                 $(".s3__logo").removeClass('on-view')
             }
     }
-    //#endregion s3 text change
-    //#region s6 list horizontal-scroll
     if(windowScrollTop<=s6t + winH){
         $('.s6__text').removeClass('init')
         TweenLite.to(s6List,1,{
             css:{x:0+"%"}
         });
     }else if(s6t + winH < windowScrollTop && windowScrollTop < s6t + s6h){
-        console.log(s6t + "....." + windowScrollTop)
         var start = windowScrollBot - s6t - winH;
         var end = $("#sect6").innerHeight() - winH;
         var pers = Math.floor(start / end * 1100);
@@ -162,22 +179,6 @@ function scroll(){
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
     }
-    if(s6t < windowScrollTop && windowScrollTop < s7t){
-        $('.s6__text').addClass('init')
-    }else{
-        $('.s6__text').removeClass('init')
-    }
-    $('.s4__c1_col').each(function(){
-        var thisTop = $(this).offset().top;
-        var parentBox = $(this).find('.s4__c1_padding')
-        var stretchBox = $(this).find('.s4__c1_imgBox')
-        var stretchW = stretchBox.width()
-        if(thisTop<windowScrollBot - 100 && windowScrollTop < thisTop){
-            parentBox.css({"width":stretchW})
-        }else{
-            parentBox.css({"width":"0px"})
-        }
-    })
 }
 // #endregion sect4 text-change==================================================
 $(window).scroll(function(){

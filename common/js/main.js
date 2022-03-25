@@ -1,5 +1,11 @@
 $(document).ready(function(){
 $('.s1__c1').addClass('on-view')
+var swiper = new Swiper(".s4_swiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    // spaceBetween: 8,
+    mousewheel:true,
+});
 // for a horizontal version, see https://codepen.io/GreenSock/pen/rNmQPpa?editors=0010
 //#region declare============================================================
     var winW = $(window).width();
@@ -12,6 +18,10 @@ $('.s1__c1').addClass('on-view')
     const s4 = $('#sect4');
     const $s4 = document.querySelector("#sect4");
     const $s4c2Sticky = document.querySelector("#s4c2Sticky");
+    const s2__c2 = $('.s2__c2')
+    const s2c2 = document.querySelector("#s2c2")
+    const s2c3 = document.querySelector("#s2c3")
+    const s3c1 = document.querySelector("#s3c1")
     const s5 = $('#sect5');
     const s6 = $('#sect6');
     const s7 = $('#sect7');
@@ -38,49 +48,13 @@ $('.s1__c1').addClass('on-view')
 //#endregion declare=========================================================
 //#region sect1 belt=========================================================
 
-gsap.fromTo(s1c3belt,40,
-    {x:"0%"},{x:"-100%",ease:Power0.easeNone}
-).repeat(-1);
 //#endregion sect1 belt======================================================
 
 function s3c1Keep(dataNum){//for sect3 img function
-    TweenLite.to(s3c1f1,0.2,{
-        css:{top:"75%",left:"2%",y:"-50%"}
-    })
-    TweenLite.to(s3c1f2,0.2,{
-        css:{top:"50%",left:"98%",x:"-100%",y:"-50%"}
-    })
-    TweenLite.to(s3c1f3,0.2,{
-        css:{top:"25%",left:"10%",x:"0%",y:"-50%"}
-    })
-    $('.s3__c1').removeClass('opac0')
-    $('.s3__c1').addClass('opac1')
     $('.s3__c1_fig').attr({"data-number":dataNum})
 }
 function mainFunction(){
             //#region body scroll check==================================================
-            //#region scroll-detect check================================================
-        $('.s6__c1_col').each(function(){
-            var thisTop = $(this).offset().top;
-            var parentBox = $(this).find('.s6__c1_padding')
-            var stretchBox = $(this).find('.s6__c1_imgBox')
-            var stretchW = stretchBox.width()
-            if(thisTop<windowScrollBot - scrollPadding && windowScrollTop < thisTop){
-                parentBox.css({"width":stretchW})
-            }else{
-                parentBox.css({"width":"0px"})
-            }
-        })
-        function isInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-        //#endregion scroll-detect check=============================================
             windowScrollTop = $(document).scrollTop();
             windowScrollBot = windowScrollTop + winH;
             if(200 < windowScrollTop && windowScrollTop < (s2t - scrollPadding)){
@@ -103,41 +77,10 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-                    gsap.to(s3c1f1,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    gsap.to(s3c1f2,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    gsap.to(s3c1f3,0.1,{css:{top:"50%",left:"50%",x:"-50%",y:"-50%"}})
-                    $('.s3__c1').removeClass('opac1')
-                    $('.s3__c1').addClass('opac0')
-                    $('.s3__c1_fig').attr({"data-number":"1"})
-                }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
-                    var persent = (((windowScrollTop - sect3for1)*100 /sect3partHeight));
-                    var answer = Math.floor(persent/2.0615);
-                    gsap.to(s3c1f1,0.5,{
-                            left: (i)=>{return gsap.utils.clamp(6.25,50,(50-answer)) + "%"},
-                            top: (i)=>{return gsap.utils.clamp(50,75,(1 + Math.floor(50 + persent/4))) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + persent/2))+"%"},
-                            y: "-50%"
-                            }
-                    );
-                    gsap.to(s3c1f2,0.5,{
-                        css:{
-                            left: (i)=>{return gsap.utils.clamp(50,98,(50 + answer)) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-100,-50,Math.floor(-50 - persent/2)) + "%"},
-                            y: "-50%"
-                        }
-                    });
-                    gsap.to(s3c1f3,0.5,{
-                        css:{
-                            left: (i)=>{return gsap.utils.clamp(10,50,(50 - answer)) + "%"},
-                            top : (i)=>{return gsap.utils.clamp(25,50,(50 - answer/1.5)) + "%"},
-                            x: (i)=>{return gsap.utils.clamp(-50,0,(-50 + answer*6/5)) + "%"},
-                            y: "-50%"
-                        }
-                    });
 
                     $('.s3__c1_fig').attr({"data-number":"1"})
-                    $('.s3__c1').addClass('opac1')
-                    $('.s3__c1').removeClass('opac0')
+                }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
+                    $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for2 < windowScrollTop && windowScrollTop <= sect3for3){
                     s3c1Keep(1);
                 }else if(sect3for3 < windowScrollTop && windowScrollTop <= sect3for4){
@@ -172,24 +115,75 @@ function mainFunction(){
                 colorStyle.addClass("black")
             }
 }
-gsap.to($s4c2Wrapper,0.6,{
-    x:"-110%",
+gsap.set(s3c1,{opacity:"0"})
+gsap.set(s3c1f1,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.set(s3c1f2,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.set(s3c1f3,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
+gsap.to(s3c1,0.1,{
+    opacity:"1",
     scrollTrigger:{
-        trigger:s4,
-        start:"top top",
-        end:"bottom bottom",
-        scrub:true
+        trigger:s3,
+        start:"1% top",
+        end:"5% top",
+        scrub:1
     }
 })
-    $(window).scroll(function(){
-        if(scrollDelay){
-            scrollDelay = false;
-            setTimeout(()=>{
-                scrollDelay=true;
-                },10);
-            mainFunction();
-        };
-    });
+gsap.to(s3c1f1,0.3,{
+    left:"6.25%",
+    top:"75%",
+    x:"0%",
+    y: "-50%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:1
+    }
+    }
+);
+gsap.to(s3c1f2,0.3,{
+    left:"98%",
+    x:"-100%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:1
+    }
+});
+gsap.to(s3c1f3,0.3,{
+    left:"10%",
+    top:"25%",
+    x:"0%",
+    y: "-50%",
+    scrollTrigger:{
+        trigger:s3,
+        start:"10% top",
+        end:"40% top",
+        scrub:1
+    }
+});
+gsap.set($s4c2Wrapper,{x:"0%"})
+gsap.to($s4c2Wrapper,{
+    x:"-=90%",
+    ease: Power2.easeOut,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:s4,
+        start:"5% top",
+        end:"bottom bottom",
+        scrub:1,
+    },
+})
+$(window).scroll(function(){
+    if(scrollDelay){
+        scrollDelay = false;
+        setTimeout(()=>{
+            scrollDelay=true;
+            },10);
+        mainFunction();
+    };
+});
 //#region resize==================================================
     $(window).resize(function(){
         sizeRefresh();

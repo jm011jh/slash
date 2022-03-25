@@ -167,7 +167,7 @@
           transform: translate(-20%, 20%);
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
   .btn__read_more {
     height: 40px;
   }

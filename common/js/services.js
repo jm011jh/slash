@@ -1,7 +1,6 @@
 $(window).ready(function(){
 
     const $s2 = document.querySelector('#sect2')
-    const s2Title = document.querySelector('#s2Title')
     const s1 = $("#sect1")
     const s2 = $("#sect2")
     const s3 = $("#sect3")
@@ -9,6 +8,9 @@ $(window).ready(function(){
     const s5 = $("#sect5")
     const footer = $("#footer")
     const s2title = $('.s2__title')
+    const s2title1 = $('.s2__title1')
+    const s2title2 = $('.s2__title2')
+    const s2title3 = $('.s2__title3')
     var winW = $(window).width();
     var winH = $(window).height();
     var windowScrollTop = $(document).scrollTop();
@@ -21,25 +23,18 @@ $(window).ready(function(){
     var s2h = s2.innerHeight()
     var s3h = s3.innerHeight()
     var s5h = s5.innerHeight()
-    var footerT = footer.offset().top;
 
-    var s2titleTop = s2title.offset().top;
-    var s2titleH = s2title.innerHeight();
-    var s2titleBot = s2titleTop + s2titleH;
-    setTimeout(() => {
-        $(".s1__head").addClass('on-view')
-    }, 200);
+    var s2titleTop1 = s2title1.offset().top;
+    var s2titleTop2 = s2title2.offset().top;
+    var s2titleTop3 = s2title3.offset().top;
+    var s2titleH1 = s2title1.innerHeight();
+    var s2titleH2 = s2title2.innerHeight();
+    var s2titleH3 = s2title3.innerHeight();
+    setTimeout(() => {$(".s1__head").addClass('on-view')}, 200);
 
-    function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
     $(window).resize(function(){
+        ScrollTrigger.refresh();
+        trig$2.scrollTrigger.refresh();
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -56,13 +51,17 @@ $(window).ready(function(){
         s5h = s5.innerHeight()
         footerT = footer.offset().top;
 
-        s2titleTop = s2title.offset().top;
-        s2titleH = s2title.innerHeight();
-        s2titleBot = s2titleTop + s2titleH;
+        s2titleTop1 = s2title1.offset().top;
+        s2titleTop2 = s2title2.offset().top;
+        s2titleTop3 = s2title3.offset().top;
+        s2titleH1 = s2title1.innerHeight();
+        s2titleH2 = s2title2.innerHeight();
+        s2titleH3 = s2title3.innerHeight();
     })
     $(window).scroll(function(){
-        s2titleH = s2title.innerHeight();
-        console.log(s2titleH)
+        s2titleH1 = s2title1.innerHeight();
+        s2titleH2 = s2title2.innerHeight();
+        s2titleH3 = s2title3.innerHeight();
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -74,23 +73,76 @@ $(window).ready(function(){
             $("#colorStyle").removeClass("white")
             $("#colorStyle").addClass("black")
         }
+
+
         if(windowScrollTop<s2t){
-            s2title.removeClass('fixed')
-        }else if(s2t<=windowScrollTop && windowScrollTop < s3t - s2titleH){
-            var start = windowScrollTop - s2t;
-            var end = s2h - s2titleH;
-            var fontPers = (0 - Math.floor(start / end * 120) + 160)/10;
-            TweenLite.to(s2title,0.1,{
-                css:{fontSize:fontPers+"vw"}
-            });
-            s2title.removeClass('end')
-            s2title.addClass('fixed')
-        }else if(s3t - s2titleH <= windowScrollTop){
-            s2title.removeClass('fixed')
-            s2title.addClass('end')
+            s2title1.removeClass('fixed')
+        }else if(s2t<=windowScrollTop && windowScrollTop < s3t - s2titleH1){
+            s2title1.removeClass('end')
+            s2title1.addClass('fixed')
+        }else if(s3t - s2titleH1 <= windowScrollTop){
+            s2title1.removeClass('fixed')
+            s2title1.addClass('end')
+        }
+
+        if(windowScrollTop<s2t){
+            s2title2.removeClass('fixed')
+        }else if(s2t<=windowScrollTop && windowScrollTop < s3t - s2titleH2){
+            s2title2.removeClass('end')
+            s2title2.addClass('fixed')
+        }else if(s3t - s2titleH2 <= windowScrollTop){
+            s2title2.removeClass('fixed')
+            s2title2.addClass('end')
+        }
+
+        if(windowScrollTop<s2t){
+            s2title3.removeClass('fixed')
+        }else if(s2t<=windowScrollTop && windowScrollTop < s3t - s2titleH3){
+            s2title3.removeClass('end')
+            s2title3.addClass('fixed')
+        }else if(s3t - s2titleH3 <= windowScrollTop){
+            s2title3.removeClass('fixed')
+            s2title3.addClass('end')
         }
 
     })
+    const trig$1 = gsap.timeline({
+        scrollTrigger:{
+            trigger:$s2,
+            start:"top top",
+            end:"bottom top",
+            scrub:true,
+        }
+    })
+    const trig$2 = gsap.timeline({
+        scrollTrigger:{
+            trigger:$s2,
+            start:"top top",
+            end:"bottom top",
+            scrub:true,
+        }
+    })
+    const trig$3 = gsap.timeline({
+        scrollTrigger:{
+            trigger:$s2,
+            start:"top top",
+            end:"bottom top",
+            scrub:true,
+        }
+    })
+    trig$1.to(s2title1,{
+        fontSize:"40px",
+        paddingTop:"240px",
+    })
+    trig$2.to(s2title2,{
+        fontSize:"40px",
+        paddingTop:"180px",
+    })
+    trig$3.to(s2title3,{
+        fontSize:"20px",
+        paddingTop:"120px",
+    })
+
     const s4belt = $(".s4__belt_item")
     gsap.fromTo(s4belt,20,
         {x:"0%"},{x:"-100%",ease:Power0.easeNone}
