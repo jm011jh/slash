@@ -213,7 +213,7 @@
   font-size: 22px;
   font-family: "AppleSD";
   font-weight: 300;
-  line-height: 1.66;
+  line-height: 1.5;
 }
 
 #colorStyle #sect1 .on_pc {
@@ -223,6 +223,7 @@
 @media all and (max-width: 1300px) {
   #colorStyle #sect1 .s1__head span:not(.s1__span_img) {
     font-size: 4vw;
+    line-height: 1.15;
   }
   #colorStyle #sect1 .s1__span_img {
     width: 100px;
@@ -231,6 +232,10 @@
 }
 
 @media all and (max-width: 768px) {
+  #colorStyle #sect1 {
+    padding-top: 170px;
+    padding-bottom: 60px;
+  }
   #colorStyle #sect1 .s1__head {
     margin-left: 0;
   }
@@ -242,7 +247,7 @@
             transform: rotateX(0deg) translateZ(120px) scaleY(1) translateY(4px);
   }
   #colorStyle #sect1 .s1__body {
-    margin-top: 40px;
+    margin-top: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -250,7 +255,7 @@
   }
   #colorStyle #sect1 .s1__body_img {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 56px;
   }
   #colorStyle #sect1 .s1__body_text {
     font-size: 16px;
@@ -287,6 +292,24 @@
   font-weight: 500;
 }
 
+#colorStyle #sect2 .s2__title1 {
+  font-size: 240px;
+  padding-top: 0px;
+  opacity: 1;
+}
+
+#colorStyle #sect2 .s2__title2 {
+  font-size: 120px;
+  padding-top: 0px;
+  opacity: 0;
+}
+
+#colorStyle #sect2 .s2__title3 {
+  font-size: 60px;
+  padding-top: 0px;
+  opacity: 0;
+}
+
 #colorStyle #sect2 .fixed {
   position: fixed;
 }
@@ -296,52 +319,37 @@
   bottom: 0;
 }
 
-#colorStyle #sect2 .p1 {
-  font-size: 240px;
-  display: block;
-}
-
-#colorStyle #sect2 .p2 {
-  font-size: 120px;
-  display: none;
-}
-
-#colorStyle #sect2 .p3 {
-  font-size: 64px;
-  display: none;
-}
-
 @media all and (max-width: 1350px) {
   #colorStyle #sect2 .s2__title {
-    padding-top: 40px;
+    padding-top: 70px;
   }
-  #colorStyle #sect2 .p1 {
-    display: none;
+  #colorStyle #sect2 .s2__title1 {
+    opacity: 0;
   }
-  #colorStyle #sect2 .p2 {
-    display: block;
+  #colorStyle #sect2 .s2__title2 {
+    opacity: 1;
   }
-  #colorStyle #sect2 .p3 {
-    display: none;
+  #colorStyle #sect2 .s2__title3 {
+    opacity: 0;
   }
 }
 
 @media all and (max-width: 768px) {
   #colorStyle #sect2 {
-    padding: 150px 0 100px;
+    padding: 70px 0 100px;
   }
   #colorStyle #sect2 .s2__title {
     padding-top: 40px;
     font-size: 60px;
   }
-  #colorStyle #sect2 .p1 {
-    display: none;
+  #colorStyle #sect2 .s2__title1 {
+    opacity: 0;
   }
-  #colorStyle #sect2 .p2 {
-    display: none;
+  #colorStyle #sect2 .s2__title2 {
+    opacity: 0;
   }
-  #colorStyle #sect2 .p3 {
-    display: block;
+  #colorStyle #sect2 .s2__title3 {
+    opacity: 1;
   }
 }
 

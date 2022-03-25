@@ -75,7 +75,7 @@ li{list-style: none;}
         }
     }
 }
-.open-text-child{overflow-y: hidden;display: block;}
+.open-text-child{display: block;}
 .open-text-child span{display: inline-block;transition-duration: 0.4s;transform: translate(0,100%);transition-delay: 0s;opacity: 0;}
 .on-view .open-text-child span{transform: translate(0,0px);transition-delay: 1s;opacity: 1;}
 @for $i from 1 through 7{
