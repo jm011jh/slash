@@ -149,15 +149,11 @@
   width: 135px;
 }
 
-<<<<<<< HEAD
 .footer__logo .ft_b {
   display: none;
 }
 
-@media all and (max-width: 750px) {
-=======
 @media all and (max-width: 768px) {
->>>>>>> 0d5dbc7187de71f359febb8c93db81f9550f4008
   #footer {
     padding-top: 90px;
     padding-bottom: 40px;
