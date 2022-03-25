@@ -91,7 +91,7 @@ $white : #ffffff;
         .s3__body{padding: 0 8.035%;}
         
         .s3__fig{display: flex;justify-content: space-between;position: relative;padding: 72px 0 144px;}
-        .s3__tit,.s3__exp{font-size: 40px;}
+        .s3__tit,.s3__exp{font-size: 40px;font-weight: 500;}
         .s3__tit, .s3__cto{width: calc(49.35%);}
         .s3__sub{display: flex;justify-content:space-between;font-size: 20px;line-height: 2.2;margin-top: 40px;font-weight: 300;}
         .s3__sub .col{width: 38.5%;}
@@ -130,7 +130,7 @@ $white : #ffffff;
         .s5__fig:last-child{padding: 36px 0 0;}
         .s5__fig_head{display: flex;font-size: 22px;}
         .s5__fig_body{display: flex;justify-content: space-between;margin-top: 26px;}
-        .s5__fig_tit{font-size: 40px;}
+        .s5__fig_tit{font-size: 40px;font-weight: 500;}
         .s5__fig_cto{font-size: 20px;line-height: 1.5;font-weight: 400;}
         .s5__fig_tit, .s5__fig_cto{width: calc(49.35%);}
     }

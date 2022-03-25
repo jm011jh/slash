@@ -13,63 +13,18 @@ $(window).ready(function(){
     var s7h = $("#sect7").innerHeight();
     var footerT = $("#footer").offset().top;
     var scrollPadding = 300;//스크롤여분값
-    const s6List = $(".s6__list")
+    const s6List = $(".s6__list_horizontal")
     const s7bgScale = $("#s7bgScale")
     const s7bgScaleMob = $("#s7bgScaleMob")
-    const s2c3f1 = $("#s2c3f1")
-    const s2c3f2 = $("#s2c3f2")
-    const s2c3f3 = $("#s2c3f3")
-    const s2c3f4 = $("#s2c3f4")
     const s2c4belt = $(".s2__c4_belt p")
     setTimeout(()=>{$('#sect1').addClass('on-view')},100)
-    gsap.set(s2c3f1,{y:"0%"})
-    gsap.set(s2c3f2,{y:"0%"})
-    gsap.set(s2c3f3,{y:"0%"})
-    gsap.set(s2c3f4,{y:"0%"})
-    gsap.to(s2c3f1,{
-        y:"-20%",
-        scrollTrigger:{
-            trigger:"#sect2",
-            start:"top top",
-            end:"bottom bottom",
-            scrub:1,
-            duration:{min:0.2,max:0.3},
-            ease: "power1.inOut"
-        }
-    })
-    gsap.to(s2c3f2,{
-        y:"-20%",
-        scrollTrigger:{
-            trigger:"#sect2",
-            start:"top top",
-            end:"bottom bottom",
-            scrub:1,
-            duration:{min:0.2,max:0.3},
-            ease: "power1.inOut"
-        }
-    })
-    gsap.to(s2c3f3,{
-        y:"-55%",
-        scrollTrigger:{
-            trigger:"#sect2",
-            start:"top top",
-            end:"bottom bottom",
-            scrub:1,
-            duration:{min:0.2,max:0.4},
-            ease: "power1.inOut"
-        }
-    })
-    gsap.to(s2c3f4,{
-        y:"-60%",
-        scrollTrigger:{
-            trigger:"#sect2",
-            start:"top top",
-            end:"bottom bottom",
-            scrub:1,
-            duration:{min:0.2,max:0.3},
-            ease: "power1.inOut"
-        }
-    })
+
+    var swiper = new Swiper(".s6swiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        // spaceBetween: 8,
+        mousewheel:true,
+    });
 // #region sect4 text-change==================================================
 function scroll(){
     //#region s3 text change
@@ -169,13 +124,13 @@ function scroll(){
         })
     }
     //#region s7 bg scale
-    if(0< windowScrollBot && windowScrollBot < s4t - 1000){//color style
+    if(0< windowScrollBot && windowScrollBot < s4t - 300){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
-    }else if(s4t - 1000 <= windowScrollBot && windowScrollBot < s7t){
+    }else if(s4t - 300 <= windowScrollBot && windowScrollBot < s7t+winH){
         $("#colorStyle").removeClass("black")
         $("#colorStyle").addClass("white")
-    }else if(s7t <= windowScrollBot){
+    }else if(s7t+winH <= windowScrollBot){
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
     }

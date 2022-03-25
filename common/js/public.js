@@ -58,7 +58,7 @@ $(document).ready(function () {
                     $('.initiate-detect').addClass('on-view')
                 },300)
             }
-        })
+        })  
     }
     $(window).resize(function(){
         publicRefresh();

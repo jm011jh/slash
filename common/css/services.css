@@ -383,6 +383,7 @@
 
 #colorStyle #sect3 .s3__tit, #colorStyle #sect3 .s3__exp {
   font-size: 40px;
+  font-weight: 500;
 }
 
 #colorStyle #sect3 .s3__tit, #colorStyle #sect3 .s3__cto {
@@ -541,6 +542,7 @@
 
 #colorStyle #sect5 .s5__fig_tit {
   font-size: 40px;
+  font-weight: 500;
 }
 
 #colorStyle #sect5 .s5__fig_cto {

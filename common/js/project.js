@@ -44,7 +44,7 @@ const dispose = (scroll) => {
     modifiers: {
       x: (x, target) => {
         const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
-        return `${-s/20}px`
+        return `${-s/15 - 30}px`
       }
     }
   })
@@ -115,16 +115,8 @@ Render
 --------------------*/
 const render = () => {
   requestAnimationFrame(render)
-  y = lerp(y, scrollY, 0.05)
+  y = lerp(y, scrollY, 0.1)
   dispose(y)  
-  // scrollSpeed = y - oldScrollY
-  // oldScrollY = y
-  
-  // gsap.to($items, {
-  //   // skewX: -scrollSpeed * .2,
-  //   rotate: scrollSpeed * .01,
-  //   // scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003
-  // })
 }
 render()
 
