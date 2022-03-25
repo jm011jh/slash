@@ -44,7 +44,7 @@ const dispose = (scroll) => {
     modifiers: {
       x: (x, target) => {
         const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
-        return `${-s/15 - 30}px`
+        return `${-s/80}%`
       }
     }
   })

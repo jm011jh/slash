@@ -21,6 +21,16 @@ body {
   height: 100vh;
 }
 
+.title-menu {
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
 .menu.is-dragging {
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -48,6 +58,10 @@ body {
           transform: translate(0, -50%);
 }
 
+.menu--item:nth-child(odd) {
+  margin-top: 3vw;
+}
+
 .menu--item .img--box {
   height: 100%;
   width: 150%;
@@ -59,7 +73,7 @@ body {
 }
 
 .menu--item:nth-child(1) .img--box {
-  background-image: url(/common/image/project_bespoke.png);
+  background-image: url(/common/image/slide_summer.png);
 }
 
 .menu--item:nth-child(2) .img--box {
@@ -91,7 +105,7 @@ body {
 }
 
 .menu--item:nth-child(9) .img--box {
-  background-image: url(/common/image/project_zpsamsung.png);
+  background-image: url(/common/image/slide_zepeto.png);
 }
 
 .menu--item:nth-child(10) .img--box {
@@ -124,6 +138,13 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 20px;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  background-color: #000;
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
 }
 
 .item--year {
@@ -145,6 +166,11 @@ body {
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   margin-top: 16px;
+}
+
+.menu--item .item--img:hover {
+  -webkit-filter: grayscale(20%) opacity(0.5);
+          filter: grayscale(20%) opacity(0.5);
 }
 
 @media (max-width: 767px) {

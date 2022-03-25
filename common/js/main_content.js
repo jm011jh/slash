@@ -67,7 +67,7 @@ const s4c2Contents = [
 for (i = 0; i <= s4c2Contents.length - 1; i++) {
     var $s4SwiperList =
         $(
-            `<li class="s4__c2_listitem mouse-change-link">
+            `<li class="s4__c2_listitem mouse-change">
             <a href="#">
                 <p class="s4__c2_p1">${s4c2Contents[i].year}</p>
                 <div class="s4__c2_imgBox">
@@ -83,7 +83,7 @@ for (i = 0; i <= s4c2Contents.length - 1; i++) {
 for (i = 0; i <= s4c2Contents.length - 1; i++) {
     var $s4SwiperList =
         $(
-            `<li class="s4__c2_listitem_mobile mouse-change-link swiper-slide">
+            `<li class="s4__c2_listitem_mobile mouse-change swiper-slide">
             <a href="#">
                 <p class="s4__c2_p1">${s4c2Contents[i].year}</p>
                 <div class="s4__c2_imgBox">

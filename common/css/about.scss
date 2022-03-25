@@ -38,7 +38,7 @@ $--g : 155px;//컬럼+갭
         .s2__c1_title{color: $white;margin-left: $--gw;}
         .s2__c2{max-width:calc(100% - 80px);display: flex;justify-content: flex-end;margin: auto;}
         .s2__c2_figure{width:70%;}
-        .s2__c2 p{color: $white;font-size: 3.5vw;display: inline-block;font-weight: 500;}
+        .s2__c2 p{color: $white;font-size: 3.3vw;display: inline-block;font-weight: 500;}
         .s2__c2 .margin{color:$white;margin-right: 40px;transform: translateY(-12px);font-size: 16px;display: inline-block;text-align: left;}
         .s2__c2 p.open-text-child span:not(.s2_on_mobile){display:inline-block;transform: rotateX(-90deg) translateZ(80px);transition-duration: 0.3s;}
         .s2__c2.on-view p.open-text-child span:not(.s2_on_mobile){transform: rotateX(0deg) translateZ(20px);transition-duration: 0.9s;}

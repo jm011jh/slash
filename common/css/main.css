@@ -47,12 +47,12 @@
 
 #sect1 {
   width: 100%;
-  padding-top: 50vh;
+  padding-top: 58vh;
   padding-bottom: 100px;
 }
 
 .s1__c1 {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   padding: 0 40px;
 }
 
@@ -11661,7 +11661,7 @@
 }
 
 .s1__c1__title {
-  font-size: 8.1vw;
+  font-size: 6.5vw;
   font-weight: 400;
   margin-right: 4vw;
 }
@@ -11672,7 +11672,7 @@
 
 .s1__c1__title .font2 {
   letter-spacing: -0.1vw;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .s1__c1_p {
@@ -11707,13 +11707,13 @@
 
 .s1__c1__description .p1 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 32px;
 }
 
 .s1__c1__description .p1 b {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .s1__c1__description .p1 span {
@@ -11728,6 +11728,7 @@
   font-size: 18px;
   line-height: 1.4;
   font-weight: 200;
+  opacity: 0.8;
 }
 
 .s1__c3 {
@@ -11741,6 +11742,7 @@
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .s1__c3_wrap {
@@ -11860,8 +11862,8 @@
 }
 
 .s2__c2 p {
-  font-size: 3.5vw;
-  font-weight: 400;
+  font-size: 3.3vw;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -11911,6 +11913,7 @@
   opacity: 0;
   -webkit-transition-duration: 0.6s;
           transition-duration: 0.6s;
+  font-weight: 300;
 }
 
 .s2__c3.on-view p {
@@ -11993,6 +11996,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  overflow: hidden;
 }
 
 .s3__c1_fig1 {
@@ -12024,7 +12028,7 @@
 }
 
 .s3c1_text {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: 0;
   -webkit-transform: translate(0, 100%);
@@ -12034,14 +12038,8 @@
   font-size: 18px;
 }
 
-.s3__c1_fig[data-number="1"] img:nth-of-type(1), .s3__c1_fig[data-number="1"] p:nth-of-type(1) {
-  opacity: 1;
-}
-
-.s3__c1_fig[data-number="2"] img:nth-of-type(2), .s3__c1_fig[data-number="2"] p:nth-of-type(2) {
-  opacity: 1;
-}
-
+.s3__c1_fig[data-number="1"] img:nth-of-type(1), .s3__c1_fig[data-number="1"] p:nth-of-type(1),
+.s3__c1_fig[data-number="2"] img:nth-of-type(2), .s3__c1_fig[data-number="2"] p:nth-of-type(2),
 .s3__c1_fig[data-number="3"] img:nth-of-type(3), .s3__c1_fig[data-number="3"] p:nth-of-type(3) {
   opacity: 1;
 }
@@ -13321,7 +13319,7 @@
 
 .s6__c1 {
   font-size: clamp(80px, 6vw, 130px);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .s6__c1_col {
