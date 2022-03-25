@@ -9,6 +9,9 @@ $(window).ready(function(){
     const s5 = $("#sect5")
     const footer = $("#footer")
     const s2title = $('.s2__title')
+    const s2titleP1 = $('.s2__title .p1')
+    const s2titleP2 = $('.s2__title .p2')
+    const s2titleP3 = $('.s2__title .p3')
     var winW = $(window).width();
     var winH = $(window).height();
     var windowScrollTop = $(document).scrollTop();
@@ -41,6 +44,7 @@ $(window).ready(function(){
     }
     $(window).resize(function(){
         ScrollTrigger.refresh();
+        trig$2.scrollTrigger.refresh();
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -63,7 +67,6 @@ $(window).ready(function(){
     })
     $(window).scroll(function(){
         s2titleH = s2title.innerHeight();
-        console.log(s2titleH)
         winW = $(window).width();
         winH = $(window).height();
         windowScrollTop = $(document).scrollTop();
@@ -94,7 +97,7 @@ $(window).ready(function(){
             scrub:true,
         }
     })
-    trig$2.to(s2title,{
+    trig$2.to(s2titleP1,{
         fontSize:"40px",
         paddingTop:"240px",
     })
