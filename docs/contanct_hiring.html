@@ -7,7 +7,7 @@
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <link rel="stylesheet" href="/common/css/public.css">
         <link rel="stylesheet" href="/common/css/contact.css">
-        <title>Document</title>
+        <title>CHANGER - APPLY FOR A JOB</title>
     </head>
 
     <body>
@@ -33,7 +33,6 @@
                         <div class="con__in in__ani">슬래시 인재풀에 등록하기</div>
                     </div>
                 </div>
-
 
                 <div class="hiring__contents">
                     <!-- #1 -->
@@ -150,73 +149,75 @@
                     </div>
 
                     <!-- #2 -->
-                    <div class="content__box">
-                        <div class="box__title">
-                            <div class="num"><div class="num__in">02.</div></div>
-                            <div class="tit"><div class="tit__in">연락을 받으실 담당자님에 대한 정보를 알려주세요.</div></div>
-                        </div>
+                    <div class="content__box box02">
+                        <div class="content__box-in">
+                            <div class="box__title">
+                                <div class="num"><div class="num__in">02.</div></div>
+                                <div class="tit"><div class="tit__in">연락을 받으실 담당자님에 대한 <br class="mo" />정보를 알려주세요.</div></div>
+                            </div>
 
-                        <div class="box__cont">
-                            <form class="in-box__container">
+                            <div class="box__cont">
+                                <form class="in-box__container">
 
-                                <div class="in-box__box-wrap">
-                                    <input type="text" placeholder="이름을 기입하세요" name="name" class="in-box__box in-box__box--required in-box__box--posi">
-                                    <!--                                     
-                                    <span class="in-box__state"></span>
-                                    <button type="reset" class="in-box__close">
-                                        <span class="ico-chatbot--content-cancel"></span>
-                                    </button>
-                                    -->
-                                </div>
+                                    <div class="in-box__box-wrap">
+                                        <input type="text" placeholder="이름을 기입하세요" name="name" id="hiringName" class="in-box__box in-box__box--required in-box__box--posi">
+                                        <!--                                     
+                                        <span class="in-box__state"></span>
+                                        <button type="reset" class="in-box__close">
+                                            <span class="ico-chatbot--content-cancel"></span>
+                                        </button>
+                                        -->
+                                    </div>
 
-                                <div class="in-box__box-wrap">
-                                    <input type="email" placeholder="이메일 주소를 알려주세요" name="email" class="in-box__box in-box__box--required in-box__box--posi">
-                                </div>
+                                    <div class="in-box__box-wrap">
+                                        <input type="email" placeholder="이메일 주소를 알려주세요" name="email" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
 
-                                <div class="in-box__box-wrap">
-                                    <input type="tel" placeholder="연락처 정보를 알려주세요" name="tel" class="in-box__box in-box__box--required in-box__box--posi">
-                                </div>
+                                    <div class="in-box__box-wrap">
+                                        <input type="tel" placeholder="연락처 정보를 알려주세요" name="tel" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
 
-                                <div class="in-box__box-wrap">
-                                    <input type="url" placeholder="URL(포트폴리오, 웹사이트)" name="url" class="in-box__box in-box__box--required in-box__box--posi">
-                                </div>
+                                    <div class="in-box__box-wrap">
+                                        <input type="url" placeholder="URL(포트폴리오, 웹사이트)" name="url" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
 
-                                <div class="in-box__box-wrap">
-                                    <input type="text" value="지원분야" readonly name="position" class="in-box__box in-box__box--required in-box__box--posi">
-                                </div>
+                                    <div class="in-box__box-wrap confirm">
+                                        <input type="text" value="지원분야" readonly name="position" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
 
-                                <div class="in-box__box-wrap">
-                                    <label for="file" id="file-label" class="in-box__box in-box__box--required">이력서를 첨부해 주세요</label>
-                                    <input type="file" placeholder="이력서를 첨부해 주세요" name="file" class="in-box__box in-box__box--required in-box__box--file">
-                                </div>
+                                    <div class="in-box__box-wrap">
+                                        <label for="file" id="file-label" class="in-box__box in-box__box--required">이력서를 첨부해 주세요</label>
+                                        <input type="file" placeholder="이력서를 첨부해 주세요" name="file" class="in-box__box in-box__box--required in-box__box--file">
+                                    </div>
 
-                                <div class="in-box__box-wrap in-box__box-wrap-textarea noAni">
-                                    <textarea placeholder="간단한 자기소개를 적어주세요~" name="desc" class="in-box__box in-box__box--long in-box__box--required"></textarea>
-                                </div>
+                                    <div class="in-box__box-wrap in-box__box-wrap-textarea noAni">
+                                        <textarea placeholder="간단한 자기소개를 적어주세요~" name="desc" class="in-box__box in-box__box--long in-box__box--required"></textarea>
+                                    </div>
 
-                                <div class="in-box__box-policy">
-                                    <input type="checkbox" id="policy" />
-                                    <label for="policy" class="policy-check__label">
-                                        <span class="policy-check__box">
-                                            <span class="policy-check__check ico-chatbot--input-check"></span>
-                                        </span>
-                                        <span class="policy-check__txt">
-                                            <span class="t-cb--16">
-                                                <span class="t--kr">
-                                                    <button class="policy-check__page">개인정보처리방침</button>에 동의합니다.
+                                    <div class="in-box__box-policy">
+                                        <input type="checkbox" id="policy" />
+                                        <label for="policy" class="policy-check__label">
+                                            <span class="policy-check__box">
+                                                <span class="policy-check__check ico-chatbot--input-check"></span>
+                                            </span>
+                                            <span class="policy-check__txt">
+                                                <span class="t-cb--16">
+                                                    <span class="t--kr">
+                                                        <button class="policy-check__page">개인정보처리방침</button>에 동의합니다.
+                                                    </span>
                                                 </span>
                                             </span>
-                                        </span>
-                                    </label>
-                                </div>
+                                        </label>
+                                    </div>
 
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
 
                     <!-- #OK -->
-                    <div class="content__box content__submit">
+                    <div class="content__box content__submit box02 ">
                         <button class="hiring_submit__button mouse-change">
                             <div class="submit__button-in">
                                 <div class="arr">

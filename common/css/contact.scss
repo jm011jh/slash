@@ -1,11 +1,4 @@
-//@import "_settings";
-
-
-$font1 :  Arial, Helvetica, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande";
-$font2 : 'Playfair Display', serif;
-$font3 : "AppleSD";
-$black : #000000;
-$white : #ffffff;
+@import "_settings";
 
 
 /* footer */
@@ -19,14 +12,20 @@ $white : #ffffff;
 
 
 .w_inner {width:calc(100% - 40px); max-width:1530px; font-size:0.0521vw; margin-right:auto; margin-left:auto; -webkit-font-smoothing:antialiased;}
+
+@media all and(max-width:1600px){
+    .w_inner  {
+        font-size:0.0625vw;
+    }
+}
 @media all and(max-width:1080px){
     .w_inner {
         font-size: 0.0926vw;
     }
 }
-@media all and(max-width:768px){
+@media all and(max-width:750px){
     .w_inner {
-        font-size: 0.2604vw;
+        font-size: 0.2667vw;
     }
 }
 
@@ -270,16 +269,47 @@ $white : #ffffff;
 } 
 
 
+@media all and(max-width:750px){
+
+    .hiring__title {
+        padding-top:160em;
+        .title_sup {
+            font-size:14em;
+            .star{
+                height: 1.3em;
+            }
+        }
+    
+        .title_con {
+            margin-top:20em;
+            .con__in {
+                font-size:32em;
+                line-height: 0.95;
+            }
+        }
+    } 
+
+}
+
+
+
 .hiring__contents {
     .content__box {
-        // display:none;
-        // opacity:0;
-        margin-top:160em;
-        overflow:hidden; 
+        padding-top:00em;
+        overflow:hidden;
+        opacity:0;
+        height:0;
 
         &:first-child {
             display: block;
             opacity: 1;
+            height:auto;
+            padding-top:160em;
+        }
+        &.on {
+            height:auto;
+            opacity: 1;
+            padding-top:160em;
         }
 
         .box__title {
@@ -297,10 +327,20 @@ $white : #ffffff;
                     font-weight:bold;
                 }
             }
+
+            .con {
+                margin-top:28em;
+                .con__in {
+                    font-size:16em;
+                    opacity:0.5; 
+                }
+            }
+
+            .mo {display:none;}
         }
 
         .box__cont {
-            margin-top:50em;
+            margin-top:60em;
         }
 
         /**/
@@ -317,13 +357,48 @@ $white : #ffffff;
     }
 }
 
+@media all and(max-width:750px){
+    .hiring__contents {
+        .content__box {
+            &:first-child {
+                padding-top:100em;
+            }
+            &.on {
+                padding-top:80em;
+            }
+    
+            .box__title {
+                .num {
+                    margin-bottom:20em;
+                    .num__in{
+                        font-size:12em;
+                        line-height: 0.78em;
+                    }
+                }
+                .tit {
+                    .tit__in {
+                        font-size:20em;
+                    }
+                }
+                .mo {display:block;}
+            }
+            .box__cont {
+                margin-top:40em;
+            }
+        }
+    }
+}
+
+
+
 .selecttext_balloon__cont {
-    margin-bottom:-20em;
+    display:flex;
+    flex-wrap: wrap;
+    gap:20em;
 
     .selecttext_balloon {
         position:relative;
         display:inline-block;
-        margin:0 20em 20em 0;
         
         .st_balloon__check {
             position:absolute;
@@ -338,6 +413,7 @@ $white : #ffffff;
                 color:#FFF;
                 border-radius: 10em;
                 transition: all 0.3s;
+                box-sizing: border-box;
             }
         }
 
@@ -349,7 +425,7 @@ $white : #ffffff;
             width:2px;
             height:2px;
             opacity:0;
-
+            display:none;
             &:checked + .st_balloon__lbe {
                 background:#000;
                 color:#FFF;
@@ -379,6 +455,22 @@ $white : #ffffff;
     }
 }
 
+
+@media all and(max-width:750px){
+    .selecttext_balloon__cont {
+        gap:10em;
+        .selecttext_balloon {
+            .st_balloon__lbe {
+                padding:11em 14em;
+                .t--kr {
+                    font-size: 14em;
+                }
+            }
+        }
+    }
+}
+
+
 .in-box__container {
     display:flex;
     flex-direction: row;    
@@ -392,8 +484,6 @@ $white : #ffffff;
     padding:22em;
     border-bottom:1px solid #ddd;
     margin:0 0 20em;
-
-    
     &::before {
         content: "";
         width: 100%;
@@ -441,9 +531,26 @@ $white : #ffffff;
         border:1px solid #ddd;
         margin:20em 0;
     }
-
 }
 
+
+
+
+@media all and(max-width:750px){
+
+    .in-box__box-wrap {
+        flex-basis: 100%;
+        padding:11em;
+        margin:20em 0 0em;
+        &:nth-child(odd){ margin-right:0em; }
+        &:nth-child(even) { margin-left:0em; }
+    
+        &.in-box__box-wrap-textarea{
+            margin:20em 0;
+        }
+    }
+
+}
 
 
 .in-box__box{
@@ -455,8 +562,9 @@ $white : #ffffff;
     letter-spacing: -0.05em;
     &::placeholder {color:#8d8d8d}
     &:focus {outline: none;}
-    
 }
+
+
 
 #file-label{color:#8d8d8d}
 .in-box__box--file {opacity:0; position:absolute; top:0; left: 0; width: 1px; height: 1px;;}
@@ -472,6 +580,15 @@ $white : #ffffff;
     white-space: nowrap;
     resize: none;
 
+}
+
+@media all and(max-width:750px){
+    .in-box__box{
+        font-size:16em; 
+    }
+    .in-box__box--long {
+        height: 6em;
+    }
 }
 
 
@@ -502,6 +619,7 @@ $white : #ffffff;
             height:20em;
             display: inline-block;
             position: relative;
+            box-sizing:Border-box;
             .policy-check__check {
                 display:block;
                 width:100%;
@@ -544,6 +662,28 @@ $white : #ffffff;
         }
     }
 }
+
+
+@media all and(max-width:750px){
+    .in-box__box-policy {
+        .policy-check__label {
+            .policy-check__box {
+                width:10em;
+                height:10em;
+                .policy-check__check {
+                    &::after {
+                        top:2em; 
+                    }
+                }
+            }
+            .policy-check__txt {
+                font-size:12em;
+            }
+        }
+    }
+}
+
+
 
 .hiring_submit__button {
     font-size:1em;
@@ -618,3 +758,13 @@ $white : #ffffff;
 }
 
 
+@media all and(max-width:750px){
+    .hiring_submit__button {
+        width:120em;
+        height:120em;
+        .arr{
+            width: 30em;
+            height: 30em;
+        }
+    }
+}
