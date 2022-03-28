@@ -231,9 +231,10 @@ $--g : 155px;//컬럼+갭
         }
     }
     #sect7{height: 300vh;
+        .s7sticky{position: sticky;top: 0;}
         .s7__bg_scale{position: absolute;top: 0%;left: 50%;width: 100%;display: block;transform: translate(-50%,-50%);}
-        .fixed{position: fixed;top: 50%;}
-        .end{top: unset;bottom: 0;}
+        // .fixed{position: fixed;top: 50%;}
+        // .end{top: unset;bottom: 0%;transform: translate(-50%,0);}
         #s7bgScaleMob{opacity: 0;}
         #s7bgScale{opacity: 1;}
     }

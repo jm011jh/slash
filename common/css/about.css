@@ -976,6 +976,12 @@
   height: 300vh;
 }
 
+#aboutMain #sect7 .s7sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 #aboutMain #sect7 .s7__bg_scale {
   position: absolute;
   top: 0%;
@@ -984,16 +990,6 @@
   display: block;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-#aboutMain #sect7 .fixed {
-  position: fixed;
-  top: 50%;
-}
-
-#aboutMain #sect7 .end {
-  top: unset;
-  bottom: 0;
 }
 
 #aboutMain #sect7 #s7bgScaleMob {
