@@ -976,34 +976,24 @@
   height: 300vh;
 }
 
-#aboutMain #sect7 .s7__sticky {
+#aboutMain #sect7 .s7__bg_scale {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #aboutMain #sect7 .fixed {
   position: fixed;
+  top: 50%;
 }
 
 #aboutMain #sect7 .end {
   top: unset;
   bottom: 0;
-}
-
-#aboutMain #sect7 .s7__bg {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#aboutMain #sect7 .s7__bg_scale {
-  width: 100%;
-  height: 100vh;
-}
-
-#aboutMain #sect7 .s7__bg_scale img {
-  width: 100%;
 }
 
 #aboutMain #sect7 #s7bgScaleMob {

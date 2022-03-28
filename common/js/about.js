@@ -15,6 +15,7 @@ $(window).ready(function(){
     var scrollPadding = 300;//스크롤여분값
     const s6List = $(".s6__list_horizontal")
     const s7bgScale = $("#s7bgScale")
+    const s7bgScaleH = $("#s7bgScale").height()
     const s7bgScaleMob = $("#s7bgScaleMob")
     const s2c4belt = $(".s2__c4_belt p")
     setTimeout(()=>{$('#sect1').addClass('on-view')},100)
@@ -119,15 +120,20 @@ function scroll(){
     }
     //#endregion s7 bg scale
     //#region s7 bg position
-    const s7sticky = $("#s7sticky")
-    if(windowScrollTop<=s7t){
-        s7sticky.removeClass('fixed')
-    }else if(s7t<windowScrollTop && windowScrollTop <s7t + s7h - winH){
-        s7sticky.removeClass('end')
-        s7sticky.addClass('fixed')
+    if(windowScrollTop<=s7t - s7bgScaleH/4){
+        s7bgScale.removeClass('fixed')
+        s7bgScaleMob.removeClass('fixed')
+    }else if(s7t - s7bgScaleH/4<windowScrollTop && windowScrollTop <s7t + s7h - winH){
+        console.log('enjot')
+        s7bgScale.removeClass('end')
+        s7bgScale.addClass('fixed')
+        s7bgScaleMob.removeClass('end')
+        s7bgScaleMob.addClass('fixed')
     }else if(s7t + s7h - winH <= windowScrollTop){
-        s7sticky.removeClass('fixed')
-        s7sticky.addClass('end')
+        s7bgScale.removeClass('fixed')
+        s7bgScale.addClass('end')
+        s7bgScale.removeClass('fixed')
+        s7bgScale.addClass('end')
     }
     //#endregion s7 bg position
     //#region colorStyle
