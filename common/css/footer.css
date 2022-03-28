@@ -211,12 +211,17 @@
     -webkit-transform: translate(calc(-50% - 2px), calc(-50% + 2px)) rotate(-45deg);
             transform: translate(calc(-50% - 2px), calc(-50% + 2px)) rotate(-45deg);
   }
+}
+
+@media all and (max-width: 750px) {
   .footer__c3 {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-size: 0.2667vw;
+    padding: 0 20em;
   }
   .footer__textBox .p1 {
     display: none;
@@ -230,22 +235,36 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0 20px;
-    font-size: 12px;
+    font-size: 12em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer__sns .p2 span {
+    display: block;
+    margin: 0;
+    padding: 0.9em 0;
   }
   .footer__logo {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    width: 50px;
-    text-align: center;
-    margin: 38px auto 0;
-  }
-  .footer__logo img {
     width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 30em auto 24em;
+  }
+  .footer__logo svg {
+    width: auto;
+    height: 16em;
   }
   .footer__email {
     -webkit-box-ordinal-group: 4;
@@ -253,21 +272,22 @@
             order: 3;
     width: 100%;
     text-align: center;
-    margin-top: 18px;
+    margin-top: 0;
   }
   .footer__email .p2 {
-    font-size: 11px;
+    font-size: 12em;
+    line-height: 1em;
   }
   .footer__date {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
     width: 100%;
-    margin-top: 14px;
+    margin-top: 17em;
   }
   .footer__date .p2 {
-    font-size: 11px;
-    opacity: 0.3;
+    font-size: 11em;
+    opacity: 0.62;
     text-align: center;
   }
   .footer__date .p3 {
