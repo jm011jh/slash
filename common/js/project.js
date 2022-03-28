@@ -50,8 +50,7 @@ const dispose = (scroll) => {
     },
     modifiers: {
       x: (x, target) => {
-        const s = gsap.utils.wrap(-paginationWidth - 100, paginationWrapWidth - paginationWidth - 100, parseInt(x))
-        console.log(s)
+        const s = gsap.utils.wrap(-paginationWidth, paginationWrapWidth - paginationWidth, parseInt(x))
         return `${-s}px`
       }
     }
@@ -64,7 +63,7 @@ const dispose = (scroll) => {
       x: (x, target) => {
         
         const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
-        return `${-s/80}%`
+        return `${-s/80 + 10}%`
       }
     }
   })

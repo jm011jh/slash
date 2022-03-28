@@ -640,8 +640,8 @@
 @media all and (max-width: 768px) {
   #nav {
     right: 0;
-    -webkit-transform: translate(35px, 0);
-            transform: translate(35px, 0);
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
     height: 200px;
     width: 180px;
   }

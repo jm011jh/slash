@@ -22,7 +22,7 @@ $white : #ffffff;
 ::-webkit-scrollbar { display: none; }
 //#region sect1==================================================
 .sect1_bg{width: 100%;height: 200vh;position: absolute;background-image: url(/common/image/main_bg.png);background-size: cover;background-repeat: no-repeat;}
-#sect1{width: 100%;padding-top: 58vh;padding-bottom: 100px;}
+#sect1{width: 100%;padding-top: 45vh;padding-bottom: 100px;}
 .s1__c1{margin-bottom: 80px;padding:0 40px;}
 .s1__c1__title, .s1__c1__description{display: inline-block;}
 @for $i from 1 through 4{
@@ -41,11 +41,12 @@ $white : #ffffff;
 .s1__c1__title{font-size:6.5vw; font-weight:400; margin-right:4vw;}
 .s1__c1__title .font1{font-weight: 500;}
 .s1__c1__title .font2{letter-spacing:-0.1vw;font-weight: 400;}
-.s1__c1_p{@include persParent;overflow:visible;line-height: 1;}
-.s1__c1_p span{display: inline-block;transform:rotateX(-90deg) translateZ(80px);transition-duration: 0.9s;transition-property: transform;}
-.on-view .s1__c1_p span{transform: rotateX(0deg) translateZ(0px);}
+.s1__c1_p{@include persParent;overflow:visible;line-height: 1;overflow: hidden;}
+.s1__c1_p:nth-child(2){transform: translate(0,-1vw);}
+.s1__c1_p span{display: inline-block;transform:rotateX(-90deg) translateZ(100px);transition-duration: 0.9s;transition-property: transform;}
+.on-view .s1__c1_p span{transform: rotateX(0deg) translateZ(20px);}
 
-.s1__c1_-title .font2,.s1__c1__description{transform: translateY(0.25vw)}
+.s1__c1__description{transform: translateY(-1.1vw)}
 
 .s1__c1__description .p1 {font-size: 16px;font-weight: 400;margin-bottom: 32px;}
 .s1__c1__description .p1 b{font-size: 20px;font-weight: 400;}
@@ -130,28 +131,18 @@ $white : #ffffff;
 .s3__c2_fig{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 100%;}
 .s3__c2 p{text-align: center;}
 .s3__c2_p1{font-size: 120px;margin-bottom: 24px;line-height: 1.15; @include persParent;margin: auto;display: block;font-weight: 500;}
-.s3__c2_fig .s3__c2_p1 span{display: inline-block;transform:rotateX(-90deg) translateZ(120px);opacity: 1;transition-duration: 0.3s;}
-.s3__c2_fig.on-view .s3__c2_p1 span{opacity: 1;transform: rotateX(0deg) translateZ(120px);transition-duration: 0.9s;}
-.s3__c2_fig .s3__c2_p2{font-size: 22px;line-height: 1.5;font-weight: 300;font-family: $font3;margin-top: 20px;}
-.s3__c2_fig .s3__c2_p2 span.space{margin-right: 4px;}
-.s3__c2_fig .s3__c2_p2 span.mini-span{display: inline-block;}
-.s3__c2_fig .s3__c2_p2 span.mini-span{opacity: 0;transform: translate(0%,50%);transition-duration: 0.5s;}
-.s3__c2_fig.on-view .s3__c2_p2 span.mini-span{opacity: 1;transform: translate(0%,0%);}
-@for $i from 1 through 2{
-    @for $j from 1 through 7{
-        @for $k from 1 through 10{
-        .s3__c2_fig.on-view .s3__c2_p2 span.split_text:nth-of-type(#{$i}){
-        span.space:nth-of-type(#{$j}){
-                    span.mini-span:nth-of-type(#{$k}){
-                        transition-delay: #{$i/5 + $j/20 + $k/100 + 0.8}s;
-                    }
-                }
-            }
-        }
-    }
-}
+.s3__c2_fig .s3__c2_p1 span{display: inline-block;transform:rotateX(-90deg) translateZ(80px);opacity: 1;transition-duration: 0.6s;transition-property: transform;}
+.s3__c2_fig.on-view .s3__c2_p1 span{opacity: 1;transform: rotateX(0deg) translateZ(100px);transition-duration: 0.9s;}
 
-.s3__c2_p3{font-size: 12px;position: absolute;bottom: 24px;left: 50%;transform: translate(-50%,0);font-weight: 300;display: none !important;}
+.s3__c2_fig .s3__c2_p2{position: relative;overflow: hidden;}
+.s3__c2_fig .s3__c2_p2 p{font-size: 22px;line-height: 1.5;font-weight: 300;font-family: $font3;margin-top: 20px;}
+.s3__c2_fig .s3__c2_p2 p.s3c2_real{position: absolute;top: 50%;left: 50%;transform: translate(-50%,100%);transition-duration: 0.6s;transition-property: transform;margin-top: 0;}
+.s3__c2_fig .s3__c2_p2 p.s3c2_fake{opacity: 0;}
+.s3__c2_fig.on-view .s3__c2_p2 p.s3c2_real{transform: translate(-50%,-50%);transition-delay: 0.3s;}
+
+@for $i from 1 through 20{
+    .s3__c2_fig.on-view .s3__c2_p1 span:nth-child(#{$i}){transition-delay: #{$i/40}s; transition-duration: 0.6s;}
+}
 @media all and(max-width:768px){
     #sect3{height: unset;margin-bottom: 200px;margin-top: 0px;padding-top: 190px;}
     .s3__sticky{height: unset;position: static;}
@@ -162,7 +153,6 @@ $white : #ffffff;
     .s3__c2_p1{font-size: 32px;}
     .s3__c2_p1 b{font-family: $font2;font-weight: 300;}
     .s3__c2_fig  .s3__c2_p2{font-size: 16px;}
-    .s3__c2_p3{display: none;}
 }
 //#endregion sect3===============================================
 //#region sect4==================================================
