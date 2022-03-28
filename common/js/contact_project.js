@@ -9,29 +9,59 @@ $(document).ready(function () {
     }
 
     // Select 01
-    $('input[name="hiringPosition"]').on("click", function (e) {
+    $('input[name="Selectproject"]').on("click", function (e) {
         NextContentBox(e, "#content_box-02");
     });
 
+    // Select 02
+    $('input[name="SelectCase"]').on("click", function (e) {
+        NextContentBox(e, "#content_box-03");
+    });
 
+    // Select 03
+    $('input[name="SelectMoney"]').on("click", function (e) {
+        NextContentBox(e, "#content_box-04");
+    });
+
+    // Select 04
+    
     
 
 
-    // 유효성검사
+    // 첨부파일
+    $("#file-input").on('change',function(){
+        let fileName = $("#file-input").val();
+        let fileNameNew = fileName.split('/').pop().split('\\').pop(); // 파일명만 추출
+        $("#file-label").text(fileNameNew);
+    });
+
+
+
     var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
     var getCheck= RegExp(/^[a-zA-Z0-9]{4,12}$/);
     var getName = /^[가-힣]{2,4}$/;
     var getTel = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
     let getUrl = /(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
+    let contactName = false;
     $("#contactName").keyup(function (){
         if(!getName.test($(this).val())){
             $(this).parent(".in-box__box-wrap").removeClass("confirm").addClass("error");
             $("#contactName").focus();
         }else{
             $(this).parent(".in-box__box-wrap").removeClass("error").addClass("confirm");
+            contactName = true;
         }
     });
+
+    $("#contactCompany").keyup(function(){
+        if(!$(this).val()){
+            $(this).parent(".in-box__box-wrap").addClass("error");
+            $("#contactCompany").focus();
+        }else{
+            $(this).parent(".in-box__box-wrap").removeClass("error").addClass("confirm");
+        }
+    })
 
     $('#contactEmail').keyup(function () {
         if(!getMail.test($(this).val())){
@@ -51,22 +81,14 @@ $(document).ready(function () {
         }
     });
 
-
-    // 첨부파일
-    $("#contactResume").on('change',function(){
-        let fileName = $("#contactResume").val();
-        if(!fileName){
-            $(this).parent(".in-box__box-wrap").addClass("error");
-            $("#contactResumeLabel").text("이력서를 첨부해 주세요");
-        }else{
-            $(this).parent(".in-box__box-wrap").removeClass("error").addClass("confirm");
-
-            let fileNameNew = fileName.split('/').pop().split('\\').pop(); // 파일명만 추출
-            $("#contactResumeLabel").text(fileNameNew);
-
+    $(".in-box__box--required").on("input", function (e) {
+        if($("#contactName").parent().hasClass("confirm")
+            && $("#contactCompany").parent().hasClass("confirm")
+            && $("#contactEmail").parent().hasClass("confirm")
+            && $("#contactTel").parent().hasClass("confirm")){
+            NextContentBox(e, "#content_box-06");
         }
-    });
-
+    })
 
     // 개인정보처리취급방침
     $(".policy-check__page").on("click", function (e) {
@@ -83,7 +105,6 @@ $(document).ready(function () {
     })
 
 
-
     function NextContentBox (e, NextBox) {
         if($(e.target).val()){
             if(!$(NextBox).hasClass("on")){
@@ -98,6 +119,8 @@ $(document).ready(function () {
             }
         }
     }
+
+
 
 
 });

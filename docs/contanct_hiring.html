@@ -36,7 +36,7 @@
 
                 <div class="hiring__contents">
                     <!-- #1 -->
-                    <div class="content__box box_01">
+                    <div class="content__box box_01" id="content_box-01">
                         <div class="content__box-in">
                             <div class="box__title">
                                 <div class="num"><div class="num__in">01.</div></div>
@@ -149,7 +149,7 @@
                     </div>
 
                     <!-- #2 -->
-                    <div class="content__box box02">
+                    <div class="content__box box02" id="content_box-02">
                         <div class="content__box-in">
                             <div class="box__title">
                                 <div class="num"><div class="num__in">02.</div></div>
@@ -157,10 +157,10 @@
                             </div>
 
                             <div class="box__cont">
-                                <form class="in-box__container">
+                                <div class="in-box__container">
 
                                     <div class="in-box__box-wrap">
-                                        <input type="text" placeholder="이름을 기입하세요" name="name" id="hiringName" class="in-box__box in-box__box--required in-box__box--posi">
+                                        <input type="text" placeholder="이름을 기입하세요" name="name" id="contactName" class="in-box__box in-box__box--required in-box__box--posi">
                                         <!--                                     
                                         <span class="in-box__state"></span>
                                         <button type="reset" class="in-box__close">
@@ -170,11 +170,11 @@
                                     </div>
 
                                     <div class="in-box__box-wrap">
-                                        <input type="email" placeholder="이메일 주소를 알려주세요" name="email" class="in-box__box in-box__box--required in-box__box--posi">
+                                        <input type="email" placeholder="이메일 주소를 알려주세요" name="email" id="contactEmail" class="in-box__box in-box__box--required in-box__box--posi">
                                     </div>
 
                                     <div class="in-box__box-wrap">
-                                        <input type="tel" placeholder="연락처 정보를 알려주세요" name="tel" class="in-box__box in-box__box--required in-box__box--posi">
+                                        <input type="tel" placeholder="연락처 정보를 알려주세요" name="tel"  id="contactTel" class="in-box__box in-box__box--required in-box__box--posi">
                                     </div>
 
                                     <div class="in-box__box-wrap">
@@ -186,11 +186,13 @@
                                     </div>
 
                                     <div class="in-box__box-wrap">
-                                        <label for="file" id="file-label" class="in-box__box in-box__box--required">이력서를 첨부해 주세요</label>
-                                        <input type="file" placeholder="이력서를 첨부해 주세요" name="file" class="in-box__box in-box__box--required in-box__box--file">
+                                        <label for="file" id="contactResumeLabel" class="in-box__box in-box__box--required">이력서를 첨부해 주세요</label>
+                                        <input type="file" placeholder="이력서를 첨부해 주세요" name="file" id="contactResume" class="in-box__box in-box__box--required in-box__box--file">
+                                        <span class="in-box__state state-file"></span>
                                     </div>
 
-                                    <div class="in-box__box-wrap in-box__box-wrap-textarea noAni">
+
+                                    <div class="in-box__box-wrap w100 in-box__box-wrap-textarea noAni">
                                         <textarea placeholder="간단한 자기소개를 적어주세요~" name="desc" class="in-box__box in-box__box--long in-box__box--required"></textarea>
                                     </div>
 
@@ -210,14 +212,9 @@
                                         </label>
                                     </div>
 
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-
-                    <!-- #OK -->
-                    <div class="content__box content__submit box02 ">
                         <button class="hiring_submit__button mouse-change">
                             <div class="submit__button-in">
                                 <div class="arr">
@@ -247,6 +244,21 @@
             <div id="downCircle"></div>
             <div id="cursor"></div>
         </div>
+
+        <!-- #개인정보처리취급방침 -->
+        <div class="agree_popup_wrap w_inner">
+            <div class="agree_popup_inner">
+                <div class="agree_popup_close mouse-change"><img src="../common/image/icon_popup_close.png" /></div>
+                <div class="agree_popup_cont">
+                    <div class="cont_in">
+                        <div class="">개인정보 수집 및 이용</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #개인정보처리취급방침 -->
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

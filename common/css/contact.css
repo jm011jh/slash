@@ -32,6 +32,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.w_inner * {
+  font-family: "Helvetica Neue", "AppleSD";
+}
+
 @media all and (max-width: 1600px) {
   .w_inner {
     font-size: 0.0625vw;
@@ -80,6 +84,10 @@
   line-height: 0.78em;
 }
 
+.contact__title .add .mo {
+  display: none;
+}
+
 .contact__title .tel {
   margin-top: 25em;
 }
@@ -104,26 +112,29 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 750px) {
   .contact__title {
     margin-bottom: 116em;
   }
   .contact__title .tit {
-    font-size: 64.5em;
+    font-size: 63em;
     line-height: 0.78em;
   }
   .contact__title .add {
-    margin-top: 50em;
+    margin-top: 40em;
   }
   .contact__title .add .add-in {
-    font-size: 14em;
-    line-height: 1.5em;
+    font-size: 11em;
+    line-height: 1.3em;
+  }
+  .contact__title .add .mo {
+    display: block;
   }
   .contact__title .tel {
     margin-top: 14.5em;
   }
   .contact__title .tel .tel-in {
-    font-size: 13em;
+    font-size: 10em;
   }
 }
 
@@ -260,6 +271,33 @@
   transition-property: all;
 }
 
+@media all and (max-width: 750px) {
+  .contact__list {
+    width: calc(100% - 0px);
+  }
+  .contact__list .list_box {
+    padding: 44em 0 37em 0;
+  }
+  .contact__list .list_box .box__text .text_sup {
+    margin-bottom: 10em;
+  }
+  .contact__list .list_box .box__text .text_sup span {
+    font-size: 13em;
+    padding: 0.5em 1.25em;
+  }
+  .contact__list .list_box .box__text .text_tit {
+    font-size: 40em;
+    line-height: 1.25em;
+  }
+  .contact__list .list_box .box__arrow {
+    padding: 0 0 0 22em;
+  }
+  .contact__list .list_box .box__arrow .arr {
+    width: 30em;
+    height: 30em;
+  }
+}
+
 /*****************   HIRING   *****************/
 .hiring_main {
   max-width: 1220px;
@@ -290,6 +328,10 @@
   font-size: 80em;
   font-weight: bold;
   line-height: 0.95;
+}
+
+.hiring__title .title_con .mo {
+  display: none;
 }
 
 .hiring__title .in__ani {
@@ -324,27 +366,39 @@
   }
   .hiring__title .title_con .con__in {
     font-size: 32em;
-    line-height: 0.95;
+    line-height: 1.2;
+  }
+  .hiring__title .title_con .mo {
+    display: block;
   }
 }
 
 .hiring__contents .content__box {
   padding-top: 00em;
-  overflow: hidden;
   opacity: 0;
   height: 0;
+  display: none;
+  position: Relative;
   /**/
 }
 
-.hiring__contents .content__box:first-child {
+.hiring__contents .content__box.box_01 {
   display: block;
   opacity: 1;
   height: auto;
   padding-top: 160em;
+  overflow: hidden;
+}
+
+.hiring__contents .content__box.box_04 {
+  z-index: 1;
 }
 
 .hiring__contents .content__box.on {
+  display: block;
   height: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   opacity: 1;
   padding-top: 160em;
 }
@@ -361,6 +415,7 @@
 .hiring__contents .content__box .box__title .tit .tit__in {
   font-size: 40em;
   font-weight: bold;
+  margin: -7px 0;
 }
 
 .hiring__contents .content__box .box__title .con {
@@ -382,6 +437,7 @@
 
 .hiring__contents .content__box .content__box-in {
   display: inline-block;
+  width: 100%;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -413,6 +469,12 @@
   }
   .hiring__contents .content__box .box__title .tit .tit__in {
     font-size: 20em;
+  }
+  .hiring__contents .content__box .box__title .con {
+    margin-top: 19.25em;
+  }
+  .hiring__contents .content__box .box__title .con .con__in {
+    font-size: 11em;
   }
   .hiring__contents .content__box .box__title .mo {
     display: block;
@@ -448,7 +510,6 @@
 .selecttext_balloon__cont .selecttext_balloon .st_balloon__check:checked + .st_balloon__lbe {
   background: #000;
   color: #FFF;
-  border-radius: 10em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-box-sizing: border-box;
@@ -468,7 +529,6 @@
 .selecttext_balloon__cont .selecttext_balloon .st_balloon__radio:checked + .st_balloon__lbe {
   background: #000;
   color: #FFF;
-  border-radius: 10em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -483,7 +543,6 @@
 }
 
 .selecttext_balloon__cont .selecttext_balloon .st_balloon__lbe:hover {
-  border-radius: 10em;
   border-color: #000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -515,6 +574,7 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 20em 40em;
 }
 
 .in-box__box-wrap {
@@ -523,9 +583,13 @@
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 22em;
+  padding: 22em 44em 22em 22em;
   border-bottom: 1px solid #ddd;
-  margin: 0 0 20em;
+}
+
+.in-box__box-wrap.w100 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .in-box__box-wrap::before {
@@ -548,7 +612,7 @@
 }
 
 .in-box__box-wrap.confirm:hover::before, .in-box__box-wrap.confirm:focus::before {
-  background: #0aa86c;
+  background: transparent;
 }
 
 .in-box__box-wrap.error, .in-box__box-wrap.error:focus-within {
@@ -556,14 +620,10 @@
 }
 
 .in-box__box-wrap.error:hover::before, .in-box__box-wrap.error:focus::before {
-  background: #d2330f;
+  background: transparent;
 }
 
-.in-box__box-wrap.error .in-box__box {
-  color: #d2330f;
-}
-
-.in-box__box-wrap:not(.noAni):hover::before, .in-box__box-wrap:not(.noAni):focus::before {
+.in-box__box-wrap:hover::before, .in-box__box-wrap:focus::before {
   background-color: #000;
   -webkit-transform: scaleX(100%);
           transform: scaleX(100%);
@@ -571,7 +631,7 @@
   transition: all 0.5s;
 }
 
-.in-box__box-wrap:not(.noAni):focus-within {
+.in-box__box-wrap:focus-within {
   border-bottom-color: #000;
   -webkit-transition: all 0.3s 0.5s;
   transition: all 0.3s 0.5s;
@@ -605,36 +665,62 @@
   transition: all 0.3s;
 }
 
-.in-box__box-wrap:nth-child(odd) {
-  margin-right: 20em;
-}
-
-.in-box__box-wrap:nth-child(even) {
-  margin-left: 20em;
-}
-
 .in-box__box-wrap.in-box__box-wrap-textarea {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   border: 1px solid #ddd;
-  margin: 20em 0;
+  margin: 0 0 20em;
+}
+
+.in-box__box-wrap .in-box__state {
+  position: Absolute;
+  height: 100%;
+  top: 0;
+  right: 10em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.in-box__box-wrap .in-box__state.state-arrow {
+  width: 15em;
+  background-image: url(../image/contact-state-arrow.svg);
+  opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.in-box__box-wrap .in-box__state.state-file {
+  width: 21em;
+  background-image: url(../image/contact-state-file.svg);
+  opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media all and (max-width: 750px) {
+  .in-box__container {
+    gap: 20em;
+  }
   .in-box__box-wrap {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding: 11em;
-    margin: 20em 0 0em;
+    padding: 11em 22em 11em 11em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
-  .in-box__box-wrap:nth-child(odd) {
-    margin-right: 0em;
-  }
-  .in-box__box-wrap:nth-child(even) {
-    margin-left: 0em;
+  .in-box__box-wrap.box-file {
+    overflow: hidden;
   }
   .in-box__box-wrap.in-box__box-wrap-textarea {
-    margin: 20em 0;
+    margin: 0 0;
+  }
+  .in-box__box-wrap .in-box__state {
+    right: 5em;
+  }
+  .in-box__box-wrap .in-box__state.state-arrow {
+    width: 12em;
+  }
+  .in-box__box-wrap .in-box__state.state-file {
+    width: 14em;
   }
 }
 
@@ -672,12 +758,14 @@
 }
 
 .in-box__box--file {
+  cursor: pointer;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 1px;
-  height: 1px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .in-box__box--long {
@@ -697,7 +785,8 @@
 
 @media all and (max-width: 750px) {
   .in-box__box {
-    font-size: 16em;
+    font-size: 14em;
+    height: 1em;
   }
   .in-box__box--long {
     height: 6em;
@@ -807,7 +896,7 @@
   font-size: 1em;
   border: 0;
   padding: 0;
-  margin: 0 auto 0;
+  margin: 160em auto 0;
   display: block;
   background: transparent;
   width: 280em;
@@ -894,10 +983,173 @@
   .hiring_submit__button {
     width: 120em;
     height: 120em;
+    margin-top: 80em;
   }
   .hiring_submit__button .arr {
     width: 30em;
     height: 30em;
   }
+}
+
+#jrange {
+  position: relative;
+}
+
+#jrange .hasDatepicker {
+  position: Absolute;
+  top: 55em !important;
+  left: 20em !important;
+  border: 1px solid #DDD;
+  background: #FFF;
+  width: 300em;
+  padding: 10em;
+  font-family: "Helvetica Neue", "AppleSD";
+}
+
+#jrange .hasDatepicker .ui-widget.ui-widget-content {
+  width: 100%;
+  border: 0;
+  font-size: 15em;
+}
+
+#jrange .hasDatepicker .ui-datepicker .ui-datepicker-header {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 1.13em;
+}
+
+#jrange .hasDatepicker .ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em 0.7em;
+}
+
+#jrange .hasDatepicker .ui-datepicker .ui-datepicker-prev span {
+  background: url(../image/icon_date_arrL.png) no-repeat center center;
+}
+
+#jrange .hasDatepicker .ui-datepicker .ui-datepicker-next span {
+  background: url(../image/icon_date_arrR.png) no-repeat center center;
+}
+
+#jrange .hasDatepicker .ui-state-default,
+#jrange .hasDatepicker .ui-widget-content .ui-state-default,
+#jrange .hasDatepicker .ui-widget-header .ui-state-default,
+#jrange .hasDatepicker .ui-button, #jrange .hasDatepicker html .ui-button.ui-state-disabled:hover,
+#jrange .hasDatepicker html .ui-button.ui-state-disabled:active {
+  border: 0;
+  background: transparent;
+  text-align: center;
+  color: #a3a3a3;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#jrange .hasDatepicker .ui-state-active,
+#jrange .hasDatepicker .ui-widget-content .ui-state-active,
+#jrange .hasDatepicker .ui-widget-header .ui-state-active,
+#jrange .hasDatepicker a.ui-button:active,
+#jrange .hasDatepicker .ui-button:active,
+#jrange .hasDatepicker .ui-button.ui-state-active:hover {
+  position: relative;
+  color: #FFF !important;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+#jrange .hasDatepicker .ui-datepicker td {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#jrange .hasDatepicker .ui-datepicker td:hover a {
+  color: #000 !important;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#jrange .hasDatepicker .ui-datepicker td.ui-datepicker-current-day::before {
+  content: "";
+  position: Absolute;
+  width: 1.65em;
+  height: 1.65em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #000;
+  color: #FFF !important;
+}
+
+#jrange .hasDatepicker .ui-datepicker .ui-datepicker-buttonpane button {
+  margin: 0.5em 0 0;
+  padding: 0;
+  color: #000 !important;
+  font-size: 0.8em;
+}
+
+@media all and (max-width: 750px) {
+  #jrange .hasDatepicker {
+    top: 30em !important;
+  }
+  #jrange .hasDatepicker .ui-widget.ui-widget-content {
+    font-size: 12em;
+  }
+}
+
+/**/
+.agree_popup_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -99;
+  opacity: 0;
+}
+
+.agree_popup_wrap.on {
+  z-index: 99;
+  opacity: 1;
+  -webkit-transition: all 0.4s 0.3s;
+  transition: all 0.4s 0.3s;
+}
+
+.agree_popup_wrap .agree_popup_inner {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.agree_popup_wrap .agree_popup_inner .agree_popup_close {
+  position: absolute;
+  top: 0;
+  right: -25em;
+  cursor: pointer;
+}
+
+.agree_popup_wrap .agree_popup_inner .agree_popup_cont {
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60em 50em;
+}
+
+.agree_popup_wrap .agree_popup_inner .agree_popup_cont .cont_in {
+  font-size: 16em;
 }
 /*# sourceMappingURL=contact.css.map */
