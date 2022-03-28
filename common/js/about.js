@@ -117,7 +117,20 @@ function scroll(){
             css:{scale:1/1.75}
         })
     }
-    //#region s7 bg scale
+    //#endregion s7 bg scale
+    //#region s7 bg position
+    const s7sticky = $("#s7sticky")
+    if(windowScrollTop<=s7t){
+        s7sticky.removeClass('fixed')
+    }else if(s7t<windowScrollTop && windowScrollTop <s7t + s7h - winH){
+        s7sticky.removeClass('end')
+        s7sticky.addClass('fixed')
+    }else if(s7t + s7h - winH <= windowScrollTop){
+        s7sticky.removeClass('fixed')
+        s7sticky.addClass('end')
+    }
+    //#endregion s7 bg position
+    //#region colorStyle
     if(0< windowScrollBot && windowScrollBot < s4t - 300){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
@@ -128,6 +141,7 @@ function scroll(){
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
     }
+    //#endregion colorStyle
 }
 // #endregion sect4 text-change==================================================
 $(window).scroll(function(){

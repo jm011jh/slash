@@ -973,21 +973,22 @@
 }
 
 #aboutMain #sect7 {
-  padding-top: 240px;
-}
-
-#aboutMain #sect7 .s7__container {
-  width: 100%;
   height: 300vh;
-  position: relative;
 }
 
 #aboutMain #sect7 .s7__sticky {
-  width: 100%;
-  height: 100vh;
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+}
+
+#aboutMain #sect7 .fixed {
+  position: fixed;
+}
+
+#aboutMain #sect7 .end {
+  top: unset;
+  bottom: 0;
 }
 
 #aboutMain #sect7 .s7__bg {
@@ -999,20 +1000,10 @@
 #aboutMain #sect7 .s7__bg_scale {
   width: 100%;
   height: 100vh;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 #aboutMain #sect7 .s7__bg_scale img {
   width: 100%;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 #aboutMain #sect7 #s7bgScaleMob {

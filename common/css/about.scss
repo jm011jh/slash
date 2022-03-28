@@ -230,12 +230,13 @@ $--g : 155px;//컬럼+갭
             .s6__text.init p{opacity: 1;transform: scale(1)translate(0,0);}
         }
     }
-    #sect7{padding-top:240px;
-        .s7__container{width: 100%;height: 300vh;position: relative;}
-        .s7__sticky{width: 100%;height: 100vh;position: sticky;top: 0;}
+    #sect7{height: 300vh;
+        .s7__sticky{position: absolute;top: 0;left: 0;}
+        .fixed{position: fixed;}
+        .end{top: unset;bottom: 0;}
         .s7__bg{width: 100%;height: 100%;overflow: hidden;}
-        .s7__bg_scale{width: 100%;height: 100vh;@include absCenter;}
-        .s7__bg_scale img{width: 100%;@include absCenter;}
+        .s7__bg_scale{width: 100%;height: 100vh;}
+        .s7__bg_scale img{width: 100%;}
         #s7bgScaleMob{opacity: 0;}
         #s7bgScale{opacity: 1;}
     }
