@@ -1,18 +1,17 @@
 @import "_settings";
 
+::-webkit-scrollbar { display: none; }
 
 /* footer */
 #footer {padding-top:200px;}
 .footer__c2 {display: none;}
 .footer__c3 p{color: $black;}
 .footer__c3 .p3,.footer__c3 .p1{color:$black;}
-.footer__logo .ft_b {display:block;}
-.footer__logo .ft_w {display:none;}
+.footer__logo svg {fill:black}
 
 
 
 .w_inner {  width:calc(100% - 40px); max-width:1530px; font-size:0.0521vw; margin-right:auto; margin-left:auto; -webkit-font-smoothing:antialiased;}
-.w_inner * {font-family:"Helvetica Neue", "AppleSD" ;}
 
 @media all and(max-width:1600px){
     .w_inner  {
@@ -81,6 +80,7 @@
 }
 @media all and(max-width:750px){
     .contact__title {
+        font-size:1em;
         margin-bottom:116em;
         .tit {
             font-size: 63em;
@@ -89,7 +89,7 @@
         .add{
             margin-top: 40em;
             .add-in{
-                font-size:11em;
+                font-size:14em;
                 line-height: 1.3em;
             }
             .mo {display:block;}
@@ -97,7 +97,7 @@
         .tel{
             margin-top:14.5em;
             .tel-in{
-                font-size:10em;
+                font-size:12em;
             }
         }
     }
@@ -130,7 +130,6 @@
             .text_sup{
                 margin-bottom: 10em;
                 span {
-                    font-family: $font3;
                     font-size: 16em;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -139,6 +138,7 @@
                     background:#000;
                     color:#FFF;
                     border-radius: 50px;
+                    letter-spacing: -0.02em;;
                 }
 
             }
@@ -150,6 +150,7 @@
                 &.underline{
                     text-decoration: underline;
                 }
+                .mo {display:none;}
             }
         }
 
@@ -234,22 +235,24 @@
                 .text_sup{
                     margin-bottom: 10em;
                     span {
-                        font-size: 13em;
+                        font-size: 12em;
                         padding:0.5em 1.25em;
                     }
                 }
                 .text_tit{
-                    font-size: 40em;
+                    font-size: 32em;
                     line-height: 1.25em;
+                    .mo {display: block;}
                 }
             }
     
             .box__arrow{
-                padding:0 0 0 22em;
+                padding:0 22em 0 22em;
                 .arr{
                     width: 30em;
                     height: 30em;
                 }
+                &.moChang .arr { margin-top:40em;}
             }
         }
     }
@@ -315,7 +318,7 @@
         .title_con {
             margin-top:20em;
             .con__in {
-                font-size:32em;
+                font-size:44em;
                 line-height: 1.2;
             }
             .mo {display:block;}
@@ -406,7 +409,7 @@
                 padding-top:100em;
             }
             &.on {
-                padding-top:80em;
+                padding-top:100em;
             }
     
             .box__title {
@@ -419,14 +422,14 @@
                 }
                 .tit {
                     .tit__in {
-                        font-size:20em;
+                        font-size:28em;
                     }
                 }
 
                 .con {
                     margin-top:19.25em;
                     .con__in {
-                        font-size:11em;
+                        font-size:12em;
                     }
                 }
                 
@@ -497,6 +500,7 @@
 
             .t--kr {
                 font-size: 18em;
+                line-height: 1;
             }
         }
     }
@@ -641,12 +645,13 @@
 
 
 .in-box__box{
+    font-family: "AppleSD";
     font-size:18em;
     border:0; 
     outline: none;
     line-height: 1em;
     width:100%;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
     &::placeholder {color:#8d8d8d}
     &:focus {outline: none;}
 }
@@ -671,8 +676,7 @@
 
 @media all and(max-width:750px){
     .in-box__box{
-        font-size:14em;
-        height:1em;
+        font-size:16em;
     }
     .in-box__box--long {
         height: 6em;
@@ -869,13 +873,13 @@
         left:20em !important;
         border:1px solid #DDD;
         background:#FFF;
-        width:300em;
+        width:400em;
         padding:10em;
         font-family: "Helvetica Neue", "AppleSD";
         .ui-widget.ui-widget-content{
             width:100%;
             border:0;
-            font-size:15em;
+            font-size:17em;
         }
 
         .ui-datepicker .ui-datepicker-header {
@@ -916,7 +920,7 @@
             z-index: 2;
         }
         .ui-datepicker td{position:relative; transition:all 0.5s;}
-        .ui-datepicker td:hover a{color:#000 !important; transition: all 0.4s;}
+        .ui-datepicker td:not(.ui-datepicker-current-day ):hover a{color:#000 !important; transition: all 0.4s;}
         .ui-datepicker td.ui-datepicker-current-day::before{
             content:"";
             position:Absolute;
@@ -930,7 +934,7 @@
             color:#FFF !important;
         }
         .ui-datepicker .ui-datepicker-buttonpane button{
-            margin: 0.5em 0 0;
+            margin: 1em 0 0;
             padding:0;
             color:#000 !important;
             font-size:0.8em;
@@ -941,9 +945,25 @@
 @media all and(max-width:750px){
     #jrange {
         .hasDatepicker {
-            top:30em !important;
+            top:38em !important;
+            left:0 !important;
+            width:100%;
+            
             .ui-widget.ui-widget-content{
-                font-size:12em;
+                font-size:15em;
+            }
+        }
+    }
+}
+@media all and(max-width:550px){
+    #jrange {
+        .hasDatepicker {
+            top:38em !important;
+            left:0 !important;
+            width:100%;
+            
+            .ui-widget.ui-widget-content{
+                font-size:15em;
             }
         }
     }
@@ -974,9 +994,9 @@
 
     .agree_popup_inner{
         position:relative;
-        width:90%;
+        width:80%;
         max-width:600px;
-        height:80vh;
+        height:70vh;
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);

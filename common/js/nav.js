@@ -29,18 +29,21 @@ $(document).ready(function(){
             }
         },
     })
+    
     $('.nav_container .nav_head').on({
         mouseenter:function(){
             if(navPC.hasClass('on')){
                 navPC.addClass('show')
             }
-        },
-        click:function(){
-            if(navPC.hasClass('on') && navPC.hasClass('show')){
-                navPC.removeClass('show')
-            }
         }
+        //,
+        // click:function(){
+        //     if(navPC.hasClass('on') && navPC.hasClass('show')){
+        //         navPC.removeClass('show')
+        //     }
+        // }
     })
+
     var navSwitchMobile = false;
     $('.nav_container_mobile .nav_head').on({
         click:function(){
@@ -66,4 +69,18 @@ $(document).ready(function(){
             },310)
         }
     })
+
+    $(".nav_head").on("click", function (){
+        if($(".nav_container").hasClass("show")){
+            $(".nav_container").removeClass("show"); 
+        }else{
+            $(".nav_container").addClass("show")
+        }
+    });
+
+    $(".nav_container").on("mouseleave", function (){
+        if($(".nav_container").hasClass("show")){
+            $(".nav_container").removeClass("show"); 
+        }
+    });
 })

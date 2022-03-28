@@ -11,6 +11,8 @@ $(document).ready(function () {
     // Select 01
     $('input[name="hiringPosition"]').on("click", function (e) {
         NextContentBox(e, "#content_box-02");
+
+        $("input[name='position']").val(e.target.value)
     });
 
 
