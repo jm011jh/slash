@@ -7,6 +7,8 @@
         <meta content="yes" name="apple-mobile-web-app-capable" />
         <link rel="stylesheet" href="/common/css/public.css">
         <link rel="stylesheet" href="/common/css/contact.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
         <title>CHANGER - PROJET INQUIRY</title>
     </head>
 
@@ -30,23 +32,23 @@
                     </div>
 
                     <div class="title_con">
-                        <div class="con__in in__ani">체이저의 도움이 필요하신가요?</div>
+                        <div class="con__in in__ani">슬래시의 도움이 <br class="mo" />필요하신가요?</div>
                     </div>
                 </div>
 
                 <div class="hiring__contents">
                     <!-- #1 -->
-                    <div class="content__box box_01">
+                    <div class="content__box box_01" id="content_box-01">
                         <div class="content__box-in">
                             <div class="box__title">
                                 <div class="num"><div class="num__in">01.</div></div>
-                                <div class="tit"><div class="tit__in">우리와 함께 하고 싶은 프로젝트는 무엇인가요?</div></div>
-                                <div class="con"><div class="con__in">* 중복선택이 가능합니다.</div></div>
+                                <div class="tit"><div class="tit__in">우리와 함께 하고 싶은 <br class="mo" />프로젝트는 무엇인가요?</div></div>
+                                <div class="con"><div class="con__in">* 중복선택 가능합니다.</div></div>
                             </div>
 
                             <div class="box__cont selecttext_balloon__cont">
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="홈페이지 제작" class="st_balloon__radio" name="Selectproject" value="홈페이지 제작">
+                                    <input type="checkbox" id="홈페이지 제작" class="st_balloon__check" name="Selectproject" value="홈페이지 제작">
                                     <label for="홈페이지 제작" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">홈페이지 제작</div>
@@ -55,7 +57,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="모바일 앱/웹" class="st_balloon__radio" name="Selectproject" value="모바일 앱/웹">
+                                    <input type="checkbox" id="모바일 앱/웹" class="st_balloon__check" name="Selectproject" value="모바일 앱/웹">
                                     <label for="모바일 앱/웹" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">모바일 앱/웹</div>
@@ -64,7 +66,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="e커머스 플랫폼" class="st_balloon__radio" name="Selectproject" value="e커머스 플랫폼">
+                                    <input type="checkbox" id="e커머스 플랫폼" class="st_balloon__check" name="Selectproject" value="e커머스 플랫폼">
                                     <label for="e커머스 플랫폼" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">e커머스 플랫폼</div>
@@ -73,7 +75,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="브랜드 프로모션" class="st_balloon__radio" name="Selectproject" value="브랜드 프로모션">
+                                    <input type="checkbox" id="브랜드 프로모션" class="st_balloon__check" name="Selectproject" value="브랜드 프로모션">
                                     <label for="브랜드 프로모션" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">브랜드 프로모션</div>
@@ -82,7 +84,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="디지털 브랜딩" class="st_balloon__radio" name="Selectproject" value="디지털 브랜딩">
+                                    <input type="checkbox" id="디지털 브랜딩" class="st_balloon__check" name="Selectproject" value="디지털 브랜딩">
                                     <label for="디지털 브랜딩" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">디지털 브랜딩</div>
@@ -91,7 +93,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="VR/AR" class="st_balloon__radio" name="Selectproject" value="VR/AR">
+                                    <input type="checkbox" id="VR/AR" class="st_balloon__check" name="Selectproject" value="VR/AR">
                                     <label for="VR/AR" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">VR/AR</div>
@@ -100,7 +102,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="가상 전시관" class="st_balloon__radio" name="Selectproject" value="가상 전시관">
+                                    <input type="checkbox" id="가상 전시관" class="st_balloon__check" name="Selectproject" value="가상 전시관">
                                     <label for="가상 전시관" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">가상 전시관</div>
@@ -109,7 +111,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="인터렉티브 전시" class="st_balloon__radio" name="Selectproject" value="인터렉티브 전시">
+                                    <input type="checkbox" id="인터렉티브 전시" class="st_balloon__check" name="Selectproject" value="인터렉티브 전시">
                                     <label for="인터렉티브 전시" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">인터렉티브 전시</div>
@@ -118,7 +120,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="360 영상" class="st_balloon__radio" name="Selectproject" value="360 영상">
+                                    <input type="checkbox" id="360 영상" class="st_balloon__check" name="Selectproject" value="360 영상">
                                     <label for="360 영상" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">360 영상</div>
@@ -127,7 +129,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="메타버스" class="st_balloon__radio" name="Selectproject" value="메타버스">
+                                    <input type="checkbox" id="메타버스" class="st_balloon__check" name="Selectproject" value="메타버스">
                                     <label for="메타버스" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">메타버스</div>
@@ -136,7 +138,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="3D" class="st_balloon__radio" name="Selectproject" value="3D">
+                                    <input type="checkbox" id="3D" class="st_balloon__check" name="Selectproject" value="3D">
                                     <label for="3D" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">3D</div>
@@ -145,7 +147,7 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="기타" class="st_balloon__radio" name="Selectproject" value="기타">
+                                    <input type="checkbox" id="기타" class="st_balloon__check" name="Selectproject" value="기타">
                                     <label for="기타" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">기타</div>
@@ -157,7 +159,7 @@
                     </div>
 
                     <!-- #2 -->
-                    <div class="content__box box_01">
+                    <div class="content__box box_02" id="content_box-02">
                         <div class="content__box-in">
                             <div class="box__title">
                                 <div class="num"><div class="num__in">02.</div></div>
@@ -193,8 +195,8 @@
                                 </div>
 
                                 <div class="selecttext_balloon selecttext__item">
-                                    <input type="radio" id="기타" class="st_balloon__radio" name="SelectCase" value="기타">
-                                    <label for="기타" class="st_balloon__lbe">
+                                    <input type="radio" id="기타유형" class="st_balloon__radio" name="SelectCase" value="기타유형">
+                                    <label for="기타유형" class="st_balloon__lbe">
                                         <div class="t-cb">
                                             <div class="t--kr">기타</div>
                                         </div>
@@ -204,10 +206,8 @@
                         </div>
                     </div>
 
-
-
                     <!-- #3 -->
-                    <div class="content__box box_01">
+                    <div class="content__box box_03" id="content_box-03">
                         <div class="content__box-in">
                             <div class="box__title">
                                 <div class="num"><div class="num__in">03.</div></div>
@@ -254,9 +254,108 @@
                         </div>
                     </div>
 
+                    <!-- #4 -->
+                    <div class="content__box box_04" id="content_box-04">
+                        <div class="content__box-in">
+                            <div class="box__title">
+                                <div class="num"><div class="num__in">04.</div></div>
+                                <div class="tit"><div class="tit__in">우리와 함께 할 프로젝트의 <br class="mo" />착수일정을 알려주세요.</div></div>
+                            </div>
 
-                    <!-- #OK -->
-                    <div class="content__box content__submit box02 ">
+                            <div class="box__cont">
+                                <div class="in-box__container">
+                                    <div id="jrange" class="dates in-box__box-wrap">
+                                        <input type="text" placeholder="착수일정 / 오픈예정일" name="name" id="SelectDate" class="in-box__box in-box__box--required in-box__box--posi">
+                                        <span class="in-box__state state-arrow"></span>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #5 -->
+                    <div class="content__box box_05" id="content_box-05">
+                        <div class="content__box-in">
+                            <div class="box__title">
+                                <div class="num"><div class="num__in">05.</div></div>
+                                <div class="tit"><div class="tit__in">연락을 받으실 담당자님에 대한 <br class="mo" />정보를 알려주세요.</div></div>
+                            </div>
+
+                            <div class="box__cont">
+                                <div class="in-box__container">
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="text" placeholder="이름을 기입하세요 *" name="name" id="contactName" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="text" placeholder="직책이 무엇인가요" name="name" id="contactPosition" class="in-box__box in-box__box--posi">
+                                    </div>
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="text" placeholder="기관 혹은 기업명을 알려주세요 *" id="contactCompany" name="name" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="email" placeholder="이메일 주소를 알려주세요 *" id="contactEmail" name="email" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="tel" placeholder="연락처 정보를 알려주세요 *" id="contactTel" name="tel" class="in-box__box in-box__box--required in-box__box--posi">
+                                    </div>
+
+                                    <div class="in-box__box-wrap">
+                                        <input type="url" placeholder="URL(기존사이트 주소를 입력해주세요.)" id="contactUrl" name="url" class="in-box__box in-box__box--posi">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #6 -->
+                    <div class="content__box box_06" id="content_box-06">
+                        <div class="content__box-in">
+                            <div class="box__title">
+                                <div class="num"><div class="num__in">06.</div></div>
+                                <div class="tit"><div class="tit__in">프로젝트에 대해 <br class="mo" />더 자세히 알려주세요.</div></div>
+                                <div class="con"><div class="con__in">우리에게 선호하는 레퍼런스, 프로젝트 목적, 웹사이트 방향성, <br class="mo" />문의 내용 등을 자세히 알려주세요</div></div>
+                            </div>
+
+                            <div class="box__cont">
+                                <div class="in-box__container">
+
+                                    <div class="in-box__box-wrap w100 in-box__box-wrap-textarea noAni">
+                                        <textarea placeholder="프로젝트에 대해 설명해주세요" name="desc" class="in-box__box in-box__box--long in-box__box--required"></textarea>
+                                    </div>
+
+                                    <div class="in-box__box-wrap box-file w100">
+                                        <label for="file" id="file-label" class="in-box__box in-box__box--required">파일첨부 : (pdf, ppt, word, excel, jpg, png, Doc, hwp, zip / 최대 50MB)</label>
+                                        <input type="file" placeholder="파일첨부" name="file" id="file-input" class="in-box__box in-box__box--required in-box__box--file">
+                                        <span class="in-box__state state-file"></span>
+                                    </div>
+
+                                    <div class="in-box__box-policy">
+                                        <input type="checkbox" id="policy" />
+                                        <label for="policy" class="policy-check__label">
+                                            <span class="policy-check__box">
+                                                <span class="policy-check__check ico-chatbot--input-check"></span>
+                                            </span>
+                                            <span class="policy-check__txt">
+                                                <span class="t-cb--16">
+                                                    <span class="t--kr">
+                                                        <button class="policy-check__page">개인정보처리방침</button>에 동의합니다.
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                         <button class="hiring_submit__button mouse-change">
                             <div class="submit__button-in">
                                 <div class="arr">
@@ -286,11 +385,145 @@
             <div id="downCircle"></div>
             <div id="cursor"></div>
         </div>
+
+
+
+
+        <!-- #개인정보처리취급방침 -->
+        <div class="agree_popup_wrap w_inner">
+            <div class="agree_popup_inner">
+                <div class="agree_popup_close mouse-change"><img src="../common/image/icon_popup_close.png" /></div>
+                <div class="agree_popup_cont">
+                    <div class="cont_in">
+                        <div class="">개인정보 수집 및 이용</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #개인정보처리취급방침 -->
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
         <script src="/common/js/public.js"></script>
-        <script src="/common/js/hiring.js"></script>
+        <script src="/common/js/contact_project.js"></script>
+
+        <script>
+            $.datepicker._defaults.onAfterUpdate = null;
+
+            var datepicker__updateDatepicker = $.datepicker._updateDatepicker;
+
+            $.datepicker._updateDatepicker = function( inst ) {
+                datepicker__updateDatepicker.call( this, inst );
+
+                var onAfterUpdate = this._get(inst, 'onAfterUpdate');
+
+                if (onAfterUpdate)
+                    onAfterUpdate.apply((inst.input ? inst.input[0] : null),
+                    [(inst.input ? inst.input.val() : ''), inst]);
+            }
+
+
+        $(function() {
+
+        var cur = -1, prv = -1;
+        $('#jrange div')
+            .datepicker({
+                    //numberOfMonths: 3,
+                    // changeMonth: true,
+                    // changeYear: true,
+                    showButtonPanel: true,
+                    inline: true,
+                    showOtherMonths: true,
+                    showMonthAfterYear: true,
+                    monthNames: [ '01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월' ],
+                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                    yearSuffix:'년',
+
+                    beforeShowDay: function ( date ) {
+                        return [true, ( (date.getTime() >= Math.min(prv, cur) && date.getTime() <= Math.max(prv, cur)) ? 'date-range-selected' : '')];
+                    },
+
+                    onSelect: function ( dateText, inst ) {
+                        var d1, d2;
+
+                        prv = cur;
+                        cur = (new Date(inst.selectedYear, inst.selectedMonth, inst.selectedDay)).getTime();
+                        if ( prv == -1 || prv == cur ) {
+                            prv = cur;
+                            $('#jrange input').val( '착수일정 : ' + $.datepicker.formatDate( 'yy년 mm월 dd일', new Date(Math.min(prv,cur)), {} ) + ' - 오픈예정일 : ');
+                        } else {
+                            d1 = $.datepicker.formatDate( 'yy년 mm월 dd일', new Date(Math.min(prv,cur)), {} );
+                            d2 = $.datepicker.formatDate( 'yy년 mm월 dd일', new Date(Math.max(prv,cur)), {} );
+                            $('#jrange input').val( '착수일정 : '+d1+' - 오픈예정일 : '+d2 );
+                            
+                        }
+                    },
+
+                    onChangeMonthYear: function ( year, month, inst ) {
+                        //prv = cur = -1;
+                    },
+
+                    onAfterUpdate: function ( inst ) {
+                        $('<button type="button" class="ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all" data-handler="hide" data-event="click">Done</button>')
+                            .appendTo($('#jrange div .ui-datepicker-buttonpane'))
+                            .on('click', function () { 
+                                $('#jrange div').hide(); 
+                                
+                                if($("#SelectDate").val()){
+                                    if(!$("#content_box-05").hasClass("on")){
+                                        $("#content_box-05").addClass("on");
+                                        setTimeout( () => {
+                                            let scrollPosition02 = $("#content_box-05").offset().top;
+                                            $("html, body").animate({
+                                                scrollTop : scrollPosition02
+                                            }, 500);
+                                        }, 200);
+                                    }
+                                }
+                                
+                            });
+                        }
+                })
+            .position({
+                    my: 'left top',
+                    at: 'left bottom',
+                    of: $('#jrange input')
+                })
+            .hide();
+
+        $('#jrange input').on('focus', function (e) {
+                var v = this.value,
+                    d;
+
+                try {
+                    if ( v.indexOf(' - ') > -1 ) {
+                    d = v.split(' - ');
+
+                    prv = $.datepicker.parseDate( 'yy년 mm월 dd일', d[0] ).getTime();
+                    cur = $.datepicker.parseDate( 'yy년 mm월 dd일', d[1] ).getTime();
+
+                    } else if ( v.length > 0 ) {
+                    prv = cur = $.datepicker.parseDate( 'yy년 mm월 dd일', v ).getTime();
+                    }
+                } catch ( e ) {
+                    cur = prv = -1;
+                }
+
+                if ( cur > -1 )
+                    $('#jrange div').datepicker('setDate', new Date(cur));
+
+                $('#jrange div').datepicker('refresh').show();
+                
+            });
+
+        });
+
+
+        </script>
     </body>
 </html>
