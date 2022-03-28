@@ -33,21 +33,17 @@ function scroll(){
             var end = $("#sect3").innerHeight();
             var pers = Math.floor(start / end * 1000);
     
-            if(100 < pers && pers < 300){
+            if(100 < pers && pers < 330){
                 $(".s3__text_list li").removeClass('on-view')
                 $(".s3__text_list li").eq(0).addClass('on-view')
             }
-            else if(300 <= pers && pers < 500){
+            else if(330 <= pers && pers < 660){
                 $(".s3__text_list li").removeClass('on-view')
                 $(".s3__text_list li").eq(1).addClass('on-view')
             }
-            else if(500 <= pers && pers < 700){
+            else if(660 <= pers && pers < 990){
                 $(".s3__text_list li").removeClass('on-view')
                 $(".s3__text_list li").eq(2).addClass('on-view')
-            }
-            else if(700 <= pers && pers < 900){
-                $(".s3__text_list li").removeClass('on-view')
-                $(".s3__text_list li").eq(3).addClass('on-view')
             }
             else{
                 $(".s3__text_list li").removeClass('on-view')
@@ -55,10 +51,8 @@ function scroll(){
     
             if(100< pers && pers <950){
                 $(".s3__bg").addClass('on-view')
-                $(".s3__logo").addClass('on-view')
             }else{
                 $(".s3__bg").removeClass('on-view')
-                $(".s3__logo").removeClass('on-view')
             }
     }
     if(windowScrollTop<=s6t + winH){
@@ -123,7 +117,20 @@ function scroll(){
             css:{scale:1/1.75}
         })
     }
-    //#region s7 bg scale
+    //#endregion s7 bg scale
+    //#region s7 bg position
+    const s7sticky = $("#s7sticky")
+    if(windowScrollTop<=s7t){
+        s7sticky.removeClass('fixed')
+    }else if(s7t<windowScrollTop && windowScrollTop <s7t + s7h - winH){
+        s7sticky.removeClass('end')
+        s7sticky.addClass('fixed')
+    }else if(s7t + s7h - winH <= windowScrollTop){
+        s7sticky.removeClass('fixed')
+        s7sticky.addClass('end')
+    }
+    //#endregion s7 bg position
+    //#region colorStyle
     if(0< windowScrollBot && windowScrollBot < s4t - 300){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
@@ -134,6 +141,7 @@ function scroll(){
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
     }
+    //#endregion colorStyle
 }
 // #endregion sect4 text-change==================================================
 $(window).scroll(function(){

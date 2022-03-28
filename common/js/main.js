@@ -16,12 +16,6 @@ var swiper = new Swiper(".s4_swiper", {
     const s2 = $('#sect2');
     const s3 = $('#sect3');
     const s4 = $('#sect4');
-    const $s4 = document.querySelector("#sect4");
-    const $s4c2Sticky = document.querySelector("#s4c2Sticky");
-    const s2__c2 = $('.s2__c2')
-    const s2c2 = document.querySelector("#s2c2")
-    const s2c3 = document.querySelector("#s2c3")
-    const s3c1 = document.querySelector("#s3c1")
     const s5 = $('#sect5');
     const s6 = $('#sect6');
     const s7 = $('#sect7');
@@ -39,10 +33,6 @@ var swiper = new Swiper(".s4_swiper", {
     var sect4top = Math.floor(s4t);
     var sect5top = Math.floor(s5t);
 
-    const s3c1f1 = document.getElementById('s3c1f1')
-    const s3c1f2 = document.getElementById('s3c1f2')
-    const s3c1f3 = document.getElementById('s3c1f3')
-    const s1c3belt = $('.s1__c3_belt');
     var scrollDelay = true;
     var scrollPadding = 300;//스크롤여분값
 //#endregion declare=========================================================
@@ -52,6 +42,8 @@ var swiper = new Swiper(".s4_swiper", {
 
 function s3c1Keep(dataNum){//for sect3 img function
     $('.s3__c1_fig').attr({"data-number":dataNum})
+    $('.s3__c2_fig').removeClass('on-view')
+    $('.s3__c2_fig').eq(dataNum-1).addClass('on-view')
 }
 function mainFunction(){
             //#region body scroll check==================================================
@@ -77,7 +69,6 @@ function mainFunction(){
                 // var sect3for6 = sect3top + sect3partHeight*6
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
-
                     $('.s3__c1_fig').attr({"data-number":"1"})
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
                     $('.s3__c1_fig').attr({"data-number":"1"})
@@ -115,6 +106,14 @@ function mainFunction(){
                 colorStyle.addClass("black")
             }
 }
+
+const s3c1 = document.getElementById('s3c1')
+const s3c1f1 = document.getElementById('s3c1f1')
+const s3c1f2 = document.getElementById('s3c1f2')
+const s3c1f3 = document.getElementById('s3c1f3')
+const s3c2f1 = document.getElementById('s3c2f1')
+const s3c2f2 = document.getElementById('s3c2f2')
+const s3c2f3 = document.getElementById('s3c2f3')
 gsap.set(s3c1,{opacity:"0"})
 gsap.set(s3c1f1,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
 gsap.set(s3c1f2,{left:"50%",top:"50%",x:"-50%",y:"-50%",})
