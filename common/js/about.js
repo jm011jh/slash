@@ -26,6 +26,10 @@ $(window).ready(function(){
         centeredSlides: true,
         // spaceBetween: 8,
         mousewheel:true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable:true,
+          },
     });
 // #region sect4 text-change==================================================
 function scroll(){
@@ -85,11 +89,11 @@ function scroll(){
     //#region s7 bg scale
     //#endregion s7 bg scale
     //#region s7 bg position
-    var x = (winH)/2
+    var x = (winH - s7bgScaleH)/2
     var y = s7t + s7h - (winH+s7bgScaleH)/2
     if(windowScrollTop<=s7t - x){
         s7sticky.removeClass('fixed')
-    }else if(s7t - x < windowScrollTop && windowScrollTop < y){
+    }else if(s7t + x < windowScrollTop && windowScrollTop < y){
         s7sticky.removeClass('end')
         s7sticky.addClass('fixed')
     }else if(y <= windowScrollTop){
@@ -128,13 +132,13 @@ ScrollTrigger.matchMedia({
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger:s7,
-                start:"top 50%",
+                start:"50% 50%",
                 end:"80% 50%",
                 scrub:-1,
             }
         });
         tl.to(s7bgScale,{
-            width:"25vw"
+            width:"31vw"
         })
     }
 })

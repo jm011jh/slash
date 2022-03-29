@@ -45,7 +45,7 @@ $stickySpanR :  84px;
 .footer__logo .ft_b{display:none;}
 @media all and(max-width:768px){
     #footer{padding-top: 90px;padding-bottom: 40px;}
-    .footer__c2{padding-bottom: 40px;}
+    .footer__c2{padding-bottom: 30px;}
     .footer__c2 p{color: $white;font-size: 44px;line-height: 1.2;}
     $stickyR : 120px;
     .footer__c2_sticky{position: absolute;width: $stickyR;height: $stickyR;top: 0;left: 50%;transform: translate(-50%,calc(-50% - 14px));border-radius: 50%;}
