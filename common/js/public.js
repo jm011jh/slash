@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var winW = $(window).width();
     var winH = $(window).height();
     var windowScrollTop = $(document).scrollTop();

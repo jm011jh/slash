@@ -119,7 +119,7 @@ ScrollTrigger.matchMedia({
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger:s7,
-                start:"20% 50%",
+                start:"50% 50%",
                 end:"80% 50%",
                 scrub:-1,
             }

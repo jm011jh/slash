@@ -47,7 +47,7 @@
 
 #sect1 {
   width: 100%;
-  padding-top: 45vh;
+  padding-top: 28vh;
   padding-bottom: 100px;
 }
 
@@ -11661,7 +11661,7 @@
 }
 
 .s1__c1__title {
-  font-size: 6.5vw;
+  font-size: 9.5vw;
   font-weight: 400;
   margin-right: 4vw;
 }
@@ -11682,11 +11682,7 @@
   overflow: visible;
   line-height: 1;
   overflow: hidden;
-}
-
-.s1__c1_p:nth-child(2) {
-  -webkit-transform: translate(0, -1vw);
-          transform: translate(0, -1vw);
+  display: block;
 }
 
 .s1__c1_p span {
@@ -11707,8 +11703,8 @@
 }
 
 .s1__c1__description {
-  -webkit-transform: translateY(-1.1vw);
-          transform: translateY(-1.1vw);
+  -webkit-transform: translateY(-0.5vw);
+          transform: translateY(-0.5vw);
 }
 
 .s1__c1__description .p1 {
@@ -11778,16 +11774,28 @@
 }
 
 @media all and (max-width: 768px) {
+  #sect1 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .sect1_bg {
     height: 100vh;
   }
-  #sect1 {
-    padding-top: 26vh;
-    padding-bottom: 76px;
-  }
   .s1__c1 {
-    padding: 0 20px;
-    margin-bottom: 54px;
+    padding: 0 20px 40px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .s1__c1_p {
     display: -webkit-box;
@@ -11819,6 +11827,7 @@
   }
   .s1__c3 {
     height: 114px;
+    margin-top: 50px;
   }
   .s1__c3_belt {
     font-size: 120px;
@@ -12281,14 +12290,10 @@
 
 @media all and (max-width: 768px) {
   #sect3 {
-    height: unset;
+    height: 300vh;
     margin-bottom: 200px;
     margin-top: 0px;
     padding-top: 190px;
-  }
-  .s3__sticky {
-    height: unset;
-    position: static;
   }
   .s3__c1 {
     top: 0;
@@ -12299,14 +12304,9 @@
     opacity: 0;
   }
   .s3__c2 {
-    position: static;
-  }
-  .s3__c2_fig {
-    position: static;
-    top: unset;
-    left: unset;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   .s3__c2_p1 {
     font-size: 32px;
@@ -12315,7 +12315,7 @@
     font-family: "Playfair Display", serif;
     font-weight: 300;
   }
-  .s3__c2_fig .s3__c2_p2 {
+  .s3__c2_fig .s3__c2_p2 p {
     font-size: 16px;
   }
 }

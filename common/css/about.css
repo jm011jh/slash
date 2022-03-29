@@ -289,6 +289,7 @@
   display: flex;
   font-size: 12.5vw;
   line-height: 1;
+  font-weight: 500;
 }
 
 #aboutMain #sect2 .s2__c4_belt p {
@@ -621,7 +622,6 @@
 #aboutMain #sect4 .s4__c1_imgBox {
   border-radius: 0px;
   height: 80%;
-  background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transform: translate(0, 20%);
@@ -994,8 +994,12 @@
 
 #aboutMain #sect7 .s7__bg_scale {
   width: 100vw;
-  display: block;
-  margin: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: unset;
 }
 
 #aboutMain #sect7 .fixed {

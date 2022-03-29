@@ -60,7 +60,7 @@ function mainFunction(){
                 var sect3top = Math.floor(s3t)
                 var sect4top = Math.floor(s4t)
                 var sect3Height = sect4top - sect3top;
-                var sect3partHeight = sect3Height/6
+                var sect3partHeight = sect3Height/5
                 var sect3for1 = sect3top + sect3partHeight*1
                 var sect3for2 = sect3top + sect3partHeight*2
                 var sect3for3 = sect3top + sect3partHeight*3
@@ -70,14 +70,15 @@ function mainFunction(){
                 //#endregion declare===============================================
                 if(sect3top < windowScrollTop && windowScrollTop <= sect3for1){
                     $('.s3__c1_fig').attr({"data-number":"1"})
+                    s3c1Keep(4);
                 }else if(sect3for1 < windowScrollTop && windowScrollTop <= sect3for2){
                     $('.s3__c1_fig').attr({"data-number":"1"})
-                }else if(sect3for2 < windowScrollTop && windowScrollTop <= sect3for3){
                     s3c1Keep(1);
-                }else if(sect3for3 < windowScrollTop && windowScrollTop <= sect3for4){
+                }else if(sect3for2 < windowScrollTop && windowScrollTop <= sect3for3){
                     s3c1Keep(2);
-                }else if(sect3for4 < windowScrollTop){
+                }else if(sect3for3 < windowScrollTop && windowScrollTop <= sect3for4){
                     s3c1Keep(3);
+                }else if(sect3for4 < windowScrollTop){
                 }
                 colorStyle.removeClass("black")
                 colorStyle.addClass("white")

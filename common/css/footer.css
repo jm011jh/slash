@@ -117,7 +117,8 @@
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  width: 1570px;
+  width: calc(100% - 80px);
+  max-width: 1570px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -211,11 +212,8 @@
     -webkit-transform: translate(calc(-50% - 2px), calc(-50% + 2px)) rotate(-45deg);
             transform: translate(calc(-50% - 2px), calc(-50% + 2px)) rotate(-45deg);
   }
-}
-
-@media all and (max-width: 750px) {
   .footer__c3 {
-    width: 100%;
+    width: calc(100% - 40px);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -29,6 +29,10 @@
   }
 }
 
+:root {
+  height: -webkit-fill-available;
+}
+
 * {
   padding: 0;
   margin: 0;
