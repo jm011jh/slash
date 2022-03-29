@@ -919,6 +919,9 @@
 }
 
 @media all and (max-width: 768px) {
+  #aboutMain #sect6 {
+    margin-bottom: 100vw;
+  }
   #aboutMain #sect6 .s6__container {
     height: unset;
   }
@@ -977,43 +980,38 @@
 }
 
 #aboutMain #sect7 .s7sticky {
-  position: -webkit-sticky;
-  position: sticky;
+  width: 100%;
+  position: absolute;
   top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #aboutMain #sect7 .s7__bg_scale {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  width: 100%;
+  width: 100vw;
   display: block;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: auto;
 }
 
-#aboutMain #sect7 #s7bgScaleMob {
-  opacity: 0;
+#aboutMain #sect7 .fixed {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-#aboutMain #sect7 #s7bgScale {
-  opacity: 1;
-}
-
-@media all and (max-width: 768px) {
-  #aboutMain #sect7 #s7bgScale {
-    opacity: 0;
-  }
-  #aboutMain #sect7 #s7bgScaleMob {
-    opacity: 1;
-  }
+#aboutMain #sect7 .end {
+  bottom: 0%;
+  top: unset;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 #aboutMain #sect8 .s8__text {
   font-size: 60px;
   color: #ffffff;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 #aboutMain #sect8 .s8__text .small_text {
@@ -1084,13 +1082,10 @@
 }
 
 @media all and (max-width: 768px) {
-  #aboutMain #sect8 {
-    margin-top: -120px;
-  }
   #aboutMain #sect8 .s8__text {
     font-size: 32px;
     margin-bottom: 80px;
-    margin-top: 0px;
+    margin-top: 40px;
   }
   #aboutMain #sect8 .s8__text p:not(.small) {
     margin: 0;

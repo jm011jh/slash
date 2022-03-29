@@ -214,7 +214,7 @@ $--g : 155px;//컬럼+갭
         .listitem_cha{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);} 
     }
     @media all and(max-width:768px){
-        #sect6{
+        #sect6{margin-bottom:100vw;
             .s6__container{height: unset;}
             .s6pc{display: none;}
             .s6mobile{display: block;}
@@ -231,21 +231,15 @@ $--g : 155px;//컬럼+갭
         }
     }
     #sect7{height: 300vh;
-        .s7sticky{position: sticky;top: 0;}
-        .s7__bg_scale{position: absolute;top: 0%;left: 50%;width: 100%;display: block;transform: translate(-50%,-50%);}
-        // .fixed{position: fixed;top: 50%;}
-        // .end{top: unset;bottom: 0%;transform: translate(-50%,0);}
-        #s7bgScaleMob{opacity: 0;}
-        #s7bgScale{opacity: 1;}
+        .s7sticky{width: 100%;position: absolute;top: 0;transform: translateY(-50%);}
+        .s7__bg_scale{width: 100vw;display: block;margin: auto;}
+        .fixed{position: fixed;top: 50%;transform: translateY(-50%);}
+        .end{bottom: 0%;top: unset;transform: translateY(0%);}
     }
     @media all and(max-width:768px){
-        #sect7{
-            #s7bgScale{opacity: 0;}
-            #s7bgScaleMob{opacity: 1;}
-        }
     }
     #sect8{
-        .s8__text{font-size: 60px;color: $white;text-align: center;margin-top: 50px;}
+        .s8__text{font-size: 60px;color: $white;text-align: center;margin-top: 60px;}
         .s8__text .small_text{display: flex;justify-content: center;line-height: 1.66;font-weight: 200;font-family: $font3;}
         .s8__text p:not(.small){display: inline-block;line-height: 1;overflow: hidden;}
         .s8__text p.small{font-size: 22px;margin-top: 8px;font-family: $font3;display: inline-block;}
@@ -261,8 +255,8 @@ $--g : 155px;//컬럼+갭
         .on-view .split_text span{transform:rotateX(0deg) translate(0,-15%) translateZ(10px);}
     }
     @media all and(max-width:768px){
-        #sect8{margin-top: -120px;
-            .s8__text{font-size: 32px;margin-bottom: 80px;margin-top: 0px;}
+        #sect8{
+            .s8__text{font-size: 32px;margin-bottom: 80px;margin-top: 40px;}
             .s8__text p:not(.small){margin: 0;}
             .s8__text p.small{font-size: 16px;margin-top: 0;}
             .s8__text .small_text{flex-direction: column;justify-content: center;margin-top: 34px;}

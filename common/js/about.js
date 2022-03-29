@@ -9,14 +9,15 @@ $(window).ready(function(){
     var s6t = $("#sect6").offset().top;
     var s6ct = $(".s6__container").offset().top;
     var s6h = $("#sect6").innerHeight();
+    const s7 = $("#sect7")
     var s7t = $("#sect7").offset().top;
     var s7h = $("#sect7").innerHeight();
     var footerT = $("#footer").offset().top;
     var scrollPadding = 300;//스크롤여분값
     const s6List = $(".s6__list_horizontal")
     const s7bgScale = $("#s7bgScale")
-    const s7bgScaleH = $("#s7bgScale").height()
-    const s7bgScaleMob = $("#s7bgScaleMob")
+    var s7bgScaleH = $("#s7bgScale").height()
+    const s7sticky = $("#s7sticky")
     const s2c4belt = $(".s2__c4_belt p")
     setTimeout(()=>{$('#sect1').addClass('on-view')},100)
 
@@ -82,77 +83,67 @@ function scroll(){
     }
     //#endregion s6 list horizontal-scroll
     //#region s7 bg scale
-    if(windowScrollTop < s7t){
-        TweenLite.to(s7bgScale,0.5,{
-            css:{scale:1}
-        })
-        TweenLite.to(s7bgScaleMob,0.5,{
-            css:{scale:1}
-        })
-    }else if(s7t <= windowScrollTop && windowScrollTop < s7t + s7h - winH){
-        
-        var start = windowScrollBot - s7t - winH;
-        var end = $("#sect7").innerHeight() - winH;
-        var pers = Math.floor(start / end * 32);
-        var persMob = Math.floor(start / end * 175);
-        
-        if(10<=pers){
-            TweenLite.to(s7bgScale,0.3,{
-                css:{scale:(1/pers)*10}
-            })
-        }
-        if(100<=persMob){
-            TweenLite.to(s7bgScaleMob,0.3,{
-                css:{scale:(1/persMob * 100)}
-            })
-        }else if(persMob<100){
-            TweenLite.to(s7bgScaleMob,0.3,{
-                css:{scale:1}
-            })
-        }
-    }else if(s7t + s7h - winH <= windowScrollTop){
-        TweenLite.to(s7bgScale,0.2,{
-            css:{scale:1/3.2}
-        })
-        TweenLite.to(s7bgScaleMob,0.2,{
-            css:{scale:1/1.75}
-        })
-    }
     //#endregion s7 bg scale
     //#region s7 bg position
-    if(windowScrollTop<=s7t - s7bgScaleH/4){
-        s7bgScale.removeClass('fixed')
-        s7bgScaleMob.removeClass('fixed')
-    }else if(s7t - s7bgScaleH/4<windowScrollTop && windowScrollTop <s7t + s7h - winH){
-        console.log('enjot')
-        s7bgScale.removeClass('end')
-        s7bgScale.addClass('fixed')
-        s7bgScaleMob.removeClass('end')
-        s7bgScaleMob.addClass('fixed')
-    }else if(s7t + s7h - winH <= windowScrollTop){
-        s7bgScale.removeClass('fixed')
-        s7bgScale.addClass('end')
-        s7bgScale.removeClass('fixed')
-        s7bgScale.addClass('end')
+    var x = (winH)/2
+    var y = s7t + s7h - (winH+s7bgScaleH)/2
+    if(windowScrollTop<=s7t - x){
+        s7sticky.removeClass('fixed')
+    }else if(s7t - x < windowScrollTop && windowScrollTop < y){
+        s7sticky.removeClass('end')
+        s7sticky.addClass('fixed')
+    }else if(y <= windowScrollTop){
+        s7sticky.removeClass('fixed')
+        s7sticky.addClass('end')
     }
     //#endregion s7 bg position
     //#region colorStyle
     if(0< windowScrollBot && windowScrollBot < s4t - 300){//color style
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
-    }else if(s4t - 300 <= windowScrollBot && windowScrollBot < s7t+winH){
+    }else if(s4t - 300 <= windowScrollBot && windowScrollBot < s7t+winH-x*1.3){
         $("#colorStyle").removeClass("black")
         $("#colorStyle").addClass("white")
-    }else if(s7t+winH <= windowScrollBot){
+    }else if(s7t+winH-x*1.3 <= windowScrollBot){
         $("#colorStyle").removeClass("white")
         $("#colorStyle").addClass("black")
     }
     //#endregion colorStyle
 }
+ScrollTrigger.matchMedia({
+    "(max-width:768px)":function(){
+        let tl = gsap.timeline({
+            scrollTrigger:{
+                trigger:s7,
+                start:"20% 50%",
+                end:"80% 50%",
+                scrub:-1,
+            }
+        });
+        tl.to(s7bgScale,{
+            width:"60vw"
+        })
+    },
+    "(min-width:769px)":function(){
+        let tl = gsap.timeline({
+            scrollTrigger:{
+                trigger:s7,
+                start:"top 50%",
+                end:"80% 50%",
+                scrub:-1,
+            }
+        });
+        tl.to(s7bgScale,{
+            width:"25vw"
+        })
+    }
+})
 // #endregion sect4 text-change==================================================
 $(window).scroll(function(){
+    winH = $(window).height();
     windowScrollTop = $(document).scrollTop();
     windowScrollBot = windowScrollTop + winH;
+    s7bgScaleH = $("#s7bgScale").height()
     scroll();
 })
 $(window).resize(function(){
@@ -168,10 +159,12 @@ $(window).resize(function(){
     s6ct = $(".s6__container").offset().top;
     s6h = $("#sect6").innerHeight();
     s7t = $("#sect7").offset().top;
-    footerT = $("#footer").offset().top;
     s7h = $("#sect7").innerHeight();
+    s7bgScaleH = $("#s7bgScale").height()
+    footerT = $("#footer").offset().top;
 })
 setTimeout(()=>{
+    ScrollTrigger.refresh();
     s2c4beltW = s2c4belt.width();
     winW = $(window).width();
     winH = $(window).height();
@@ -186,5 +179,6 @@ setTimeout(()=>{
     s7t = $("#sect7").offset().top;
     footerT = $("#footer").offset().top;
     s7h = $("#sect7").innerHeight();
+    s7bgScaleH = $("#s7bgScale").height()
 },100)
 })
