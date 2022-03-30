@@ -37,7 +37,7 @@ $(document).ready(function () {
             var thisBot = thisTop - thisHeight;
             var topPadding = 100;
     
-            if( thisTop < windowScrollBot - topPadding && windowScrollTop < thisTop ){
+            if( thisTop < windowScrollBot - topPadding - thisHeight/2 && windowScrollTop < thisTop + thisHeight ){
                 $(this).addClass('on-view')
             }else{
                 $(this).removeClass('on-view')

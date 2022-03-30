@@ -46,7 +46,7 @@ $PrimaryColor2 : #2f479c;
     .s3__head_box b{color: rgba(255,255,255,1);}
     .s3__head_box:nth-child(2){margin-top: 90px;}
 
-    .s3__body{display: flex;justify-content: space-between;font-family: $font1;margin-top: 160px;}
+    .s3__body{display: flex;justify-content: space-between;font-family: $font1;margin-top: 160px;width: 100%;}
     .s3__body_box{width: 30%;background-color: #ffffff;padding: 20px 28px;border-radius: 28px;overflow-x: hidden;background-size: cover;background-position: center center;}
     .s3__body_box:nth-child(1){background-image: url(/common/image/project/labstartup_s3_card1.png);}
     .s3__body_box:nth-child(2){background-image: url(/common/image/project/labstartup_s3_card2.png);}

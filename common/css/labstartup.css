@@ -234,6 +234,7 @@
           justify-content: space-between;
   font-family: "Helvetica Neue";
   margin-top: 160px;
+  width: 100%;
 }
 
 #sect3 .s3__body_box {
