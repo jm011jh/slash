@@ -117,4 +117,11 @@
   font-weight: 100;
   font-style: normal;
 }
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url("../font/DungGeunMo.ttf");
+  src: url("../font/DungGeunMo.svg") format("svg"), url("../font/DungGeunMo.woff") format("woff"), url("../font/DungGeunMo.otf") format("opentype"),;
+  font-weight: 400;
+  font-style: normal;
+}
 /*# sourceMappingURL=font.css.map */

@@ -17,7 +17,7 @@ function cursorMove(e){
 }
 window.addEventListener("mousemove",function(e){
     cursorMove(e)
-    var gutter = 100;
+    var gutter = 30;
     if(e.clientX<gutter||e.clientX>(winW - gutter)||e.clientY<gutter||e.clientY>(winH - gutter)){
         cursor.addClass('out')
     }else{
