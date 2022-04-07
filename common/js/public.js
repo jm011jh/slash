@@ -43,6 +43,18 @@ $(document).ready(function () {
                 $(this).removeClass('on-view')
             }
         })
+        $('.scroll-detect-top').each(function(index,item){
+            var thisHeight = $(this).height();
+            var thisTop = $(this).offset().top;
+            var thisBot = thisTop - thisHeight;
+            var topPadding = 100;
+    
+            if( thisTop < windowScrollBot - topPadding - thisHeight/10 && windowScrollTop < thisTop + thisHeight ){
+                $(this).addClass('on-view')
+            }else{
+                $(this).removeClass('on-view')
+            }
+        })
         $('.scroll-detect-instant').each(function(index,item){
             var thisTop = $(this).offset().top;
             var topPadding = 100;

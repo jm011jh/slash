@@ -165,7 +165,7 @@ gsap.to(s3c1f3,0.3,{
 });
 gsap.set($s4c2Wrapper,{x:"0%"})
 gsap.to($s4c2Wrapper,{
-    x:"-=76.2%",
+    x:"-=80.2%",
     ease: Power2.easeOut,
     duration:0.5,
     scrollTrigger:{
