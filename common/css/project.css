@@ -59,49 +59,49 @@ body {
 }
 
 .menu--item:nth-child(1) .img--box {
-  background-image: url(/common/image/slide_summer.png);
+  background-image: url(/common/image/slide_dku.jpg);
 }
 
 .menu--item:nth-child(2) .img--box {
-  background-image: url(/common/image/slide_dubai.png);
+  background-image: url(/common/image/slide_dubai.jpg);
 }
 
 .menu--item:nth-child(3) .img--box {
-  background-image: url(/common/image/slide_freestyle.png);
+  background-image: url(/common/image/slide_freestyle.jpg);
 }
 
 .menu--item:nth-child(4) .img--box {
-  background-image: url(/common/image/project_imsil.png);
+  background-image: url(/common/image/slide_labstartup.jpg);
 }
 
 .menu--item:nth-child(5) .img--box {
-  background-image: url(/common/image/slide_labstartup.png);
+  background-image: url(/common/image/slide_linkplus.jpg);
 }
 
 .menu--item:nth-child(6) .img--box {
-  background-image: url(/common/image/slide_yakwang.png);
+  background-image: url(/common/image/slide_luminous.jpg);
 }
 
 .menu--item:nth-child(7) .img--box {
-  background-image: url(/common/image/slide_freestyle.png);
+  background-image: url(/common/image/slide_mireuk.jpg);
 }
 
 .menu--item:nth-child(8) .img--box {
-  background-image: url(/common/image/slide_samsung.png);
+  background-image: url(/common/image/slide_samsung.jpg);
 }
 
 .menu--item:nth-child(9) .img--box {
-  background-image: url(/common/image/slide_dku.png);
-}
-
-.menu--item:nth-child(10) .img--box {
-  background-image: url(/common/image/project_zpmireuk.png);
+  background-image: url(/common/image/slide_summer.jpg);
 }
 
 @media (max-width: 767px) {
   .menu--item {
     width: 80vw;
   }
+}
+
+.menu--item:nth-child(10) .img--box {
+  background-image: url(/common/image/project_cheese.jpg);
 }
 
 .menu--item.is-hover {

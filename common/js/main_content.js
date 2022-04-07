@@ -51,13 +51,13 @@ const s4c2Contents = [
         description: "MATTERPORT (Virtual Showroom)",
         link:"samsungbespoke",
     },
-    {
-        year: "©2020",
-        img: "/common/image/slide_linkplus.jpg",
-        title: "slide-08 title",
-        description: "(slide-08 description)",
-        link:"#",
-    },
+    // {
+    //     year: "©2020",
+    //     img: "/common/image/slide_linkplus.jpg",
+    //     title: "slide-08 title",
+    //     description: "(slide-08 description)",
+    //     link:"#",
+    // },
     {
         year: "©2020",
         img: "/common/image/slide_mireuk.jpg",
