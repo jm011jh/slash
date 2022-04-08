@@ -1621,11 +1621,33 @@ body {
     width: 12px;
     top: 90%;
   }
+  #sect9 .s9__body_box2_imgBox {
+    display: block;
+  }
   #sect9 .s9__body_box2_textBox {
     font-size: 8vw;
   }
   #sect9 .s9__body_box2_imgWrap {
-    width: calc(33.33333% - 13px);
+    width: 50%;
+  }
+  #sect9 .s9__body_box2_imgBox.on-view .s9__body_box2_imgWrap {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  #sect9 .s9__body_box2_imgBox.on-view .s9__body_box2_imgWrap.on-view {
+    width: 50%;
+    opacity: 1;
+  }
+  #sect9 .s9__body_box2_imgWrap:nth-child(2) img {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  #sect9 .s9__body_box2_imgWrap:nth-child(2) img {
+    margin-top: 40px;
+  }
+  #sect9 .s9__body_box2_imgWrap:nth-child(3) img {
+    margin-top: 40px;
   }
 }
 
