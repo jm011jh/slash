@@ -59,7 +59,7 @@ body {
 }
 
 .menu--item:nth-child(1) .img--box {
-  background-image: url(/common/image/slide_dku.jpg);
+  background-image: url(/common/image/slide_summer.jpg);
 }
 
 .menu--item:nth-child(2) .img--box {
@@ -71,11 +71,11 @@ body {
 }
 
 .menu--item:nth-child(4) .img--box {
-  background-image: url(/common/image/slide_labstartup.jpg);
+  background-image: url(/common/image/slide_cheese.jpg);
 }
 
 .menu--item:nth-child(5) .img--box {
-  background-image: url(/common/image/slide_linkplus.jpg);
+  background-image: url(/common/image/slide_labstartup.jpg);
 }
 
 .menu--item:nth-child(6) .img--box {
@@ -83,7 +83,7 @@ body {
 }
 
 .menu--item:nth-child(7) .img--box {
-  background-image: url(/common/image/slide_mireuk.jpg);
+  background-image: url(/common/image/slide_beijing.jpg);
 }
 
 .menu--item:nth-child(8) .img--box {
@@ -91,17 +91,17 @@ body {
 }
 
 .menu--item:nth-child(9) .img--box {
-  background-image: url(/common/image/slide_summer.jpg);
+  background-image: url(/common/image/slide_dku.jpg);
+}
+
+.menu--item:nth-child(10) .img--box {
+  background-image: url(/common/image/slide_mireuk.jpg);
 }
 
 @media (max-width: 767px) {
   .menu--item {
     width: 80vw;
   }
-}
-
-.menu--item:nth-child(10) .img--box {
-  background-image: url(/common/image/project_cheese.jpg);
 }
 
 .menu--item.is-hover {

@@ -63,7 +63,7 @@ const dispose = (scroll) => {
       x: (x, target) => {
         
         const s = gsap.utils.wrap(-itemWidth - 100, wrapWidth - itemWidth - 100, parseInt(x))
-        return `${-s/80}%`
+        return `${-s/90}%`
       }
     }
   })

@@ -20,17 +20,17 @@ body{overflow: hidden;}
 .menu.is-dragging {cursor: grabbing;}
 .menu--wrapper{position: absolute;z-index: 1;height: 100%;top: 50%;left: 50%;width: 100%;transform: translate(-50%,-50%) rotate(20deg);}
 .menu--item{position: absolute;z-index: 1;top: 50%;left: 0;width: 30vw;padding-right:3vw;transform:translate(0,-50%);
-    &:nth-child(1)  .img--box{background-image: url(/common/image/slide_dku.jpg);}
+    &:nth-child(1)  .img--box{background-image: url(/common/image/slide_summer.jpg);}
     &:nth-child(2)  .img--box{background-image: url(/common/image/slide_dubai.jpg);}
     &:nth-child(3)  .img--box{background-image: url(/common/image/slide_freestyle.jpg);}
-    &:nth-child(4)  .img--box{background-image: url(/common/image/slide_labstartup.jpg);}
-    &:nth-child(5)  .img--box{background-image: url(/common/image/slide_linkplus.jpg);}
+    &:nth-child(4)  .img--box{background-image: url(/common/image/slide_cheese.jpg);}
+    &:nth-child(5)  .img--box{background-image: url(/common/image/slide_labstartup.jpg);}
     &:nth-child(6)  .img--box{background-image: url(/common/image/slide_luminous.jpg);}
-    &:nth-child(7)  .img--box{background-image: url(/common/image/slide_mireuk.jpg);}
+    &:nth-child(7)  .img--box{background-image: url(/common/image/slide_beijing.jpg);}
     &:nth-child(8)  .img--box{background-image: url(/common/image/slide_samsung.jpg);}
-    &:nth-child(9)  .img--box{background-image: url(/common/image/slide_summer.jpg);}
+    &:nth-child(9)  .img--box{background-image: url(/common/image/slide_dku.jpg);}
+    &:nth-child(10) .img--box{background-image: url(/common/image/slide_mireuk.jpg);}
     @media (max-width: 767px){width: 80vw;}
-    &:nth-child(10) .img--box{background-image: url(/common/image/project_cheese.jpg);}
 }
 .menu--item.is-hover{z-index: 2;}
 .menu--item:nth-child(odd){margin-top:3vw;}
