@@ -34,7 +34,7 @@ body{overflow: hidden;}
 }
 .menu--item.is-hover{z-index: 2;}
 .menu--item:nth-child(odd){margin-top:3vw;}
-.img--box{height: 100%;width:150%;background-size: cover;background-repeat:repeat-y;background-position:center center;transform: translateX(0);}
+.img--box{height: 100%;width:170%;background-size: cover;background-repeat:repeat-y;background-position:center center;transform: translateX(0);}
 .item{
     &--num{color: white;font-size: 14px;margin-bottom: 8px;margin-left: 8px;overflow: hidden;}
     &--num .p-fake{position: absolute;top: 0;left: 0;opacity: 0;}
@@ -47,11 +47,12 @@ body{overflow: hidden;}
     &--year .p-real{transform: translate(-100%,0);display: block;transition-duration: 0.5s; transition-property: transform;}
 
     &--tit{color: white;font-size: 24px;font-size: 5vw;pointer-events: none;text-align: center;font-weight: 500;}
-    &--tit{position:absolute;top:50%;left:50%;transform:translateX(-50%)rotate(-20deg)translateY(-50%);width: 200%;overflow: hidden;line-height: 1;}
+    &--tit{position:absolute;top:50%;left:50%;transform:translateX(-50%) rotate(-20deg) translateY(-50%);width: 200%;overflow: hidden;line-height: 1;}
     &--tit .tit-lv1{position: relative;overflow: hidden;display: inline-block;}
     &--tit .tit-lv2-real{transform:translateY(100%);display: inline-block;transition-duration: 0.5s;transition-property: transform;}
     &--tit .tit-lv2-clone{position: absolute;left: 0;top: 0;opacity: 0;}
-    
+    &--tit-mob{display: none;color: white;margin-top: 16px;font-size: 16px;}
+
     &--class{color: white;font-size: 14px;margin-top: 8px;margin-left: 1vw;overflow: hidden;}
     &--class .p-fake{position: absolute;top: 0;left: 0;opacity: 0;}
     &--class .p-real{transform: translate(0%,-100%);display: block;transition-duration: 0.5s; transition-property: transform;}
@@ -72,9 +73,14 @@ body{overflow: hidden;}
         &--content{height: 80%;}
         &--img{border-radius: 10px;}
         &--year{font-size: 12px;margin-left: 12px;}
-        &--tit{font-size: 16px;margin-top: 16px;}
+        &--tit{font-size: 16px;margin-top: 16px;display: none;}
+        &--tit-mob{display: block;}
         &--class{font-size: 14px;margin-top: 10px;}
     }
+    .menu--item .item--year .p-real{transform: translate(0,0);}
+    .menu--item .item--class .p-real{transform: translate(0,0);}
+    .menu--item .item--num .p-real{transform: translate(0,0);}
+    .menu--item .item--tit .tit-lv2{transform:translateY(0%);}
 }
 
 .menu--pagination{position: absolute;bottom: 40px;left: 40px;}

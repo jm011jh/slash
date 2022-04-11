@@ -114,7 +114,7 @@ body {
 
 .img--box {
   height: 100%;
-  width: 150%;
+  width: 170%;
   background-size: cover;
   background-repeat: repeat-y;
   background-position: center center;
@@ -245,6 +245,13 @@ body {
   left: 0;
   top: 0;
   opacity: 0;
+}
+
+.item--tit-mob {
+  display: none;
+  color: white;
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 .item--class {
@@ -476,10 +483,30 @@ body {
   .item--tit {
     font-size: 16px;
     margin-top: 16px;
+    display: none;
+  }
+  .item--tit-mob {
+    display: block;
   }
   .item--class {
     font-size: 14px;
     margin-top: 10px;
+  }
+  .menu--item .item--year .p-real {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .menu--item .item--class .p-real {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .menu--item .item--num .p-real {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .menu--item .item--tit .tit-lv2 {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
