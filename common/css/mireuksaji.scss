@@ -107,7 +107,10 @@ html,body{max-width: 100%;overflow-x: hidden;}
     .s2__row4_tower{width: 100%;max-width:800px;margin:-30% auto 0;position: relative;}
     .s2__row_tower_text{font-size: 22px;@include textCenter;line-height: 1.5;}
 
-    .s2__title{font-size: 48px;font-weight: bold;color: $gray1;margin-top: 260px;}
+    .s2__row4_tower_textBox{@include transform;opacity: 0;transform: translate(0,10%);}
+    .s2__row4_tower_textBox.on-view{opacity: 1;transform: translate(0,0);}
+    .s2__title{font-size: 48px;font-weight: bold;color: $gray1;margin-top: 260px;@include transform;opacity: 0;transform: translate(0,10%);}
+    .s2__title.on-view{opacity: 1;transform: translate(0,0);}
     .s2__title b{color: $keyColor1;}
 
     .s2__row{margin-top: 300px;}
