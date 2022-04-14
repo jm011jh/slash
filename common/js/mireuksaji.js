@@ -27,12 +27,8 @@ $(window).ready(function(){
             scrub:-1,
         }
     })
-    trig$s10.to(s10box1,{
-        y:"-20%",
-    })
-    trig$s10.to(s10box2,{
-        y:"-20%",
-    })
+    trig$s10.to(s10box1,{y:"-20%",})
+    trig$s10.to(s10box2,{y:"-20%",})
     trig$s1.to(s2Row4BoxItem1,{
         y:"-100%",
         scrollTrigger:{
@@ -63,4 +59,5 @@ $(window).ready(function(){
             scrub:-1,
         }
     })
+
 })
