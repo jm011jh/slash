@@ -841,7 +841,7 @@ html, body {
 }
 
 #sect2 .s2__row4_tower_gradi {
-  display: block;
+  display: none;
   height: 50%;
   width: 100%;
   position: absolute;
@@ -1000,6 +1000,9 @@ html, body {
   }
   #sect2 .s2__title {
     margin-top: 160px;
+  }
+  #sect2 .s2__row4_tower_gradi {
+    display: block;
   }
 }
 
@@ -1333,6 +1336,7 @@ html, body {
 #sect6 .s6__row2 {
   background-color: #ffffff;
   padding: 260px 40px;
+  text-align: center;
 }
 
 #sect6 .s6__row2_wrapper {
@@ -1424,10 +1428,13 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #sect7 .s7__row2_box img {
-  width: 50%;
+  width: calc(50% - 2px);
 }
 
 #sect7 .s7__row2_text {
@@ -1910,6 +1917,7 @@ html, body {
   font-size: 14px;
   opacity: 0.64;
   margin-top: 40px;
+  color: #000000;
 }
 
 @media all and (max-width: 1024px) {
