@@ -98,10 +98,20 @@
           justify-content: center;
 }
 
+.small_title.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .small_title p {
   font-family: "AppleSD";
   font-size: 20px;
   font-weight: bold;
+}
+
+.small_title.white {
+  color: #ffffff;
 }
 
 .double-span {
@@ -159,6 +169,10 @@ b.purple {
   line-height: 1.2;
 }
 
+.big_title.white p {
+  color: #ffffff;
+}
+
 .big_exp {
   margin-top: 60px;
   font-size: 20px;
@@ -166,6 +180,10 @@ b.purple {
   font-family: "AppleSD";
   color: #333333;
   letter-spacing: -1px;
+}
+
+.big_exp.white {
+  color: #ffffff;
 }
 
 .small_exp {
@@ -939,7 +957,7 @@ b.purple {
 }
 
 #sect5 .s5__wrap {
-  max-width: 1310px;
+  max-width: 1300px;
   padding: 270px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1087,5 +1105,21 @@ b.purple {
   opacity: 1;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
+}
+
+#sect6 {
+  background-color: #1e1e1e;
+}
+
+#sect6 .s6__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1300px;
+  padding: 0 40px;
+  margin: auto;
 }
 /*# sourceMappingURL=dku.css.map */
