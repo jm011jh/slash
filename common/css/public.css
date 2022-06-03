@@ -188,6 +188,10 @@ li {
   font-style: italic;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
 @media all and (max-width: 768px) {
   .on_win {
     display: none !important;

@@ -216,6 +216,7 @@ $PrimaryColor : #ff5373;
         .s5__head_box:nth-child(2){width: 100%;}
 
         .s5__body_box_item:not(.circle){width: 100%;display: flex;flex-direction: row;margin: 12px 0;}
+        .s5__body_box_item_arrow .w{transform: rotate(90deg);}
         .s5__body_box{flex-direction: column;max-width: 240px;margin: auto;}
 
         .s5__body .s5__body_box_item:nth-child(1),
@@ -306,7 +307,7 @@ $PrimaryColor : #ff5373;
         .s6__footer_box_text2{font-size: 18px;}
     }
 }
-#sect7{margin-top: 400px;color: #ffffff;position: relative;}
+#sect7{margin-top: 400px;color: #ffffff;position: relative;overflow: hidden;}
 #sect7{
     .s7__head{font-size: 120px;font-family: $font3;width: 100%;max-width: 1220px;margin: auto;font-weight: 500;}
     .s7__footer{width: 100%;height: 100vh;background-image: url(/common/image/project/dubai_s7_footer.png);background-size: cover;}
@@ -324,6 +325,13 @@ $PrimaryColor : #ff5373;
     .s7__head p.real{display: block;transform: rotateX(-90deg) translateZ(140px);transition-duration: 1s;transition-property: transform;}
     .s7__head.on-view p.real{transform: rotateX(0deg) translateZ(20px);}
     .s7__fig.on-view{transform: translate(0,0);opacity: 1;}
+
+    @media all and (max-width:1300px){
+        .s7__fig:nth-of-type(1){width: 340px;height: 240px;}
+        .s7__fig:nth-of-type(2){width: 210px;height: 300px;}
+        .s7__fig:nth-of-type(3){width: 330px;height: 420px;}
+        .s7__fig:nth-of-type(4){width: 500px;height: 280px;}
+    }
 }
 #sect8{width: 100%;height: 100vh;background-color: #888888;}
 #sect9{width: 100%;}

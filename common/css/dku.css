@@ -1119,7 +1119,7 @@ b.purple {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1300px;
-  padding: 0 40px;
+  padding: 300px 40px 0;
   margin: auto;
 }
 /*# sourceMappingURL=dku.css.map */

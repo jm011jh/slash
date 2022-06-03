@@ -828,6 +828,10 @@
             flex-direction: row;
     margin: 12px 0;
   }
+  #sect5 .s5__body_box_item_arrow .w {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
   #sect5 .s5__body_box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1123,6 +1127,7 @@
   margin-top: 400px;
   color: #ffffff;
   position: relative;
+  overflow: hidden;
 }
 
 #sect7 .s7__head {
@@ -1230,6 +1235,25 @@
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
+}
+
+@media all and (max-width: 1300px) {
+  #sect7 .s7__fig:nth-of-type(1) {
+    width: 340px;
+    height: 240px;
+  }
+  #sect7 .s7__fig:nth-of-type(2) {
+    width: 210px;
+    height: 300px;
+  }
+  #sect7 .s7__fig:nth-of-type(3) {
+    width: 330px;
+    height: 420px;
+  }
+  #sect7 .s7__fig:nth-of-type(4) {
+    width: 500px;
+    height: 280px;
+  }
 }
 
 #sect8 {
