@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#colorStyle {
+  background-color: #ccc;
+  height: 300vh;
+}
+
+#projectClassList {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#projectClassList li {
+  color: white;
+  margin: 0 9px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#projectClassList li span {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.project2--container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-top: 180px;
+}
+
+.project2--indexWrap {
+  color: #ffffff;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px 40px;
+}
+
+.project--blocking {
+  width: 100%;
+  height: 40px;
+}
+
+.project2--wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 107px);
+  overflow: hidden;
+}
+
+.project2--list {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.project2--listItem {
+  overflow: hidden;
+}
+
+.project2--listItem a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 40px;
+  opacity: 0.2;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: red;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.project2--list-num {
+  margin-right: 110px;
+}
+
+.project2--list-tit {
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.project2--list-num p {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-style: italic;
+  line-height: 0.5;
+  margin-top: 38px;
+}
+
+.project2--list-class {
+  font-size: 22px;
+  font-family: "Helvetica Neue";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project2--list-class svg {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.project2--list-class span {
+  height: 20px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: block;
+  margin: 0 10px;
+}
+
+.project2--list-className {
+  margin-left: 10px;
+}
+
+.project2--list-titleName1 {
+  font-size: 120px;
+  font-weight: 500;
+  font-family: "Helvetica Neue";
+}
+
+.project2--list-titleName1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.project2--list-titleName1 span.br {
+  margin-right: 150px;
+}
+
+.project2--listItem.hovered a {
+  opacity: 1;
+}
+
+.project2--listItem.hovered a .project2--list-tit {
+  -webkit-transform: translate(80px, 0);
+          transform: translate(80px, 0);
+}
+
+#projectThumbMoving {
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0.1s;
+  transition: opacity 0.3s 0.1s;
+}
+
+#projectThumbMoving.enter {
+  opacity: 1;
+}
+
+.project2--index-num {
+  overflow: hidden;
+}
+
+.project2--index-num p {
+  position: relative;
+}
+
+#projectIdxFake {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/*# sourceMappingURL=project2.css.map */

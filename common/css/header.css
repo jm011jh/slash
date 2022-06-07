@@ -96,6 +96,15 @@
   padding-top: 40px;
 }
 
+#projectHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
 .header__col1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,6 +225,9 @@
 
 @media all and (max-width: 768px) {
   #header {
+    padding: 20px 20px 0;
+  }
+  #projectHeader {
     padding: 20px 20px 0;
   }
 }

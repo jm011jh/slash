@@ -6,6 +6,7 @@ $(document).ready(function () {
     var windowScrollBot = windowScrollTop + winH;
     //#region get data from docs==================================================
     $.get(`/common/inc/header.html`, (data) => { $("#header").prepend(data); })
+    $.get(`/common/inc/projectHeader.html`, (data) => { $("#projectHeader").prepend(data); })
     $.get(`/common/inc/nav.html`, (data) => { $("#nav").prepend(data); })
     $.get(`/common/inc/circle.html`, (data) => { $("#downCircle").prepend(data); })
     $.get(`/common/inc/footer.html`, (data) => { $("#footer").prepend(data) })

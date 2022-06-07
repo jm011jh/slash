@@ -49,6 +49,7 @@ $--g : 155px;
     }
 }
 #header{width: 100%;position: fixed;top: 0;padding-left:$--gw;padding-right:$--gw;padding-top: 40px;}
+#projectHeader{width: 100%;position: fixed;top: 0;padding-left:$--gw;padding-right:$--gw;padding-top: 40px;}
 
 .header__col1{display: flex;}
 .header__logo{font-size: 20px;width: $--gc;align-items: flex-end;display: flex;}
@@ -75,5 +76,6 @@ $--g : 155px;
 }
 @media all and(max-width:768px){
     #header{padding:20px 20px 0;}
+    #projectHeader{padding:20px 20px 0;}
 }
 // #endregion header==================================================
