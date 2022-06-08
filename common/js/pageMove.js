@@ -1,34 +1,24 @@
-function isSameAsLocation(uriString) {
-    const uri = new URL(uriString);
-
-    return (
-        uri.origin === window.location.origin &&
-        uri.pathname === window.location.pathname
-    );
-}
-
-function pageTransition(nodeList) {
-    nodeList.forEach((node) => {
-        if (!(node instanceof HTMLAnchorElement)) return;
-
-        const { href } = node;
-
-        if (!href || node.target === "_blank" || isSameAsLocation(href)) return;
-
-        node.addEventListener("click", (event) => {
-            event.preventDefault();
-
-            document.body.addEventListener(
-                "transitionend",
-                () => {
-                    window.location.href = href;
-                },
-                { passive: true, once: true }
-            );
-            document.body.classList.add("hidden");
+$(function () {
+    // $("body div").fadeIn(500, function () {
+    //     $(this).animate({
+    //         "top": "150px"
+    //     },1000);
+    // });
+    
+    $("a").click(function () {
+        var url = $(this).attr("href");
+        console.log(url)
+        $("#colorStyle").animate({
+            "opacity": "0",
+        },500, function () {
+            document.location.href = url;
         });
+        
+        return false;
     });
-}
 
-pageTransition(document.querySelectorAll("a"))
-document.body.classList.add("reveal");
+    setTimeout(()=>{
+        $("#project2ListContainer").addClass("moved")
+        $("#colorStyle").addClass("moved")
+    },300)
+});

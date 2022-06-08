@@ -1,0 +1,17 @@
+.project--button-container{position: fixed;bottom: 40px;left: 50%;transform: translate(-50%,0);z-index: 9999;}
+.project--button-wrap{background-color: #fff;display: flex;padding: 8px;border-radius: 50px;position: relative;transition-property: color;}
+.project--button-wrap p{color: #000000;transition-duration: 0.3s;transition-property: color;}
+.project--button-wrap .fake-button p{color: #000000;transition-duration: 0.3s;transition-property: color;}
+.project--button-wrap a p{color: #cccccc;transition-duration: 0.6s;transition-property: color;}
+.project--button-wrap a.hovered p{color: #000000;transition-duration: 0.6s;}
+.project--button-container a{display: block;padding: 16px 36px;color: #000000;border-radius: 50px;font-size: 16px;font-weight: 500;line-height: 1;width: 50%;}
+.project--button-container .fake-button{display: block;padding: 16px 36px;color: #000000;border-radius: 50px;font-size: 16px;font-weight: 500;line-height: 1;width: 50%;}
+.project--button-cover{width: 50%;height: 48px;transform: translate(0%,0);position: absolute;pointer-events: none;mix-blend-mode: difference;background-color: #ffffff;border-radius: 50px;transition-property: transform;}
+.project--button-cover.right{transform: translate(calc(100% - 16px),0);}
+.trans0{transition-duration: 0s !important;}
+
+.project1wrap .project--button-cover.left{transform: translate(0%,0);transition-duration: 1s;}
+.project1wrap .project--button-cover{transform: translate((calc(100% - 16px),0));}
+
+.project2wrap .project--button-cover{transform: translate(0%,0)}
+.project2wrap .project--button-cover.right{transform: translate((calc(100% - 16px),0));transition-duration: 1s;}

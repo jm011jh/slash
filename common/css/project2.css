@@ -2,11 +2,19 @@
 body {
   overflow-x: hidden;
   overflow-y: scroll;
+  height: 100%;
 }
 
 #colorStyle {
-  background-color: #ccc;
+  background-color: #000000;
   height: 300vh;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+#colorStyle.moved {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 #projectClassList {
@@ -30,6 +38,15 @@ body {
   margin: 0 9px;
   font-size: 16px;
   cursor: pointer;
+  opacity: 0.3;
+}
+
+#projectClassList li.hovered {
+  opacity: 0.5;
+}
+
+#projectClassList li.clicked {
+  opacity: 1;
 }
 
 #projectClassList li span {
@@ -64,7 +81,7 @@ body {
 .project2--wrap {
   position: relative;
   width: 100%;
-  height: calc(100% - 107px);
+  height: calc(100% - 67px);
   overflow: hidden;
 }
 
@@ -86,7 +103,7 @@ body {
   opacity: 0.2;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  color: red;
+  color: white;
   -webkit-transition-property: opacity;
   transition-property: opacity;
 }
@@ -128,6 +145,12 @@ body {
   fill: #ffffff;
   width: 24px;
   height: 24px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .project2--list-class span {
@@ -143,9 +166,15 @@ body {
 }
 
 .project2--list-titleName1 {
-  font-size: 120px;
+  font-size: 128px;
   font-weight: 500;
   font-family: "Helvetica Neue";
+  position: relative;
+  overflow: hidden;
+}
+
+.project2--list-titleName1:nth-child(2) {
+  margin-top: -40px;
 }
 
 .project2--list-titleName1 span {
@@ -158,6 +187,12 @@ body {
   margin-right: 150px;
 }
 
+.project2--list-titleName1 .real {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
 .project2--listItem.hovered a {
   opacity: 1;
 }
@@ -167,10 +202,68 @@ body {
           transform: translate(80px, 0);
 }
 
-#projectThumbMoving {
-  width: 300px;
+.project2--listItem.hovered a .project2--list-class svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.project2--listItem .project2--list-titleName1 .real {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.project2--listItem .project2--list-num p {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.project2--listItem .project2--list-class {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.project2--listItem.appear .project2--list-num p {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.project2--listItem.appear .project2--list-class {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.project2--listItem.appear .project2--list-titleName1 .real {
+  -webkit-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-delay: 0.01s;
+          transition-delay: 0.01s;
+}
+
+.project2--listItem {
+  display: none;
+}
+
+.project2--listItem.show {
+  display: block;
+}
+
+.project2--thumb-moving {
+  width: 700px;
   height: 500px;
-  background-color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -181,8 +274,42 @@ body {
   transition: opacity 0.3s 0.1s;
 }
 
-#projectThumbMoving.enter {
+.project2--thumb-moving.enter {
   opacity: 1;
+}
+
+.project2--thumb-moving .project2--thumb-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.project2--thumb-moving .project2--thumb-listItem {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.project2--thumb-moving .project2--thumb-listItem.show {
+  opacity: 1;
+}
+
+.project2--thumb-moving .project2--thumb-listItem img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .project2--index-num {
@@ -193,9 +320,22 @@ body {
   position: relative;
 }
 
-#projectIdxFake {
-  position: absolute;
-  left: 0;
-  top: 0;
+.project-scroll-text {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 14px;
+  color: white;
+  opacity: 0.5;
+}
+
+#project2ListContainer {
+  opacity: 0;
+}
+
+#project2ListContainer.moved {
+  opacity: 1;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 /*# sourceMappingURL=project2.css.map */

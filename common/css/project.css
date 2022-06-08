@@ -11,6 +11,19 @@ body {
   overflow: hidden;
 }
 
+#colorStyle {
+  background-color: #000000;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  opacity: 0;
+}
+
+#colorStyle.moved {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  opacity: 1;
+}
+
 .menu {
   overflow: hidden;
   cursor: -webkit-grab;

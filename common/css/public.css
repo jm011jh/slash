@@ -48,10 +48,16 @@ body {
   font-size: 14px;
   font-family: "Helvetica Neue";
   background-color: #000000;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
   overflow-x: hidden;
   width: 100%;
+}
+
+body.movingTo {
+  opacity: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #colorStyle {

@@ -13,23 +13,32 @@
 </head>
 
 <body>
-    <div id="colorStyle" class="black">
+    <div id="colorStyle" class="black colorChange">
         <div id="project2ListContainer" class="project2--container">
-            <div id="projectThumbMoving" class="project2--thumb-moving"></div>
+            <div id="projectThumbMoving" class="project2--thumb-moving">
+                <ul id="projectThumbList" class="project2--thumb-list">
+                    <li class="project2--thumb-listItem" data-image-name="test1"><img src="../common/image/test1.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test2"><img src="../common/image/test2.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test3"><img src="../common/image/test3.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test4"><img src="../common/image/test4.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test5"><img src="../common/image/test5.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test6"><img src="../common/image/test6.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test7"><img src="../common/image/test7.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test8"><img src="../common/image/test8.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="test9"><img src="../common/image/test9.png" alt=""></li>
+                </ul>
+            </div>
             <div class="project2--indexWrap">
                 <div class="project2--index-text"><p>PROJECT INDEX</p></div>
                 <div class="project2--index-num">
                     <p>
-                        (<span id="projectIdx">1</span>
-                        <!-- <span id="projectIdxFake">1</span> -->
-                        /
-                        <span id="projectTotalIdx">12</span>)
+                        (<span id="projectIdx">1</span>/<span id="projectTotalIdx">12</span>)
                     </p>
                 </div>
             </div>
             <div id="project2ListWrap" class="project2--wrap">
                 <ul id="project2List" class="project2--list">
-                    <li class="project2--listItem allProject metaverseProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="f07726" data-image="test1">
                         <a href="">
                             <div class="project2--list-num"><p>01</p></div>
                             <div class="project2--list-tit">
@@ -40,12 +49,19 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">Dankuk University<br><span class="br"></span><span>Gather Town</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Dankuk University</p>
+                                        <p class="real">Dankuk University</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Gather Town</span></p>
+                                        <p class="real"><span class="br"></span><span>Gather Town</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject irtualshowroomProject WebProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject irtualshowroomProject webProject" data-link="" data-color="b8995f" data-image="test2">
                         <a href="">
                             <div class="project2--list-num"><p>02</p></div>
                             <div class="project2--list-tit">
@@ -56,12 +72,19 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">The 7th Summery<br><span class="br"></span><span>Condescendence</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">The 7th Summery</p>
+                                        <p class="real">The 7th Summery</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Condescendence</span></p>
+                                        <p class="real"><span class="br"></span><span>Condescendence</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject metaverseProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="3e5dd1" data-image="test3">
                         <a href="">
                             <div class="project2--list-num"><p>03</p></div>
                             <div class="project2--list-tit">
@@ -72,12 +95,15 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">Lab start<span>up</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Lab start <span>up</span></p>
+                                        <p class="real">Lab start <span>up</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject virtualshowroomProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="3e0099" data-image="test4">
                         <a href="">
                             <div class="project2--list-num"><p>04</p></div>
                             <div class="project2--list-tit">
@@ -88,12 +114,15 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">Luminous<span>ACC</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Luminous <span>ACC</span></p>
+                                        <p class="real">Luminous <span>ACC</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject virtualshowroomProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="ff5373" data-image="test5">
                         <a href="">
                             <div class="project2--list-num"><p>05</p></div>
                             <div class="project2--list-tit">
@@ -104,12 +133,15 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">Dubai<span>Expo</span> 2022</p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Dubai<span> Expo</span> 2022</p>
+                                        <p class="real">Dubai<span> Expo</span> 2022</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject metaverseProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="030b1a" data-image="test6">
                         <a href="">
                             <div class="project2--list-num"><p>06</p></div>
                             <div class="project2--list-tit">
@@ -120,12 +152,19 @@
                                     <p>©2022</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">SAMSUNG<span>The</span>Freestyle</p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">SAMSUNG</p>
+                                        <p class="real">SAMSUNG</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>The </span>Freestyle</p>
+                                        <p class="real"><span class="br"></span><span>The </span>Freestyle</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject webProject virtualshowroomProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject webProject virtualshowroomProject" data-link="" data-color="1428a0" data-image="test7">
                         <a href="">
                             <div class="project2--list-num"><p>07</p></div>
                             <div class="project2--list-tit">
@@ -136,12 +175,19 @@
                                     <p>©2021</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">SAMSUNG<span>Bespoke</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">SAMSUNG</p>
+                                        <p class="real">SAMSUNG</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Bespoke</span></p>
+                                        <p class="real"><span class="br"></span><span>Bespoke</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject metaverseProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="896545" data-image="test8">
                         <a href="">
                             <div class="project2--list-num"><p>08</p></div>
                             <div class="project2--list-tit">
@@ -152,12 +198,15 @@
                                     <p>©2022</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">MIREUKSAJI</p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">MIREUKSAJI</p>
+                                        <p class="real">MIREUKSAJI</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem allProject metaverseProject" data-project-name="">
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="0069ff" data-image="test9">
                         <a href="">
                             <div class="project2--list-num"><p>09</p></div>
                             <div class="project2--list-tit">
@@ -168,7 +217,14 @@
                                     <p>©2022</p>
                                 </div>
                                 <div class="project2--list-titleName">
-                                    <p class="project2--list-titleName1">Beigjing<br><span class="br"></span><span>Olympic</span></p>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Beijing</p>
+                                        <p class="real">Beijing</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Olympic</span></p>
+                                        <p class="real"><span class="br"></span><span>Olympic</span></p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -177,7 +233,7 @@
             </div>
         </div>
         <ul id="projectClassList" class="project_classList">
-            <li data-project-class="all"><p>ALL (<span>0</span>)</p></li>
+            <li data-project-class="all" class="clicked"><p>ALL (<span>0</span>)</p></li>
             <li data-project-class="web"><p>WEB (<span>0</span>)</p></li>
             <!-- <li><p>APP (<span>0</span>)</p></li> -->
             <li data-project-class="virtualshowroom"><p>VIRTUALSHOWROOM (<span>0</span>)</p></li>
@@ -185,16 +241,29 @@
         </ul>
         <div id="nav" class="mouse-change"></div>
         <!-- <div id="cursor"></div> -->
+        <p class="project-scroll-text">SCROLL</p>
+    </div>
+    <div id="projectChange" class="project--button-container">
+        <div class="project--button-wrap project2wrap">
+            <div class="project--button-cover"></div>
+            <a href="/docs/project.html"><p>DIAGONAL</p></a>
+            <div class="fake-button"><p>VERTICAL</p></div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js" integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/common/js/public.js"></script>
     <script src="/common/js/project2.js" async></script>
     <script src="/common/js/pageMove.js"></script>
     <script src="/common/js/projectCursor.js"></script>
+    <script>
+        setTimeout(()=>{
+            $(".project--button-cover").addClass('right')
+        },10)
+    </script>
 </body>
 
 </html>

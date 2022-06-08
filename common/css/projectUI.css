@@ -1,1 +1,123 @@
-/* No CSS *//*# sourceMappingURL=projectUI.css.map */
+.project--button-container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 9999;
+}
+
+.project--button-wrap {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.project--button-wrap p {
+  color: #000000;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.project--button-wrap .fake-button p {
+  color: #000000;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.project--button-wrap a p {
+  color: #cccccc;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.project--button-wrap a.hovered p {
+  color: #000000;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.project--button-container a {
+  display: block;
+  padding: 16px 36px;
+  color: #000000;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  width: 50%;
+}
+
+.project--button-container .fake-button {
+  display: block;
+  padding: 16px 36px;
+  color: #000000;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  width: 50%;
+}
+
+.project--button-cover {
+  width: 50%;
+  height: 48px;
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: #ffffff;
+  border-radius: 50px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.project--button-cover.right {
+  -webkit-transform: translate(calc(100% - 16px), 0);
+          transform: translate(calc(100% - 16px), 0);
+}
+
+.trans0 {
+  -webkit-transition-duration: 0s !important;
+          transition-duration: 0s !important;
+}
+
+.project1wrap .project--button-cover.left {
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.project1wrap .project--button-cover {
+  -webkit-transform: translate(calc(100% - 16px), 0);
+          transform: translate(calc(100% - 16px), 0);
+}
+
+.project2wrap .project--button-cover {
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
+}
+
+.project2wrap .project--button-cover.right {
+  -webkit-transform: translate(calc(100% - 16px), 0);
+          transform: translate(calc(100% - 16px), 0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+/*# sourceMappingURL=projectUI.css.map */

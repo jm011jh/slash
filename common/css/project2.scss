@@ -2,12 +2,16 @@
 $font1 :  'Helvetica Neue';
 $font2 : 'Playfair Display', serif;
 $font3 : 'AppleSD';
-body{overflow-x: hidden;overflow-y: scroll;}
+body{overflow-x: hidden;overflow-y: scroll;height: 100%;}
+
 @mixin tr-du($sec){transition-duration: $sec;}
-#colorStyle{background-color: #ccc;height: 300vh;}
+#colorStyle{background-color: #000000;height: 300vh;transition-duration: 0s;}
+#colorStyle.moved{transition-duration: 0.3s;}
 
 #projectClassList {position: fixed;top: 0;left:0;width: 100%;display: flex;justify-content: center;padding-top: 40px;padding-left: 40px;padding-right: 40px;}
-#projectClassList li{color: white;margin: 0 9px;font-size: 16px;cursor: pointer;}
+#projectClassList li{color: white;margin: 0 9px;font-size: 16px;cursor: pointer;opacity:0.3;}
+#projectClassList li.hovered{opacity: 0.5;}
+#projectClassList li.clicked{opacity: 1;}
 #projectClassList li span{display: inline-block;margin: 0 2px;}
 
 .project2--container{position: fixed;width: 100%;height:100%;padding-top: 180px;}
@@ -15,28 +19,50 @@ body{overflow-x: hidden;overflow-y: scroll;}
 .project2--indexWrap{color: #ffffff;font-size: 22px;display: flex;justify-content: space-between;padding: 0 40px 40px;}
 .project--blocking{width: 100%;height: 40px;}
 
-.project2--wrap{position: relative;width: 100%;height: calc(100% - 107px);overflow: hidden;}
+.project2--wrap{position: relative;width: 100%;height: calc(100% - 67px);overflow: hidden;}
 .project2--list{overflow: hidden;width: 100%;position: relative;}
 .project2--listItem{overflow: hidden;}
-.project2--listItem a{display: flex;padding: 60px 40px;opacity: 0.2;@include tr-du(0.3s);color: red;transition-property: opacity;}
+.project2--listItem a{display: flex;padding: 60px 40px;opacity: 0.2;@include tr-du(0.3s);color: white;transition-property: opacity;}
 .project2--list-num{margin-right: 110px;}
 .project2--list-tit{@include tr-du(0.9s);transition-property: transform;}
 .project2--list-num p{font-family: $font2;font-size: 44px;font-style: italic;line-height: 0.5;margin-top: 38px;}
 .project2--list-class{font-size: 22px;font-family: $font1;display: flex;line-height: 1;align-items: center;}
-.project2--list-class svg{fill: #ffffff;width: 24px;height: 24px;}
+.project2--list-class svg{fill: #ffffff;width: 24px;height: 24px;transition-property: transform;transition-duration: 1s;}
 .project2--list-class span{height: 20px;width: 1px;background-color:rgba(255,255,255,0.3);display: block;margin: 0 10px;}
 .project2--list-className{margin-left: 10px;}
-.project2--list-titleName1{font-size: 120px;font-weight: 500;font-family: $font1;}
+.project2--list-titleName1{font-size: 128px;font-weight: 500;font-family: $font1;position: relative;overflow: hidden;}
+.project2--list-titleName1:nth-child(2){margin-top: -40px;}
 .project2--list-titleName1 span{font-family: $font2;font-style: italic;font-weight: 400;}
 .project2--list-titleName1 span.br{margin-right: 150px;}
 
+.project2--list-titleName1 .real{position: absolute;top: 0;overflow: hidden;}
 .project2--listItem.hovered a{opacity: 1;
     .project2--list-tit{transform: translate(80px,0);}
+    .project2--list-class svg{transform: rotate(90deg);}
 }
+.project2--listItem .project2--list-titleName1 .real{transform: translate(0,100%);transition-property: transform;}
+.project2--listItem .project2--list-num p{transition-property: opacity;opacity: 0;}
+.project2--listItem .project2--list-class{transition-property: opacity;opacity: 0;}
+.project2--listItem.appear .project2--list-num p{opacity: 1;transition-duration: 1s;transition-delay: 0.2s;}
+.project2--listItem.appear .project2--list-class{opacity: 1;transition-duration: 1s;transition-delay: 0.2s;}
+.project2--listItem.appear .project2--list-titleName1 .real{transform: translate(0,0%);transition-duration: 1s;transition-delay: 0.01s;}
+.project2--listItem{display: none;}
+.project2--listItem.show{display: block;}
 
-#projectThumbMoving{width: 300px;height: 500px;background-color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity: 0;transition:opacity 0.3s 0.1s;}
-#projectThumbMoving.enter{opacity: 1;}
+.project2--thumb-moving{width: 700px;height: 500px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity: 0;transition:opacity 0.3s 0.1s;}
+// #projectThumbMovingFake{width: 700px;height: 500px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity: 0;transition:opacity 0.3s 0.1s;}
+.project2--thumb-moving.enter{opacity: 1;}
+
+.project2--thumb-moving .project2--thumb-list{width: 100%;height: 100%;position: relative;}
+.project2--thumb-moving .project2--thumb-listItem{width: 100%;height: 100%;position: absolute;transform: translate(-50%,-50%);top: 50%;left: 50%;opacity: 0;transition-property: opacity;transition-duration: 0.5s;}
+.project2--thumb-moving .project2--thumb-listItem.show{opacity: 1;}
+.project2--thumb-moving .project2--thumb-listItem img{width: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 
 .project2--index-num{overflow: hidden;}
 .project2--index-num p{position: relative;}
-#projectIdxFake{position: absolute;left: 0;top: 0;}
+
+.project-scroll-text{position: fixed;bottom: 40px;right: 40px;font-size: 14px;color: white;opacity: 0.5;}
+
+#project2ListContainer{opacity: 0;}
+#project2ListContainer.moved{opacity: 1;transition-duration: 1s;}
+// #projectIdxFake{position: absolute;left: 0;top: 0;}

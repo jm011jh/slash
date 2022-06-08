@@ -23,7 +23,8 @@ $font3 : 'AppleSD';
 $black : #000000;
 $white : #ffffff;
 *{padding: 0;margin: 0;box-sizing: border-box;}
-body{font-size: 14px;font-family: $font1;background-color: #000000;transition-duration: 0.6s;overflow-x: hidden;width: 100%;}
+body{font-size: 14px;font-family: $font1;background-color: #000000;transition-duration: 0s;overflow-x: hidden;width: 100%;}
+body.movingTo{opacity:0;transition-duration: 1s;}
 #colorStyle{transition-duration: 0.6s;transition-property: background-color;}
 #colorStyle.black{
     .belt_small_belt svg{fill: $white;}
