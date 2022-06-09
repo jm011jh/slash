@@ -1,5 +1,4 @@
 $(window).ready(function(){
-    console.log('hi')
     $("#projectChange a").mouseenter(function(){
         $(this).addClass("hovered")
     })

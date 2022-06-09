@@ -13,14 +13,14 @@ body {
 
 #colorStyle {
   background-color: #000000;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
   opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
 }
 
 #colorStyle.moved {
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   opacity: 1;
 }
 
