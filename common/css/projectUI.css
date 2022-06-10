@@ -120,4 +120,24 @@
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
+
+@media all and (max-width: 767px) {
+  .project--button-container a,
+  .project--button-container .fake-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+  .project--button-cover {
+    height: 38px;
+  }
+  .project-scroll-text {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .project--button-container {
+    bottom: 30px;
+  }
+}
 /*# sourceMappingURL=projectUI.css.map */

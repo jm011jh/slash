@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/common/css/project2.css">
     <link rel="stylesheet" href="/common/css/projectUI.css">
     <title>Projects | CHANGER</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -17,17 +21,26 @@
         <div id="project2ListContainer" class="project2--container">
             <div id="projectThumbMoving" class="project2--thumb-moving">
                 <ul id="projectThumbList" class="project2--thumb-list">
-                    <li class="project2--thumb-listItem" data-image-name="test1"><img src="../common/image/test1.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test2"><img src="../common/image/test2.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test3"><img src="../common/image/test3.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test4"><img src="../common/image/test4.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test5"><img src="../common/image/test5.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test6"><img src="../common/image/test6.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test7"><img src="../common/image/test7.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test8"><img src="../common/image/test8.png" alt=""></li>
-                    <li class="project2--thumb-listItem" data-image-name="test9"><img src="../common/image/test9.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="dku"><img src="../common/image/project_thumb_dku.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="dubaiExpo"><img src="../common/image/project_thumb_dubaiExpo.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="labStartup"><img src="../common/image/project_thumb_labStartup.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="luminous"><img src="../common/image/project_thumb_luminous.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="summerCondescendence"><img src="../common/image/project_thumb_summerCondescendence.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="theFreeStyle"><img src="../common/image/project_thumb_theFreeStyle.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="samsungBespoke"><img src="../common/image/project_thumb_samsungBespoke.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="zepetoUnity"><img src="../common/image/project_thumb_zepetoUnity.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="mireuksaji"><img src="../common/image/project_thumb_mireuk.png" alt=""></li>
+                    <li class="project2--thumb-listItem" data-image-name="imshilCheese"><img src="../common/image/project_thumb_imshilCheese.png" alt=""></li>
                 </ul>
             </div>
+            <div id="header" class="black" style="z-index: unset;"></div>
+            <ul id="projectClassList" class="project_classList">
+                <li data-project-class="all" class="clicked"><p>ALL (<span>0</span>)</p></li>
+                <li data-project-class="web"><p>WEB (<span>0</span>)</p></li>
+                <!-- <li><p>APP (<span>0</span>)</p></li> -->
+                <li data-project-class="virtualshowroom"><p>VIRTUALSHOWROOM (<span>0</span>)</p></li>
+                <li data-project-class="metaverse"><p>METAVERSE (<span>0</span>)</p></li>
+            </ul>
             <div class="project2--indexWrap">
                 <div class="project2--index-text"><p>PROJECT INDEX</p></div>
                 <div class="project2--index-num">
@@ -38,135 +51,9 @@
             </div>
             <div id="project2ListWrap" class="project2--wrap">
                 <ul id="project2List" class="project2--list">
-                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="f07726" data-image="test1">
-                        <a href="">
+                    <li class="project2--listItem show appear allProject webProject virtualshowroomProject" data-link="" data-color="1428a0" data-image="samsungBespoke">
+                        <a href="../project/samsungbespoke.html">
                             <div class="project2--list-num"><p>01</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">METAVERSE</p>
-                                    <span></span>
-                                    <p>©2021</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">Dankuk University</p>
-                                        <p class="real">Dankuk University</p>
-                                    </div>
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake"><span class="br"></span><span>Gather Town</span></p>
-                                        <p class="real"><span class="br"></span><span>Gather Town</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject irtualshowroomProject webProject" data-link="" data-color="b8995f" data-image="test2">
-                        <a href="">
-                            <div class="project2--list-num"><p>02</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">WEB, VIRTUAL SHOWROOM</p>
-                                    <span></span>
-                                    <p>©2021</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">The 7th Summery</p>
-                                        <p class="real">The 7th Summery</p>
-                                    </div>
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake"><span class="br"></span><span>Condescendence</span></p>
-                                        <p class="real"><span class="br"></span><span>Condescendence</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="3e5dd1" data-image="test3">
-                        <a href="">
-                            <div class="project2--list-num"><p>03</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">METAVERSE</p>
-                                    <span></span>
-                                    <p>©2021</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">Lab start <span>up</span></p>
-                                        <p class="real">Lab start <span>up</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="3e0099" data-image="test4">
-                        <a href="">
-                            <div class="project2--list-num"><p>04</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">VIRTUAL SHOWROOM</p>
-                                    <span></span>
-                                    <p>©2021</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">Luminous <span>ACC</span></p>
-                                        <p class="real">Luminous <span>ACC</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="ff5373" data-image="test5">
-                        <a href="">
-                            <div class="project2--list-num"><p>05</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">KRPANO</p>
-                                    <span></span>
-                                    <p>©2021</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">Dubai<span> Expo</span> 2022</p>
-                                        <p class="real">Dubai<span> Expo</span> 2022</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="030b1a" data-image="test6">
-                        <a href="">
-                            <div class="project2--list-num"><p>06</p></div>
-                            <div class="project2--list-tit">
-                                <div class="project2--list-class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">ZEPETO</p>
-                                    <span></span>
-                                    <p>©2022</p>
-                                </div>
-                                <div class="project2--list-titleName">
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake">SAMSUNG</p>
-                                        <p class="real">SAMSUNG</p>
-                                    </div>
-                                    <div class="project2--list-titleName1">
-                                        <p class="fake"><span class="br"></span><span>The </span>Freestyle</p>
-                                        <p class="real"><span class="br"></span><span>The </span>Freestyle</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="project2--listItem show appear allProject webProject virtualshowroomProject" data-link="" data-color="1428a0" data-image="test7">
-                        <a href="">
-                            <div class="project2--list-num"><p>07</p></div>
                             <div class="project2--list-tit">
                                 <div class="project2--list-class">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
@@ -187,28 +74,70 @@
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="896545" data-image="test8">
-                        <a href="">
-                            <div class="project2--list-num"><p>08</p></div>
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="104436" data-image="theFreeStyle">
+                        <a href="../project/freestyle.html">
+                            <div class="project2--list-num"><p>02</p></div>
                             <div class="project2--list-tit">
                                 <div class="project2--list-class">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
-                                    <p class="project2--list-className">METAVERSE</p>
+                                    <p class="project2--list-className">ZEPETO</p>
                                     <span></span>
                                     <p>©2022</p>
                                 </div>
                                 <div class="project2--list-titleName">
                                     <div class="project2--list-titleName1">
-                                        <p class="fake">MIREUKSAJI</p>
-                                        <p class="real">MIREUKSAJI</p>
+                                        <p class="fake">SAMSUNG</p>
+                                        <p class="real">SAMSUNG</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>The </span>Freestyle</p>
+                                        <p class="real"><span class="br"></span><span>The </span>Freestyle</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="0069ff" data-image="test9">
+                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="ff5373" data-image="dubaiExpo">
+                        <a href="../project/dubai2020.html">
+                            <div class="project2--list-num"><p>03</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">KRPANO</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Dubai<span> Expo</span> 2022</p>
+                                        <p class="real">Dubai<span> Expo</span> 2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="3e5dd1" data-image="labStartup">
+                        <a href="../project/labstartup.html">
+                            <div class="project2--list-num"><p>04</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">METAVERSE</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Lab start <span>up</span></p>
+                                        <p class="real">Lab start <span>up</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="0069ff" data-image="zepetoUnity">
                         <a href="">
-                            <div class="project2--list-num"><p>09</p></div>
+                            <div class="project2--list-num"><p>05</p></div>
                             <div class="project2--list-tit">
                                 <div class="project2--list-class">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
@@ -229,16 +158,116 @@
                             </div>
                         </a>
                     </li>
+                    <li class="project2--listItem show appear allProject virtualshowroomProject webProject" data-link="" data-color="b8995f" data-image="summerCondescendence">
+                        <a href="../project/summer.html">
+                            <div class="project2--list-num"><p>06</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">WEB, VIRTUAL SHOWROOM</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">The 7th Summery</p>
+                                        <p class="real">The 7th Summery</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Condescendence</span></p>
+                                        <p class="real"><span class="br"></span><span>Condescendence</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="f07726" data-image="dku">
+                        <a href="../project/dku.html">
+                            <div class="project2--list-num"><p>07</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">METAVERSE</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Dankuk University</p>
+                                        <p class="real">Dankuk University</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Gather Town</span></p>
+                                        <p class="real"><span class="br"></span><span>Gather Town</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject virtualshowroomProject" data-link="" data-color="3e0099" data-image="luminous">
+                        <a href="../project/luminous.html">
+                            <div class="project2--list-num"><p>08</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">VIRTUAL SHOWROOM</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Luminous <span>ACC</span></p>
+                                        <p class="real">Luminous <span>ACC</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject metaverseProject" data-link="" data-color="896545" data-image="mireuksaji">
+                        <a href="../project/mireuksaji.html">
+                            <div class="project2--list-num"><p>09</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">METAVERSE</p>
+                                    <span></span>
+                                    <p>©2022</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">MIREUKSAJI</p>
+                                        <p class="real">MIREUKSAJI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project2--listItem show appear allProject webProject virtualshowroomProject" data-link="" data-color="f8b62d" data-image="imshilCheese">
+                        <a href="../project/cheese.html">
+                            <div class="project2--list-num"><p>10</p></div>
+                            <div class="project2--list-tit">
+                                <div class="project2--list-class">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 880"><path d="M450,440,479.55,46a41.07,41.07,0,0,0,.45-6,40,40,0,0,0-80,0,41.07,41.07,0,0,0,.45,6L430,440,400.45,834a41.07,41.07,0,0,0-.45,6,40,40,0,0,0,80,0,41.07,41.07,0,0,0-.45-6Z"></path><path d="M447.07,447.07,746.55,189.38a40,40,0,1,0-55.93-55.93L432.93,432.93,133.45,690.62a40,40,0,1,0,55.93,55.93Z"></path><path d="M440,450l394,29.55a41.07,41.07,0,0,0,6,.45,40,40,0,0,0,0-80,41.07,41.07,0,0,0-6,.45L440,430,46,400.45a41.07,41.07,0,0,0-6-.45,40,40,0,0,0,0,80,41.07,41.07,0,0,0,6-.45Z"></path><path d="M432.93,447.07,690.62,746.55a40,40,0,1,0,55.93-55.93L447.07,432.93,189.38,133.45a40,40,0,1,0-55.93,55.93Z"></path></svg>
+                                    <p class="project2--list-className">WEB, VIRTUAL SHOWROOM</p>
+                                    <span></span>
+                                    <p>©2021</p>
+                                </div>
+                                <div class="project2--list-titleName">
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake">Imshill Cheese</p>
+                                        <p class="real">Imshill Cheese</p>
+                                    </div>
+                                    <div class="project2--list-titleName1">
+                                        <p class="fake"><span class="br"></span><span>Theme park</span></p>
+                                        <p class="real"><span class="br"></span><span>Theme park</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <ul id="projectClassList" class="project_classList">
-            <li data-project-class="all" class="clicked"><p>ALL (<span>0</span>)</p></li>
-            <li data-project-class="web"><p>WEB (<span>0</span>)</p></li>
-            <!-- <li><p>APP (<span>0</span>)</p></li> -->
-            <li data-project-class="virtualshowroom"><p>VIRTUALSHOWROOM (<span>0</span>)</p></li>
-            <li data-project-class="metaverse"><p>METAVERSE (<span>0</span>)</p></li>
-        </ul>
         <div id="nav" class="mouse-change"></div>
         <!-- <div id="cursor"></div> -->
         <p class="project-scroll-text">SCROLL</p>
@@ -250,10 +279,6 @@
             <div class="fake-button"><p>VERTICAL</p></div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js" integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/common/js/public.js"></script>
     <script src="/common/js/project2.js" async></script>

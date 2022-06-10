@@ -6,39 +6,45 @@ $(window).ready(function () {
   */
   const colorStyle = document.getElementById("colorStyle")
   const projectClassBtn = document.querySelectorAll("#projectClassList li")
-  const metaverseList = document.querySelectorAll(".metaverseProject")
-  const webList = document.querySelectorAll(".webProject")
-  const virtualshowroomList = document.querySelectorAll("virtualshowroomProject")
   const projectListItem = document.querySelectorAll(".project2--listItem")
-  const projectTotalIdx = document.getElementById("projectTotalIdx")
   const project2ListContainer = document.getElementById("project2ListContainer");
   const project2ListWrap = document.getElementById("project2ListWrap");
   const projectList = document.getElementById("project2List");
   const projectIdx = document.getElementById("projectIdx")
+  const projectTotalIdx = document.getElementById("projectTotalIdx")
   const projectThumbList = document.getElementById("projectThumbList")
   const projectThumbItem = projectThumbList.querySelectorAll("li")
   var projectIdxNumber = 1;
-  var thisTest = gsap.to(projectList, {
-    y: `-100%`,
-    top: `100%`,
+
+  gsap.to(projectList, {
+    y: "-100%", top: "100%",
     scrollTrigger: {
       trigger: colorStyle,
-      start: "0% top",
-      end: "99% bottom",
-      scrub: 1.2,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
       invalidateOnRefresh: true,
       ease: "none",
     }
   })
+
   projectClassBtn.forEach((target, index) => {//all,web,virtualshowroom,metaverse buttons
+
     let thisClass = target.getAttribute("data-project-class")
     let thisList = document.querySelectorAll(`.${thisClass}Project`)
-    let thisLength = document.querySelectorAll(`.${thisClass}Project`).length;
+    let thisLength = thisList.length;
     let thisSpan = target.querySelector("span")
     thisSpan.innerText = thisLength;
 
     target.addEventListener("click", (e) => {
+
+      $(window).scrollTop(0);
+      ScrollTrigger.refresh(true);
+      gsap.set(projectList, { y: "0%", top: "0%", })
+
+      projectIdxNumber = 1;
       projectTotalIdx.innerText = thisLength;
+      projectIdx.innerText = 1;
 
       for (var i = 0; i < projectClassBtn.length; i++) {
         projectClassBtn[i].classList.remove("clicked")
@@ -46,24 +52,25 @@ $(window).ready(function () {
       target.classList.add("clicked")
 
       projectListItem.forEach(function (target, index) {//class delete
-        target.classList.remove("appear")
-        target.classList.remove("show")
+        target.classList.remove("appear","show")
       })
       thisList.forEach(function (target, index) {
         target.classList.add("show")//class change
-        setTimeout(()=>{
+        setTimeout(() => {
           target.classList.add("appear")
-        })
-        
+        }, 200)
+
         let number = target.querySelector(".project2--list-num p");//index number change
-        let indexNumber = String(index + 1)
-        console.log("0" + indexNumber)
-        if (indexNumber < 10) {
+        let indexNumber = index + 1
+        if (indexNumber <= 9) {
+          indexNumber = String(indexNumber)
           number.innerText = "0" + indexNumber;
         } else {
-          number.innerText = index;
+          number.innerText = index + 1;
         }
       })
+
+
     })
 
     target.addEventListener("mouseenter", (e) => {
@@ -78,38 +85,43 @@ $(window).ready(function () {
   /*
   === project list
   */
-
-  function projectIdxFix() {
-    projectIdx.innerText = projectIdxNumber;
-  }
+  projectTotalIdx.innerText = projectThumbItem.length//change the project length number with init
+  
+  function projectIdxFix() {projectIdx.innerText = projectIdxNumber;}//change the project index number every 0.5sec
   setInterval(projectIdxFix, 500);
+
   projectListItem.forEach((target, index) => {
 
     target.addEventListener("mouseenter", (e) => {
 
+      for(i = 0; i<projectListItem.length; i++){
+        projectListItem[i].classList.remove("on-mobile")
+      }
       target.classList.add("hovered")
 
-      var indexNumber = Number(target.querySelector(".project2--list-num p").innerText)//chage the index number
+      var indexNumber = Number(target.querySelector(".project2--list-num p").innerText)//chage the project list number
       projectIdxNumber = indexNumber;
-      console.log(indexNumber)
 
       var thisColor = target.getAttribute("data-color")//chage the background-color
       colorStyle.style.background = `#${thisColor}`
 
       var thisImage = target.getAttribute("data-image");//chage the thumb-nail image
-      console.log(thisImage)
-      projectThumbItem.forEach(function(target, index){
+
+      projectThumbItem.forEach(function (target, index) {
         var thisImageName = target.getAttribute("data-image-name")
         target.classList.remove("show")
-        if(thisImageName==thisImage){
+        if (thisImageName == thisImage) {
           target.classList.add("show")
         }
       })
-      
+
     })
 
     target.addEventListener("mouseleave", (e) => {
       target.classList.remove("hovered")
+      for(i = 0; i<projectListItem.length; i++){
+        projectListItem[i].classList.add("on-mobile")
+      }
     })
 
   })
@@ -117,16 +129,16 @@ $(window).ready(function () {
   /*
   === project thumbnail
   */
-  var project2ListWrapTop = project2ListWrap.getBoundingClientRect().top;
-  var project2ListWrapLeft = project2ListWrap.getBoundingClientRect().left;
+ const projectThumbMoving = $("#projectThumbMoving")
+  // var project2ListWrapTop = project2ListWrap.getBoundingClientRect().top;
+  // var project2ListWrapLeft = project2ListWrap.getBoundingClientRect().left;
   var project2ListContainerW = project2ListContainer.clientWidth;
   var project2ListContainerH = project2ListContainer.clientHeight;
 
-  const projectThumbMoving = $("#projectThumbMoving")
-  const projectThumbMovingFake = $("#projectThumbMovingFake")
   var ThumbMovingW = projectThumbMoving.outerWidth();
   var ThumbMovingH = projectThumbMoving.outerHeight();
-  $(window).resize(function(){
+
+  $(window).resize(function () {
     ThumbMovingW = projectThumbMoving.outerWidth();
     ThumbMovingH = projectThumbMoving.outerHeight();
     project2ListWrapTop = project2ListWrap.getBoundingClientRect().top;
@@ -142,7 +154,7 @@ $(window).ready(function () {
       css: {
         transform: `matrix(1,0,0,1,${x},${y})`,
       },
-      scrub:-1,
+      scrub: -1,
       delay: 0.01,
       ease: Power1.none,
     })
@@ -163,4 +175,13 @@ $(window).ready(function () {
     colorStyle.style.background = `#000000`
   })
 
+})
+
+function Mobile() {return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+console.log(Mobile())
+if(Mobile()){
+  $(".project2--index-num").addClass("on-mobile")
+}
+setTimeout(()=>{
+    $(".project2--listItem").addClass("on-mobile")
 })

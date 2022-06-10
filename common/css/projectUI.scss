@@ -15,3 +15,12 @@
 
 .project2wrap .project--button-cover{transform: translate(0%,0)}
 .project2wrap .project--button-cover.right{transform: translate((calc(100% - 16px),0));transition-duration: 1s;}
+@media all and (max-width:767px){
+    .project--button-container a,
+    .project--button-container .fake-button{font-size: 14px;padding: 12px 24px;}
+    .project--button-cover{height: 38px;}
+    .project-scroll-text{display: none;}
+}
+@media all and (max-width:480px){
+    .project--button-container{bottom: 30px;}
+}
