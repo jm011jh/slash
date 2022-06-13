@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("./font.css");
+.orange {
+  color: #ffa010;
+}
+
+.white {
+  color: #ffffff;
+}
+
 .font1 {
   font-family: "Helvetica Neue";
 }
@@ -1121,5 +1129,319 @@ b.purple {
   max-width: 1300px;
   padding: 300px 40px 0;
   margin: auto;
+}
+
+#sect6 .s6__body_container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#sect6 .s6__body_fig:not(.s6__body_fig1) {
+  position: absolute;
+}
+
+#sect6 .s6__body_fig1 {
+  position: relative;
+  -webkit-transform: translate(-5%, 0);
+          transform: translate(-5%, 0);
+  padding-bottom: 60px;
+  padding-top: 100px;
+}
+
+#sect6 .s6__body_fig2 {
+  top: 40%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+#sect6 .s6__body_fig3 {
+  top: 10%;
+  left: 45%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+#sect6 .s6__body_fig4 {
+  top: 0%;
+  left: 80%;
+}
+
+#sect6 .s6__body_fig5 {
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translate(25%, -50%);
+          transform: translate(25%, -50%);
+}
+
+#sect6 .s6__body_fig6 {
+  bottom: 0%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#sect6 .s6__body_fig7 {
+  bottom: 0%;
+  left: 5%;
+}
+
+#sect6 .s6__body_fig7 span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: #ffa010;
+  border-radius: 50%;
+}
+
+#sect7 {
+  background-color: #1e1e1e;
+  padding-top: 300px;
+}
+
+#sect7 .s7_title {
+  margin-bottom: 360px;
+}
+
+#sect7 .s7__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 1760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+#sect7 .s7__body_imgBox {
+  padding-left: 10%;
+  width: 50%;
+  padding-bottom: 40px;
+  padding-right: 10%;
+}
+
+#sect7 .s7__body_imgBox img {
+  width: 100%;
+  -webkit-filter: drop-shadow(-200px 40px 100px black);
+}
+
+#sect7 .s7__body_textBox {
+  width: 50%;
+  padding-top: 200px;
+  background-color: #1e1e1e;
+}
+
+#sect7 .s7__body_text1 p {
+  font-size: 20px;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  font-family: "AppleSD";
+  color: #ffa010;
+  display: inline-block;
+}
+
+#sect7 .s7__body_text2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+#sect7 .s7__body_text3 {
+  font-size: 18px;
+  opacity: 0.82;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+#sect7 .s7__body_menus {
+  margin-top: 180px;
+}
+
+#sect7 .s7__body_menu1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-family: "Helvetica Neue";
+  margin-bottom: 28px;
+}
+
+#sect7 .s7__body_menu1 .white {
+  margin-right: 24px;
+}
+
+#sect7 .s7__body_menu1Box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#sect7 .s7__body_menu1Box > div {
+  position: relative;
+  width: 20px;
+}
+
+#sect7 .s7__body_menu1Box > div span {
+  width: 12px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+
+#sect7 .s7__body_menu1Box > div span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 0;
+  top: 50%;
+}
+
+#sect7 .s7__body_menu1Box > div span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 0;
+  top: 50%;
+}
+
+#sect7 .s7__body_menu2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-family: "AppleSD";
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#sect7 .s7__body_menu2 img.dot {
+  position: absolute;
+  left: 0;
+  -webkit-transform: translate(-100%, 0%);
+          transform: translate(-100%, 0%);
+  top: 50%;
+}
+
+#sect7 .s7__body_menu2:nth-child(2) p {
+  opacity: 0.82;
+}
+
+#sect7 .s7__body_menu2:nth-child(3) {
+  opacity: 0.5;
+}
+
+#sect7 .s7__body_menu2:nth-child(4) {
+  opacity: 0.2;
+}
+
+#sect7 .s7__body2 {
+  width: 100%;
+  max-width: 1360px;
+  padding: 0 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sect7 .s7__body2_cardBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#sect7 .s7__body2_cardItem {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 28px;
+  color: white;
+}
+
+#sect7 .s7__body2_card_icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#sect7 .s7__body2_cardItem:nth-child(1) .s7__body2_card_icon {
+  background-color: #ffa010;
+}
+
+#sect7 .s7__body2_cardItem:nth-child(2) .s7__body2_card_icon {
+  background-color: #70d076;
+}
+
+#sect7 .s7__body2_card_icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+}
+
+#sect7 .s7__body2_card_text1 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-top: 28px;
+  letter-spacing: -1px;
+}
+
+#sect7 .s7__body2_card_text2 {
+  font-size: 16px;
+  opacity: 0.5;
+  letter-spacing: -0.5px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+#sect7 .s7__body2_card_person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 46px;
+}
+
+#sect7 .s7__body2_card_personText {
+  font-size: 15px;
+}
+
+#sect7 .s7__body2_card_mail {
+  opacity: 0.5;
+  margin-top: 4px;
 }
 /*# sourceMappingURL=dku.css.map */
