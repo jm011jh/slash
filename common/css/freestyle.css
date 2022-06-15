@@ -73,6 +73,18 @@ img {
   font-size: 50px;
 }
 
+.s2__video {
+  width: 100%;
+  position: relative;
+  background-color: #cccccc;
+  border: 1px solid #000;
+}
+
+.s2__video video {
+  width: 100%;
+  height: auto;
+}
+
 @media all and (max-width: 1300px) {
   .font-size1 {
     font-size: 40px;

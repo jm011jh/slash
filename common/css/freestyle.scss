@@ -22,6 +22,8 @@ $gray1 : rgba(255,255,255,0.7);
 .grid-box{width: 100%;margin: auto;max-width: 1260px;padding: 0 40px;}
 .video-test{width: 100%;height: 100vh;position: relative;background-color: #cccccc;border: 1px solid #000;}
 .video-test p {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-size: 50px;}
+.s2__video{width: 100%;position: relative;background-color: #cccccc;border: 1px solid #000;}
+.s2__video video{width: 100%;height: auto;}
 @media all and(max-width:1300px){
     .font-size1{font-size: 40px;}
     .font-size2{font-size: 20px;}
